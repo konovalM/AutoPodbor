@@ -1,0 +1,60 @@
+@media screen and (max-width: 992px) {
+  footer {
+    background: #090909;
+    .adrress{
+      .wt{
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 125%;
+      }
+    }
+    .number{
+      .WT{
+        font-weight: 500;
+        font-size: 24px;
+      }
+      .contact font{
+        font-size: 15px;
+        color: #FC8B26;
+        text-decoration-line: underline;
+        font-weight: 500;
+      }
+    }
+    font{
+      color: white;
+    }
+    .maps{
+      padding-top: 15px;
+    }
+    .logoFooter{
+      margin-top: 44px;
+    }
+    li{
+      padding-bottom: 15px;
+      a{
+        color: white;
+      }
+    }
+    .LF .text{
+      color: white;
+      margin-top: 71px;
+      margin-left: 14px;
+     //font{
+       font-weight: 600;
+       font-size: 14px;
+       line-height: 125%;
+     //}
+    }
+    .Ozzo font{
+      font-size: 14px;
+      line-height: 125%;
+      color: #4B4A4A;
+
+    }
+    .nav-item{
+      span{
+        color: white;
+      }
+    }
+  }
+}

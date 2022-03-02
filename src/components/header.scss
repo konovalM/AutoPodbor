@@ -1,0 +1,50 @@
+@media screen and (max-width: 992px) {
+
+  header {
+    .nav-item a{
+      color: black;
+    }
+    .logo {
+      width: 54px;
+      height: 54px;
+    }
+    nav{
+      padding-left: 0!important;
+    }
+    .number {
+      font-size: 13px;
+      line-height: 130%;
+
+      color: #121212;
+
+    }
+
+    .address {
+      font-size: 13px;
+      margin-left: 13px;
+      margin-top: 5px;
+    }
+
+    .contact {
+      font-size: 15px;
+      color: #FC8B26;
+      text-decoration-line: underline;
+      font-weight: 500;
+    }
+
+    .maps {
+      width: 50px;
+      height: 50px;
+    }
+
+    li {
+      border-bottom: 1px solid #D1D1D1;
+
+      a {
+        font {
+          color: #121212;
+        }
+      }
+    }
+  }
+}
