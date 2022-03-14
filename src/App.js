@@ -1,12 +1,17 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
-import * as ReactDOM from "react-dom";
-import AppRouter from "./router/AppRouter";
+import {AppRouter} from "./router/AppRouter";
+import {BrowserRouter} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'normalize.css';
+import './index.scss'
+import './override.css'
 
-function App() {
+
+export const App = () =>  {
   return (
-    <AppRouter/>
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
   );
 }
 
-export default App;
+

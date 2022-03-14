@@ -1,0 +1,29 @@
+.headerContent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gray{
+  background: var(--header-bcg);
+}
+.topBar{
+  margin: 0 auto;
+  max-width: 1410px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 8px 15px;
+}
+
+
+.menu{
+  background:white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 14px 0;
+}
