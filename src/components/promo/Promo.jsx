@@ -11,6 +11,7 @@ import cloud1 from '../../assets/images/clouds/cloud1.png'
 import cloud2 from '../../assets/images/clouds/cloud2.png'
 import cloud3 from '../../assets/images/clouds/cloud3.png'
 import cloud4 from '../../assets/images/clouds/cloud4.png'
+import button from '../../assets/images/ui/button.png'
 import cn from "classnames";
 
 const Plus = ({src, title, text}) => {
@@ -56,7 +57,6 @@ const MainTitle = () => {
                 <img src={money}/>
                 <p>Наши услуги окупаются в 95% случаев</p>
             </div>
-            <button>Оставить заявку</button>
         </div>
     )
 }

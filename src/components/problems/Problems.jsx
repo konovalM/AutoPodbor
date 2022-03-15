@@ -9,13 +9,14 @@ import vin from "../../assets/images/problems/vin.jpg"
 import mileage from "../../assets/images/problems/mileage.jpg"
 import layer from "../../assets/images/problems/layer.jpg"
 import speed from "../../assets/images/problems/speed.jpg"
+import cn from "classnames";
 
 export const Problems = () => {
     return (
         <section className={styles.wrapper}>
             <h2 className={styles.title}>Проблемы при<br/> самостоятельной покупке</h2>
             <div className={styles.content}>
-                <div className={styles.row}>
+                <div className={cn(styles.row,styles.first)}>
                     <ProblemCard
                         src={mileage}
                         title={"Юридические проблемы"}
@@ -29,7 +30,7 @@ export const Problems = () => {
                         number={2}
                     />
                 </div>
-                <div className={styles.row}>
+                <div className={cn(styles.row,styles.second)}>
                     <ProblemCard
                         src={dtp}
                         title={"Восстановление после ДТП"}
@@ -43,7 +44,7 @@ export const Problems = () => {
                         number={4}
                     />
                 </div>
-                <div className={styles.row}>
+                <div className={cn(styles.row,styles.third)}>
                     <ProblemCard
                         src={delerships}
                         title={"Серые автосалоны"}

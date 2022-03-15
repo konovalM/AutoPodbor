@@ -1,12 +1,17 @@
 .footer{
-  padding: 13px 31px;
-  background: var(--footer-bcg);
+  margin: 0 auto;
+  max-width: 1410px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-}
+  align-items: center;
 
+  width: 100%;
+  padding: 8px 15px;
+}
+.black{
+  background: var(--footer-bcg);
+}
 @media screen and (max-width: 500px)  {
   .footer{
     flex-direction: column;

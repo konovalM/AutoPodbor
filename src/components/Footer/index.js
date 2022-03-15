@@ -7,12 +7,14 @@ import {Menu} from "./menu";
 import {Waiting} from "./waiting";
 export const Footer = () => {
     return (
-        <footer className={styles.footer}>
+        <footer className={styles.black}>
+            <div className={styles.footer}>
             <Logo/>
             <Address isBlack={false}/>
             <Call isBlack={false}/>
             <Menu/>
             <Waiting/>
+            </div>
         </footer>
     );
 };
