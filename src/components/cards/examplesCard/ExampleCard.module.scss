@@ -12,7 +12,7 @@
   flex: 1;
   padding: 17px 29px 0;
   background: rgba(119, 119, 119, 0.01);
-  opacity: 0.7;
+  //opacity: 0.7;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   backdrop-filter: blur(150px);
@@ -58,19 +58,19 @@ display: flex;
 
 .text{
   font-style: normal;
-  font-weight: 600;
   font-size: 16px;
   line-height: 113.7%;
   color: var(--white);
   margin-bottom: 10px;
 }
 .textBold{
+  font-weight: 900;
   font-style: normal;
   font-size: 16px;
   line-height: 113.7%;
   color: var(--white);
   margin-bottom: 10px;
-  font-weight: 900;
+
 }
 
 
@@ -84,11 +84,18 @@ display: flex;
 .row{
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .texts{
   flex:2;
 }
+.mb0{
+  margin-bottom: 0;
+}
 .button{
   color: var(--white);
-  flex:1
+  flex:1;
+  height: 100%;
+  min-height: 44px;
+  max-height: 44px;
 }

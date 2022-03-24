@@ -1,5 +1,5 @@
 import React from 'react';
-import {Cube} from "../../cube";
+import {Cube} from "../../UI/cube";
 import shadow from '../../../assets/images/shadow.svg'
 import styles from './WhyCard.module.scss'
 

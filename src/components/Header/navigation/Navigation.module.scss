@@ -36,3 +36,22 @@
     color: var(--header-bcg);
   }
 }
+
+@media screen and (max-width: 1040px){
+  .list{
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .item{
+    border-bottom: 1px solid #D1D1D1;
+    padding-bottom: 8px;
+    &:after{
+      content: ""!important;
+    }
+    &:last-child{
+     border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}
+

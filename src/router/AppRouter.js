@@ -1,23 +1,31 @@
 import React from 'react';
-import {Routes,Route} from 'react-router'
-import Article from "../components/article/Article";
-import PrivacyPolicy from "../components/privacyPolicy/PrivacyPolicy";
-import Error from "../components/404/Error";
-import AutoSelection from "../components/autoSelection/autoSelection";
-import Block from "../components/block/Block";
-import {MainLayout} from "../layout";
+import {Routes, Route} from 'react-router'
+import {MainLayout} from "../layout/mainLayout";
 import {Main} from "../pages/Main";
+import {BreadcrumbsLayout} from "../layout/breadcrumbsLayout";
+import {Service} from "../pages/Service";
+import {About} from "../pages/About";
+import {NotFound} from "../pages/404";
+import {Blog} from "../pages/Blog";
+import {Privacy} from "../pages/Privacy";
+import {Article} from "../pages/Article/Article";
 
 export const AppRouter = () => {
     return (
             <Routes>
                 <Route path="/" element={<MainLayout/>}>
                     <Route index element={<Main/>} />
-                    <Route path="/article" element={<Article/>} />
-                    <Route path="/ps" element={<PrivacyPolicy />} />
-                    <Route path="/error" element={<Error />} />
-                    <Route path="/as" element={<AutoSelection />} />
-                    <Route path="/block" element={<Block />} />
+                    <Route element={<BreadcrumbsLayout/>} >
+                        <Route path="/service/:id" element={<Service />} />
+                        <Route path="/article/:id" element={<Article />} />
+
+
+                        <Route path="/privacy" element={<Privacy />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/blog" element={<Blog />} />
+
+                    </Route>
+                    <Route path="*" element={<NotFound  to={"not-found"}/>} />
                 </Route>
             </Routes>
     );

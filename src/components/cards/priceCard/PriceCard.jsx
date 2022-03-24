@@ -3,6 +3,7 @@ import {ShadowCard} from "../shadowCard";
 import {ReactComponent as Car} from '../../../assets/images/services/car.svg'
 import styles from './PriceCard.module.scss'
 import {Button} from "../../UI/button";
+import {useModalContext} from "../../../contexts/ModalContext";
 
 const CircleIcon = ({component}) => {
     return (
@@ -27,6 +28,7 @@ const Price = ({price}) => {
 
 
 export const PriceCard = ({price, title, component, text}) => {
+    const {setShow} = useModalContext()
     return (
         <ShadowCard className={styles.mb56}>
             <div className={styles.card}>
@@ -37,7 +39,7 @@ export const PriceCard = ({price, title, component, text}) => {
                     <h3 className={styles.title}>{title}</h3>
                     <p className={styles.text}>{text}</p>
                     <Price price={price}/>
-                    <Button className={styles.button} text={"Оставить заявку"}/>
+                    <Button className={styles.button} text={"Оставить заявку"} onClick={()=>{setShow(true)}}/>
                     <span className={styles.more}>Подробнее</span>
                 </div>
             </div>

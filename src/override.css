@@ -13,3 +13,61 @@
 button:focus:not(:focus-visible){
     outline:inherit ;
 }
+/*.breadcrumb-divider: quote(">");*/
+.breadcrumb-item+.breadcrumb-item::before{
+    content:">"
+}
+.breadcrumb{
+    background: var(--white);
+}
+
+.modal-content{
+    background: rgba(119, 119, 119, 0.01);
+    opacity: 0.95;
+    border: 1px solid rgba(255, 255, 255, 0.51);
+    box-sizing: border-box;
+    backdrop-filter: blur(150px);
+
+    border-radius: 11px;
+}
+
+.rc-pagination{
+    display: flex;
+    flex-direction: row;
+}
+.rc-pagination-item{
+    border:none;
+    width: 45px!important;
+    height: 45px!important;
+    border-radius: 50%;
+    position: relative;
+}
+.rc-pagination-item a{
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 3px 10px;
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    /* or 25px */
+
+    text-align: center;
+
+    color: #000000;
+}
+.rc-pagination-item:hover{
+    border: inherit;
+    background: black;
+    color: white;
+}
+
+.rc-pagination-item-active{
+    border-color: none;
+    background: black;
+    color: white;
+}

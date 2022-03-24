@@ -1,6 +1,6 @@
 .wrapper{
   max-width: 910px;
-  padding: 0 15px;
+  padding: 100px 15px;
   margin: 0 auto;
   width: 100%;
 }
@@ -13,7 +13,7 @@
   width: 100%;
   margin: 0 auto;
   background: rgba(119, 119, 119, 0.01);
-  opacity: 0.7;
+  //opacity: 0.7;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   backdrop-filter: blur(150px);
@@ -53,4 +53,20 @@
   color: var(--white);
 }
 
+.btn{
+  min-height: 60px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
 
+  text-align: center;
+
+  color: #000000;
+}
+
+
+.underline{
+  text-decoration: underline;
+}

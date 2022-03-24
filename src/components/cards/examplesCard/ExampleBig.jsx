@@ -2,19 +2,19 @@ import React from 'react';
 import car from '../../../assets/images/example/car.png'
 import styles from './ExampleCard.module.scss'
 
-export const ExampleBig = () => {
+export const ExampleBig = ({post}) => {
     return (
         <div className={styles.card}>
-            <img src={car} className={styles.img}/>
+            <img src={post.img} className={styles.img}/>
             <div className={styles.content}>
                 <div className={styles.header}>
                     <div>
-                        <h3 className={styles.title}>Toyota Land Cruiser 300</h3>
-                        <h4 className={styles.subtitle}>2003 год выпуска</h4>
+                        <h3 className={styles.title}>{post.car_name}</h3>
+                        <h4 className={styles.subtitle}>{post.year_of_issue} год выпуска</h4>
                     </div>
                     <div>
-                        <p className={styles.prices}>Цена продавца: 1 900 000 руб.</p>
-                        <p className={styles.prices}>После торга: 1 700 000 руб.</p>
+                        <p className={styles.prices}>{post.saler_price}руб</p>
+                        <p className={styles.prices}>{post.after_price}руб.</p>
                     </div>
                 </div>
                 <div>
@@ -23,14 +23,7 @@ export const ExampleBig = () => {
 
 
                         <span className={styles.textBold}>Результат:</span><br/>
-                        - Автомобиль в хорошем техническом и внешнем состоянии<br/>
-                        - По кузову присутствуют несколько вторичных окрасов (до 300 мкр), был небольшой ремонт задних арок (до 500 мкр).<br/>
-                        - В работе ДВС посторонние звуки отсутствуют<br/>
-                        - АКПП переключает без рывков и пинков<br/>
-                        - Тест-драйв и подвеска без замечаний<br/>
-                        - Салон в прекрасном состоянии, чистый, не затертый<br/>
-                        - Комплектация INVITE+<br/>
-                        - Рекомендовано пройти плановое ТО на 250 000 км с заменой всех жидкостей, поменять датчик кислорода.<br/>
+                        <div dangerouslySetInnerHTML={{__html: post.result}}/>
                     </p>
                 </div>
             </div>

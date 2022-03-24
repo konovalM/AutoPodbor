@@ -1,15 +1,9 @@
 import React from 'react';
 import {ShadowCard} from "../shadowCard";
-import millage from '../../../assets/images/problems/mileage.jpg'
 import styles from './ProblemCard.module.scss'
+import {Circle} from "../../UI/circle/Circle";
 
-const Circle = ({count}) => {
-    return (
-        <div className={styles.circle}>
-            <span className={styles.textInner}>0{count}</span>
-        </div>
-    )
-}
+
 
 
 export const ProblemCard = ({src, title,text,number}) => {
