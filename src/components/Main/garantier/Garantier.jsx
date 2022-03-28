@@ -54,13 +54,10 @@ export const Garantier = () => {
                         <p className={styles.smallText}>
                             Если в течение 60 дней после покупки машины выявились неисправности в узлах и агрегатах, за
                             работоспособность которых мы поручились при подборе.
-
                         </p>
                     </div>
                     <img src={letter} alt={"letter"} className={styles.letter}/>
                 </div>
-
-
             </div>
         </section>
     );

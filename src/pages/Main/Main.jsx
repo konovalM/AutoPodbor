@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Questions} from "../../components/Main/Questions";
 import {Choice} from "../../components/Main/choice";
 import {ServicesAndPrices} from "../../components/Main/servicesAndPrices";
@@ -8,7 +8,6 @@ import {Examples} from "../../components/Main/Examples";
 import {Maps} from "../../components/Main/Map";
 import {Promo} from "../../components/Main/promo";
 import {Selection} from "../../components/Main/selection";
-import {getBlogPosts} from "../../api/blogApi";
 import {Feedback} from "../../components/Main/feedback";
 import styles from "../../components/Main/Check/Check.module.scss";
 import blackBcg from "../../assets/images/blackBcg.jpg";
@@ -29,7 +28,7 @@ export const Main = () => {
     return (
         <main>
             <Promo/>
-            {/*<Feedback/>*/}
+
             <Choice/>
             <ServicesAndPrices/>
             <Problems/>
@@ -42,6 +41,8 @@ export const Main = () => {
                 <Examples/>
 
                 <Selection/>
+                <Feedback/>
+
                 <div className={style.back}>
                     <img src={garantier} alt={"Гарант"} className={style.garantier}/>
                     <Garantier/>

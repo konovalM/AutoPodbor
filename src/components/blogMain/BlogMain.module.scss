@@ -7,8 +7,16 @@
   align-items: center;
   max-width: 1182px;
   padding: 0 15px;
+  position: relative;
 }
 
+
+.wheels{
+  z-index: 10;
+  position: absolute;
+  bottom: -25%;
+  right: -25%;
+}
 .content{
   max-width: 620px;
   margin-right: 20px;

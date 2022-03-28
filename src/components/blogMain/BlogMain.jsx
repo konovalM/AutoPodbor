@@ -3,6 +3,7 @@ import styles from './BlogMain.module.scss'
 import person from '../../assets/images/BlogPage/BlockMain.png'
 import {Button} from "../UI/button";
 import {OPEN_MODAL, useModalContext} from "../../contexts/ModalContext";
+import wheels from "../../assets/images/BlogPage/wheels.png";
 
 
 export const BlogMain = () => {
@@ -22,6 +23,7 @@ export const BlogMain = () => {
                 </p>
                 <Button text={"Получить консультацию"} className={styles.btn} onClick={()=>dispatch({type:OPEN_MODAL})}/>
             </div>
+            <img src={wheels} alt={"wheels"} className={styles.wheels}/>
         </section>
     );
 };

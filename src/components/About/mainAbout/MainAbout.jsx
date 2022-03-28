@@ -4,8 +4,8 @@ import slider from '../../../assets/images/aboutPage/slider.jpg'
 import {Carousel} from "react-bootstrap";
 import {ReactComponent as Next} from '../../../assets/images/aboutPage/next.svg'
 import {ReactComponent as Prev} from '../../../assets/images/aboutPage/prev.svg'
-
-
+import spare1 from '../../../assets/images/aboutPage/spare1.png'
+import spare2 from '../../../assets/images/aboutPage/spare2.png'
 
 const Slider = () => {
     return(
@@ -38,6 +38,8 @@ const Slider = () => {
 export const MainAbout = () => {
     return (
         <section className={styles.wrapper}>
+            <img src={spare1} alt={"spare1"} className={styles.spare1}/>
+            <img src={spare2} alt={"spare2"} className={styles.spare2}/>
             <div className={styles.container}>
                 <div className={styles.content}>
                     <h1 className={styles.title}>

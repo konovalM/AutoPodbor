@@ -7,6 +7,7 @@ import {PaginationComponent} from "../../components/UI/pagination/Pagination";
 import styles from "../../components/Main/Check/Check.module.scss";
 import bcg from '../../assets/images/RectangleBcg.png'
 import {FormBlock} from "../../components/FormBlock";
+import smallBcgRectangle from "../../assets/images/smallBcgRectangle.png";
 
 export const Article = () => {
     const location = useLocation()
@@ -39,15 +40,15 @@ export const Article = () => {
         <main>
             <ArticleBlock post={currentPost}/>
             {
-                posts?.results.length && <div>
+                posts?.results.length && <div style={{padding:"0 0 100px 0"}}>
                     <BlogArticles posts={posts.results}/>
                     <PaginationComponent pageCount={posts.page_count} setPage={setPage}/>
                 </div>
             }
-            <section className={styles.black}>
-                <img src={bcg} alt={"Black background"} className={styles.img}/>
-                <FormBlock style={{padding:"100px 0 "}}/>
-            </section>
+            <div style={{position:"relative"}}>
+                <img src={smallBcgRectangle} alt={"Black background"} className={styles.img}/>
+                <FormBlock/>
+            </div>
 
         </main>
     );

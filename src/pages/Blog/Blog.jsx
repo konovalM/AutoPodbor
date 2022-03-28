@@ -3,11 +3,10 @@ import {BlogMain} from "../../components/blogMain";
 import {useLocation, useNavigate, useParams} from "react-router";
 import {getBlogPosts} from "../../api/blogApi";
 import styles from "../../components/Main/Check/Check.module.scss";
-import blackBcg from "../../assets/images/blackBcg.jpg";
-import {Form} from "../../components/UI/Forms";
 import {BlogArticles} from "../../components/blogArticles";
 import {PaginationComponent} from "../../components/UI/pagination/Pagination";
 import {FormBlock} from "../../components/FormBlock";
+import smallBcgRectangle from "../../assets/images/smallBcgRectangle.png";
 
 export const Blog = () => {
     const location = useLocation()
@@ -40,16 +39,17 @@ export const Blog = () => {
     return (
         <main style={{margin: "0 auto"}}>
             <BlogMain/>
-            <section className={styles.black}>
-                <img src={blackBcg} alt={"Black background"} className={styles.img}/>
+
+                <div style={{position:"relative"}}>
+                 <img src={smallBcgRectangle} alt={"Black background"} className={styles.img}/>
                 {
-                    posts?.results.length && <div>
+                    posts?.results.length && <div style={{paddingTop:"150px"}}>
                         <BlogArticles posts={posts.results}/>
                         <PaginationComponent pageCount={posts.page_count} setPage={setPage}/>
                     </div>
                 }
-                <FormBlock/>
-            </section>
+                    <FormBlock/>
+                </div>
         </main>
     );
 };

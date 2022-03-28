@@ -34,10 +34,18 @@
 
 
 .padding{
-  padding: 100px 30px;
+  padding: 150px 30px;
+  position: relative;
+  >img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+  }
 }
-
-
 
 
 .subtitle{

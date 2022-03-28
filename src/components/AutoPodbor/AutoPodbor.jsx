@@ -3,6 +3,10 @@ import styles from './AutoPodbor.module.scss'
 import {Button} from "../UI/button";
 import car from '../../assets/images/servicePage/car.png'
 import bcg from '../../assets/images/servicePage/bcg.png'
+import {OPEN_MODAL, useModalContext} from "../../contexts/ModalContext";
+import wheels from '../../assets/images/BlogPage/wheels.png'
+
+
 const ListServices = () => {
     return (
         <ul className={styles.list}>
@@ -38,15 +42,17 @@ const HeaderBlock = () => {
 
 
 const EnterInService = () => {
+    const {dispatch} = useModalContext()
     return (
         <div className={styles.box}>
             <h3 className={styles.title}>Входит в услугу</h3>
             <ListServices/>
 
             <div className={styles.btnWrapper}>
-                <Button text={"Заказать услугу"} className={styles.btn}/>
+                <Button text={"Заказать услугу"} className={styles.btn} onClick={()=>dispatch({type:OPEN_MODAL})}/>
             </div>
             <img className={styles.img} src={car} alt={"car"}/>
+
         </div>
     )
 }

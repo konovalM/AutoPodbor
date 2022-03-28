@@ -7,19 +7,16 @@ import {ReactComponent as Next} from "../../../assets/images/breadcrumbs/next.sv
 import arm from '../../../assets/images/main/arm.png'
 import phone from '../../../assets/images/main/phone.png'
 
-import slider from "../../../assets/images/aboutPage/slider.jpg";
 import ReactElasticCarousel from "react-elastic-carousel";
-import {Button} from "react-bootstrap";
-import {ConsultationModal} from "../../Modal";
 
 
 const PhoneSlider = () => {
     return (
         <>
             <ReactElasticCarousel itemsToShow={3} initialActiveIndex={2} style={{alignItems:"center"}}>
-                <img src={phone}/>
-                <img src={arm}/>
-                <img src={phone}/>
+                <img src={phone} alt={"phone"}/>
+                <img src={arm} alt={"arm"}/>
+                <img src={phone} alt={"phone"}/>
             </ReactElasticCarousel>
         </>
     )
@@ -43,22 +40,13 @@ const SocialItem = ({src,children}) => {
 }
 
 export const Feedback = () => {
-    const [modalShow, setModalShow] = useState(false);
 
 
     return (
         <section className={styles.bck}>
-            <>
-                <Button variant="primary" onClick={() => setModalShow(true)}>
-                    Launch vertically centered modal
-                </Button>
-
-
-            </>
             <div className={styles.container}>
                 <h2 className={styles.title}>
-
-                </h2>
+                    Я не знаю как сделать слайдер, на макете тупо рука с телефоном                </h2>
                 <div className={styles.social}>
                     <SocialItem src={yandex}>
                         Более 45 отзывов на <span className={styles.underline}>Яндекс</span><br/>

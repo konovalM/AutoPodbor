@@ -6,6 +6,8 @@ import {useModalContext} from "../../contexts/ModalContext";
 import {CustomForm} from "../UI/Forms/CustomForm";
 import {postFeedback} from "../../api/feedbackAPI";
 import cn from "classnames";
+import bcgImg from '../../assets/images/form/formFon.png'
+
 
 const FirstStep = ({onUploadPosts}) => {
     return (
@@ -52,6 +54,7 @@ export const FormBlock = ({style}) => {
 
     return (
         <div className={styles.padding} style={style}>
+            <img src={bcgImg} />
             {count === 1?
                 <FirstStep onUploadPosts={onUploadPosts}/>
                 :

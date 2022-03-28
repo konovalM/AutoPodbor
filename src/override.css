@@ -71,3 +71,11 @@ button:focus:not(:focus-visible){
     background: black;
     color: white;
 }
+
+.modal-backdrop.show{
+    opacity: 0.7;
+}
+
+.modal-content{
+    background: rgba(0, 0, 0, 0.6);
+}
