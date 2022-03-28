@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Accordion} from "react-bootstrap";
 import styles from './Questions.module.scss'
-import {Form} from "./Form";
-import orangeSquare from '../../../assets/images/questions/orangeSquare.png'
-import bcg from '../../../assets/images/questions/bcg.png'
+import {SecondStep} from "../../FormBlock/FormBlock";
+import {postFeedback} from "../../../api/feedbackAPI";
+import {FirstStep} from "./Form/Form";
 
 
 
@@ -103,11 +103,27 @@ const AccordionBlock = () => {
 
 
 
+
+
+
 export const Questions = () => {
+    const [count,setCount] = useState(1)
+    const onUploadPosts = (body) => {
+        (async ()=>{
+            await postFeedback(body)
+        })()
+        setCount(2)
+    }
     return (
         <section className={styles.wrapper}>
             <AccordionBlock/>
-            <Form/>
+
+                {count === 1?
+                    <FirstStep onUploadPosts={onUploadPosts}/>
+                    :
+                    <SecondStep wrapper={styles.secondStepWrapper}/>
+                }
+
         </section>
     )
 }

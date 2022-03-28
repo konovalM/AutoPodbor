@@ -1,10 +1,11 @@
 import {api} from "./axios";
 
 
-export const getWorkExamples = async (page=1) => {
+export const getWorkExamples = async (page=1,objectCount = 4) => {
     return await api.get("/work_example/",{
         params:{
-            page
+            page,
+            objectCount
         }
     }).then(res=>res.data)
 }

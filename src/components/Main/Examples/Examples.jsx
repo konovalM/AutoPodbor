@@ -16,7 +16,6 @@ export const Examples = () => {
 
     useEffect(()=>{
         (async ()=>{
-            console.log("fetch")
             const data = await getWorkExamples(page)
             setExamples(data)
             setCurrent(data.results[0])

@@ -4,7 +4,6 @@ import {Choice} from "../../components/Main/choice";
 import {ServicesAndPrices} from "../../components/Main/servicesAndPrices";
 import {Problems} from "../../components/Main/problems";
 import {Check} from "../../components/Main/Check";
-import {Form} from "../../components/Form";
 import {Examples} from "../../components/Main/Examples";
 import {Maps} from "../../components/Main/Map";
 import {Promo} from "../../components/Main/promo";
@@ -19,6 +18,7 @@ import style from './Main.module.scss'
 import {RoadToCenter} from "../../components/Main/RoadToCenter";
 import garantier from '../../assets/images/garant/garan.png'
 import {Garantier} from "../../components/Main/garantier";
+import {FormBlock} from "../../components/FormBlock";
 
 
 
@@ -38,7 +38,7 @@ export const Main = () => {
             <section className={styles.black}>
                 <img src={blackBcg} alt={"Black background"} className={styles.img}/>
                 <Check/>
-                <Form/>
+                <FormBlock/>
                 <Examples/>
 
                 <Selection/>

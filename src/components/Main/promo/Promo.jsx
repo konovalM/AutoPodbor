@@ -13,7 +13,7 @@ import cloud3 from '../../../assets/images/clouds/cloud3.png'
 import cloud4 from '../../../assets/images/clouds/cloud4.png'
 import button from '../../../assets/images/ui/button.png'
 import cn from "classnames";
-import {useModalContext} from "../../../contexts/ModalContext";
+import {CHANGE_SHOW_MODAL, OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
 
 const Plus = ({src, title, text}) => {
     return (
@@ -46,7 +46,7 @@ const Pluses = () => {
 
 
 const MainTitle = () => {
-    const {setShow} = useModalContext()
+    const {dispatch} = useModalContext()
     return (
         <div className={styles.mainTitleBlock}>
             <h1 className={styles.mainTitle}>
@@ -59,7 +59,7 @@ const MainTitle = () => {
                 <img src={money} alt={"money"}/>
                 <p>Наши услуги окупаются в 95% случаев</p>
             </div>
-            <button className={styles.button} onClick={()=>setShow(true)}>
+            <button className={styles.button} onClick={()=>dispatch({type:OPEN_MODAL})}>
                 <img src={button} alt={"Button"}/>
             </button>
         </div>

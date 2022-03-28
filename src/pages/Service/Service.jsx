@@ -7,25 +7,16 @@ export const Service = () => {
     const location = useLocation()
     const {id} = useParams()
     const nav = useNavigate()
-    console.log("location: ",location)
-    let service = "service"
 
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        (async ()=>{
-            await setTimeout(()=>{
-                service = "название услуги"
-                nav(location.pathname,{ state: service });
-            },2000)
-
-        })()
-
-    },[])
-    return (
-        <main>
-            <AutoPodbor/>
-        </main>
-    );
-};
+        nav(location.pathname, {state: "название услуги"});
+        }, [])
+        return (
+            <main>
+                <AutoPodbor/>
+            </main>
+        );
+    };
 

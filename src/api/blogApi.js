@@ -1,10 +1,11 @@
 import {api} from "./axios";
 
 
-export const getBlogPosts = async (page=1) => {
+export const getBlogPosts = async (page=1,objectCount = 5) => {
     return await api.get("/blog/",{
         params:{
-            page
+            page,
+            objectCount
         }
     }).then(res=>res.data)
 }

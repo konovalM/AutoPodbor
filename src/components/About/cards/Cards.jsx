@@ -10,7 +10,7 @@ import moreCoin from '../../../assets/images/aboutPage/moreCoin.jpg'
 import closeBase from '../../../assets/images/aboutPage/closeBatabase.png'
 import cn from "classnames";
 import {Button} from "../../UI/button";
-import {useModalContext} from "../../../contexts/ModalContext";
+import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
 
 const SmallCardsBlock = () => {
     return (
@@ -100,13 +100,13 @@ const Block = ({isBig = false, title, className}) => {
 
 
 const ChooseCarCTA = () => {
-    const {setShow} = useModalContext()
+    const {dispatch} = useModalContext()
     return (
         <div className={styles.cta}>
             <Button
                 text={"Подобрать автомобиль"}
                 className={styles.btn}
-                onClick={()=>setShow(true)}
+                onClick={()=>dispatch({type:OPEN_MODAL})}
             />
             <p className={styles.comment}>
                 С нами вы экономите время, нервы и деньги!

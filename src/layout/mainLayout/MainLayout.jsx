@@ -5,15 +5,11 @@ import {Footer} from "../../components/Footer";
 import {ConsultationModal} from "../../components/Modal";
 import {useModalContext} from "../../contexts/ModalContext";
 export const MainLayout = () => {
-    const {show,setShow} = useModalContext()
     return (
         <>
             <Header/>
-            <ConsultationModal
-                show={show}
-                onHide={() => setShow(false)}
-            />
-                <Outlet/>
+            <ConsultationModal />
+            <Outlet/>
             <Footer/>
         </>
     );

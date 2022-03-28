@@ -7,8 +7,14 @@ export const BlogArticles = ({posts}) => {
     return (
         <section className={styles.wrapper}>
             <div className={styles.container}>
+
                 {
-                    posts.map(post=><BlogCard key={post.id} post={post}/>)
+                    posts.map((post,index)=>{
+                        if (index>2){
+                            return <BlogCard key={post.id} post={post} isRow={true}/>
+                        }
+                        return <BlogCard key={post.id} post={post} isRow={false}/>
+                    })
                 }
 
             </div>

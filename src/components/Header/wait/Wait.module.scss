@@ -19,3 +19,11 @@
   line-height: 125%;
   color:var(--gray-title);
 }
+
+
+
+@media screen and (max-width: 1070px){
+  .indicator{
+    display: none;
+  }
+}

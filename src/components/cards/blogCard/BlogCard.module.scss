@@ -1,4 +1,4 @@
-.card{
+.cardCol{
   background: #FFFFFF;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
@@ -8,11 +8,32 @@
   flex-direction: column;
   padding: 24px;
   position: relative;
+
   max-width: 447px;
 }
+.cardRow{
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  box-shadow: -1px 4px 21px rgba(0, 0, 0, 0.1);
+  border-radius: 11px;
 
+  display: flex;
+  flex-direction: row;
+  padding: 24px;
+  position: relative;
+
+  max-width: 676px;
+  gap:20px;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  max-width: 310px;
+}
 .img{
   margin-bottom: 24px;
+  object-fit: cover;
 }
 
 .title{
@@ -22,6 +43,9 @@
   line-height: 125%;
   color: var(--gray-primary);
   margin-bottom: 5px;
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis;
 }
 .text{
   font-style: normal;
@@ -29,6 +53,10 @@
   font-size: 17px;
   line-height: 125%;
   color: var(--gray-secondary);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 .date{

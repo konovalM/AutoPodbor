@@ -8,12 +8,13 @@ export const NotFound = () => {
 
 
     return (
-        <main className={styles.main}>
-            <img src={bcg} alt={"Not-Found"} className={styles.img}/>
-            <button className={styles.btn} onClick={()=>nav('/')}>
-                На главную
-            </button>
-        </main>
+            <main className={styles.main}>
+                <img src={bcg} alt={"Not-Found"} className={styles.img}/>
+                <button className={styles.btn} onClick={() => nav('/')}>
+                    На главную
+                </button>
+            </main>
+
     );
 };
 

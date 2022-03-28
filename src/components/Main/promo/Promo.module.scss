@@ -117,10 +117,13 @@
 
 .people{
   margin-left: auto;
+  object-fit: cover;
+  height: 590px;
 }
 
 
 .cloud{
+  //overflow-x: hidden;
   position: relative;
   z-index: 0;
   background: white;
@@ -128,6 +131,9 @@
   flex-direction: row;
   height: 200px;
   img{
+    max-width: 500px;
+    max-height: 250px;
+    overflow-x: hidden;
     position: relative;
     top: -90px;
   }

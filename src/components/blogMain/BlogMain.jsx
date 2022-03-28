@@ -2,12 +2,12 @@ import React from 'react';
 import styles from './BlogMain.module.scss'
 import person from '../../assets/images/BlogPage/BlockMain.png'
 import {Button} from "../UI/button";
-import {useModalContext} from "../../contexts/ModalContext";
+import {OPEN_MODAL, useModalContext} from "../../contexts/ModalContext";
 
 
 export const BlogMain = () => {
 
-    const {setShow} = useModalContext()
+    const {dispatch} = useModalContext()
 
     return (
         <section className={styles.wrapper}>
@@ -20,7 +20,7 @@ export const BlogMain = () => {
                     Рассказываем на что обращать внимание при выборе автомобиля и как не попасть на уловки продавцов. Если у вас возникли трудности или сомнения при покупке машины, мы готовы проконсультировать вас бесплатно по телефону
                     <b className={styles.phoneNumber}>+7 (999) 200 93 30</b>.
                 </p>
-                <Button text={"Получить консультацию"} className={styles.btn} onClick={()=>setShow(true)}/>
+                <Button text={"Получить консультацию"} className={styles.btn} onClick={()=>dispatch({type:OPEN_MODAL})}/>
             </div>
         </section>
     );

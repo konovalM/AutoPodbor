@@ -38,11 +38,19 @@
 }
 
 .container {
+  position: relative;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
 }
 
 
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1070px) {
 
   .headerDesktop {
     display: none;
@@ -95,5 +103,33 @@
       }
     }
 
+  }
+  .menuTransition{
+    //position: relative;
+    //top:-600px;
+    transform: translateY(-115%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .animate{
+    transform: translateY(0%);
+  }
+  .addressWait{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 27px 0 30px;
+  }
+  .nav{
+    margin-bottom: 20px;
+  }
+  .btn{
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* отображаем курсор в виде руки при наведении; некоторые
+    считают, что необходимо оставлять стрелочный вид для кнопок */
+    cursor: pointer;
   }
 }

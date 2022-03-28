@@ -5,12 +5,14 @@ import 'normalize.css';
 import './index.scss'
 import './override.css'
 import {ModalContextProvider} from "./contexts/ModalContext";
+import {ScrollToTop} from "./components/scrollToTop/ScrollToTop";
 
 
 export const App = () => {
     return (
         <BrowserRouter>
             <ModalContextProvider>
+                <ScrollToTop/>
                 <AppRouter/>
             </ModalContextProvider>
         </BrowserRouter>
