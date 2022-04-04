@@ -2,20 +2,28 @@
   padding: 100px 0 ;
   position: relative;
   width: 100%;
+  background: white;
 }
-
-.img{
+.carAndTrees{
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index:-1;
+  //margin-right: -150px;
+  height: 300px;
+  z-index: 2;
+
+}
+.trees{
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+  height: 300px;
 }
 
 .container{
+  z-index: 10;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -45,3 +53,30 @@
 
 
 
+
+@media screen and (max-width: 768px){
+  .cardContainer{
+    column-gap: 0;
+  }
+
+  .carAndTrees{
+    transform:translateY(-20%);
+  }
+  .trees{
+    bottom: 0;
+    top:initial;
+    height: 200px;
+    transform: translateY(40%);
+    margin-left: -40px;
+  }
+}
+
+
+@media screen and (max-width: 730px){
+  .cardContainer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+  }
+}

@@ -99,3 +99,15 @@ display: flex;
   min-height: 44px;
   max-height: 44px;
 }
+
+
+@media screen and (max-width: 768px){
+  .card{
+    flex-direction: column;
+  }
+
+  .small{
+    max-width: 100%;
+  }
+
+}

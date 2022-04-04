@@ -44,7 +44,7 @@ button:focus:not(:focus-visible){
 }
 .rc-pagination-item a{
     position: absolute;
-    top: 7px;
+    /*top: 7px;*/
     left: 50%;
     transform: translateX(-50%);
     width: auto;
@@ -78,4 +78,17 @@ button:focus:not(:focus-visible){
 
 .modal-content{
     background: rgba(0, 0, 0, 0.6);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .rc-pagination-item{
+        margin-top: 10px;
+        height: 25px!important;
+        width: 25px!important;
+    }
+    .rc-pagination-jump-next,.rc-pagination-jump-prev{
+        margin-top: 10px;
+    }
 }

@@ -23,6 +23,12 @@
   bottom: 0;
 }
 
+.textImg{
+  background:url("../../../assets/images/bcg.svg");
+  height: 100%;
+  width: 100%;
+}
+
 .section{
   display: flex;
   flex-direction: column;
@@ -36,6 +42,7 @@
   font-size: 30px;
   line-height: 129.7%;
   color: var(--white);
+  margin-bottom: 0;
 }
 
 
@@ -90,4 +97,17 @@
   text-align: center;
   color: var(--white);
 
+}
+
+@media screen and (max-width: 768px){
+  .title{
+    text-align: center;
+  }
+  .section{
+    gap:50px;
+  }
+  .blocks{
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 40px;
+  }
 }

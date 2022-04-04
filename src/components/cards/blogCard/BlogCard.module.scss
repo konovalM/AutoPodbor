@@ -9,6 +9,7 @@
   padding: 24px;
   position: relative;
 
+  width: 100%;
   max-width: 447px;
 }
 .cardRow{
@@ -17,7 +18,7 @@
   box-sizing: border-box;
   box-shadow: -1px 4px 21px rgba(0, 0, 0, 0.1);
   border-radius: 11px;
-
+  width: 100%;
   display: flex;
   flex-direction: row;
   padding: 24px;
@@ -32,6 +33,7 @@
   max-width: 310px;
 }
 .img{
+  width: 100%;
   margin-bottom: 24px;
   object-fit: cover;
 }
@@ -76,4 +78,15 @@
   right: 0;
   bottom: 0;
   padding: 10px 40px;
+}
+
+
+@media screen and (max-width: 768px){
+  .cardRow{
+    flex-direction: column;
+  }
+  .cardRow, .cardCol{
+    max-width: 100%;
+  }
+
 }

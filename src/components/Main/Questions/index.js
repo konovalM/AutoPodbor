@@ -7,83 +7,90 @@ import {FirstStep} from "./Form/Form";
 
 
 
+const AccordionItem = ({header,body,eventKey}) => {
+    return (
+        <>
+            <Accordion.Item eventKey={eventKey}>
+                <Accordion.Header>{header}</Accordion.Header>
+                <Accordion.Body >
+                    {body}
+                </Accordion.Body>
+            </Accordion.Item>
+        </>
+    )
+}
+
 
 const QuestionsExpanded = () => {
     return (
         <>
             <Accordion className={styles.accordionContainer}>
-                <Accordion.Item eventKey="0">
-                    <Accordion.Header>Какую машину можно взять за мой бюджет?</Accordion.Header>
-                    <Accordion.Body >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                <AccordionItem
+                header={"Какую машину можно взять за мой бюджет?"}
+                body={` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                        est laborum.
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="1">
-                    <Accordion.Header>Какие автомобили берете на подбор «под ключ»?</Accordion.Header>
-                    <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        est laborum.`}
+                eventKey={"0"}
+                />
+                <AccordionItem
+                    header={"Какие автомобили берете на подбор «под ключ»?"}
+                    body={` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                        est laborum.
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="2">
-                    <Accordion.Header>Если я из другого города?</Accordion.Header>
-                    <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        est laborum.`}
+                    eventKey={"1"}
+                />
+                <AccordionItem
+                    header={"Если я из другого города?"}
+                    body={` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                        est laborum.
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="3">
-                    <Accordion.Header>Сколько времени занимает поиск авто?</Accordion.Header>
-                    <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        est laborum.`}
+                    eventKey={"2"}
+                />
+                <AccordionItem
+                    header={"Сколько времени занимает поиск авто?"}
+                    body={` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                        est laborum.
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="4">
-                    <Accordion.Header>Где вы ищете автомобили?</Accordion.Header>
-                    <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        est laborum.`}
+                    eventKey={"3"}
+                />
+                <AccordionItem
+                    header={"Где вы ищете автомобили?"}
+                    body={` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                        est laborum.
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="5">
-                    <Accordion.Header>Вы поможете с оформлением документов?</Accordion.Header>
-                    <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        est laborum.`}
+                    eventKey={"4"}
+                />
+                <AccordionItem
+                    header={"Вы поможете с оформлением документов?"}
+                    body={` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                        est laborum.
-                    </Accordion.Body>
-                </Accordion.Item>
+                        est laborum.`}
+                    eventKey={"5"}
+                />
             </Accordion>
         </>
     );

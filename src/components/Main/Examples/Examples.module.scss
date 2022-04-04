@@ -25,3 +25,11 @@
   text-align: center;
   color:var(--white)
 }
+
+@media screen and (max-width: 768px){
+  .content{
+    flex-direction: column;
+    gap:20px
+
+  }
+}

@@ -1,5 +1,6 @@
 .main{
   position: relative;
+  overflow-x: hidden;
 }
 .bcgImage{
   position: absolute;
@@ -146,4 +147,49 @@
   font: inherit;
   color: inherit;
   background-color: transparent;
+}
+.plusesDesktop{
+  display: block;
+}
+
+.plusesMobile{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .bcgImage{
+    object-fit: none;
+  }
+  .wrapper{
+    flex-direction: column;
+  }
+  .plusesDesktop{
+    display: none;
+  }
+
+  .plusesMobile{
+    display: block;
+    padding: 0 15px;
+    margin-top: -100px;
+    z-index: 100;
+  }
+  .moneyBlock{
+    margin-bottom: 0;
+  }
+  .button{
+    >img{
+      width: 300px;
+    }
+
+  }
+  .people{
+    height: 300px;
+  }
+  .pluses{
+    max-width: 100%;
+    margin: 0;
+  }
+  .cloud{
+    z-index: -1;
+  }
 }

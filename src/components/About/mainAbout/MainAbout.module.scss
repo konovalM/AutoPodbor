@@ -60,5 +60,30 @@
 .item{
   max-height: 410px;
   width: 100%;
-  ;
+}
+
+
+@media screen  and (max-width: 768px){
+  .content{
+    gap: 30px;
+  }
+  .title{
+    text-align: left;
+  }
+
+  .spare1{
+    right:0;
+    left: auto;
+    width: 100px;
+    height: 150px;
+    transform: rotateY(180deg);
+  }
+  .spare2{
+    left:0;
+    right: auto;
+    width: 100px;
+    height: 150px;
+    transform: rotateY(180deg);
+    bottom: -10%;
+  }
 }

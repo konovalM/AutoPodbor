@@ -14,6 +14,7 @@
   line-height: 125%;
   text-align: center;
   color: var(--gray-title);
+
 }
 
 .content{
@@ -47,11 +48,28 @@
 }
 .btn{
   padding: 8px 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 113.7%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--gray-title);
+  min-height: 45px;
+  width: 100%;
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 768px){
   .title{
-    margin-bottom: 48px;
+    gap: 48px;
     text-align: left;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 125%;
+    color: var(--gray-secondary);
+  }
+  .wrapper{
+    padding-bottom: 30px;
   }
 }

@@ -12,6 +12,7 @@
   right: 0;
   bottom: 0;
   margin: auto;
+  width: 100%;
 }
 
 .orangeSquare{
@@ -33,4 +34,17 @@
   right: 0;
   bottom: 0;
   margin: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+  .garantier{
+    display: none;
+  }
+  .back{
+    overflow-x: hidden;
+  }
+  .orangeSquare{
+    display: none;
+  }
 }

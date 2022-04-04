@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Cards.module.scss'
-import bcg from '../../../assets/images/RectangleBcg.png'
+import bcg from '../../../assets/images/bcg.svg'
 import {AboutCardBig, AboutCardSmall} from "../../cards/aboutCard";
 import garantier from '../../../assets/images/aboutPage/garantier.png'
 import checkingDocuments from '../../../assets/images/aboutPage/checkingDocuments.jpg'
@@ -11,6 +11,7 @@ import closeBase from '../../../assets/images/aboutPage/closeBatabase.png'
 import cn from "classnames";
 import {Button} from "../../UI/button";
 import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
+import {BlackWrapper} from "../../blackWrapper";
 
 const SmallCardsBlock = () => {
     return (
@@ -119,12 +120,12 @@ const ChooseCarCTA = () => {
 
 export const Cards = () => {
     return (
-        <div className={styles.bcg}>
-            <img src={bcg} alt={"Background"} className={styles.img}/>
+        <BlackWrapper>
+            {/*<div className={styles.textImg}/>*/}
             <Block title={"Для поиска автомобиля нужно:"} className={styles.mt60}/>
             <Block isBig={true} title={"Почему именно мы?"} className={styles.second}/>
             <ChooseCarCTA/>
-        </div>
+        </BlackWrapper>
     );
 };
 

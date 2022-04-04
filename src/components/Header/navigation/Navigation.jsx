@@ -37,10 +37,9 @@ export const NavigationMobile = () => {
     return (
         <ul className={styles.list}>
             <NavItem text={"Услуги"}/>
-            <NavItem text={"О компании"}/>
+            <NavItem text={"О компании"} link={'/about'}/>
             <NavItem text={"подобранные авто"}/>
-            <NavItem text={"отзывы"}/>
-            <NavItem text={"блог"}/>
+            <NavItem text={"блог"} link={"/blog"}/>
             <NavItem text={"Контакты"}/>
         </ul>
     )

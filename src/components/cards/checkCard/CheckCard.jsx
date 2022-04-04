@@ -12,7 +12,7 @@ export const CheckCard = ({src,title,text,isReversed=false}) => {
                 <h3 className={cn(styles.title,isReversed?styles.textLeft:styles.textRight)}>{title}</h3>
                 <p className={cn(styles.text,isReversed?styles.textLeft:styles.textRight)}>{text}</p>
             </div>
-            <img src={src}/>
+            <img src={src} className={styles.img}/>
         </div>
     );
 };

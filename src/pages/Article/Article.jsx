@@ -8,6 +8,7 @@ import styles from "../../components/Main/Check/Check.module.scss";
 import bcg from '../../assets/images/RectangleBcg.png'
 import {FormBlock} from "../../components/FormBlock";
 import smallBcgRectangle from "../../assets/images/smallBcgRectangle.png";
+import {BlackWrapper} from "../../components/blackWrapper";
 
 export const Article = () => {
     const location = useLocation()
@@ -29,7 +30,7 @@ export const Article = () => {
     }, [id])
     useEffect(() => {
         (async () => {
-            await getBlogPosts(page,3).then(res => {
+            await getBlogPosts(page, 3).then(res => {
                 setPosts(res)
             }).catch(() => {
                 nav("/not-found");
@@ -40,15 +41,15 @@ export const Article = () => {
         <main>
             <ArticleBlock post={currentPost}/>
             {
-                posts?.results.length && <div style={{padding:"0 0 100px 0"}}>
-                    <BlogArticles posts={posts.results}/>
+                posts?.results.length && <div style={{padding: "0 0 100px 0"}}>
+                    <BlogArticles posts={posts.results} style={{flexWrap:"nowrap"}}/>
                     <PaginationComponent pageCount={posts.page_count} setPage={setPage}/>
                 </div>
             }
-            <div style={{position:"relative"}}>
-                <img src={smallBcgRectangle} alt={"Black background"} className={styles.img}/>
+            <BlackWrapper>
                 <FormBlock/>
-            </div>
+            </BlackWrapper>
+
 
         </main>
     );

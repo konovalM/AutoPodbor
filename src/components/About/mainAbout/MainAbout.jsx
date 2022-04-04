@@ -23,7 +23,7 @@ const Slider = () => {
                     alt="Second slide"
                 />
             </Carousel.Item>
-            <Carousel.Item>
+            <Carousel.Item interval={5000}>
                 <img
                     className={styles.item}
                     src={slider}
@@ -37,7 +37,7 @@ const Slider = () => {
 
 export const MainAbout = () => {
     return (
-        <section className={styles.wrapper}>
+        <section className={styles.wrapper} style={{paddingBottom:"100px"}}>
             <img src={spare1} alt={"spare1"} className={styles.spare1}/>
             <img src={spare2} alt={"spare2"} className={styles.spare2}/>
             <div className={styles.container}>

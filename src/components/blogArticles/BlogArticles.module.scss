@@ -5,7 +5,8 @@
   display: flex;
   flex-direction: column;
   gap:70px;
-  padding-bottom: 30px;
+  padding: 0 15px 30px;
+
 }
 
 .container{
@@ -14,4 +15,15 @@
   justify-content: space-between;
   gap:20px;
   flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+
+
+@media screen and (max-width: 768px){
+  .container{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }

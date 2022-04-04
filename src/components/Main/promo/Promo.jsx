@@ -18,7 +18,7 @@ import {CHANGE_SHOW_MODAL, OPEN_MODAL, useModalContext} from "../../../contexts/
 const Plus = ({src, title, text}) => {
     return (
         <div className={styles.plus}>
-            <img src={src} alt={"plus"} />
+            <img src={src} alt={"plus"}/>
             <h3 className={styles.title}>{title}</h3>
             <p className={styles.text}>{text}</p>
         </div>
@@ -59,7 +59,7 @@ const MainTitle = () => {
                 <img src={money} alt={"money"}/>
                 <p>Наши услуги окупаются в 95% случаев</p>
             </div>
-            <button className={styles.button} onClick={()=>dispatch({type:OPEN_MODAL})}>
+            <button className={styles.button} onClick={() => dispatch({type: OPEN_MODAL})}>
                 <img src={button} alt={"Button"}/>
             </button>
         </div>
@@ -82,14 +82,20 @@ const Cloud = () => {
 export const Promo = () => {
     return (
         <section className={styles.main}>
-            <img src={bcg} alt={"main"} className={styles.bcgImage} height={650}/>
-            <div className={styles.wrapper}>
-                <Pluses/>
-                <MainTitle/>
-                <img src={people} className={styles.people} alt={"people"}/>
+            <div style={{position:"relative"}}>
+                <img src={bcg} alt={"main"} className={styles.bcgImage} height={650}/>
+                <div className={styles.wrapper}>
+                    <div className={styles.plusesDesktop}>
+                        <Pluses/>
+                    </div>
+                    <MainTitle/>
+                    <img src={people} className={styles.people} alt={"people"}/>
+                </div>
+                <Cloud/>
             </div>
-            <Cloud/>
-
+            <div className={styles.plusesMobile}>
+                <Pluses/>
+            </div>
         </section>
     );
 };

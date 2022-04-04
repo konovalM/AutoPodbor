@@ -45,3 +45,17 @@ a {
     color: var(--gray-primary);
   }
 }
+
+
+.scroll-off {
+  position: fixed;
+  left: 30px;
+  top: 30px;
+}
+
+.scroll-on {
+  position: fixed;
+  left: 30px;
+  top: 60px;
+  pointer-events: none;
+}

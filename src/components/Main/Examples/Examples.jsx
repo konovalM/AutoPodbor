@@ -3,7 +3,7 @@ import styles from './Examples.module.scss'
 import {ExampleBig} from "../../cards/examplesCard";
 import {ExampleSmall} from "../../cards/examplesCard";
 import {getWorkExamples} from "../../../api/workExamplesApi";
-import {Pagination, PaginationComponent} from "../../UI/pagination/Pagination";
+import {PaginationComponent} from "../../UI/pagination/Pagination";
 
 
 
@@ -23,7 +23,7 @@ export const Examples = () => {
     },[page])
 
     return (
-        <section style={{background:"black"}} className={styles.wrapper}>
+        <section style={{background:"black"}} className={styles.wrapper} style={{paddingBottom:"100px"}}>
             <h2 className={styles.title}>Примеры нашей работы</h2>
             {
                 current && <ExampleBig post={current}/>
@@ -31,7 +31,7 @@ export const Examples = () => {
 
             <div className={styles.content}>
                 {
-                    examples?.results &&   examples.results.map((example,index)=><ExampleSmall key={example.id} setCurrent={setCurrent} post={example}/>)
+                    examples?.results &&   examples.results.map((example,index)=><ExampleSmall key={`${example.id}_${index}`} setCurrent={setCurrent} post={example}/>)
                 }
             </div>
 

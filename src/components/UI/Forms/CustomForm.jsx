@@ -17,7 +17,6 @@ function validateNumber(phoneNumber) {
 
 export const CustomForm = ({isRow,upload}) => {
 
-
     return (
         <div>
             <Formik

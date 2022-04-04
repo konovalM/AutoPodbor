@@ -4,6 +4,7 @@ import {AutoPodbor} from "../../components/AutoPodbor/AutoPodbor";
 import {FormBlock} from "../../components/FormBlock";
 import smallBcgRectangle from "../../assets/images/smallBcgRectangle.png";
 import styles from "../../components/Main/Check/Check.module.scss";
+import {BlackWrapper} from "../../components/blackWrapper";
 
 
 export const Service = () => {
@@ -19,10 +20,9 @@ export const Service = () => {
     return (
         <main>
             <AutoPodbor/>
-            <div style={{position:"relative"}}>
-                <img src={smallBcgRectangle} alt={"Black background"} className={styles.img}/>
+            <BlackWrapper>
                 <FormBlock/>
-            </div>
+            </BlackWrapper>
         </main>
     );
 };

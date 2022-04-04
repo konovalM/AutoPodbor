@@ -8,6 +8,7 @@
   max-width: 1182px;
   padding: 0 15px;
   position: relative;
+
 }
 
 
@@ -57,12 +58,15 @@
 }
 
 .img{
+  width: 100%;
   margin-left: -250px;
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 768px){
   .wrapper{
     flex-direction: column-reverse;
+    align-items: center;
+    gap:40px;
   }
 
   .title{
@@ -71,5 +75,15 @@
   }
   .text{
     margin-bottom: 30px;
+  }
+
+  .wheels{
+    display: none;
+  }
+  .content{
+    margin-right: 0;
+  }
+  .img{
+    margin-left: 0;
   }
 }

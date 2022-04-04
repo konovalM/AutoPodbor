@@ -13,8 +13,9 @@ import cn from "classnames";
 export const Problems = () => {
     return (
         <section className={styles.wrapper}>
-            <img src={men} alt={"men"} className={styles.men} />
+
             <h2 className={styles.title}>Проблемы при<br/> самостоятельной покупке</h2>
+            <img src={men} alt={"men"} className={styles.men} />
             <div className={styles.content}>
 
                 <div className={cn(styles.row,styles.first)}>

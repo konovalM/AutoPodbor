@@ -7,11 +7,13 @@ import third from '../../../assets/images/stagesOfSelection/3.png'
 import fourth from '../../../assets/images/stagesOfSelection/4.png'
 import fifth from '../../../assets/images/stagesOfSelection/5.png'
 import sixth from '../../../assets/images/stagesOfSelection/6.png'
-import bcg from '../../../assets/images/main/podbor.png'
+import carAndTrees from '../../../assets/images/stagesOfSelection/carAndTrees.png'
+import trees from '../../../assets/images/stagesOfSelection/tree.png'
 export const Selection = () => {
     return (
         <section className={styles.wrapper}>
-            <img src={bcg} alt={"bcg"} className={styles.img}/>
+            <img src={carAndTrees} alt={"carAndTrees"} className={styles.carAndTrees}/>
+            <img src={trees} alt={"trees"} className={styles.trees}/>
             <div className={styles.container}>
                 <h2 className={styles.title}>
                     Этапы подбора автомобиля

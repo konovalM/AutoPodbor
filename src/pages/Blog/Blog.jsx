@@ -7,6 +7,7 @@ import {BlogArticles} from "../../components/blogArticles";
 import {PaginationComponent} from "../../components/UI/pagination/Pagination";
 import {FormBlock} from "../../components/FormBlock";
 import smallBcgRectangle from "../../assets/images/smallBcgRectangle.png";
+import {BlackWrapper} from "../../components/blackWrapper";
 
 export const Blog = () => {
     const location = useLocation()
@@ -40,16 +41,20 @@ export const Blog = () => {
         <main style={{margin: "0 auto"}}>
             <BlogMain/>
 
-                <div style={{position:"relative"}}>
-                 <img src={smallBcgRectangle} alt={"Black background"} className={styles.img}/>
+            <BlackWrapper>
                 {
                     posts?.results.length && <div style={{paddingTop:"150px"}}>
                         <BlogArticles posts={posts.results}/>
                         <PaginationComponent pageCount={posts.page_count} setPage={setPage}/>
                     </div>
                 }
-                    <FormBlock/>
-                </div>
+
+            </BlackWrapper>
+            <BlackWrapper>
+                <FormBlock/>
+
+            </BlackWrapper>
+
         </main>
     );
 };

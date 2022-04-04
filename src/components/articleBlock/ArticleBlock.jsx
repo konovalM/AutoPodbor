@@ -23,8 +23,8 @@ export const ArticleBlock = ({post}) => {
                         <span>{convertToRussianDate(post?.created)}</span>
                     </div>
 
-                    <div>
-                        <iframe width="560" height="315" src={newYoutubeLink} className={styles.img}
+                    <div className={styles.iframe}>
+                        <iframe src={newYoutubeLink} className={styles.img}
                                 title="YouTube video player" frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen/>

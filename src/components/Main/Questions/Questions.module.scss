@@ -4,6 +4,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  padding: 0 10px;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
@@ -37,6 +38,7 @@
   width: 100%;
   height: 100%;
   justify-content: space-between;
+  gap:20px;
 }
 
 .test{
@@ -68,4 +70,18 @@
 .secondStepWrapper{
   max-width: 446px;
   width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  .wrapper{
+    flex-direction: column;
+  }
+
+  .quizTitle{
+    text-align: center;
+  }
+  .accordionContainer{
+    gap: 20px;
+  }
 }

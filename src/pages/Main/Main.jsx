@@ -41,13 +41,14 @@ export const Main = () => {
                 <Examples/>
 
                 <Selection/>
-                <Feedback/>
+                {/*<Feedback/>*/}
 
                 <div className={style.back}>
                     <img src={garantier} alt={"Гарант"} className={style.garantier}/>
                     <Garantier/>
                 </div>
                 <div className={style.back}>
+                    <div></div>
                     <img src={orangeSquare} className={style.orangeSquare} alt={"orangeSquare"}/>
                     <img src={bcg} className={style.bcg} alt={"bcg"} height={805}/>
                     <Questions/>

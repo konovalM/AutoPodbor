@@ -1,8 +1,12 @@
 import React from 'react';
 import styles from './PrivacyPolicy.module.scss'
 import {Button} from "../UI/button";
+import {useNavigate} from "react-router";
 
 export const PrivacyPolicy = () => {
+    const nav = useNavigate()
+
+
     return (
         <section className={styles.wrapper}>
             <h1 className={styles.title}>
@@ -72,7 +76,7 @@ export const PrivacyPolicy = () => {
                 </div>
             </div>
             <div className={styles.btnWrapper}>
-                <Button className={styles.btn} text={"Вернуться на главную страницу"}/>
+                <Button className={styles.btn} text={"Вернуться на главную страницу"} onClick={()=>nav('/')} />
             </div>
         </section>
     );

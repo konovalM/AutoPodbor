@@ -59,6 +59,13 @@
 
 }
 
+.iframe{
+  max-width: 100%;
+  >iframe{
+   min-height: 300px;
+    width: 100%;
+  }
+}
 
 .img{
   margin: 0  0 45px 36px;
@@ -85,4 +92,33 @@
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+@media screen and (max-width: 768px){
+  .wrapper{
+    margin-top: 100px;
+  }
+  .car{
+    height: 250px;
+    width: 250px;
+    transform: rotate(-6deg);
+    margin: -160px 0 0;
+
+
+  }
+  .tree{
+    height: 250px;
+    width: 250px;
+    margin: 0 0 -64px -40px;
+  }
+
+  .content{
+    padding: 20px;
+  }
+
+  .heading{
+    flex-direction: column;
+    align-items: start;
+  }
+
 }
