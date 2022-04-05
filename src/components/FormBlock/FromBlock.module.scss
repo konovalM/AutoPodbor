@@ -41,8 +41,7 @@
     top: 0;
     right: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    margin: auto;
     bottom: 0;
   }
 }
@@ -151,4 +150,17 @@
   text-align: center;
   text-decoration-line: underline;
   color: #FFFFFF;
+}
+
+
+.formWrapper{
+  padding:25px 30px 35px;
+  background: rgba(119, 119, 119, 0.01);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 11px;
 }

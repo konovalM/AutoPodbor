@@ -63,15 +63,10 @@
 }
 
 
-@media screen  and (max-width: 768px){
-  .content{
-    gap: 30px;
-  }
-  .title{
-    text-align: left;
-  }
 
+@media screen and (max-width: 1376px){
   .spare1{
+    top:-20px;
     right:0;
     left: auto;
     width: 100px;
@@ -86,4 +81,15 @@
     transform: rotateY(180deg);
     bottom: -10%;
   }
+}
+
+@media screen  and (max-width: 768px){
+  .content{
+    gap: 30px;
+  }
+  .title{
+    text-align: left;
+  }
+
+
 }

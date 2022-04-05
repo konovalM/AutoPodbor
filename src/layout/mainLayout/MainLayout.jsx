@@ -7,7 +7,7 @@ import {useModalContext} from "../../contexts/ModalContext";
 export const MainLayout = () => {
     return (
         <>
-            <Header/>
+            {/*<Header/>*/}
             <ConsultationModal />
             <Outlet/>
             <Footer/>

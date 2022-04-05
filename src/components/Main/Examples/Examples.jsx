@@ -23,7 +23,8 @@ export const Examples = () => {
     },[page])
 
     return (
-        <section style={{background:"black"}} className={styles.wrapper} style={{paddingBottom:"100px"}}>
+        <section style={{background:"black",
+            paddingBottom:"100px"}} className={styles.wrapper} id={"examples"}>
             <h2 className={styles.title}>Примеры нашей работы</h2>
             {
                 current && <ExampleBig post={current}/>

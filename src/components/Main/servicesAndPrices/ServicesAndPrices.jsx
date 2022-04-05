@@ -22,7 +22,7 @@ const Keys = () => {
 }
 export const ServicesAndPrices = () => {
     return (
-        <section className={styles.wrapper}>
+        <section className={styles.wrapper} id={"services"}>
             <div className={styles.blue}/>
             <div className={styles.pink}/>
             <img src={glasses} className={styles.glasses} alt={"glasses"}/>

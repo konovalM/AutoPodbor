@@ -10,7 +10,7 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
+  //align-items: center;
   gap:70px;
 }
 
@@ -125,6 +125,7 @@
   .content{
     flex-direction: column;
     gap: 100px;
+    align-items: center;
   }
   .letter{
     width: 110%;

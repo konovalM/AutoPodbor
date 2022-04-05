@@ -13,10 +13,12 @@ const FirstStep = ({onUploadPosts}) => {
     return (
         <>
             <section className={styles.modal}>
-                <h3 className={styles.title}>
-                    Найдем автомобиль для вас
-                </h3>
-                <CustomForm isRow={true} upload={(values)=>onUploadPosts(values)}/>
+                <div className={styles.formWrapper}>
+                    <h3 className={styles.title}>
+                        Найдем автомобиль для вас
+                    </h3>
+                    <CustomForm isRow={true} upload={(values) => onUploadPosts(values)}/>
+                </div>
             </section>
         </>
     )
@@ -27,15 +29,17 @@ export const SecondStep = ({wrapper}) => {
     return (
         <>
 
-            <section className={cn(styles.modal,wrapper)}>
-                <h3 className={styles.title}>
-                    Спасибо, мы скоро с вами<br/> свяжемся!
-                </h3>
-                <p className={styles.simpleText}>
-                    А пока что вы можете познакомиться с нашей группой <span
-                    className={styles.href}>ВКонтакте</span> и каналом на <span
-                    className={styles.href}>YouTube</span>
-                </p>
+            <section className={cn(styles.modal, wrapper)}>
+                <div className={styles.formWrapper}>
+                    <h3 className={styles.title}>
+                        Спасибо, мы скоро с вами<br/> свяжемся!
+                    </h3>
+                    <p className={styles.simpleText}>
+                        А пока что вы можете познакомиться с нашей группой <span
+                        className={styles.href}>ВКонтакте</span> и каналом на <span
+                        className={styles.href}>YouTube</span>
+                    </p>
+                </div>
             </section>
         </>
     )
@@ -43,10 +47,10 @@ export const SecondStep = ({wrapper}) => {
 
 
 export const FormBlock = ({style}) => {
-    const [count,setCount] = useState(1)
+    const [count, setCount] = useState(1)
 
     const onUploadPosts = (body) => {
-        (async ()=>{
+        (async () => {
             await postFeedback(body)
         })()
         setCount(2)
@@ -54,12 +58,14 @@ export const FormBlock = ({style}) => {
 
     return (
         <div className={styles.padding} style={style}>
-            <img src={bcgImg} />
-            {count === 1?
+            <img src={bcgImg} alt={"Lines"}/>
+
+            {count === 1 ?
                 <FirstStep onUploadPosts={onUploadPosts}/>
                 :
                 <SecondStep/>
             }
+
         </div>
     );
 };

@@ -36,11 +36,20 @@ button:focus:not(:focus-visible){
     flex-direction: row;
 }
 .rc-pagination-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border:none;
     width: 45px!important;
     height: 45px!important;
     border-radius: 50%;
     position: relative;
+}
+.rc-pagination-jump-next,.rc-pagination-jump-prev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 .rc-pagination-item a{
     position: absolute;
