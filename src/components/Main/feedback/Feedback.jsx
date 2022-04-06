@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import styles from './Feedback.module.scss'
 import yandex from '../../../assets/images/main/yandex.png'
 import vk from '../../../assets/images/main/vk.png'
@@ -6,16 +6,26 @@ import {ReactComponent as Prev} from "../../../assets/images/breadcrumbs/prev.sv
 import {ReactComponent as Next} from "../../../assets/images/breadcrumbs/next.svg"
 import arm from '../../../assets/images/main/arm.png'
 import phone from '../../../assets/images/main/phone.png'
-
+import {useMediaQuery} from 'react-responsive';
 import ReactElasticCarousel from "react-elastic-carousel";
+import {Button} from "../../UI/button";
 
 
 const PhoneSlider = () => {
+    const isMobile = useMediaQuery({query: `(max-width: 980px)`})
     return (
         <>
-            <ReactElasticCarousel itemsToShow={3} initialActiveIndex={2} style={{alignItems:"center"}}>
+            <ReactElasticCarousel
+                itemsToShow={isMobile ? 1 : 3}
+                initialActiveIndex={2}
+                showArrows={false}
+                enableMouseSwipe={false}
+                style={{alignItems: "center"}}>
+
                 <img src={phone} alt={"phone"}/>
-                <img src={arm} alt={"arm"}/>
+                {
+                    isMobile ? <img src={phone} alt={"phone"}/> : <img src={arm} alt={"arm"}/>
+                }
                 <img src={phone} alt={"phone"}/>
             </ReactElasticCarousel>
         </>
@@ -23,8 +33,7 @@ const PhoneSlider = () => {
 }
 
 
-
-const SocialItem = ({src,children}) => {
+const SocialItem = ({src, children}) => {
     return (
         <>
             <div className={styles.socialItem}>
@@ -46,7 +55,8 @@ export const Feedback = () => {
         <section className={styles.bck}>
             <div className={styles.container}>
                 <h2 className={styles.title}>
-                    Я не знаю как сделать слайдер, на макете тупо рука с телефоном                </h2>
+                    Отзывы клиентов
+                </h2>
                 <div className={styles.social}>
                     <SocialItem src={yandex}>
                         Более 45 отзывов на <span className={styles.underline}>Яндекс</span><br/>
@@ -56,11 +66,13 @@ export const Feedback = () => {
                     <SocialItem src={vk}>
                         Более 1200 положительных<br/>
                         отзывов в группе <span className={styles.underline}>ВКонтакте</span>
-
                     </SocialItem>
                 </div>
             </div>
             <PhoneSlider/>
+            <div className={styles.btnWrapper}>
+                <Button text={"смотреть все отзывы"} className={styles.btn}/>
+            </div>
         </section>
     );
 };

@@ -91,6 +91,25 @@ button:focus:not(:focus-visible){
 
 
 
+.rec-dot{
+    display: none!important;
+}
+
+@media screen and (max-width: 980px){
+    .rec-dot{
+        display: block!important;
+        /*background: radial-gradient(46.55% 119.48% at 49.96% 52.73%, #282828 0%, #000000 100%)!important;*/
+        border-image:   linear-gradient(180deg, #FCC026 0%, #FC8B26 100%)!important;
+        box-shadow: 0 0 1px 2px #FCC026!important;
+    }
+    .rec-dot_active{
+        box-shadow: none!important;
+        background: linear-gradient(180deg, #FCC026 0%, #FC8B26 100%)!important;
+    }
+}
+
+
+
 @media screen and (max-width: 768px) {
     .rc-pagination-item{
         margin-top: 10px;

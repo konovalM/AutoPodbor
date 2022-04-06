@@ -54,9 +54,8 @@ export const Garantier = () => {
 
                         <div className={styles.list}>
                             <div className={styles.circle}/>
-                            <div className={styles.bigText}>Бесплатно отремонтируем автомобиль на сумму не*/}
-                                более <span
-                                    className={styles.bold}>100 000 ₽</span>
+                            <div className={styles.bigText}>Вернем деньги за наши услуги или <span
+                                className={styles.bold}>бесплатно</span> отремонтируем авто
                             </div>
                         </div>
                         <p className={styles.smallText}>
@@ -82,7 +81,7 @@ export const Garantier = () => {
 
                         <div className={styles.list}>
                             <div className={styles.circle}/>
-                            <div className={styles.bigText}>Бесплатно отремонтируем автомобиль на сумму не*/}
+                            <div className={styles.bigText}>Бесплатно отремонтируем автомобиль на сумму не
                                 более <span
                                     className={styles.bold}>100 000 ₽</span>
                             </div>
