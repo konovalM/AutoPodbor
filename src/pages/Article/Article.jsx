@@ -2,13 +2,11 @@ import React, {useEffect, useState} from 'react';
 import {useLocation, useNavigate, useParams} from "react-router";
 import {ArticleBlock} from "../../components/articleBlock";
 import {BlogArticles} from "../../components/blogArticles";
-import {getBlogPost, getBlogPosts} from "../../api/blogApi";
+import {getBlogPost, getBlogPosts} from "../../api/blogAPI";
 import {PaginationComponent} from "../../components/UI/pagination/Pagination";
-import styles from "../../components/Main/Check/Check.module.scss";
-import bcg from '../../assets/images/RectangleBcg.png'
+import blackArticleRec from '../../assets/images/waves/blackArticleRec.png'
 import {FormBlock} from "../../components/FormBlock";
-import smallBcgRectangle from "../../assets/images/smallBcgRectangle.png";
-import {BlackWrapper} from "../../components/blackWrapper";
+import {WaveWrapper} from "../../components/wavesWrapper";
 
 export const Article = () => {
     const location = useLocation()
@@ -30,9 +28,7 @@ export const Article = () => {
     }, [id])
     useEffect(() => {
         (async () => {
-            await getBlogPosts(page, 3).then(res => {
-                setPosts(res)
-            }).catch(() => {
+            await getBlogPosts(page, 3).then(setPosts).catch(() => {
                 nav("/not-found");
             })
         })()
@@ -46,10 +42,9 @@ export const Article = () => {
                     <PaginationComponent pageCount={posts.page_count} setPage={setPage}/>
                 </div>
             }
-            <BlackWrapper>
+            <WaveWrapper src={blackArticleRec} alt={"blackArticleRec"}>
                 <FormBlock/>
-            </BlackWrapper>
-
+            </WaveWrapper>
 
         </main>
     );

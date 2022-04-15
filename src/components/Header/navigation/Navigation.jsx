@@ -11,11 +11,10 @@ const NavItem = ({text,link='#',isAnchor=false,...props}) => {
         <li className={styles.item} {...props}>
             {
                 isAnchor?
-                    <AnchorLink href={`#${link}`}>{text}</AnchorLink>
+                    <AnchorLink href={`#${link}`} >{text}</AnchorLink>
                     :
                     <Link to={link}>{text}</Link>
             }
-
         </li>
     )
 }

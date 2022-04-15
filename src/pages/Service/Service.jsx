@@ -1,10 +1,13 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useLocation, useMatch, useInRouterContext, useOutlet, useNavigate, useParams} from "react-router";
 import {AutoPodbor} from "../../components/AutoPodbor/AutoPodbor";
 import {FormBlock} from "../../components/FormBlock";
-import smallBcgRectangle from "../../assets/images/smallBcgRectangle.png";
+import blackServiceRec from "../../assets/images/waves/blackServiceRec.png";
 import styles from "../../components/Main/Check/Check.module.scss";
 import {BlackWrapper} from "../../components/blackWrapper";
+import {getBlogPosts} from "../../api/blogAPI";
+import {getService} from "../../api/serviceAPI";
+import {WaveWrapper} from "../../components/wavesWrapper";
 
 
 export const Service = () => {
@@ -13,16 +16,26 @@ export const Service = () => {
     const nav = useNavigate()
 
 
-    useEffect(() => {
 
-        nav(location.pathname, {state: "название услуги"});
-    }, [])
+    const [serviceData,setServiceData] = useState()
+
+    useEffect(() => {
+        (async () => {
+            await getService(id).then(res=>{
+                nav(location.pathname, {state: res.title});
+                setServiceData(res)
+            }).catch(() => {
+                nav("/not-found");
+            })
+        })()
+    }, [id])
+
     return (
         <main>
-            <AutoPodbor/>
-            <BlackWrapper>
+            {serviceData && <AutoPodbor service={serviceData}/>}
+            <WaveWrapper src={blackServiceRec} alt={"blackServiceRec"}>
                 <FormBlock/>
-            </BlackWrapper>
+            </WaveWrapper>
         </main>
     );
 };

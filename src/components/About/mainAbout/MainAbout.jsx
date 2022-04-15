@@ -1,33 +1,44 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './MainAbout.module.scss'
-import slider from '../../../assets/images/aboutPage/slider.jpg'
+import slider1 from '../../../assets/images/aboutPage/abou1.jpg'
+import slider2 from '../../../assets/images/aboutPage/abou1.jpg'
+import slider3 from '../../../assets/images/aboutPage/abou1.jpg'
+import slider4 from '../../../assets/images/aboutPage/abou1.jpg'
 import {Carousel} from "react-bootstrap";
 import {ReactComponent as Next} from '../../../assets/images/aboutPage/next.svg'
 import {ReactComponent as Prev} from '../../../assets/images/aboutPage/prev.svg'
 import spare1 from '../../../assets/images/aboutPage/spare1.png'
 import spare2 from '../../../assets/images/aboutPage/spare2.png'
+import {getCompanyInfo} from "../../../api/companyInfoAPI";
 
 const Slider = () => {
     return(
         <Carousel indicators={false} prevIcon={<Prev/>} nextIcon={<Next/>}>
-            <Carousel.Item interval={5000} >
+            <Carousel.Item interval={5000}>
                 <img className={styles.item}
-                    src={slider}
+                    src={slider1}
                     alt="First slide"
                 />
             </Carousel.Item>
             <Carousel.Item interval={5000}>
                 <img
                     className={styles.item}
-                    src={slider}
+                    src={slider2}
                     alt="Second slide"
                 />
             </Carousel.Item>
             <Carousel.Item interval={5000}>
                 <img
                     className={styles.item}
-                    src={slider}
+                    src={slider3}
                     alt="Third slide"
+                />
+            </Carousel.Item>
+            <Carousel.Item interval={5000}>
+                <img
+                    className={styles.item}
+                    src={slider4}
+                    alt="fourth slide"
                 />
             </Carousel.Item>
         </Carousel>
@@ -36,6 +47,16 @@ const Slider = () => {
 
 
 export const MainAbout = () => {
+    const [companyInfo,setCompanyInfo] = useState({})
+
+
+    useEffect(()=>{
+        (async ()=>{
+            await getCompanyInfo().then(setCompanyInfo)
+        })()
+    },[])
+
+
     return (
         <section className={styles.wrapper} style={{paddingBottom:"100px"}}>
             <img src={spare1} alt={"spare1"} className={styles.spare1}/>
@@ -45,12 +66,7 @@ export const MainAbout = () => {
                     <h1 className={styles.title}>
                         О компании
                     </h1>
-                    <p className={styles.text}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        <br/>
-                        <br/>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
+                    <div dangerouslySetInnerHTML={{__html: companyInfo.info}}/>
                 </div>
                 <Slider/>
             </div>

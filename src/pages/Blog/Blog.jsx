@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import {BlogMain} from "../../components/blogMain";
 import {useLocation, useNavigate, useParams} from "react-router";
-import {getBlogPosts} from "../../api/blogApi";
+import {getBlogPosts} from "../../api/blogAPI";
 import styles from "../../components/Main/Check/Check.module.scss";
 import {BlogArticles} from "../../components/blogArticles";
 import {PaginationComponent} from "../../components/UI/pagination/Pagination";
 import {FormBlock} from "../../components/FormBlock";
-import smallBcgRectangle from "../../assets/images/smallBcgRectangle.png";
+import blackBlogRec from "../../assets/images/waves/blackBlogRec.png";
 import {BlackWrapper} from "../../components/blackWrapper";
+import {WaveWrapper} from "../../components/wavesWrapper";
 
 export const Blog = () => {
     const location = useLocation()
@@ -41,7 +42,7 @@ export const Blog = () => {
         <main style={{margin: "0 auto"}}>
             <BlogMain/>
 
-            <BlackWrapper>
+            <WaveWrapper src={blackBlogRec} alt={"blackBlogRec"}>
                 {
                     posts?.results.length && <div style={{paddingTop:"150px"}}>
                         <BlogArticles posts={posts.results}/>
@@ -49,7 +50,7 @@ export const Blog = () => {
                     </div>
                 }
 
-            </BlackWrapper>
+            </WaveWrapper>
             <BlackWrapper>
                 <FormBlock/>
 

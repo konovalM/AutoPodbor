@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Cards.module.scss'
-import bcg from '../../../assets/images/bcg.svg'
+import bcg from '../../../assets/images/waves/blackAboutRec.png'
 import {AboutCardBig, AboutCardSmall} from "../../cards/aboutCard";
 import garantier from '../../../assets/images/aboutPage/garantier.png'
 import checkingDocuments from '../../../assets/images/aboutPage/checkingDocuments.jpg'
@@ -12,6 +12,7 @@ import cn from "classnames";
 import {Button} from "../../UI/button";
 import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
 import {BlackWrapper} from "../../blackWrapper";
+import {WaveWrapper} from "../../wavesWrapper";
 
 const SmallCardsBlock = () => {
     return (
@@ -120,12 +121,14 @@ const ChooseCarCTA = () => {
 
 export const Cards = () => {
     return (
-        <BlackWrapper>
+
+        <WaveWrapper src={bcg} alt={"Waves"} >
+
             {/*<div className={styles.textImg}/>*/}
             <Block title={"Для поиска автомобиля нужно:"} className={styles.mt60}/>
             <Block isBig={true} title={"Почему именно мы?"} className={styles.second}/>
             <ChooseCarCTA/>
-        </BlackWrapper>
+        </WaveWrapper>
     );
 };
 

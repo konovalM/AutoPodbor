@@ -2,7 +2,7 @@
   padding: 100px 0 ;
   position: relative;
   width: 100%;
-  background: white;
+  //background: white;
 }
 .carAndTrees{
   position: absolute;
@@ -53,6 +53,15 @@
 
 
 
+@media screen and (max-width: 1700px){
+  .trees{
+    bottom: 0;
+    top:initial;
+    height: 200px;
+    transform: translateY(40%);
+    margin-left: -40px;
+  }
+}
 
 @media screen and (max-width: 768px){
   .cardContainer{
@@ -62,13 +71,7 @@
   .carAndTrees{
     transform:translateY(-20%);
   }
-  .trees{
-    bottom: 0;
-    top:initial;
-    height: 200px;
-    transform: translateY(40%);
-    margin-left: -40px;
-  }
+
 }
 
 

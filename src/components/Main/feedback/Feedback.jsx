@@ -1,14 +1,13 @@
-import React, {useMemo, useState} from 'react';
+import React from 'react';
 import styles from './Feedback.module.scss'
 import yandex from '../../../assets/images/main/yandex.png'
 import vk from '../../../assets/images/main/vk.png'
-import {ReactComponent as Prev} from "../../../assets/images/breadcrumbs/prev.svg"
-import {ReactComponent as Next} from "../../../assets/images/breadcrumbs/next.svg"
-import arm from '../../../assets/images/main/arm.png'
+import map from '../../../assets/images/main/mapOfRussia.png'
 import phone from '../../../assets/images/main/phone.png'
 import {useMediaQuery} from 'react-responsive';
 import ReactElasticCarousel from "react-elastic-carousel";
 import {Button} from "../../UI/button";
+import cn from "classnames";
 
 
 const PhoneSlider = () => {
@@ -22,11 +21,29 @@ const PhoneSlider = () => {
                 enableMouseSwipe={false}
                 style={{alignItems: "center"}}>
 
-                <img src={phone} alt={"phone"}/>
-                {
-                    isMobile ? <img src={phone} alt={"phone"}/> : <img src={arm} alt={"arm"}/>
-                }
-                <img src={phone} alt={"phone"}/>
+                <a href={"https://vk.com/wall-177600442?own=1"} className={styles.review}>
+                    <img src={phone} alt={"phone"}/>
+                </a>
+                <div className={styles.phoneButton}>
+
+                    <img src={phone} alt={"phone"}/>
+                    <a href={"https://vk.com/wall-177600442?own=1"} className={cn(styles.review, styles.link)}>
+                        <Button text={"смотреть все отзывы"} className={styles.btn}/>
+                    </a>
+
+                </div>
+                {/*{*/}
+                {/*    isMobile ?*/}
+                {/*        <a href={"https://vk.com/wall-177600442?own=1"} className={styles.review}>*/}
+                {/*            <img src={phone} alt={"phone"}/>*/}
+                {/*        </a> :*/}
+                {/*        <a href={"https://vk.com/wall-177600442?own=1"} className={styles.review}>*/}
+                {/*            <img src={arm} alt={"arm"}/>*/}
+                {/*        </a>*/}
+                {/*}*/}
+                <a href={"https://vk.com/wall-177600442?own=1"} className={styles.review}>
+                    <img src={phone} alt={"phone"}/>
+                </a>
             </ReactElasticCarousel>
         </>
     )
@@ -69,9 +86,9 @@ export const Feedback = () => {
                     </SocialItem>
                 </div>
             </div>
-            <PhoneSlider/>
-            <div className={styles.btnWrapper}>
-                <Button text={"смотреть все отзывы"} className={styles.btn}/>
+            <div className={styles.mapWrapper}>
+                <img src={map} className={styles.map} alt={"map of russia"}/>
+                <PhoneSlider/>
             </div>
         </section>
     );

@@ -10,11 +10,15 @@ import styles from './Social.module.scss'
 export const Social = () => {
     return (
         <div className={styles.content}>
-            <img src={whatsApp} alt={"whatsApp"}/>
-            <img src={telegram} alt={"telegram"}/>
-            <img src={vk} alt={"vk"}/>
-            <img src={instagram} alt={"instagram"}/>
-            <img src={youtube} alt={"youtube"}/>
+            <a href={"https://wa.me/+79992009330"}>
+                <img src={whatsApp} alt={"whatsApp"}/>
+            </a>
+            <a href={"https://t.me/Sergey_Petlyak"}>
+                <img src={telegram} alt={"telegram"}/>
+            </a>
+            <a href={"https://wa.me/+79992009330"}>
+                <img src={vk} alt={"vk"}/>
+            </a>
         </div>
     );
 };

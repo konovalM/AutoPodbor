@@ -9,11 +9,11 @@ import fifth from '../../../assets/images/stagesOfSelection/5.png'
 import sixth from '../../../assets/images/stagesOfSelection/6.png'
 import carAndTrees from '../../../assets/images/stagesOfSelection/carAndTrees.png'
 import trees from '../../../assets/images/stagesOfSelection/tree.png'
-import white from '../../../assets/images/stagesOfSelection/whiteRec.png'
+import white from '../../../assets/images/waves/whiteMainRec.jpg'
 export const Selection = () => {
     return (
         <section className={styles.wrapper}>
-            {/*<img src={white} alt={"bcg"} className={styles.white}/>*/}
+
             <img src={carAndTrees} alt={"carAndTrees"} className={styles.carAndTrees}/>
             <img src={trees} alt={"trees"} className={styles.trees}/>
             <div className={styles.container}>

@@ -7,7 +7,7 @@ import {OPEN_MODAL, useModalContext} from "../../contexts/ModalContext";
 import wheels from '../../assets/images/BlogPage/wheels.png'
 
 
-const ListServices = () => {
+const ListServices = ({}) => {
     return (
         <ul className={styles.list}>
             <li className={styles.item}>Согласование параметров авто и бюджета с заказчиком</li>
@@ -28,11 +28,11 @@ const ListServices = () => {
     )
 }
 
-const HeaderBlock = () => {
+const HeaderBlock = ({price}) => {
     return (
         <div className={styles.headerBlock}>
             <h1 className={styles.title}>Автоподбор</h1>
-            <h3 className={styles.subtitle}>Стоимость: 20 000 ₽</h3>
+            <h3 className={styles.subtitle}>Стоимость: {price} ₽</h3>
             <p className={styles.text}>Цена услуги фиксированная и не меняется в процессе работы. Общая стоимость работ
                 может измениться
                 только в случае заказа дополнительных услуг.</p>
@@ -41,15 +41,18 @@ const HeaderBlock = () => {
 }
 
 
-const EnterInService = () => {
+const EnterInService = ({serviceText}) => {
     const {dispatch} = useModalContext()
     return (
         <div className={styles.box}>
             <h3 className={styles.title}>Входит в услугу</h3>
-            <ListServices/>
-
+            {/*<ListServices/>*/}
+            <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <div dangerouslySetInnerHTML={{__html: serviceText}}/>
+            </div>
+            <div/>
             <div className={styles.btnWrapper}>
-                <Button text={"Заказать услугу"} className={styles.btn} onClick={()=>dispatch({type:OPEN_MODAL})}/>
+                <Button text={"Заказать услугу"} className={styles.btn} onClick={() => dispatch({type: OPEN_MODAL})}/>
             </div>
             <img className={styles.img} src={car} alt={"car"}/>
 
@@ -57,12 +60,14 @@ const EnterInService = () => {
     )
 }
 
-
-export const AutoPodbor = () => {
+// style={{display:"flex",justifyContent:"center",alignItems:"center"}}
+export const AutoPodbor = ({service}) => {
     return (
         <section className={styles.wrapper}>
-            <HeaderBlock/>
-            <EnterInService/>
+            <div >
+                <HeaderBlock price={service.price_from}/>
+                <EnterInService serviceText={service.service_include}/>
+            </div>
             <img className={styles.imgBackground} src={bcg} alt={"Background"}/>
         </section>
     );

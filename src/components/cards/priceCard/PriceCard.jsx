@@ -3,6 +3,7 @@ import {ShadowCard} from "../shadowCard";
 import styles from './PriceCard.module.scss'
 import {Button} from "../../UI/button";
 import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
+import {Link} from "react-router-dom";
 
 const CircleIcon = ({component}) => {
     return (
@@ -26,7 +27,7 @@ const Price = ({price}) => {
 }
 
 
-export const PriceCard = ({price, title, component, text}) => {
+export const PriceCard = ({price, title, component, text, id = 1}) => {
     const {dispatch} = useModalContext()
     return (
         <ShadowCard className={styles.mb56}>
@@ -38,8 +39,12 @@ export const PriceCard = ({price, title, component, text}) => {
                     <h3 className={styles.title}>{title}</h3>
                     <p className={styles.text}>{text}</p>
                     <Price price={price}/>
-                    <Button className={styles.button} text={"Оставить заявку"} onClick={()=>{dispatch({type:OPEN_MODAL})}}/>
-                    <span className={styles.more} onClick={()=>alert("This page didn't exist yet")}>Подробнее</span>
+                    <Button className={styles.button} text={"Оставить заявку"} onClick={() => {
+                        dispatch({type: OPEN_MODAL})
+                    }}/>
+                    <Link to={`/service/${id}`}>
+                        <span className={styles.more}>Подробнее</span>
+                    </Link>
                 </div>
             </div>
         </ShadowCard>

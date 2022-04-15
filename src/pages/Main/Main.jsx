@@ -10,7 +10,7 @@ import {Promo} from "../../components/Main/promo";
 import {Selection} from "../../components/Main/selection";
 import {Feedback} from "../../components/Main/feedback";
 import styles from "../../components/Main/Check/Check.module.scss";
-import blackBcg from "../../assets/images/blackBcg.jpg";
+import blackBcg from "../../assets/images/waves/mainBlackRec.jpg";
 import orangeSquare from "../../assets/images/questions/orangeSquare.png";
 import bcg from "../../assets/images/questions/bcg.png";
 import style from './Main.module.scss'
@@ -18,11 +18,11 @@ import {RoadToCenter} from "../../components/Main/RoadToCenter";
 import garantier from '../../assets/images/garant/garan.png'
 import {Garantier} from "../../components/Main/garantier";
 import {FormBlock} from "../../components/FormBlock";
-
+import white from "../../assets/images/waves/whiteMainRec.png";
+import {WaveWrapper} from "../../components/wavesWrapper";
 
 
 export const Main = () => {
-
 
 
     return (
@@ -40,7 +40,9 @@ export const Main = () => {
                 <FormBlock/>
                 <Examples/>
                 <Feedback/>
-                <Selection/>
+                <WaveWrapper src={white} alt={"white background"}>
+                    <Selection/>
+                </WaveWrapper>
 
 
                 <div className={style.back}>

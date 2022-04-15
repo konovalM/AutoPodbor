@@ -31,7 +31,6 @@ export const ArticleBlock = ({post}) => {
                         <p className={styles.text}>
                             {post?.content}
                         </p>
-
                     </div>
                 </div>
                 <div className={styles.line}/>
