@@ -6,15 +6,10 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
 
 
-const NavItem = ({text,link='#',isAnchor=false,...props}) => {
+const NavItem = ({children}) => {
     return (
-        <li className={styles.item} {...props}>
-            {
-                isAnchor?
-                    <AnchorLink href={`#${link}`} >{text}</AnchorLink>
-                    :
-                    <Link to={link}>{text}</Link>
-            }
+        <li className={styles.item} >
+            {children}
         </li>
     )
 }
@@ -26,11 +21,29 @@ const NavList = () => {
     const {dispatch} = useModalContext()
     return (
         <ul className={styles.list}>
-            <NavItem text={"цены и Услуги"} link={'services'} isAnchor={true}/>
-            <NavItem text={"О компании"} link={'/about'}/>
-            <NavItem text={"подобранные авто"} link={'examples'} isAnchor={true}/>
-            <NavItem text={"блог"} link={'/blog'}/>
-            <NavItem text={"Контакты"} onClick={()=>dispatch({type:OPEN_MODAL})}/>
+            <NavItem>
+                <a href={`/#services`}>цены и Услуги</a>
+            </NavItem>
+
+            <NavItem>
+                <Link to={'/about'}>О компании</Link>
+            </NavItem>
+
+            <NavItem>
+                <a href={`/#examples`}>подобранные авто</a>
+            </NavItem>
+
+            <NavItem>
+                <a href={`/#feedback`}>отзывы</a>
+            </NavItem>
+
+            <NavItem>
+                <Link to={'/blog'}>блог</Link>
+            </NavItem>
+
+            <NavItem >
+                <span onClick={()=>dispatch({type:OPEN_MODAL})}>Контакты</span>
+            </NavItem>
         </ul>
     )
 }
@@ -49,11 +62,29 @@ export const NavigationMobile = () => {
     const {dispatch} = useModalContext()
     return (
         <ul className={styles.list}>
-            <NavItem text={"Услуги"}  link={'services'} isAnchor={true}/>
-            <NavItem text={"О компании"} link={'/about'}/>
-            <NavItem text={"подобранные авто"} link={'examples'} isAnchor={true}/>
-            <NavItem text={"блог"} link={"/blog"}/>
-            <NavItem text={"Контакты"} onClick={()=>dispatch({type:OPEN_MODAL})}/>
+            <NavItem>
+                <a href={`/#services`}>цены и Услуги</a>
+            </NavItem>
+
+            <NavItem>
+                <Link to={'/about'}>О компании</Link>
+            </NavItem>
+
+            <NavItem>
+                <a href={`/#examples`}>подобранные авто</a>
+            </NavItem>
+
+            <NavItem>
+                <a href={`/#feedback`}>отзывы</a>
+            </NavItem>
+
+            <NavItem>
+                <Link to={'/blog'}>блог</Link>
+            </NavItem>
+
+            <NavItem >
+                <span onClick={()=>dispatch({type:OPEN_MODAL})}>Контакты</span>
+            </NavItem>
         </ul>
     )
 }

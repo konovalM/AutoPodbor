@@ -2,7 +2,6 @@ import React from 'react';
 import {Routes, Route} from 'react-router'
 import {MainLayout} from "../layout/mainLayout";
 import {Main} from "../pages/Main";
-import {BreadcrumbsLayout} from "../layout/breadcrumbsLayout";
 import {Service} from "../pages/Service";
 import {About} from "../pages/About";
 import {NotFound} from "../pages/404";
@@ -12,23 +11,19 @@ import {Article} from "../pages/Article/Article";
 
 export const AppRouter = () => {
     return (
-            <Routes>
-                <Route path="/" element={<MainLayout/>}>
-                    <Route index element={<Main/>} />
-                    <Route element={<BreadcrumbsLayout/>} >
-                        <Route path="/service/:id" element={<Service />} />
-                        <Route path="/article/:id" element={<Article />} />
-
-
-                        <Route path="/privacy" element={<Privacy />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/blog" element={<Blog />} />
-
-                    </Route>
-                    <Route path="*" element={<NotFound  to={"not-found"}/>} />
-                </Route>
-            </Routes>
-    );
+        <Routes>
+            <Route path="/" element={<MainLayout/>}>
+                <Route index element={<Main/>}/>
+                <Route path="/service/:id" element={<Service/>}/>
+                <Route path="/article/:id" element={<Article/>}/>
+                <Route path="/privacy" element={<Privacy/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/blog" element={<Blog/>}/>
+                <Route path="*" element={<NotFound to={"not-found"}/>}/>
+            </Route>
+        </Routes>
+    )
+        ;
 };
 
 

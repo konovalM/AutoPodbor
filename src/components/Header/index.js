@@ -11,7 +11,7 @@ import logo from '../../assets/images/Logo.png'
 import {NavigationMobile} from "./navigation/Navigation";
 import {ReactComponent as Close} from "../../assets/images/close.svg";
 import {ReactComponent as Burger} from "../../assets/images/burger.svg";
-import {useLocation} from "react-router";
+import {useLocation, useNavigate} from "react-router";
 import {OPEN_MODAL, useModalContext} from "../../contexts/ModalContext";
 
 const HeaderDesktop = () => {
@@ -53,14 +53,14 @@ const HeaderMobile = () => {
     }, [location])
 
     const {dispatch} = useModalContext()
-
+    const nav = useNavigate()
     return (
         <>
             <header className={styles.headerMobile}>
                 <div className={styles.container}>
                     <div className={styles.head}>
-                        <div className={styles.logo}>
-                            <img className={styles.img} src={logo} alt={"logo"}/>
+                        <div className={styles.logo} >
+                            <img className={styles.img} src={logo} alt={"logo"} onClick={()=>nav('/')}/>
                             <div className={styles.textContainer}>
                                 <p className={styles.text}>
                                     +7 (999) 200-93-30

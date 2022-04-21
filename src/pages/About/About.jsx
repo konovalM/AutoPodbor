@@ -1,22 +1,16 @@
-import React, {useEffect} from 'react';
-import {useLocation, useNavigate} from "react-router";
+import React from 'react';
 import {MainAbout} from "../../components/About/mainAbout";
 import {Cards} from "../../components/About/cards";
+import {BreadcrumbsLayout} from "../../layout/breadcrumbsLayout";
 
 export const About = () => {
-    const location = useLocation()
-    const nav = useNavigate()
-
-
-    useEffect(()=>{
-
-        nav(location.pathname,{ state: "О компании" });
-    },[])
     return (
-        <main>
-            <MainAbout/>
-            <Cards/>
-        </main>
+        <BreadcrumbsLayout text={"О компании"}>
+            <main>
+                <MainAbout/>
+                <Cards/>
+            </main>
+        </BreadcrumbsLayout>
     );
 };
 

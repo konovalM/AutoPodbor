@@ -19,7 +19,7 @@ export const BlogMain = () => {
                 </h1>
                 <p className={styles.text}>
                     Рассказываем на что обращать внимание при выборе автомобиля и как не попасть на уловки продавцов. Если у вас возникли трудности или сомнения при покупке машины, мы готовы проконсультировать вас бесплатно по телефону
-                    <b className={styles.phoneNumber}>+7 (999) 200 93 30</b>.
+                    <b className={styles.phoneNumber}>&nbsp;+7 (999) 200 93 30</b>.
                 </p>
                 <Button text={"Получить консультацию"} className={styles.btn} onClick={()=>dispatch({type:OPEN_MODAL})}/>
             </div>

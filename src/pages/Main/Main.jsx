@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Questions} from "../../components/Main/Questions";
 import {Choice} from "../../components/Main/choice";
 import {ServicesAndPrices} from "../../components/Main/servicesAndPrices";
@@ -20,39 +20,68 @@ import {Garantier} from "../../components/Main/garantier";
 import {FormBlock} from "../../components/FormBlock";
 import white from "../../assets/images/waves/whiteMainRec.png";
 import {WaveWrapper} from "../../components/wavesWrapper";
+import AOS from 'aos'
 
+import {AnimateWrapper} from "../../components/animateWrapper";
 
 export const Main = () => {
-
-
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            duration: 1000,
+            easing: 'linear',
+            delay: 400,
+            once: false,
+            disable: 'mobile',
+            anchorPlacement:'top-top',
+            mirror: false
+        });
+    }, [])
     return (
         <main>
             <Promo/>
-
-            <Choice/>
-            <ServicesAndPrices/>
-            <Problems/>
-
-
+            <AnimateWrapper animate={"fade-right"}>
+                <Choice/>
+            </AnimateWrapper>
+            <AnimateWrapper animate={"fade-left"}>
+                <ServicesAndPrices/>
+            </AnimateWrapper>
+            <AnimateWrapper animate={"fade-right"}>
+                <Problems/>
+            </AnimateWrapper>
             <section className={styles.black}>
                 <img src={blackBcg} alt={"Black background"} className={styles.img}/>
-                <Check/>
-                <FormBlock/>
-                <Examples/>
-                <Feedback/>
+                <AnimateWrapper animate={"fade-left"}>
+                    <Check/>
+                </AnimateWrapper>
+                <AnimateWrapper animate={"fade-right"}>
+                    <FormBlock style={{padding:"100px 0"}}/>
+                </AnimateWrapper>
+                <AnimateWrapper animate={"fade-left"}>
+                    <Examples/>
+                </AnimateWrapper>
+                <AnimateWrapper animate={"fade-right"}>
+                    <Feedback/>
+                </AnimateWrapper>
                 <WaveWrapper src={white} alt={"white background"}>
-                    <Selection/>
+                    <AnimateWrapper animate={"fade-left"}>
+                        <Selection/>
+                    </AnimateWrapper>
                 </WaveWrapper>
 
 
                 <div className={style.back}>
                     <img src={garantier} alt={"Гарант"} className={style.garantier}/>
-                    <Garantier/>
+                    <AnimateWrapper animate={"fade-right"}>
+                        <Garantier/>
+                    </AnimateWrapper>
                 </div>
                 <div className={style.back}>
                     <img src={orangeSquare} className={style.orangeSquare} alt={"orangeSquare"}/>
                     <img src={bcg} className={style.bcg} alt={"bcg"} height={805}/>
-                    <Questions/>
+                    <AnimateWrapper animate={"fade-left"}>
+                        <Questions/>
+                    </AnimateWrapper>
                     <RoadToCenter/>
                 </div>
             </section>

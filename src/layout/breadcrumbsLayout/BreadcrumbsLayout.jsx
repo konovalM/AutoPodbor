@@ -1,15 +1,12 @@
 import React from 'react';
-import {Outlet, useLocation, useNavigate} from 'react-router'
 import {Breadcrumbs} from "../../components/UI/breadcrumbs";
 
-export const BreadcrumbsLayout = () => {
-    const loc = useLocation()
+export const BreadcrumbsLayout = ({children,text}) => {
 
     return (
         <>
-            <Breadcrumbs/>
-
-            <Outlet/>
+            <Breadcrumbs text={text}/>
+            {children}
         </>
     );
 };

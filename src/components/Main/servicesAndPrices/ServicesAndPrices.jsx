@@ -22,10 +22,18 @@ const Keys = () => {
     )
 }
 
+const ImagesCard = {
+    сar:<Car/>,
+    keys:<Keys/>,
+    garage:<Garage/>,
+    newCar:<NewCar/>,
+    coin:<Coin/>,
+    person:<Person/>
+}
+
 
 const ServicesFromApi = () => {
     const [services, setServices] = useState([])
-
 
     useEffect(() => {
         (async () => {
@@ -37,6 +45,7 @@ const ServicesFromApi = () => {
         <div className={styles.content}>
             {services.map((service, index) =>
                 <PriceCard
+                    component={service?.image && ImagesCard[service.image]}
                     id={service.id}
                     key={index}
                     title={service.title}
@@ -44,50 +53,6 @@ const ServicesFromApi = () => {
                     price={service.price_from}
                 />)}
 
-        </div>
-    )
-}
-
-const StaticServices = () => {
-    return (
-        <div className={styles.content}>
-
-            <PriceCard
-                component={<Car/>}
-                title={"Автоподбор под ключ"}
-                text={"После согласования параметров авто и бюджета подберем для вас идеальный автомобиль"}
-                price={"20 000"}
-            />
-            <PriceCard
-                component={<Keys/>}
-                title={"Выездная диагностика"}
-                text={"Выезд специалиста на место осмотра с оценкой общего состояния автомобиля"}
-                price={"4 000"}
-            />
-            <PriceCard
-                component={<Garage/>}
-                title={"Эндоскоп, подъемники, осмотр на СТО"}
-                text={"Также мы предоставляем дополнительные услуги, которые помогут вам ни о чем не волноваться"}
-                price={"500"}
-            />
-            <PriceCard
-                component={<NewCar/>}
-                title={"Подбор нового автомобиля"}
-                text={"Описать почему мы можем лучше, чем самостоятельно ездить по автосалонам"}
-                price={"XXX"}
-            />
-            <PriceCard
-                component={<Coin/>}
-                title={"Продажа вашего автомобиля"}
-                text={"Вы можете продолжать использовать свой автомобиль в обычном режиме, пока мы его продаем"}
-                price={"15 000"}
-            />
-            <PriceCard
-                component={<Person/>}
-                title={"Специалист на день"}
-                text={"Наш специалист сопровождает вас в течение всего дня и выполняет требующиеся работы"}
-                price={"9 000"}
-            />
         </div>
     )
 }
@@ -110,7 +75,6 @@ export const ServicesAndPrices = () => {
 
             {/*</div>*/}
             <ServicesFromApi/>
-            <StaticServices/>
         </section>
     );
 };
