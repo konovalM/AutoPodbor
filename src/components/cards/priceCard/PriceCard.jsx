@@ -10,7 +10,7 @@ const CircleIcon = ({component}) => {
         <div className={styles.circleOut}>
             <div className={styles.circleIn}>
                 <div className={styles.img}>
-                    {component}
+                    <img src={component} alt={"circle icon"}/>
                 </div>
             </div>
         </div>
@@ -42,8 +42,8 @@ export const PriceCard = ({price, title, component, text, id = 1}) => {
                     <Button className={styles.button} text={"Оставить заявку"} onClick={() => {
                         dispatch({type: OPEN_MODAL})
                     }}/>
-                    <Link to={`/service/${id}`}>
-                        <span className={styles.more}>Подробнее</span>
+                    <Link to={`/service/${id}`} className={styles.more}>
+                        Подробнее
                     </Link>
                 </div>
             </div>

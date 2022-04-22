@@ -1,11 +1,10 @@
 import React from 'react';
-import car from '../../../assets/images/example/car.png'
 import styles from './ExampleCard.module.scss'
 
 export const ExampleBig = ({post}) => {
     return (
         <div className={styles.card}>
-            <img src={post.img} className={styles.img}/>
+            <img src={post.img} className={styles.img} alt={"example big card"}/>
             <div className={styles.content}>
                 <div className={styles.header}>
                     <div>
@@ -21,12 +20,12 @@ export const ExampleBig = ({post}) => {
                     <p className={styles.text}><span className={styles.textBold}>Задача: </span>Найти автомобиль с
                         заданными параметрами, подходящий потенциальному покупателю. Найти автомобиль с заданными
                         параметрами, подходящий потенциальному покупателю. </p>
-                    <p className={styles.text}>
+                    <div className={styles.text}>
 
 
                         <span className={styles.textBold}>Результат:</span><br/>
                         <div dangerouslySetInnerHTML={{__html: post.result}}/>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>

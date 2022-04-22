@@ -51,7 +51,7 @@ export const Feedback = () => {
                 </h2>
                 <div className={styles.social}>
                     <SocialItem src={yandex}>
-                        Более 45 отзывов на <span className={styles.underline}>Яндекс</span><br/>
+                        Более 45 отзывов на <ExternalLink href={"https://yandex.ru/profile/185334738407"} className={styles.underline}>Яндекс</ExternalLink><br/>
                         со средней оценкой 5.0
 
                     </SocialItem>

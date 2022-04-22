@@ -1,36 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import styles from "./ServicesAndPrices.module.scss";
 import {PriceCard} from "../../cards/priceCard";
-import {ReactComponent as Car} from '../../../assets/images/services/car.svg'
-import {ReactComponent as Coin} from '../../../assets/images/services/coin.svg'
-import {ReactComponent as Garage} from '../../../assets/images/services/garage.svg'
-import {ReactComponent as NewCar} from '../../../assets/images/services/newCar.svg'
-import {ReactComponent as Person} from '../../../assets/images/services/person.svg'
-import {ReactComponent as Key1} from '../../../assets/images/services/key1.svg'
-import {ReactComponent as Key2} from '../../../assets/images/services/key2.svg'
 import glasses from '../../../assets/images/services/glasses.png'
 import key from '../../../assets/images/services/key.png'
 import {getServices} from "../../../api/serviceAPI";
-
-
-const Keys = () => {
-    return (
-        <div className={styles.keys}>
-            <Key1/>
-            <Key2/>
-        </div>
-    )
-}
-
-const ImagesCard = {
-    сar:<Car/>,
-    keys:<Keys/>,
-    garage:<Garage/>,
-    newCar:<NewCar/>,
-    coin:<Coin/>,
-    person:<Person/>
-}
-
 
 const ServicesFromApi = () => {
     const [services, setServices] = useState([])
@@ -40,12 +13,11 @@ const ServicesFromApi = () => {
             await getServices().then(setServices)
         })()
     }, [])
-
     return (
         <div className={styles.content}>
             {services.map((service, index) =>
                 <PriceCard
-                    component={service?.image && ImagesCard[service.image]}
+                    component={service.icon}
                     id={service.id}
                     key={index}
                     title={service.title}
