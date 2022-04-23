@@ -51,13 +51,13 @@ export const Feedback = () => {
                 </h2>
                 <div className={styles.social}>
                     <SocialItem src={yandex}>
-                        Более 45 отзывов на <ExternalLink href={"https://yandex.ru/profile/185334738407"} className={styles.underline}>Яндекс</ExternalLink><br/>
-                        со средней оценкой 5.0
+                        Более 45 отзывов на <ExternalLink href={"https://yandex.ru/profile/185334738407"} className={styles.underline}>&nbsp;Яндекс</ExternalLink>
+                        &nbsp;со средней оценкой 5.0
 
                     </SocialItem>
                     <SocialItem src={vk}>
-                        Более 1200 положительных<br/>
-                        отзывов в группе <ExternalLink href={"https://vk.com/wall-177600442?own=1"} className={styles.underline}>ВКонтакте</ExternalLink>
+                        Более 1200 положительных
+                        отзывов в группе <ExternalLink href={"https://vk.com/wall-177600442?own=1"} className={styles.underline}>&nbsp;ВКонтакте</ExternalLink>
                     </SocialItem>
                 </div>
             </div>

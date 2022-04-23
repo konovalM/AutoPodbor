@@ -14,3 +14,10 @@
     color:var(--white);
   }
 }
+
+
+@media screen and (max-width:576px){
+  .link{
+    margin-bottom: 35px;
+  }
+}
