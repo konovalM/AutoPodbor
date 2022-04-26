@@ -16,13 +16,15 @@
   // display: none;
   z-index: 1;
   position: absolute;
-  bottom: -55%;
+  bottom: -10%;
   // margin-left: 79%;
   right: 0;
   // bottom: 0;
 }
-@media screen {
-  
+@media (max-width:1400px) {
+  .wheels{
+    display: none;
+  }
 }
 .content{
   z-index: 5;

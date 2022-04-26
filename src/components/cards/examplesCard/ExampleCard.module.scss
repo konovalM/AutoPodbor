@@ -1,15 +1,38 @@
 .card{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   border-radius: 11px 11px;
   margin-bottom: 19px;
 }
+
 .img{
   flex:1;
-  object-fit: cover;
+  // object-fit: cover;
     border-radius:5px;
 
+}
+
+@media (min-width:1439px) {
+  .sua{
+    width: 50%;
+    position: relative;
+  }
+  .img{
+        height: 100%;
+    max-width: 100%;
+  }
+  
+
+}
+@media (max-width:1440px) {
+  .card{
+    flex-direction: column;
+  }
+  .img{
+    width: 100%;
+    object-fit: cover;
+  }
 }
 .content{
   flex: 1;
@@ -82,7 +105,29 @@ display: flex;
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-
+}
+@media (min-width:1439px) {
+  .tumbnails{
+    padding: 10px;
+    position: absolute;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 539px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0E0E0E;
+box-shadow: -1px 4px 21px rgba(0, 0, 0, 0.1);
+border-radius: 11px;
+margin-bottom: 10px;
+}
+.tumbEl{
+  margin-bottom: 0 !important;
+}
+.tumbEl:last-child{
+  margin-right: 0 !important;
+}
 }
 .tumbEl{
   
@@ -102,7 +147,11 @@ border-radius: 11px;
   max-width: 330px;
   width: 100%;
 }
-
+@media (max-width:1440px) {
+  .small{
+    margin-bottom: 25px;
+  }
+}
 .row{
   display: flex;
   flex-direction: row;

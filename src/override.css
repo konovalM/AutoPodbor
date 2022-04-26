@@ -132,3 +132,12 @@ button:focus:not(:focus-visible){
         margin-top: 10px;
     }
 }
+@media  (max-width: 768px) {
+  /* .wrapper {
+    max-width: 100%;
+  } */
+ .rc-pagination {
+    align-items: end;
+  }
+
+}

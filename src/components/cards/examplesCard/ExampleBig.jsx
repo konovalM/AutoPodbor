@@ -4,7 +4,19 @@ import styles from './ExampleCard.module.scss'
 export const ExampleBig = ({post}) => {
     return (
       <div className={styles.card}>
-        <img src={post.img} className={styles.img} alt={"example big card"} />
+        <div className={styles.sua}>
+          {" "}
+          <img src={post.img} className={styles.img} alt={"example big card"} />
+          <div className={styles.tumbnails}>
+            {post.additional_images.map((el) => {
+              return (
+                <div className={styles.tumbEl}>
+                  <img src={el} alt="" />
+                </div>
+              );
+            })}
+          </div>
+        </div>
         <div className={styles.content}>
           <div className={styles.header}>
             <div>
@@ -35,15 +47,6 @@ export const ExampleBig = ({post}) => {
               <div dangerouslySetInnerHTML={{ __html: post.result }} />
             </div>
           </div>
-        </div>
-        <div className={styles.tumbnails}>
-          {post.additional_images.map((el) => {
-            return (
-              <div className={styles.tumbEl}>
-                <img src={el} alt="" />
-              </div>
-            );
-          })}
         </div>
       </div>
     );
