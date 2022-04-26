@@ -14,7 +14,7 @@ import {ReactComponent as Burger} from "../../assets/images/burger.svg";
 import {useLocation, useNavigate} from "react-router";
 import {OPEN_MODAL, useModalContext} from "../../contexts/ModalContext";
 
-const HeaderDesktop = () => {
+const   HeaderDesktop = () => {
     return (
         <>
             <header className={cn(styles.headerContent, styles.headerDesktop)}>

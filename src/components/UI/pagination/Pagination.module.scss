@@ -3,6 +3,9 @@
   align-items: center;
   justify-content: center;
 }
+.rc-pagination-item-active,.rc-pagination-item-active{
+  background: linear-gradient(109.36deg, #000000 0%, #282828 100%) !important;
+}
 
 @media screen and (max-width: 768px){
   .wrapper{

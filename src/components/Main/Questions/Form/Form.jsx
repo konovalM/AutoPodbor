@@ -3,13 +3,6 @@ import styles from './Form.module.scss'
 import {CustomForm} from "../../../UI/Forms/CustomForm";
 
 
-
-
-
-
-
-
-
 export const FirstStep = ({onUploadPosts}) => {
 
     return (

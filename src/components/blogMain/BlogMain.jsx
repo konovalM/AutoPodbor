@@ -5,13 +5,13 @@ import {Button} from "../UI/button";
 import {OPEN_MODAL, useModalContext} from "../../contexts/ModalContext";
 import wheels from "../../assets/images/BlogPage/wheels.png";
 
-
 export const BlogMain = () => {
 
     const {dispatch} = useModalContext()
 
     return (
         <section className={styles.wrapper}>
+            {/* <img src="" alt=""  className={styles.wheels}/> */}
             <img src={person} alt={"Person"} className={styles.img}/>
             <div className={styles.content}>
                 <h1 className={styles.title}>

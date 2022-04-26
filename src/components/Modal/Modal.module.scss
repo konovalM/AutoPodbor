@@ -7,7 +7,7 @@
   align-items: center;
   //background: rgba(119, 119, 119, 0.01);
   //opacity: 0.95;
-  border: 1px solid rgba(255, 255, 255, 0.51);
+  // border: 1px solid rgba(255, 255, 255, 0.51);
   box-sizing: border-box;
   //backdrop-filter: blur(150px);
 
@@ -32,7 +32,7 @@
   font-size: 20px;
   line-height: 125%;
   color: var(--white);
-  margin-bottom: 3px;
+  margin-bottom: 19px;
 }
 
 .phoneNumber{
@@ -82,7 +82,7 @@
 }
 
 .img{
-  z-index: -1;
+  z-index: -10;
   position: absolute;
   top: 0;
   left: 0;

@@ -1,20 +1,20 @@
-.wrapper{
+.wrapper {
   max-width: 854px;
-  width: 100% ;
-  margin:0 auto;
+  width: 100%;
+  margin: 0 auto;
   padding: 0 16px;
 }
 
-.content{
+.content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   //align-items: center;
-  gap:70px;
+  gap: 70px;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,11 +31,7 @@
   z-index: 1;
 }
 
-
-
-
-
-.isPay{
+.isPay {
   padding: 9px 35px;
   position: absolute;
   top: 0;
@@ -47,15 +43,15 @@
   line-height: 125%;
   text-align: center;
   color: #121212;
-  &.white{
-    background: #FFFFFF;
+  &.white {
+    background: #ffffff;
   }
-  &.yellow{
-    background: linear-gradient(180deg, #FCC026 0%, #FC8B26 100%);
+  &.yellow {
+    background: linear-gradient(180deg, #fcc026 0%, #fc8b26 100%);
   }
 }
 
-.textContent{
+.textContent {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -63,79 +59,96 @@
   z-index: 10;
 }
 
-.title{
+.title {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 125%;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 0;
-  .bold{
+  .bold {
+    font-weight: 800 !important;
+    font-family: "Montserrat";
+    font-style: normal;
     font-weight: 800;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
   }
-  .yellow{
-    background: linear-gradient(180deg, #FCC026 0%, #FC8B26 100%);
+  .yellow {
+    background: linear-gradient(180deg, #fcc026 0%, #fc8b26 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 125%;
   }
 }
 
-
-.bigText{
+.fatText {
+  font-family: "Montserrat";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 800;
   font-size: 16px;
   line-height: 140%;
+}
+.bigText {
+    font-family: "Montserrat";
 
-  color: #FFFFFF;
-  .bold{
+  font-style: normal;
+  font-weight: 400 ;
+  font-size: 16px ;
+  line-height: 140%;
+
+  color: #ffffff;
+  .bold {
     font-weight: 600;
   }
 }
-.circle{
+.circle {
   width: 15px;
   height: 15px;
   padding: 0 7px;
   margin-right: 15px;
-  background: linear-gradient(180deg, #FCC026 0%, #FC8B26 100%);
+  background: linear-gradient(180deg, #fcc026 0%, #fc8b26 100%);
   border-radius: 50%;
 }
-.smallText{
+.smallText {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.list{
+.list {
   display: flex;
   flex-direction: row;
 }
-.letter{
+.letter {
   z-index: 0;
   position: absolute;
   bottom: -70px;
   width: 110%;
-
 }
-@media screen and (max-width: 768px){
-  .content{
+@media screen and (max-width: 768px) {
+  .content {
     flex-direction: column;
     gap: 100px;
     align-items: center;
   }
-  .letter{
+  .letter {
     width: 110%;
   }
-  .card{
+  .card {
     //max-width: 98%;
     width: 100%;
-    background: url('../../../assets/images/garant/garan.png') no-repeat;
+    background: url("../../../assets/images/garant/garan.png") no-repeat;
     background-size: contain;
     background-position: center center;
   }
-
 }

@@ -1,12 +1,15 @@
 .card{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   border-radius: 11px 11px;
   margin-bottom: 19px;
 }
 .img{
-  flex:1
+  flex:1;
+  object-fit: cover;
+    border-radius:5px;
+
 }
 .content{
   flex: 1;
@@ -24,7 +27,7 @@ display: flex;
 
 .header{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 23px;
 }
@@ -44,6 +47,7 @@ display: flex;
   font-size: 17px;
   line-height: 125%;
   color: var(--white);
+  margin-bottom: 30px;
 }
 
 .prices{
@@ -54,6 +58,7 @@ display: flex;
   display: flex;
   align-items: center;
   color: #7B7B7B;
+  margin-bottom: 10px;
 }
 
 .text{
@@ -73,7 +78,24 @@ display: flex;
 
 }
 
+.tumbnails{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
 
+}
+.tumbEl{
+  
+  max-width: 30%;
+  margin-right: 13px;
+  margin-bottom: 13px;
+  border-radius: 11px;
+// max-height: 57px;
+}
+.tumbEl img{
+  max-width: 100%;
+border-radius: 11px;
+}
 .small{
   display: flex;
   flex-direction: column;
@@ -105,6 +127,20 @@ display: flex;
   .card{
     flex-direction: column;
   }
+  .tumbnails{
+  flex-wrap: wrap;
+  justify-content: center;  }
+//   .tumbEl{
+//   // max-width: 40%;
+//   margin-right: 13px;
+//   border-radius: 11px;
+//   width: 93px;
+// height: 57px;
+// }
+// .tumbEl img{
+//   max-width: 100%;
+// border-radius: 11px;
+// }
 
   .small{
     max-width: 100%;

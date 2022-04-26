@@ -23,26 +23,33 @@ export const Examples = () => {
     },[page])
 
     return (
-        <section style={{background:"black",
-            paddingBottom:"100px"}} className={styles.wrapper} id={"examples"}>
-            <h2 className={styles.title}>Примеры нашей работы</h2>
-            {
-                current && <ExampleBig post={current}/>
-            }
-
-            <div className={styles.content}>
-                {
-                    examples?.results &&   examples.results.map((example,index)=><ExampleSmall key={`${example.id}_${index}`} setCurrent={setCurrent} post={example}/>)
-                }
-            </div>
-
-            {examples?.page_count &&  <PaginationComponent pageCount={examples.page_count} setPage={setPage}/>}
+      <section
+        style={{ background: "black", paddingBottom: "100px" }}
+        className={styles.wrapper}
+        id={"examples"}
+      >
+        <h2 className={styles.title}>Примеры нашей работы</h2>
+        {current && <ExampleBig post={current} />}
 
 
+        <div className={styles.content}>
+          {examples?.results &&
+            examples.results.map((example, index) => (
+              <ExampleSmall
+                key={`${example.id}_${index}`}
+                setCurrent={setCurrent}
+                post={example}
+              />
+            ))}
+        </div>
 
-
-
-        </section>
+        {examples?.page_count && (
+          <PaginationComponent
+            pageCount={examples.page_count}
+            setPage={setPage}
+          />
+        )}
+      </section>
     );
 };
 

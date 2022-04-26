@@ -17,6 +17,9 @@
 
 
 .modal{
+  input{
+    border:none;
+  }
   z-index: 10;
   position: relative;
   padding: 30px;
@@ -35,8 +38,10 @@
 
 .padding{
   padding: 0 30px;
+  padding-top: 220px;
   position: relative;
   overflow: hidden;
+  padding-bottom: 90px;
   >img{
     position: absolute;
     top: 0;
