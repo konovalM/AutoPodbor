@@ -8,7 +8,7 @@ export const PaginationComponent = ({setPage,pageCount}) => {
 
     return (
         <div className={styles.wrapper}>
-            <Pagination onChange={(page)=>setPage(page)} prevIcon={<Prev/>} nextIcon={<Next/>} className="ant-pagination"  total={pageCount*10} />
+            <Pagination onChange={(page)=>setPage(page)} prevIcon={<Prev/>} nextIcon={<Next/>} className="ant-pagination"  total={pageCount*10} showLessItems />
         </div>
     );
 };

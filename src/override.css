@@ -138,6 +138,8 @@ button:focus:not(:focus-visible){
   } */
  .rc-pagination {
     align-items: end;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
 }
