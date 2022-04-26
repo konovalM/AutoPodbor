@@ -124,7 +124,7 @@ button:focus:not(:focus-visible){
 
 @media screen and (max-width: 768px) {
     .rc-pagination-item{
-        margin-top: 10px;
+        /* margin-top: 10px; */
         height: 25px!important;
         width: 25px!important;
     }
@@ -138,8 +138,13 @@ button:focus:not(:focus-visible){
   } */
  .rc-pagination {
     align-items: end;
-    flex-wrap: wrap;
     justify-content: center;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
 }

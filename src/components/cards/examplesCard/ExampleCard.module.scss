@@ -177,20 +177,19 @@ border-radius: 11px;
     flex-direction: column;
   }
   .tumbnails{
-  flex-wrap: wrap;
-  justify-content: center;  }
-//   .tumbEl{
-//   // max-width: 40%;
-//   margin-right: 13px;
-//   border-radius: 11px;
-//   width: 93px;
-// height: 57px;
-// }
-// .tumbEl img{
-//   max-width: 100%;
-// border-radius: 11px;
-// }
+  // flex-wrap: wrap;
+    overflow-x: scroll;
+    padding-left: 10px;
+  justify-content: center;  
+}
 
+.tumbEl{
+  flex-basis: 100px;
+  flex-shrink: 0;
+}
+.tumbEl img{
+  width: 100%;
+}
   .small{
     max-width: 100%;
   }

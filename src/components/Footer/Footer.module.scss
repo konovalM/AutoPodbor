@@ -69,6 +69,16 @@
     flex-direction: column;
     align-items: baseline;
   }
+  .policyblock{
+    flex-direction: column;
+  }
+  .policy{
+    margin-bottom: 5px;
+  }
+  .policy,.companylink{
+    position: initial;
+    display: block;
+  }
   .addressCall{
     flex-direction: column;
     gap:30px;
