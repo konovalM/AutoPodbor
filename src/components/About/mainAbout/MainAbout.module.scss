@@ -6,7 +6,9 @@
 .sliderWrapp{
 
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  // grid-template-columns: 3fr 2fr;
+    grid-template-columns: auto;
+
   column-gap: 20px;
   align-items:center;
 }
@@ -15,6 +17,9 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
+}
+.thumbnails img{
+  width: 100%;
 }
 .spare1{
   position: absolute;

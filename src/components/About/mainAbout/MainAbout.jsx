@@ -51,7 +51,7 @@ export const MainAbout = () => {
           <div dangerouslySetInnerHTML={{ __html: companyInfo.info }} />
         </div>
         <div className={styles.sliderWrapp}>
-          <Slider />
+          {/* <Slider /> */}
           <div className={styles.thumbnails}>
             <img src={miniImng} alt="" />
             <img src={miniImng} alt="" />

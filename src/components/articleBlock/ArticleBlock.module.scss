@@ -96,6 +96,9 @@
 }
 
 @media screen and (max-width: 768px){
+  .tree{
+    display: none;
+  }
   .wrapper{
     margin-top: 100px;
   }

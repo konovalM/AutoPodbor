@@ -1,21 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./ExampleCard.module.scss";
 
 export const ExampleBig = ({ post }) => {
+  useEffect(() => console.log(post.additional_images.length));
   return (
     <div className={styles.card}>
       <div className={styles.sua}>
         {" "}
         <img src={post.img} className={styles.img} alt={"example big card"} />
-        {post.additional_images.lenght !== 0 ? (
+        {post.additional_images.length !== 0 ? (
           <div className={styles.tumbnails}>
-            {post.additional_images.map((el) => {
-              return (
-                <div className={styles.tumbEl}>
-                  <img src={el} alt="" />
-                </div>
-              );
-            })} 
+            {/* <div style={{backgroundColor:'black'}}> */}
+              {post.additional_images.map((el) => {
+                return (
+                  <div className={styles.tumbEl}>
+                    <img src={el} alt="" />
+                  </div>
+                );
+              })}
+            {/* </div> */}
           </div>
         ) : null}
       </div>
