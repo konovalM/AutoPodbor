@@ -87,19 +87,40 @@
 .review{
   cursor: pointer;
 }
+.sliderSlick{
+  width: 100%;
+  max-width: 1319px;
+}
 .sliderWrapper{
-  overflow-y: hidden;
+  // overflow-y: hidden;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
+  // align-items: center;
+  // background:wheat;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+}
+.slick-center .phoneButton::after{
+  bottom:0;
+  left:0;
+  content:'';
+  width: 230.38px;
+height: 48.67px;
+  background:url('./reviews.jpg');
 }
 .phoneButton{
   position: relative;
+  display: flex !important;
+  justify-content:center;
   .link{
     position: absolute;
     bottom: 10%;
-    left:13%
+left: 50%;
+    transform: translateX(-50%);
+  }
+  img{
+    max-width: auto;
   }
 }
 
@@ -125,12 +146,17 @@
     margin-bottom: 40px;
   }
 }
-
+// @media (max-width:700px) {
+//   .slick-slider{
+//     padding-bottom: 40px !important;
+//   }
+// }
 @media screen  and (max-width: 576px){
   .socialItem{
     flex-direction: column;
     align-items: flex-start;
   }
+
   .social{
     align-items: flex-start;
   }

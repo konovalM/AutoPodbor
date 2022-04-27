@@ -64,3 +64,67 @@ svg{
   max-width: 45px;
   max-height: 45px;
 }
+.slick-slide{
+  position: relative;
+  max-height: 550px;
+  transform: scaleY(90%) scaleX(90%);
+}
+.slick-center .globalPhone::after{
+  position: absolute;
+  bottom:50px;
+  left:50%;
+  content:'';
+  transform: translateX(-50%);
+  width: 100%;
+    max-width: 230.38px;
+height: 48.67px;
+  background:url('./rev.svg') center;
+}
+.slick-center{
+  max-height: 110%;
+  height: 110%;
+  transform: scaleY(100%);
+}
+.slick-prev{
+  position: absolute;
+  left: 5% !important;
+  z-index: 5;
+  width: 45px;
+height: 45px;
+}
+.slick-next{
+    position: absolute;
+  right: 5% !important;
+  z-index: 5;
+  width: 45px;
+height: 45px;
+}
+@media (max-width:700px) {
+  .slick-slide{
+  position: relative;
+  // max-height: 500px ;
+  // transform: scaleY(90%) scaleX(90%);
+}
+.slick-prev{
+  position: absolute;
+  left: 25% !important;
+  z-index: 5;
+  width: 45px;
+height: 45px;
+bottom:0;
+}
+.slick-next{
+    position: absolute;
+  right: 25% !important;
+  z-index: 5;
+  width: 45px;
+height: 45px;
+bottom:0;
+}
+.slick-arrow{
+  top:initial;
+}  .slick-slider{
+    padding-bottom: 80px !important;
+  }
+
+}

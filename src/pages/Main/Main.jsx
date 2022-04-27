@@ -32,14 +32,14 @@ import {AnimateWrapper} from "../../components/animateWrapper";
 export const Main = () => {
     useEffect(() => {
         AOS.init({
-            offset: 200,
-            duration: 1000,
-            easing: 'linear',
-            delay: 100,
-            once: false,
-            disable: 'mobile',
-            anchorPlacement:'top-top',
-            mirror: false
+          offset: 200,
+          duration: 1000,
+          easing: "linear",
+          delay: 100,
+          once: false,
+          disable: ["tablet",'mobile'],
+          anchorPlacement: "top-top",
+          mirror: false,
         });
     }, [])
     return (

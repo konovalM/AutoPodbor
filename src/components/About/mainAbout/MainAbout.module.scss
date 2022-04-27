@@ -3,14 +3,41 @@
   width: 100%;
   position: relative;
 }
+.sliderWrapp{
 
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  column-gap: 20px;
+  align-items:center;
+}
+.thumbnails{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
 .spare1{
   position: absolute;
   top: 0;
   left:0;
   z-index: 3;
 }
+@media (max-width:1024px) {
+  .sliderWrapp{
 
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: 1fr auto;
+  column-gap: 20px;
+  align-items:center;
+  row-gap: 20px;
+}
+
+.thumbnails img{
+  width: 100%;
+
+}
+}
 .spare2{
   position: absolute;
   bottom: 0;
