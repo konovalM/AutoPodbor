@@ -15,20 +15,23 @@ import { getCompanyInfo } from "../../../api/companyInfoAPI";
 import miniImng from "./mini.jpg";
 const Slider = () => {
   return (
-    <Carousel indicators={false} prevIcon={<Prev />} nextIcon={<Next />}>
-      <Carousel.Item>
-        <img className={styles.item} src={slider1} alt="First slide" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className={styles.item} src={slider2} alt="Second slide" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className={styles.item} src={slider3} alt="Third slide" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className={styles.item} src={slider4} alt="fourth slide" />
-      </Carousel.Item>
-    </Carousel>
+    // <Carousel indicators={false} prevIcon={<Prev />} nextIcon={<Next />}>
+    //   <Carousel.Item>
+    //     <img className={styles.item} src={slider1} alt="First slide" />
+    //   </Carousel.Item>
+    //   <Carousel.Item>
+    //     <img className={styles.item} src={slider2} alt="Second slide" />
+    //   </Carousel.Item>
+    //   <Carousel.Item>
+    //     <img className={styles.item} src={slider3} alt="Third slide" />
+    //   </Carousel.Item>
+    //   <Carousel.Item>
+    //     <img className={styles.item} src={slider4} alt="fourth slide" />
+    //   </Carousel.Item>
+    // </Carousel>
+    <>
+      <img className={styles.item} src={slider1} alt="First slide" />
+    </>
   );
 };
 
@@ -51,7 +54,7 @@ export const MainAbout = () => {
           <div dangerouslySetInnerHTML={{ __html: companyInfo.info }} />
         </div>
         <div className={styles.sliderWrapp}>
-          {/* <Slider /> */}
+          <Slider />
           <div className={styles.thumbnails}>
             <img src={miniImng} alt="" />
             <img src={miniImng} alt="" />
