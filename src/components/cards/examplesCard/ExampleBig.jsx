@@ -7,13 +7,15 @@ export const ExampleBig = ({ post }) => {
     <div className={styles.card}>
       <div className={styles.sua}>
         {" "}
-        <img src={post.img} className={styles.img} alt={"example big card"} />
+        <div className={styles.suaWrapper}>
+          <img src={post.img} className={styles.img} alt={"example big card"} />
+        </div>
         {post.additional_images.length !== 0 ? (
           <div className={styles.tumbnails}>
             {/* <div style={{backgroundColor:'black'}}> */}
               {post.additional_images.map((el) => {
                 return (
-                  <div className={styles.tumbEl}>
+                  <div className={styles.tumbEl} style={{width: `100%`}}>
                     <img src={el} alt="" />
                   </div>
                 );
@@ -24,17 +26,15 @@ export const ExampleBig = ({ post }) => {
       </div>
       <div className={styles.content}>
         <div className={styles.header}>
-          <div>
-            <h3 className={styles.title}>{post.car_name}</h3>
-            <h4 className={styles.subtitle}>
-              {post.year_of_issue} год выпуска
-            </h4>
-          </div>
+            <h3 className={styles.title}>
+              {post.car_name}<br/>
+              <span className={styles.subtitle}>{post.year_of_issue} год выпуска</span>
+            </h3>
           <div>
             <p className={styles.prices}>
-              Цена продавца: {post.saler_price}руб
+              Цена продавца: {post.saler_price}руб<br/>
+              После торга: {post.after_price}руб.
             </p>
-            <p className={styles.prices}>После торга: {post.after_price}руб.</p>
           </div>
         </div>
         <div>
@@ -47,7 +47,7 @@ export const ExampleBig = ({ post }) => {
           <div className={styles.text}>
             <span className={styles.textBold}>Результат:</span>
             <br />
-            <div dangerouslySetInnerHTML={{ __html: post.result }} />
+            <div dangerouslySetInnerHTML={{ __html: post.result }} className={styles.resultText}/>
           </div>
         </div>
       </div>

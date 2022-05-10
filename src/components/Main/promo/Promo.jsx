@@ -25,7 +25,7 @@ const Plus = ({ src, title, text }) => {
     <div className={styles.plus}>
       <img src={src} alt={"plus"} />
       <div>
-        <h3 className={styles.title}>{title}</h3>
+        <h3 className={cn(styles.title, styles.titleLeft)}>{title}</h3>
         <p className={styles.text}>{text}</p>
       </div>
     </div>
@@ -75,7 +75,12 @@ const MainTitle = () => {
         className={styles.button}
         onClick={() => dispatch({ type: OPEN_MODAL })}
       >
-        <img src={button} alt={"Button"} />
+        {/*<img src={button} alt={"Button"} />*/}
+          <div className={styles.btnWrapper}>
+              <div className={styles.btnInner}>
+                  Оставить заявку
+              </div>
+          </div>
       </button>
     </div>
   );
@@ -97,15 +102,15 @@ export const Promo = () => {
   return (
     <section className={styles.main}>
       <div style={{ position: "relative" }}>
-        <img src={bcg} alt={"main"} className={styles.bcgImage} height={650} />
+        {/*<img src={bcg} alt={"main"} className={styles.bcgImage} height={650} />*/}
         <div className={styles.wrapper}>
           <div className={styles.plusesDesktop}>
             <Pluses />
           </div>
           <MainTitle />
-          <img src={people} className={styles.people} alt={"people"} />
+          {/*<img src={people} className={styles.people} alt={"people"} />*/}
         </div>
-        <img src={clouds} className={styles.clouds} alt="" />
+        {/*<img src={clouds} className={styles.clouds} alt="" />*/}
         {/* <Cloud /> */}
       </div>
       <div className={styles.plusesMobile}>

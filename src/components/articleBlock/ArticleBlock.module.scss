@@ -9,7 +9,7 @@
 
 .contentWrapper{
   max-width: 1110px;
-  margin: 0 auto 100px;
+  margin: 0 auto 40px;
   width: 100%;
   padding: 0 15px;
 
@@ -21,7 +21,8 @@
   padding: 31px 43px;
   display: flex;
   flex-direction: column;
-  gap:25px
+  gap:25px;
+  margin-top: 70px;
 }
 
 .heading{
@@ -82,8 +83,8 @@
 
 .car{
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 30px;
+  right: -55px;
   margin-top: -154px;
   margin-right: -44px;
 }
@@ -94,7 +95,20 @@
   bottom: 0;
   left: 0;
 }
-
+@media screen and (max-width: 1349px){
+  .car{
+    width: 280px;
+    top: 45px;
+    right: 0;
+  }
+}
+@media screen and (max-width: 1233px){
+  .car{
+    width: 250px;
+    top: 45px;
+    right: 0;
+  }
+}
 @media screen and (max-width: 768px){
   .tree{
     display: none;
@@ -103,12 +117,7 @@
     margin-top: 100px;
   }
   .car{
-    height: 250px;
-    width: 250px;
-    transform: rotate(-6deg);
-    margin: -160px 0 0;
-
-
+    top: 15px;
   }
   .tree{
     height: 250px;
@@ -125,4 +134,26 @@
     align-items: start;
   }
 
+}
+
+@media screen and (max-width: 679px){
+  .car{
+    right: -30px;
+  }
+}
+@media screen and (max-width: 576px){
+  .car{
+    width: 200px;
+    right: 0;
+    top: 30px;
+  }
+  .title{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 340px){
+  .car{
+    right: -10px;
+  }
 }

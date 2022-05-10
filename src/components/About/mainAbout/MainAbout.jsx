@@ -30,7 +30,9 @@ const Slider = () => {
     //   </Carousel.Item>
     // </Carousel>
     <>
-      <img className={styles.item} src={slider1} alt="First slide" />
+      <div className="itemWrapper">
+        <img className={styles.item} src={slider1} alt="First slide" />
+      </div>
     </>
   );
 };
@@ -45,7 +47,7 @@ export const MainAbout = () => {
   }, []);
 
   return (
-    <section className={styles.wrapper} style={{ paddingBottom: "100px" }}>
+    <section className={styles.wrapper}>
       <img src={spare1} alt={"spare1"} className={styles.spare1} />
       <img src={spare2} alt={"spare2"} className={styles.spare2} />
       <div className={styles.container}>

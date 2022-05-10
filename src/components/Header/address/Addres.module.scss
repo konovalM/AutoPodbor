@@ -13,7 +13,7 @@
   align-items: center;
   gap:13px
 }
-
+.spanText{}
 
 
 .black{
@@ -29,3 +29,32 @@
     color: var(--white);
   }
 }
+@media screen and (max-width: 1400px) {
+  .text{
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width:1282px){
+  .spanText{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:1090px){
+  .text{
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width:1024px){
+  .text{
+    margin-right: 20px;
+  }
+  .spanText{
+    font-size: 17px;
+  }
+}
+
+
+

@@ -6,7 +6,7 @@ import {useModalContext} from "../../contexts/ModalContext";
 import {CustomForm} from "../UI/Forms/CustomForm";
 import {postFeedback} from "../../api/feedbackAPI";
 import cn from "classnames";
-import bcgImg from '../../assets/images/form/formFon.png'
+import bcgImg from '../../assets/images/linesBg.png'
 
 
 const FirstStep = ({onUploadPosts}) => {
@@ -35,9 +35,9 @@ export const SecondStep = ({wrapper}) => {
                         Спасибо, мы скоро с вами<br/> свяжемся!
                     </h3>
                     <p className={styles.simpleText}>
-                        А пока что вы можете познакомиться с нашей группой <span
-                        className={styles.href}>ВКонтакте</span> и каналом на <span
-                        className={styles.href}>YouTube</span>
+                        А пока что вы можете познакомиться с нашей группой <a
+                        href='https://vk.com/spb_avto_podbor'
+                        className={styles.href} style={{textDecoration: 'underline'}}>ВКонтакте</a>.
                     </p>
                 </div>
             </section>
@@ -57,9 +57,8 @@ export const FormBlock = ({style}) => {
     }
 
     return (
-        <div className={styles.padding} style={style}>
-            <img src={bcgImg} alt={"Lines"}/>
-
+        <div className={styles.padding}>
+            {/*<img src={bcgImg} alt={"Lines"}/>*/}
             {count === 1 ?
                 <FirstStep onUploadPosts={onUploadPosts}/>
                 :

@@ -1,4 +1,8 @@
 .wrapper{
+  background-position: center center;
+  background-image: url("../../assets/images/waveBg.svg");
+  background-repeat: repeat;
+  background-size: auto 100%;
   position: relative;
   padding: 100px 0 50px;
 }
@@ -12,4 +16,79 @@
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.carAndTrees{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+.trees{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 300px;
+}
+
+@media screen and (max-width: 1353px){
+  .carAndTrees{
+    right: -50px;
+  }
+}
+@media screen and (max-width: 1244px){
+  .carAndTrees{
+    right: -100px;
+  }
+  .trees{
+    left: -30px;
+  }
+}
+@media screen and (max-width: 1170px){
+  .carAndTrees{
+    right: 0;
+    width: 350px;
+  }
+  .trees{
+    left: 0;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 1120px){
+  .carAndTrees{
+    top: -75px;
+  }
+  .trees{
+    left: 0;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 875px){
+  .carAndTrees{
+    width: 280px;
+    top: -20px;
+  }
+  .trees{
+    height: 170px;
+  }
+}
+@media screen and (max-width: 807px){
+  .carAndTrees{
+    width: auto;
+    top: 0;
+  }
+  .trees{
+    top: auto;
+    bottom: 40px;
+  }
+}
+@media screen and (max-width: 528px){
+  .carAndTrees{
+    width: auto;
+    top: -15px;
+  }
+  .trees{
+    width: auto;
+    bottom: 40px;
+  }
 }

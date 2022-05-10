@@ -1,7 +1,7 @@
 import React from 'react';
-import vk from '../../../assets/images/social/vk.png'
-import whatsApp from '../../../assets/images/social/whatsup.png'
-import telegram from '../../../assets/images/social/telegram.png'
+import vk from '../../../assets/images/vk.svg'
+import whatsApp from '../../../assets/images/whatsup.svg'
+import telegram from '../../../assets/images/tg.svg'
 import styles from './Social.module.scss'
 import {ExternalLink} from '../../UI/externalLink'
 

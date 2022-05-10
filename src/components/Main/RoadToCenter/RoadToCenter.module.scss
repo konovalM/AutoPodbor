@@ -1,6 +1,5 @@
 .wrapper{
-  padding: 50px 0 0px;
-  max-width: 556px;
+  padding: 160px 15px 0px;
   margin: 0 auto;
 }
 
@@ -11,6 +10,7 @@
   line-height: 125%;
   text-align: center;
   color: var(--white);
+  margin-bottom: 24px;
 }
 .text{
   font-style: normal;
@@ -19,5 +19,14 @@
   line-height: 125%;
   text-align: center;
   color: var(--white);
+  margin: 0;
+}
 
+@media screen and (max-width: 550px){
+  .title{
+    font-size: 32px;
+  }
+  .text{
+
+  }
 }

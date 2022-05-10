@@ -5,11 +5,14 @@
   gap:20px;
   max-width: 430px;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 85px;
 }
 
 .reversed{
   flex-direction: row-reverse;
+  .content{
+    align-items: flex-start;
+  }
 }
 .reversedText{
   align-items: flex-start;
@@ -20,8 +23,26 @@
   gap:9px;
   align-items: flex-end;
 }
-
-
+.wrapper{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 100%;
+  color: #191919;
+  top: -36px;
+  z-index: -1;
+  &Right{
+    left: -31px;
+  }
+  &Left{
+    right: -31px;
+  }
+}
 
 .title{
   width: 100%;
@@ -45,11 +66,22 @@
 }
 
 .textLeft{
+  text-align: right;
+}
+.titleRight{
   text-align: left;
 }
+.titleRight, .titleLeft{
+  position: relative;
+}
+.titleRight::before, .titleLeft::before{
 
-.textRight{
+}
+.titleLeft{
   text-align: right;
+}
+.titleRight{
+  text-align: left;
 }
 
 
@@ -74,16 +106,52 @@
 .third{
   max-width: 816px;
 }
+@media screen and (max-width: 1270px){
+  .content{
+    max-width: 240px;
+  }
+}
 
+@media screen and (max-width: 1097px){
+  .card{
+    margin-bottom: 70px;
+    max-width: 375px;
+    gap: 5px;
+  }
+}
 @media screen and (max-width: 990px){
+  .absolute{
+    left: -28px;
+    top: -33px;
+  }
+  .title{
+    text-align: left;
+  }
+  .text{
+    text-align: left;
+  }
     .content{
       min-width: 67%;
+      align-items: flex-start;
+      gap: 0;
     }
-
-    .reversed{
-      margin-bottom: 20px;
+    .card{
+      flex-direction: row-reverse;
+      margin: 0;
+      gap: 20px;
     }
   .img{
     max-width: 33%;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .title{
+    font-size: 20px;
+    line-height: 125%;
+  }
+  .text{
+    font-size: 14px;
+    line-height: 125%;
   }
 }

@@ -1,0 +1,28 @@
+.slick-slider img{
+  opacity: 0.8;
+}
+.slick-current img{
+  opacity: 1;
+}
+@media screen and (max-width: 1275px){
+  .slick-slider img{
+    width: 265px;
+  }
+}
+@media screen and (max-width: 1100px){
+  .slick-slider img{
+    width: 250px;
+  }
+}
+@media screen and (max-width: 1024px){
+  .slick-slider img{
+    width: auto;
+  }
+}
+
+
+@media screen and (max-width: 365px){
+  .slick-slider img{
+    width: 265px;
+  }
+}

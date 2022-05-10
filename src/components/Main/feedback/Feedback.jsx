@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Feedback.module.scss";
-import yandex from "../../../assets/images/main/yandex.png";
-import vk from "../../../assets/images/main/vk.png";
+import yandex from "../../../assets/images/main/yandex.svg";
+import vk from "../../../assets/images/main/vk.svg";
 import map from "../../../assets/images/main/mapOfRussia.png";
 import phone from "../../../assets/images/main/phone.png";
 import { Button } from "../../UI/button";
@@ -12,9 +12,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Prev from "./prev.svg";
+import './Feedback.scss'
 const PhoneSlider = () => {
   const settings = {
-    className: "center",
+
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
@@ -29,7 +30,9 @@ const PhoneSlider = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-        },
+        }
+      },
+      {
         breakpoint: 500,
         settings: {
           slidesToShow: 1,
@@ -202,38 +205,35 @@ export const Feedback = () => {
           <h2 className={styles.title}>Отзывы клиентов</h2>
         </AnimateWrapper>
 
-        <div className={styles.social}>
-          <AnimateWrapper animate={"fade-left"}>
-            <SocialItem src={yandex}>
-              Более 45 отзывов на{" "}
-              <ExternalLink
-                href={"https://yandex.ru/profile/185334738407"}
-                className={styles.underline}
-              >
-                &nbsp;Яндекс
-              </ExternalLink>
-              &nbsp;со средней оценкой 5.0
-            </SocialItem>
-          </AnimateWrapper>
+        <div className={styles.socialWrapper}>
+          <div className={styles.social}>
+            <AnimateWrapper animate={"fade-left"}>
+              <SocialItem src={yandex}>
+                Более 45 отзывов &nbsp;
+                <span>
+                <a href={"https://yandex.ru/profile/185334738407"}className={styles.underline}>на Яндекс</a>
+              </span>
+                &nbsp;
+                со средней оценкой 5.0
+              </SocialItem>
+            </AnimateWrapper>
 
-          <AnimateWrapper animate={"fade-right"}>
-            {" "}
-            <SocialItem src={vk}>
-              Более 1200 положительных отзывов в группе{" "}
-              <ExternalLink
-                href={"https://vk.com/wall-177600442?own=1"}
-                className={styles.underline}
-              >
-                &nbsp;ВКонтакте
-              </ExternalLink>
-            </SocialItem>
-          </AnimateWrapper>
+            <AnimateWrapper animate={"fade-right"}>
+              {" "}
+              <SocialItem src={vk}>
+                Более 1200 положительных отзывов в группе{" "}
+                <ExternalLink
+                    href={"https://vk.com/wall-177600442?own=1"}
+                    className={styles.underline}
+                >
+                  &nbsp;ВКонтакте
+                </ExternalLink>
+              </SocialItem>
+            </AnimateWrapper>
+          </div>
         </div>
       </div>
-      <div className={styles.mapWrapper}>
-        <img src={map} className={styles.map} alt={"map of russia"} />
         <PhoneSlider />
-      </div>
     </section>
   );
 };

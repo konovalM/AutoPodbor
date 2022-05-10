@@ -22,6 +22,7 @@ import garantier from '../../assets/images/garant/garan.png'
 import {Garantier} from "../../components/Main/garantier";
 import {FormBlock} from "../../components/FormBlock";
 import white from "../../assets/images/waves/whiteMainRec.png";
+import './questions.scss'
 // import white from "./wave.svg";
 
 import {WaveWrapper} from "../../components/wavesWrapper";
@@ -82,17 +83,13 @@ export const Main = () => {
               <Garantier />
             </AnimateWrapper>
           </div>
-          <div className={style.back}>
-            <img
-              src={orangeSquare}
-              className={style.orangeSquare}
-              alt={"orangeSquare"}
-            />
-            <img src={bcg} className={style.bcg} alt={"bcg"} height={805} />
-            <AnimateWrapper animate={"fade-left"}>
-              <Questions />
-            </AnimateWrapper>
-            <RoadToCenter />
+          <div className={style.questionWrapper}>
+               <div className='questionInner'>
+                   <AnimateWrapper animate={"fade-left"}>
+                       <Questions />
+                   </AnimateWrapper>
+                   <RoadToCenter />
+               </div>
           </div>
         </section>
         <Maps />

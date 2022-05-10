@@ -42,7 +42,7 @@ const NavList = () => {
             </NavItem>
 
             <NavItem >
-                <span onClick={()=>dispatch({type:OPEN_MODAL})}>Контакты</span>
+                <span onClick={()=>dispatch({type:OPEN_MODAL})} className={styles.spanFontFamily}>Контакты</span>
             </NavItem>
         </ul>
     )
@@ -83,7 +83,7 @@ export const NavigationMobile = () => {
             </NavItem>
 
             <NavItem >
-                <span onClick={()=>dispatch({type:OPEN_MODAL})}>Контакты</span>
+                <span onClick={()=>dispatch({type:OPEN_MODAL})} className={styles.spanFontFamily}>Контакты</span>
             </NavItem>
         </ul>
     )

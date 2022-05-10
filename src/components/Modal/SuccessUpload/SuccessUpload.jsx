@@ -9,9 +9,8 @@ export const SuccessUpload = () => {
                     Спасибо, мы скоро с вами<br/> свяжемся!
                 </h3>
                 <p className={styles.simpleText}>
-                    А пока что вы можете познакомиться с нашей группой <span
-                    className={styles.href}>ВКонтакте</span> и каналом на <span
-                    className={styles.href}>YouTube</span>
+                    А пока что вы можете познакомиться с нашей группой <a
+                    className={styles.href} style={{textDecoration: 'underline'}} href='https://vk.com/spb_avto_podbor'>ВКонтакте</a>.
                 </p>
             </section>
         </>

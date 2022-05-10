@@ -13,7 +13,7 @@ export const Call = ({isBlack}) => {
                 <img src={caller} alt={"Call operator"} className={styles.imgPerson}/>
             </div>
             <div className={styles.textContent}>
-                <a href={"#"} className={cn(styles.title,isBlack?styles.black:styles.white
+                <a href={"#"} className={cn(styles.numberFooter ,styles.title,isBlack?styles.black:styles.white
                 )}>+7 (999) 200-93-30</a>
                 <span className={styles.orderNumber} onClick={()=>dispatch({type:OPEN_MODAL})}>Заказать звонок</span>
             </div>

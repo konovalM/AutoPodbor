@@ -16,7 +16,7 @@
 }
 
 .title{
-  max-width: 50%;
+  max-width: 200px;
   flex: 1 0 auto;
   font-style: normal;
   font-weight: 700;
@@ -56,4 +56,18 @@
   font-size: 22px;
   line-height: 129.7%;
   color: var(--gray-primary);
+}
+
+
+@media screen and (max-width: 450px){
+  .text{
+    font-size: 14px;
+    line-height: 125%;
+  }
+  .img{
+    margin-bottom: 20px;
+    width: 303px;
+    height: 146px;
+    object-fit: contain;
+  }
 }

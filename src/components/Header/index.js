@@ -7,7 +7,7 @@ import {Call} from "./call";
 import {Social} from "./social";
 import {Navigation} from "./navigation";
 import cn from "classnames";
-import logo from '../../assets/images/Logo.png'
+import logo from '../../assets/images/Logo.svg'
 import {NavigationMobile} from "./navigation/Navigation";
 import {ReactComponent as Close} from "../../assets/images/close.svg";
 import {ReactComponent as Burger} from "../../assets/images/burger.svg";
@@ -56,40 +56,43 @@ const HeaderMobile = () => {
     const nav = useNavigate()
     return (
         <>
-            <header className={styles.headerMobile}>
-                <div className={styles.container}>
-                    <div className={styles.head}>
-                        <div className={styles.logo} >
-                            <img className={styles.img} src={logo} alt={"logo"} onClick={()=>nav('/')}/>
-                            <div className={styles.textContainer}>
-                                <p className={styles.text}>
-                                    +7 (999) 200-93-30
-                                </p>
-                                <span className={styles.link} onClick={() => dispatch({type: OPEN_MODAL})}>
+            <div className={styles.headerOutside}>
+                <header className={styles.headerMobile}>
+                    <div className={styles.container}>
+                        <div className={styles.head}>
+                            <div className={styles.logo} >
+                                <img className={styles.img} src={logo} alt={"logo"} onClick={()=>nav('/')}/>
+                                <div className={styles.textContainer}>
+                                    <p className={styles.text}>
+                                        +7 (999) 200-93-30
+                                    </p>
+                                    <span className={styles.link} onClick={() => dispatch({type: OPEN_MODAL})}>
                                     заказать звонок
                                 </span>
+                                </div>
                             </div>
+                            <button className={styles.btn} onClick={() => setIsOpen(prevState => !prevState)}>
+                                {isOpen ? <Close/> : <Burger/>}
+                            </button>
                         </div>
-                        <button className={styles.btn} onClick={() => setIsOpen(prevState => !prevState)}>
-                            {isOpen ? <Close/> : <Burger/>}
-                        </button>
+
                     </div>
-                    <div className={cn(styles.headerWrapper, {
-                        [styles.animate]: isOpen
-                    })}>
-                        <div className={cn(styles.menuTransition)}>
-                            <div className={styles.addressWait}>
-                                <Address isBlack={true}/>
-                                <Wait/>
-                            </div>
-                            <nav className={styles.nav}>
-                                <NavigationMobile/>
-                            </nav>
-                            <Social/>
+                </header>
+                <div className={cn(styles.headerWrapper, {
+                    [styles.animate]: isOpen
+                })}>
+                    <div className={cn(styles.menuTransition)}>
+                        <div className={styles.addressWait}>
+                            <Address isBlack={true}/>
+                            <Wait/>
                         </div>
+                        <nav className={styles.nav}>
+                            <NavigationMobile/>
+                        </nav>
+                        <Social/>
                     </div>
                 </div>
-            </header>
+            </div>
         </>
     )
 }

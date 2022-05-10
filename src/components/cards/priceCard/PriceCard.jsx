@@ -39,7 +39,7 @@ export const PriceCard = ({price, title, component, text, id = 1}) => {
                     <h3 className={styles.title}>{title}</h3>
                     <p className={styles.text}>{text}</p>
                     <Price price={price}/>
-                    <Button className={styles.button} text={"Оставить заявку"} onClick={() => {
+                    <Button className={styles.button} style={{fontWeight: '500'}} text={"Оставить заявку"} onClick={() => {
                         dispatch({type: OPEN_MODAL})
                     }}/>
                     <Link to={`/service/${id}`} className={styles.more}>

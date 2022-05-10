@@ -122,11 +122,13 @@ const ChooseCarCTA = () => {
 export const Cards = () => {
     return (
 
-        <WaveWrapper src={bcg} alt={"Waves"} >
-            <Block title={"Для поиска автомобиля нужно:"} className={styles.mt60}/>
-            <Block isBig={true} title={"Почему именно мы?"} className={styles.second}/>
-            <ChooseCarCTA/>
-        </WaveWrapper>
+        <div className={styles.waves} alt={"Waves"}>
+            <div className={styles.wrapperInner}>
+                <Block title={"Для поиска автомобиля нужно:"} className={styles.mt60}/>
+                <Block isBig={true} title={"Почему именно мы?"} className={styles.second}/>
+                <ChooseCarCTA/>
+            </div>
+        </div>
     );
 };
 

@@ -24,7 +24,7 @@ export const Examples = () => {
 
     return (
       <section
-        style={{ background: "black", paddingBottom: "100px" }}
+        style={{ background: "black", paddingBottom: "50px" }}
         className={styles.wrapper}
         id={"examples"}
       >

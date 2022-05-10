@@ -9,13 +9,13 @@ import { CheckCard } from "../../cards/checkCard";
 import styles from "./Check.module.scss";
 import cn from "classnames";
 import carInMeddle from "../../../assets/images/check/carInMeddle.png";
-import carInMiddleMobile from "../../../assets/images/check/cardInMiddleMobile.png";
+import carInMiddleMobile from "../../../assets/images/carInTheCenter.png";
 import { AnimateWrapper } from "../../animateWrapper";
 
 const CheckDesktop = () => {
   return (
     <div className={styles.desktop}>
-      <img src={carInMeddle} alt={"carInMeddle"} className={styles.car} />
+      {/*<img src={carInMeddle} alt={"carInMeddle"} className={styles.car} />*/}
       <div className={cn(styles.row, styles.first)}>
         <AnimateWrapper animate={"fade-left"}>
           <CheckCard
@@ -24,6 +24,7 @@ const CheckDesktop = () => {
             text={
               "Выявляем факты скрытого ДТП, ремонта, нарушения геометрии, окраса, снятия-установки элементов."
             }
+            num='1'
           ></CheckCard>
         </AnimateWrapper>
         <AnimateWrapper animate={"fade-right"}>
@@ -34,6 +35,7 @@ const CheckDesktop = () => {
               "Ищем течи, проводим замер компрессии, осматриваем внутренности двигателя эндоскопом."
             }
             isReversed={true}
+            num='2'
           />
         </AnimateWrapper>
       </div>
@@ -45,6 +47,7 @@ const CheckDesktop = () => {
             text={
               "Тестируем корректность переключения скоростей, проводим тест-драйв, смотрим  наличие шумов, вибраций."
             }
+            num='3'
           />
         </AnimateWrapper>
 
@@ -56,6 +59,7 @@ const CheckDesktop = () => {
               "Проверяем плавность хода во время поездки, выявляем посторонние шумы, стуки."
             }
             isReversed={true}
+            num='4'
           />
         </AnimateWrapper>
       </div>
@@ -67,6 +71,7 @@ const CheckDesktop = () => {
             text={
               "Находим следы корректировки пробега. ошибки электронных систем и блоков."
             }
+            num='5'
           />
         </AnimateWrapper>
 
@@ -78,6 +83,7 @@ const CheckDesktop = () => {
               "Проверка по всем базам на угон, арест, залоги, ограничение на регистрационные действия."
             }
             isReversed={true}
+            num='6'
           />
         </AnimateWrapper>
       </div>
@@ -95,26 +101,30 @@ const CheckMobile = () => {
           text={
             "Выявляем факты скрытого ДТП, ремонта, нарушения геометрии, окраса, снятия-установки элементов."
           }
-          isReversed={true}
+          isReversed={false}
+            num='1'
         />
         <CheckCard
+
           src={engine}
           title={"Двигатель"}
           text={
             "Ищем течи, проводим замер компрессии, осматриваем внутренности двигателя эндоскопом."
           }
           isReversed={true}
+          num='2'
         />
         <CheckCard
+            num='3'
           src={kpp}
           title={"КПП"}
           text={
             "Тестируем корректность переключения скоростей, проводим тест-драйв, смотрим  наличие шумов, вибраций."
           }
-          isReversed={true}
+          isReversed={false}
         />
       </div>
-      <div>
+      <div className={styles.ellipse}>
         <img
           src={carInMiddleMobile}
           alt={"carInMeddle"}
@@ -129,14 +139,17 @@ const CheckMobile = () => {
             "Проверяем плавность хода во время поездки, выявляем посторонние шумы, стуки."
           }
           isReversed={true}
+          num='4'
         />
         <CheckCard
-          src={computer}
-          title={"Компьютерная диагностика"}
-          text={
+            num={'Hello'}
+            src={computer}
+            title={"Компьютерная диагностика"}
+            text={
             "Находим следы корректировки пробега. ошибки электронных систем и блоков."
-          }
-          isReversed={true}
+            }
+            isReversed={false}
+            num='5'
         />
         <CheckCard
           src={lawyer}
@@ -145,6 +158,7 @@ const CheckMobile = () => {
             "Проверка по всем базам на угон, арест, залоги, ограничение на регистрационные действия."
           }
           isReversed={true}
+          num='6'
         />
       </div>
     </div>

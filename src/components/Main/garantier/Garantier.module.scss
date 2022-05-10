@@ -4,7 +4,14 @@
   margin: 0 auto;
   padding: 0 16px;
 }
-
+.titleMain{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 90px;
+}
 .content {
   display: flex;
   flex-direction: row;
@@ -135,7 +142,18 @@
   bottom: -70px;
   width: 110%;
 }
+@media screen and (max-width: 930px) {
+  .content{
+    gap: 50px;
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .titleMain{
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
   .content {
     flex-direction: column;
     gap: 100px;

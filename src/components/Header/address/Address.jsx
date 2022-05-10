@@ -7,12 +7,12 @@ import cn from "classnames";
 export const Address = ({isBlack}) => {
     return (
         // ссылка на футер
-        <Link to={"/"} className={cn(styles.text,isBlack?styles.black:styles.white
+        <a href="/#footer"  className={cn(styles.text,isBlack?styles.black:styles.white
         )}>
             <img src={map} alt={"Map"} />
-            <span>Работаем в офисе:<br/>
+            <span className={styles.spanText}>Работаем в офисе:<br/>
                     г. СПб, ул. Оптиков, 1к3</span>
-        </Link>
+        </a>
     );
 };
 

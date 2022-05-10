@@ -1,8 +1,8 @@
 .main {
-  position: relative;
   overflow-x: hidden;
   padding-top: 124px;
   overflow: hidden;
+  background: url("./../../../assets/images/mainBg.jpg")center center/cover no-repeat;
 }
 .bcgImage {
   position: absolute;
@@ -42,31 +42,36 @@
 }
 .plus {
   display: flex;
-  // flex-direction: column;
-  flex-direction: row;
+  flex-direction: column;
+  //flex-direction: row;
   justify-content: center;
   justify-content: flex-start;
   align-items: center;
 }
 .plus img{
-  margin-right: 16px;
+  //margin-right: 16px;
   width: 70px;
 height: 78px;
 object-fit: scale-down;
 }
 .title {
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 20px;
   line-height: 113.7%;
   color: var(--gray-primary);
+}
+.titleLeft{
+  text-align: center;
+  font-weight: 600;
 }
 .text {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 125%;
-  text-align: left;
+  //text-align: left;
+  text-align: center;
   color: var(--gray-secondary);
 }
 
@@ -120,7 +125,7 @@ object-fit: scale-down;
   background: #ffffff;
   box-shadow: -1px 4px 21px rgba(0, 0, 0, 0.1);
   border-radius: 11px;
-  margin-bottom: 64px;
+  margin-bottom: 60px;
   & > p {
     font-style: normal;
     font-weight: 400;
@@ -163,7 +168,94 @@ object-fit: scale-down;
     top: -90px;
   }
 }
+.btnWrapper{
+  background: #FC8B26;
+  box-shadow: -1px 4px 21px rgba(0, 0, 0, 0.2);
+  border-radius: 35px;
+  width: 414px;
+  height: 71px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  position: relative;
+  overflow: hidden;
+}
+.btnWrapper::after{
+  content: "";
+  display: block;
+  height: 170px;
+  width: 57px;
+  margin-left: 50px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  left: -150px;
+  top: -50px;
+  z-index: 0;
+  transform: rotate(48deg);
+  position: absolute;
+  animation: movingFlare1 3s ease-in-out 0.05s infinite;
+}
+.btnInner{
+  background: #FCC026;
+  border-radius: 30px;
+  width: 400px;
+  height: 57px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 113%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+.btnInner::after{
+  content: "";
+  display: block;
+  height: 158px;
+  width: 56px;
+  margin-left: 50px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  left: -40px;
+  top: -50px;
+  z-index: 1;
+  transform: rotate(48deg);
+  position: absolute;
+  animation: movingFlare2 3s ease-in-out 0.05s infinite;
+}
+@keyframes movingFlare1 {
+  0% {
+    left: -35px;
+    margin-left: 0px;
+  }
+  30% {
+    left: 105%;
+    margin-left: 80px;
+  }
+  100% {
+    left: 110%;
+    margin-left: 80px;
+  }
+}
+@keyframes movingFlare2 {
+  0% {
+    left: -30px;
+    margin-left: 0px;
+  }
+  30% {
+    left: 110%;
+    margin-left: 80px;
+  }
+  100% {
+    left: 110%;
+    margin-left: 80px;
+  }
+}
 .button {
   z-index: 20;
   background: inherit;
@@ -182,23 +274,83 @@ object-fit: scale-down;
   display: none;
 
 }
-
+@media screen and (max-width: 1070px){
+  .main{
+    padding-top: 73px;
+  }
+  .btnWrapper{
+    width: 380px;
+    height: 60px;
+  }
+  .btnInner{
+    width: 367px;
+    height: 50px;
+  }
+  .moneyBlock{
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .main{
+    background-position: -250px center;
+  }
+}
+@media screen and (max-width: 950px) {
+  .main{
+    background-position: -350px 100px;
+  }
+  .btnWrapper{
+    width: 330px;
+    height: 50px;
+  }
+  .btnInner{
+    width: 315px;
+    height: 37px;
+  }
+  .moneyBlock{
+    margin-bottom: 27px;
+  }
+}
+@media screen and (max-width: 907px) {
+  .main{
+    background-position: -340px 160px;
+    background-size: 1250px;
+  }
+}
+@media screen and (max-width: 822px) {
+  .main{
+    background-position: -375px 180px;
+  }
+}
 @media screen and (max-width: 768px) {
+  .plus {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    img{
+      margin-right: 16px;
+    }
+  }
+  .titleLeft{
+    text-align: left;
+  }
   .bcgImage {
     object-fit: none;
   }
   .text{
     text-align: left;
   }
+  .main{
+    background-position: center 100px;
+    background-size: 850px;
+  }
   .wrapper {
     flex-direction: column;
+    margin-bottom: 200px;
   }
   .mainTitle,.orange,.bold {
     font-size: 23px;
     line-height: 125%;
-  }
-  .main{
-    padding-top: 30px;
   }
   .plusesDesktop {
     display: none;
@@ -211,9 +363,6 @@ object-fit: scale-down;
     z-index: 100;
     margin-bottom: 90px;
   }
-  .moneyBlock {
-    margin-bottom: 0;
-  }
   .button {
     > img {
       width: 300px;
@@ -223,11 +372,70 @@ object-fit: scale-down;
     height: 300px;
   }
   .pluses {
-    max-width: 100%;
+    max-width: 70%;
     margin: 0;
   }
   .clouds,
   .cloud {
     z-index: -1;
+  }
+}
+@media screen and (max-width: 670px){
+  .main{
+    background-position: -170px 100px;
+    background-size: 850px;
+  }
+  .pluses {
+    max-width: 410px;
+  }
+}
+@media screen and (max-width: 576px){
+  .main{
+    background: url("../../../assets/images/mainBgPhone.jpg")top center/contain no-repeat;
+  }
+  .btnWrapper{
+    width: 173px;
+    height: 50px;
+  }
+  .btnInner{
+    width: 159px;
+    height: 38px;
+    font-size: 14px;
+  }
+  .btnWrapper::after{
+    z-index: 1;
+  }
+  .btnInner::after{
+    display: none;
+  }
+}
+@media(max-width: 530px){
+  .title{
+    font-size: 16px;
+    line-height: 129.7%;
+  }
+  .main{
+    background: url("../../../assets/images/mainBgPhone.jpg")center 150px/contain no-repeat;
+  }
+}
+@media(max-width: 423px){
+  .pluses {
+    max-width: 330px;
+  }
+  .main{
+    background: url("../../../assets/images/mainBgPhone.jpg")center 250px/contain no-repeat;
+  }
+}
+@media(max-width: 367px){
+  .wrapper {
+    margin-bottom: 167px;
+  }
+  .button img{
+    width: 220px;
+  }
+}
+@media(max-width: 350px){
+  .main{
+    background: url("../../../assets/images/mainBgPhone.jpg")center 300px/contain no-repeat;
   }
 }

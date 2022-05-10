@@ -55,17 +55,27 @@
   }
 }
 
-
+.headerOutside{
+  display: none;
+}
 
 @media screen and (max-width: 1070px) {
-
+  .headerOutside{
+    display: block;
+  }
   .headerDesktop {
     display: none;
   }
 
   .headerMobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    background: var(--header-bcg);
+    z-index: 110;
     display: block;
-    padding-top: 15px;
+    padding: 15px 0 5px;
     .container {
       width: 100%;
       padding: 0 15px;
@@ -112,7 +122,6 @@
 
   }
   .headerWrapper{
-    z-index: -100;
     min-height: 100vh;
     min-width: 100%;
     position: fixed;
@@ -124,6 +133,7 @@
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: -900;
   }
 
   .menuTransition{

@@ -3,6 +3,7 @@ import styles from "./ArticleBlock.module.scss"
 import video from '../../assets/images/video.jpg'
 import christmasTree from '../../assets/images/article/christmasTree.png'
 import carAndTree from '../../assets/images/article/carAndTree.png'
+import carMobile from '../../assets/images/carMobileArticle.png'
 import {convertToRussianDate} from "../../utils/date";
 
 
@@ -12,12 +13,16 @@ export const ArticleBlock = ({post}) => {
 
     return (
         <section className={styles.wrapper}>
+            <picture>
+                <source srcSet={carMobile} media="(max-width: 300px)" />
+                <img src={carAndTree} alt={"Car with tree"} className={styles.car} />
+            </picture>
             <img src={christmasTree} alt={"Брелок"} className={styles.tree}/>
-            <img src={carAndTree} alt={"Car with tree"} className={styles.car} />
+
             <div className={styles.contentWrapper}>
                 <div className={styles.content}>
                     <div className={styles.heading}>
-                        <h1>
+                        <h1 className={styles.title}>
                             {post?.title}
                         </h1>
                         <span>{convertToRussianDate(post?.created)}</span>

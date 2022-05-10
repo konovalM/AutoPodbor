@@ -1,0 +1,55 @@
+.small{
+  display: flex;
+  flex-direction: column;
+  max-width: 330px;
+  height: 196px;
+  width: 100%;
+}
+.img{
+  max-height: 152px;
+  object-fit: cover;
+  border-top-right-radius: 11px;
+  border-top-left-radius: 11px;
+}
+.row{
+
+  display: flex;
+  justify-content: space-between;
+}
+.carName{
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 13px;
+  color: #FFFFFF;
+  margin: 7px 0 2px;
+}
+.carDescription{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+  color: #7B7B7B;
+  margin: 0;
+}
+.button{
+  background: linear-gradient(180deg, #FCC026 0%, #FC8B26 100%);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 11px 0px;
+  border: none;
+  width: 117px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+.texts{
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 330px){
+  .small{
+    height: auto;
+  }
+}

@@ -26,7 +26,7 @@ button:focus:not(:focus-visible){
     content:">"
 }
 .breadcrumb{
-    background: var(--white);
+    background: transparent;
 }
 
 .modal-content{

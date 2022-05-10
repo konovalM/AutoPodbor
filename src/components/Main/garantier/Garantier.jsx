@@ -7,6 +7,9 @@ export const Garantier = () => {
 
     return (
       <section className={styles.wrapper}>
+        <h2 className={styles.titleMain}>
+          Предоставляем гарантию
+        </h2>
         <div className={styles.content}>
           <div className={styles.card}>
             <span className={cn(styles.isPay, styles.white)}>Бесплатная</span>

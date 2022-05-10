@@ -1,14 +1,16 @@
 .wrapper{
-  background: rgba(119, 119, 119, 0.01);
   //opacity: 0.7;
-  border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
-  backdrop-filter: blur(150px);
+  //backdrop-filter: blur(150px);
   border-radius: 11px;
   display:flex;
   flex-direction: column;
-  padding: 20px 30px 25px;
+  padding: 20px 26px 25px;
+  max-width: 446px;
+  backdrop-filter: blur(150px);
+  background: rgba(119, 119, 119, 0.3);
 
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 
@@ -61,4 +63,15 @@
   font-size: 18px;
   line-height: 140%;
   color: #000000;
+}
+
+@media screen and (max-width: 500px){
+  .phone{
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 366px){
+  .phone{
+    font-size: 26px;
+  }
 }

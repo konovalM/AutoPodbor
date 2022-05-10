@@ -59,9 +59,9 @@ export const CustomForm = ({isRow,upload}) => {
               </div>
               <p className={styles.disclaimer}>
                 При отправке данных вы соглашаетесь на{" "}
-                <span className={styles.underline}>
+                <a href='/privacy' style={{textDecoration: 'underline', color: 'inherit'}}>
                   обработку персональных данных
-                </span>
+                </a>
               </p>
               <Button
                 type="submit"
@@ -72,5 +72,6 @@ export const CustomForm = ({isRow,upload}) => {
           )}
         </Formik>
       </div>
+
     );
 };

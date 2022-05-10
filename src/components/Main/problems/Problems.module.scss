@@ -1,3 +1,7 @@
+.problems{
+  padding: 144px 0 0;
+  background: url("../../../assets/images/problemsBg.jpg")calc(50% - 45px) bottom/contain no-repeat;
+}
 .wrapper{
   overflow: hidden;
   margin: 0 auto;
@@ -79,15 +83,26 @@
   top: 0; left: -95px; bottom: 0; right: 0;
 
 }
-
+@media screen and (max-width: 1275px){
+  .men{
+    display: none;
+  }
+  .problems{
+    background: url("../../../assets/images/problemsBg.jpg")calc(50% - 45px) bottom/cover no-repeat;
+  }
+}
 
 @media screen and (max-width: 768px){
+  .problems{
+    background: url("../../../assets/images/problemsBg.jpg")calc(50% - 10px) 150px/contain no-repeat;
+    background-size: 500px;
+  }
   .row{
     flex-direction: column;
     gap:20px;
   }
   .title{
-    margin-bottom: -30px;
+    margin-bottom: 300px;
   }
   .men{
     position: static;
@@ -99,5 +114,35 @@
   }
   .content{
    gap: 20px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 614px){
+  .problems{
+    padding: 100px 0 0;
+    background: url("../../../assets/images/problemsBg.jpg")calc(50% - 10px) 170px/contain no-repeat;
+  }
+  .title{
+    margin-bottom: 320px;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .problems{
+    background: url("../../../assets/images/problemsBg.jpg")calc(50% - 10px) 170px/contain no-repeat;
+  }
+  .title{
+    margin-bottom: 298px;
+    font-size: 32px;
+    line-height: 125%;
+  }
+}
+@media screen and (max-width: 390px){
+  .problems{
+    background: url("../../../assets/images/problemsBg.jpg")calc(50% - 10px) 200px/contain no-repeat;
+  }
+  .title{
+    margin-bottom: 298px;
   }
 }

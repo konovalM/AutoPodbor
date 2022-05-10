@@ -10,7 +10,7 @@ import {ExternalLink} from "../UI/externalLink";
 
 export const Footer = () => {
     return (
-        <footer className={styles.black}>
+        <footer className={styles.black} id='footer'>
 
             <div className={styles.container}>
                 <div className={styles.footer}>

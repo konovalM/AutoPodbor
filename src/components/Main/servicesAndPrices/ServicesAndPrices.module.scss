@@ -1,3 +1,8 @@
+.servicesAndPrices{
+  background: url("../../../assets/images/servicesEllipseLeft.svg")left center/contain no-repeat, url('../../../assets/images/servicesEllipseRight.svg')top right/contain no-repeat;
+  position: relative;
+  overflow: hidden;
+}
 .wrapper{
   z-index:100;
   position: relative;
@@ -8,9 +13,7 @@
   display: flex;
   flex-direction: column;
   gap: 38px;
-  overflow-x: hidden;
-    padding-top: 54px;
-// background:url('./')
+  padding-top: 54px;
 }
 
 .content{
@@ -18,7 +21,8 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap:20px;
+  column-gap:20px;
+  row-gap: 97px;
   padding-bottom: 47px;
 }
 
@@ -38,49 +42,18 @@
   flex-direction: column;
   gap:3px;
 }
-
-
-.blue{
-  margin-left: -30px;
-  z-index: -1;
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 600px;
-  height: 600px;
-  border-radius: 50px;
-  transform: rotate(90deg);
-  background: #F4F6F5;
-  filter: blur(170px);
-}
-
-
-.pink{
-  margin-right: -30px;
-  z-index: -1;
-  position: absolute;
-  top:0;
-  right: -30px;
-  width: 600px;
-  height: 600px;
-  border-radius: 50px;
-  transform: rotate(90deg);
-  background: #FAF6F3;
-  filter: blur(170px);
-}
-
 .glasses{
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -100px;
 }
 
 .key{
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -80px;
 }
 
 @media screen and (max-width: 768px){

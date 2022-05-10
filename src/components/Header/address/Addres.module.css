@@ -1,0 +1,56 @@
+.text {
+  margin-right: 50px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 125%;
+  color: var(--gray-title);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 13px;
+}
+.text:hover {
+  color: var(--gray-title);
+}
+
+.black {
+  color: var(--gray-title);
+}
+.black:hover {
+  color: var(--gray-title);
+}
+
+.white {
+  color: var(--white);
+}
+.white:hover {
+  color: var(--white);
+}
+
+@media screen and (max-width: 1400px) {
+  .text {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 1282px) {
+  .spanText {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .text {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .text {
+    margin-right: 20px;
+  }
+
+  .spanText {
+    font-size: 17px;
+  }
+}
+
+/*# sourceMappingURL=Addres.module.css.map */

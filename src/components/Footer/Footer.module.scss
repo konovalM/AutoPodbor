@@ -63,7 +63,13 @@
 
 }
 
-@media screen and (max-width: 1070px) {
+@media screen and (max-width:1282px){
+  .addressCall{
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   .footer{
     padding-top: 50px;
     flex-direction: column;

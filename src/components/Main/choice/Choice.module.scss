@@ -1,4 +1,9 @@
+.choice{
+  background: url("../../../assets/images/whyLeftEllipse.svg")left center/contain no-repeat, url("../../../assets/images/whyRightEllipse.svg")right bottom/contain no-repeat;
+}
 .wrapper{
+  //background: #F4F6F5;
+  //filter: blur(170px);
   margin: 0 auto;
   max-width: 1090px;
   padding: 0 10px;

@@ -1,0 +1,36 @@
+.link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 113.7%;
+  text-transform: uppercase;
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+}
+.link:hover {
+  color: var(--white);
+}
+
+@media screen and (max-width: 1282px) {
+  .link img {
+    width: 70px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .link img {
+    width: auto;
+  }
+
+  .link {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .link {
+    margin-bottom: 35px;
+  }
+}
+
+/*# sourceMappingURL=Logo.module.css.map */

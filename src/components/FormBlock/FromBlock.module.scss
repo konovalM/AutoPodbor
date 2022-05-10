@@ -35,13 +35,11 @@
   border-radius: 11px;
 }
 
-
+//
 .padding{
-  padding: 0 30px;
-  padding-top: 220px;
+  padding: 64px 30px;
   position: relative;
   overflow: hidden;
-  padding-bottom: 90px;
   >img{
     position: absolute;
     top: 0;
@@ -169,4 +167,22 @@
   /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 11px;
+}
+
+@media screen and (max-width: 1432px){
+  .padding{
+    background-size: 130% 220%;
+  }
+}
+
+@media screen and (max-width: 575px){
+  .padding{
+    padding: 56px 0;
+  }
+  .title{
+    font-size: 26px;
+  }
+  .padding{
+    background-size: 250% 220%;
+  }
 }

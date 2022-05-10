@@ -13,7 +13,11 @@
   gap: 16px;
   margin:0;
 }
-
+.spanFontFamily{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
 .item{
 
   &>a,span{

@@ -8,6 +8,8 @@ import blackArticleRec from '../../assets/images/waves/blackArticleRec.png'
 import {FormBlock} from "../../components/FormBlock";
 import {WaveWrapper} from "../../components/wavesWrapper";
 import {BreadcrumbsLayout} from "../../layout/breadcrumbsLayout";
+import styles from './Article.module.scss'
+import {BlogCard} from "../../components/cards/blogCard";
 
 export const Article = () => {
     const {id} = useParams()
@@ -31,21 +33,39 @@ export const Article = () => {
         })()
     }, [page])
     return (
-        <BreadcrumbsLayout text={currentPost?.title || ""}>
-            <main>
-                <ArticleBlock post={currentPost}/>
-                {
-                    posts?.results.length && <div style={{padding: "0 0 100px 0"}}>
-                        <BlogArticles posts={posts.results} style={{flexWrap: "nowrap"}}/>
-                        <PaginationComponent pageCount={posts.page_count} setPage={setPage}/>
-                    </div>
-                }
-                <WaveWrapper src={blackArticleRec} alt={"blackArticleRec"}>
-                    <FormBlock/>
-                </WaveWrapper>
+        <div className={styles.overflow}>
+            <BreadcrumbsLayout text={currentPost?.title || ""}>
+                <main>
+                    <ArticleBlock post={currentPost}/>
+                    {
+                        posts?.results.length && <div>
+                            <div className={styles.articleWrapper}>
+                                <section className={styles.wrapper}>
+                                    <div className={styles.container}>
 
-            </main>
-        </BreadcrumbsLayout>
+                                        {
+                                            posts.results.map((post,index)=>{
+                                                if (index>2){
+                                                    return <BlogCard key={post.id} post={post} isRow={true}/>
+                                                }
+                                                return <BlogCard key={post.id} post={post} isRow={false}/>
+                                            })
+                                        }
+
+                                    </div>
+                                </section>
+                            </div>
+                            <PaginationComponent pageCount={posts.page_count} setPage={setPage} background={'#fff'}/>
+                        </div>
+                    }
+                    <div className={styles.wave}>
+                        <div style={{backgroundColor: '#000'}}>
+                            <FormBlock/>
+                        </div>
+                    </div>
+                </main>
+            </BreadcrumbsLayout>
+        </div>
     );
 };
 

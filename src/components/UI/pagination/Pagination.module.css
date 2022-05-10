@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
+.rc-pagination-item-active,
+.rc-pagination-item-active {
+  background: linear-gradient(109.36deg, #000000 0%, #282828 100%) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 100%;
+  }
+
+  .wrapper .rc-pagination {
+    align-items: end;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=Pagination.module.css.map */

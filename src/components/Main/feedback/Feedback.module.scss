@@ -1,6 +1,5 @@
 .bck{
   width: 100%;
-  background: black;
   padding:100px 0;
 }
 
@@ -23,11 +22,10 @@
 
 .social{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  max-width: 900px;
+  justify-content: center;
   width: 100%;
+  gap: 50px;
   margin: 0 auto;
 }
 
@@ -42,6 +40,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 129.7%;
+  max-width: 308px;
   color: var(--white);
   margin-bottom: 0;
 }
@@ -92,12 +91,7 @@
   max-width: 1319px;
 }
 .sliderWrapper{
-  // overflow-y: hidden;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: center;
-  // align-items: center;
-  // background:wheat;
+  background: url("../../../assets/images/mapOfRussia.svg")center center/contain no-repeat, url("../../../assets/images/lightEllipse.svg")center center/contain no-repeat;
   display: flex;
     justify-content: center;
 }

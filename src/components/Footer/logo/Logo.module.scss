@@ -15,6 +15,20 @@
   }
 }
 
+@media screen and (max-width:1282px){
+  .link img{
+    width: 70px;
+  }
+}
+
+@media screen and (max-width:1024px){
+  .link img{
+    width: auto;
+  }
+  .link{
+    margin-bottom: 20px;
+  }
+}
 
 @media screen and (max-width:576px){
   .link{

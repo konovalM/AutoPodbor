@@ -1,3 +1,21 @@
+.waves{
+  background: url("../../../assets/images/waveBgBlack.svg")top center/contain no-repeat;
+  /*background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;*/
+  padding-top: 150px;
+}
+@media (max-width: 500px){
+  .waves{
+    padding-top: 80px;
+  }
+  .wrapperInner{
+    padding: 0 0 20px;
+  }
+}
+.wrapperInner{
+  background-color: #000;
+}
 .bcg{
   //background: black;
   position: relative;
@@ -53,9 +71,6 @@
   grid-row-gap: 20px;
 }
 
-.mt60{
-  margin-top: 60px;
-}
 
 
 .second{

@@ -7,7 +7,7 @@ export const Breadcrumbs = ({text}) => {
 
     return (
         <div className={styles.container}>
-            <Breadcrumb >
+            <Breadcrumb>
                 <Breadcrumb.Item href="/" className={styles.item}>Главная страница</Breadcrumb.Item>
                 <Breadcrumb.Item active>
                     {text}

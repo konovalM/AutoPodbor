@@ -36,19 +36,15 @@ export const Blog = () => {
         <BreadcrumbsLayout text={"Блог"}>
             <main style={{margin: "0 auto"}}>
                 <BlogMain/>
-
-                <WaveWrapper src={blackBlogRec} alt={"blackBlogRec"}>
                     {
-                        posts?.results.length && <div style={{paddingTop: "150px"}}>
+                        posts?.results.length && <div>
                             <BlogArticles posts={posts.results}/>
                             <PaginationComponent pageCount={posts.page_count} setPage={setPage}/>
                         </div>
                     }
-                </WaveWrapper>
-
-                <BlackWrapper>
+                <div style={{backgroundColor: '#000'}}>
                     <FormBlock/>
-                </BlackWrapper>
+                </div>
 
             </main>
         </BreadcrumbsLayout>

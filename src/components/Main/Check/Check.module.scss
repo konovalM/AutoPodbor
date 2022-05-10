@@ -84,13 +84,15 @@
 }
 
 .desktop{
-  display: block;
+  background: url("../../../assets/images/carBg.png")center center/contain no-repeat, url("../../../assets/images/carEllipseBg.svg")center center/contain no-repeat;
 }
 .mobile{
   display: none;
 
 }
-
+.ellipse{
+  display: none;
+}
 .column{
   display: flex;
   flex-direction: column;
@@ -98,21 +100,57 @@
   padding: 0 15px;
 }
 
-
+@media screen and (max-width: 1260px) {
+  .desktop{
+    background-size: 600px;
+  }
+}
+@media screen and (max-width: 1157px) {
+  .desktop{
+    background-size: 500px;
+  }
+}
+@media screen and (max-width: 1104px){
+  .desktop{
+    background-size: 440px;
+  }
+}
+@media screen and (max-width: 1042px){
+  .desktop{
+    background-size: 380px;
+  }
+}
 @media screen and (max-width: 990px) {
   //.title{
   //  margin-bottom: 30px;
   //}
+
+  .ellipse{
+    display: block;
+    background: url("../../../assets/images/ellipseCenter.svg")center center/contain no-repeat;
+  }
   .carMobile{
     width: 100%;
   }
+
   .desktop{
     display: none;
   }
   .mobile{
+    background: url("../../../assets/images/verticalEllipse.svg")center center/contain no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .title{
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+  .column{
+    padding: 0 0 0 15px;
   }
 }
