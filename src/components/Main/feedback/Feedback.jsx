@@ -226,7 +226,7 @@ export const Feedback = () => {
                     href={"https://vk.com/wall-177600442?own=1"}
                     className={styles.underline}
                 >
-                  &nbsp;ВКонтакте
+                  ВКонтакте
                 </ExternalLink>
               </SocialItem>
             </AnimateWrapper>

@@ -6,6 +6,7 @@ import blackServiceRec from "../../assets/images/waves/blackServiceRec.png";
 import {getService} from "../../api/serviceAPI";
 import {WaveWrapper} from "../../components/wavesWrapper";
 import {BreadcrumbsLayout} from "../../layout/breadcrumbsLayout";
+import styles from './Service.module.scss'
 
 
 export const Service = () => {
@@ -25,11 +26,13 @@ export const Service = () => {
 
     return (
         <BreadcrumbsLayout text={serviceData?.title || ""}>
-            <main>
+            <main style={{overflow: 'hidden'}}>
                 {serviceData && <AutoPodbor service={serviceData}/>}
-                <WaveWrapper src={blackServiceRec} alt={"blackServiceRec"}>
-                    <FormBlock/>
-                </WaveWrapper>
+                <div className={styles.wave}>
+                    <div style={{backgroundColor: '#000'}}>
+                        <FormBlock/>
+                    </div>
+                </div>
             </main>
         </BreadcrumbsLayout>
     );

@@ -26,7 +26,7 @@ export const Menu = () => {
             </div>
             <div className={styles.col}>
                 <a  className={styles.link} href={`/#feedback`}>отзывы</a>
-                <Link to={"/about"} className={styles.link}>блог</Link>
+                <Link to={"/blog"} className={styles.link}>блог</Link>
                 <span className={styles.link} onClick={()=>dispatch({type:OPEN_MODAL})}>контакты</span>
             </div>
         </div>

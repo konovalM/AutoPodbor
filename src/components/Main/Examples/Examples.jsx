@@ -24,12 +24,12 @@ export const Examples = () => {
 
     return (
       <section
-        style={{ background: "black", paddingBottom: "50px" }}
+        style={{ paddingBottom: "50px" }}
         className={styles.wrapper}
         id={"examples"}
       >
         <h2 className={styles.title}>Примеры нашей работы</h2>
-        {current && <ExampleBig post={current} />}
+        {current && <ExampleBig post={current}/>}
 
 
         <div className={styles.content}>
@@ -45,6 +45,7 @@ export const Examples = () => {
 
         {examples?.page_count && (
           <PaginationComponent
+            background={'transparent'}
             pageCount={examples.page_count}
             setPage={setPage}
           />

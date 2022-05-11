@@ -1,9 +1,9 @@
-.bck{
+.bck {
   width: 100%;
-  padding:100px 0;
+  padding: 100px 0;
 }
 
-.title{
+.title {
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -13,14 +13,14 @@
   margin-bottom: 68px;
 }
 
-.container{
+.container {
   max-width: 1365px;
-  padding:0 15px ;
+  padding: 0 15px;
   width: 100%;
   margin: 0 auto 100px;
 }
 
-.social{
+.social {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,13 +29,14 @@
   margin: 0 auto;
 }
 
-.socialItem{
+.socialItem {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap:20px;
+  gap: 20px;
 }
-.text{
+
+.text {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -45,25 +46,26 @@
   margin-bottom: 0;
 }
 
-.underline{
+.underline {
   text-decoration: underline;
   color: #0000FF;
 }
 
-.red{
+.red {
   width: 300px;
   height: 300px;
   background: red;
 }
 
-.btnWrapper{
+.btnWrapper {
   margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.btn{
+
+.btn {
   background: linear-gradient(180deg, #FCC026 0%, #FC8B26 100%);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
@@ -73,88 +75,94 @@
   font-size: 15px;
   line-height: 113%;
   /* or 17px */
-
   display: flex;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  padding:0 10px;
+  padding: 0 10px;
   color: #121212;
 }
 
-
-.review{
+.review {
   cursor: pointer;
 }
-.sliderSlick{
+
+.sliderSlick {
   width: 100%;
   max-width: 1319px;
 }
-.sliderWrapper{
-  background: url("../../../assets/images/mapOfRussia.svg")center center/contain no-repeat, url("../../../assets/images/lightEllipse.svg")center center/contain no-repeat;
+
+.sliderWrapper {
+  background: url("../../../assets/images/mapOfRussia.svg") center center/contain no-repeat, url("../../../assets/images/lightEllipse.svg") center center/contain no-repeat;
   display: flex;
-    justify-content: center;
-}
-.slick-center .phoneButton::after{
-  bottom:0;
-  left:0;
-  content:'';
-  width: 230.38px;
-height: 48.67px;
-  background:url('./reviews.jpg');
-}
-.phoneButton{
-  position: relative;
-  display: flex !important;
-  justify-content:center;
-  .link{
-    position: absolute;
-    bottom: 10%;
-left: 50%;
-    transform: translateX(-50%);
-  }
-  img{
-    max-width: auto;
-  }
+  justify-content: center;
 }
 
-.mapWrapper{
+.slick-center .phoneButton::after {
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 230.38px;
+  height: 48.67px;
+  background: url("./reviews.jpg");
+}
+
+.phoneButton {
+  position: relative;
+  display: flex !important;
+  justify-content: center;
+}
+.phoneButton .link {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.phoneButton img {
+  max-width: auto;
+}
+
+.mapWrapper {
   position: relative;
   overflow: hidden;
 }
-.map{
+
+.map {
   margin: auto;
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
-@media screen  and (max-width: 800px){
-  .map{
+
+@media screen and (max-width: 800px) {
+  .map {
     display: none;
   }
-  .social{
-    flex-direction: column;
-    gap:30px;
 
+  .social {
+    flex-direction: column;
+    gap: 30px;
   }
-  .container{
+
+  .container {
     margin-bottom: 40px;
   }
 }
-// @media (max-width:700px) {
-//   .slick-slider{
-//     padding-bottom: 40px !important;
-//   }
-// }
-@media screen  and (max-width: 576px){
-  .socialItem{
+@media screen and (max-width: 576px) {
+  .socialItem {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .social{
+  .social {
     align-items: flex-start;
   }
-  .container{
+
+  .container {
     margin-bottom: 40px;
   }
 }
+
+/*# sourceMappingURL=Feedback.module.css.map */

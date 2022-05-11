@@ -1,22 +1,37 @@
-import React, { useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import styles from "./ExampleCard.module.scss";
 
-export const ExampleBig = ({ post }) => {
-  useEffect(() => console.log(post.additional_images.length));
+export const ExampleBig = ({ post}) => {
+  useEffect(() => console.log(post.additional_images.length), []);
+
+  const [images, setImages] = useState(post.additional_images)
+  const [activeImage, setActiveImage] = useState(post.img)
+  useEffect(() => {
+    setImages(post.additional_images)
+    setActiveImage(post.img)
+  }, [post])
+
+  const changeActive = (img, index) => {
+    const clonedImages = [...images]
+    clonedImages[index] = activeImage
+    setActiveImage(img)
+    setImages(clonedImages)
+  }
+
   return (
     <div className={styles.card}>
       <div className={styles.sua}>
         {" "}
         <div className={styles.suaWrapper}>
-          <img src={post.img} className={styles.img} alt={"example big card"} />
+          <img src={activeImage} className={styles.img} alt={"example big card"} />
         </div>
         {post.additional_images.length !== 0 ? (
           <div className={styles.tumbnails}>
             {/* <div style={{backgroundColor:'black'}}> */}
-              {post.additional_images.map((el) => {
+              {images.map((el, i) => {
                 return (
-                  <div className={styles.tumbEl} style={{width: `100%`}}>
-                    <img src={el} alt="" />
+                  <div className={styles.tumbEl} style={{width: `100%`}} key={i}>
+                    <img src={el} alt="" onClick={() => changeActive(el, i)}/>
                   </div>
                 );
               })}
