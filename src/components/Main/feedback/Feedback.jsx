@@ -199,41 +199,41 @@ const SocialItem = ({ src, children }) => {
 
 export const Feedback = () => {
   return (
-    <section className={styles.bck} id={"feedback"}>
-      <div className={styles.container}>
-        <AnimateWrapper animate={"fade-right"}>
-          <h2 className={styles.title}>Отзывы клиентов</h2>
-        </AnimateWrapper>
+      <section className={styles.bck} id={"feedback"}>
+        <div className={styles.container}>
+          <AnimateWrapper animate={"fade-right"}>
+            <h2 className={styles.title}>Отзывы клиентов</h2>
+          </AnimateWrapper>
 
-        <div className={styles.socialWrapper}>
-          <div className={styles.social}>
-            <AnimateWrapper animate={"fade-left"}>
-              <SocialItem src={yandex}>
-                Более 45 отзывов &nbsp;
-                <span>
-                <a href={"https://yandex.ru/profile/185334738407"}className={styles.underline}>на Яндекс</a>
-              </span>
-                &nbsp;
-                со средней оценкой 5.0
-              </SocialItem>
-            </AnimateWrapper>
+          <div className={styles.socialWrapper}>
+            <div className={styles.social}>
+              <AnimateWrapper animate={"fade-left"}>
+                <SocialItem src={yandex}>
+                  Более 45 отзывов &nbsp;
+                  <span>
+              <a href={"https://yandex.ru/profile/185334738407"}className={styles.underline}>на Яндекс</a>
+            </span>
+                  &nbsp;
+                  со средней оценкой 5.0
+                </SocialItem>
+              </AnimateWrapper>
 
-            <AnimateWrapper animate={"fade-right"}>
-              {" "}
-              <SocialItem src={vk}>
-                Более 1200 положительных отзывов в группе{" "}
-                <ExternalLink
-                    href={"https://vk.com/wall-177600442?own=1"}
-                    className={styles.underline}
-                >
-                  ВКонтакте
-                </ExternalLink>
-              </SocialItem>
-            </AnimateWrapper>
+              <AnimateWrapper animate={"fade-right"}>
+                {" "}
+                <SocialItem src={vk}>
+                  Более 1200 положительных отзывов в группе{" "}
+                  <ExternalLink
+                      href={"https://vk.com/wall-177600442?own=1"}
+                      className={styles.underline}
+                  >
+                    ВКонтакте
+                  </ExternalLink>
+                </SocialItem>
+              </AnimateWrapper>
+            </div>
           </div>
         </div>
-      </div>
         <PhoneSlider />
-    </section>
+      </section>
   );
 };

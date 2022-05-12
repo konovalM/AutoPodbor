@@ -68,7 +68,6 @@ export const AutoPodbor = ({service}) => {
                 <HeaderBlock price={service.price_from}/>
                 <EnterInService serviceText={service.service_include}/>
             </div>
-            <img className={styles.imgBackground} src={bcg} alt={"Background"}/>
         </section>
     );
 };

@@ -63,10 +63,36 @@
 .row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 390px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1309px){
+  .row{
+    column-gap: 360px;
+  }
+}
+@media screen and (max-width: 1228px){
+  .row{
+    column-gap: 330px;
+  }
+}
+@media screen and (max-width: 1141px){
+  .row{
+    column-gap: 280px;
+  }
+}
+@media screen and (max-width: 1094px){
+  .row{
+    column-gap: 250px;
+  }
+}
+@media screen and (max-width: 1039px){
+  .row{
+    column-gap: 230px;
+  }
 }
 
 

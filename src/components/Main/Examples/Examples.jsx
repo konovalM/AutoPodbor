@@ -24,9 +24,9 @@ export const Examples = () => {
 
     return (
       <section
+        id={"examples"}
         style={{ paddingBottom: "50px" }}
         className={styles.wrapper}
-        id={"examples"}
       >
         <h2 className={styles.title}>Примеры нашей работы</h2>
         {current && <ExampleBig post={current}/>}
