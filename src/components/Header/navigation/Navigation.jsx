@@ -2,8 +2,8 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import styles from './Navigation.module.scss'
 import cn from 'classnames'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
+
 
 
 const NavItem = ({children}) => {

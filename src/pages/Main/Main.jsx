@@ -62,10 +62,10 @@ export const Main = () => {
           {/* <AnimateWrapper animate={"fade-left"}> */}
           <Check />
           {/* </AnimateWrapper> */}
-          <AnimateWrapper animate={"fade-right"}>
+          <AnimateWrapper animate={"fade-left"}>
             <FormBlock style={{ padding: "100px 0" }} />
           </AnimateWrapper>
-          <AnimateWrapper animate={"fade-left"}>
+          <AnimateWrapper animate={"fade-right"}>
             <Examples />
           </AnimateWrapper>
           {/* <AnimateWrapper animate={"fade-right"}> */}

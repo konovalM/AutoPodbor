@@ -18,8 +18,32 @@
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
 }
+.linkScroll:not([href]):not([tabindex]) {
+  color:var(--gray-secondary);
+  &:hover{
+    text-decoration: underline;
+    color:var(--gray-secondary);
+  }
+}
+.linkScroll{
+  color:var(--gray-secondary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 113.7%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.linkScroll:hover{
+  color:var(--gray-secondary);
+  text-decoration: underline;
+}
 .item{
 
+  a:hover{
+    color:var(--gray-secondary);
+    text-decoration: underline;
+  }
   &>a,span{
     color:var(--gray-secondary);
     font-style: normal;

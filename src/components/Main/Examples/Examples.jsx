@@ -23,34 +23,33 @@ export const Examples = () => {
     },[page])
 
     return (
-      <section
-        id={"examples"}
-        style={{ paddingBottom: "50px" }}
-        className={styles.wrapper}
-      >
-        <h2 className={styles.title}>Примеры нашей работы</h2>
-        {current && <ExampleBig post={current}/>}
+        <section
+            id={"examples"}
+            style={{ paddingBottom: "50px" }}
+            className={styles.wrapper}
+        >
+            <h2 className={styles.title}>Примеры нашей работы</h2>
+            {current && <ExampleBig post={current}/>}
 
 
-        <div className={styles.content}>
-          {examples?.results &&
-            examples.results.map((example, index) => (
-              <ExampleSmall
-                key={`${example.id}_${index}`}
-                setCurrent={setCurrent}
-                post={example}
-              />
-            ))}
-        </div>
+            <div className={styles.content}>
+                {examples?.results &&
+                    examples.results.map((example, index) => (
+                        <ExampleSmall
+                            key={`${example.id}_${index}`}
+                            setCurrent={setCurrent}
+                            post={example}
+                        />
+                    ))}
+            </div>
 
-        {examples?.page_count && (
-          <PaginationComponent
-            background={'transparent'}
-            pageCount={examples.page_count}
-            setPage={setPage}
-          />
-        )}
-      </section>
+            {examples?.page_count && (
+                <PaginationComponent
+                    background={'transparent'}
+                    pageCount={examples.page_count}
+                    setPage={setPage}
+                />
+            )}
+        </section>
     );
 };
-
