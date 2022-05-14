@@ -6,7 +6,7 @@ import {ConsultationModal} from "../../components/Modal";
 export const MainLayout = () => {
     return (
         <>
-            <Header myRe/>
+            <Header/>
             <ConsultationModal />
             <Outlet/>
             <Footer/>

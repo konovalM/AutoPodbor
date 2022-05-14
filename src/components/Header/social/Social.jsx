@@ -11,7 +11,7 @@ export const Social = () => {
     return (
         <div className={styles.content}>
             <ExternalLink href={"https://wa.me/+79992009330"}>
-                <img src={whatsApp} alt={"whatsApp"}/>
+                <img src={whatsApp} alt={"whatsApp"} className={styles.whatapp}/>
             </ExternalLink>
             <ExternalLink href={"https://t.me/Sergey_Petlyak"}>
                 <img src={telegram} alt={"telegram"}/>

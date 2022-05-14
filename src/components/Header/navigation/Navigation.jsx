@@ -84,7 +84,7 @@ export const NavigationMobile = ({isOpen, setIsOpen}) => {
                         ?
                         <a href={'/#services'}>цены и Услуги</a>
                         :
-                        <LinkScroll to={'examples'} className={styles.linkScroll} onClick={() => scrollTo('services')}>
+                        <LinkScroll className={styles.linkScroll} onClick={() => scrollTo('services')}>
                             цены и Услуги
                         </LinkScroll>
                 }

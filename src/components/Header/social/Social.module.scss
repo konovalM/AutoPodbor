@@ -3,3 +3,11 @@
   flex-direction: row;
   gap:8px;
 }
+.whatapp{
+  display: none;
+}
+@media screen and (max-width: 1024px){
+  .whatapp{
+    display: block;
+  }
+}
