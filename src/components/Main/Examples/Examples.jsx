@@ -25,6 +25,7 @@ export const Examples = () => {
     return (
         <section
             id={"examples"}
+            name={'examples'}
             style={{ paddingBottom: "50px" }}
             className={styles.wrapper}
         >

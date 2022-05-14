@@ -87,7 +87,7 @@ const HeaderMobile = () => {
                             <Wait/>
                         </div>
                         <nav className={styles.nav}>
-                            <NavigationMobile/>
+                            <NavigationMobile isOpen={isOpen} setIsOpen={setIsOpen}/>
                         </nav>
                         <Social/>
                     </div>

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.505cfb46.css",
-    "main.js": "/static/js/main.266ef33b.js",
+    "main.css": "/static/css/main.96eb45bb.css",
+    "main.js": "/static/js/main.05821933.js",
     "static/media/404.png": "/static/media/404.edc5ee97390fdd9ffeb5.png",
     "static/media/bcg.png": "/static/media/bcg.25f7220e2162b5c89482.png",
     "static/media/linesBg.png": "/static/media/linesBg.4dd14a9e37ba4aa26019.png",
@@ -29,6 +29,7 @@
     "static/media/whatsup.svg": "/static/media/whatsup.5e9c960f7b2738caebc91debb403d8ce.svg",
     "static/media/carMobile.png": "/static/media/carMobile.5ee48b2d0975cdfe87fd.png",
     "static/media/bashDesktop.png": "/static/media/bashDesktop.fa378e69393b655c1199.png",
+    "static/media/manMobile.png": "/static/media/manMobile.51a564967987c53076cf.png",
     "static/media/wheels.png": "/static/media/wheels.b24bb6236af3d61dbaff.png",
     "static/media/abou1.jpg": "/static/media/abou1.150af1244a6bafa91346.jpg",
     "static/media/Logo.svg": "/static/media/Logo.585d5367d47d546b1f752c8f33a58564.svg",
@@ -46,6 +47,7 @@
     "static/media/tg.svg": "/static/media/tg.163e4fc9fb99c35715b569fa088ab286.svg",
     "static/media/carInTheCenter.png": "/static/media/carInTheCenter.87f89b6506b1b214e19d.png",
     "static/media/whiteMainRec.jpg": "/static/media/whiteMainRec.a24ff21d7024840f2307.jpg",
+    "static/media/carMobileArticle.png": "/static/media/carMobileArticle.3668ce851b3e244cea1c.png",
     "static/media/spare1.png": "/static/media/spare1.d2d1add45a268f026b99.png",
     "static/media/key.png": "/static/media/key.ed479be5a2697a8f7d0a.png",
     "static/media/vin.jpg": "/static/media/vin.2805e48b191b7389e94a.jpg",
@@ -90,14 +92,21 @@
     "index.html": "/index.html",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "static/media/waveBg.svg": "/static/media/waveBg.d80ebdc958340c4d0188.svg",
-    "static/media/secondBg.svg": "/static/media/secondBg.e59c84296008e81f224b.svg",
+    "static/media/tabletEllipse.svg": "/static/media/tabletEllipse.3304cef78c87befcad30.svg",
     "static/media/lightEllipse.svg": "/static/media/lightEllipse.b9aceee8b508c91bc953.svg",
     "static/media/prev.svg": "/static/media/prev.88413f43eea02b85bfdb92eb7e8e11eb.svg",
     "static/media/carEllipseBg.svg": "/static/media/carEllipseBg.6ef7a58d4c35981b5855.svg",
+    "static/media/examplesEllipseMobile.svg": "/static/media/examplesEllipseMobile.b17fb7cf160de03ea19e.svg",
     "static/media/verticalEllipse.svg": "/static/media/verticalEllipse.b9af3a0696b59055aec4.svg",
+    "static/media/examplesEllipse.svg": "/static/media/examplesEllipse.b313ae30bbfc6a76e4a4.svg",
     "static/media/next.svg": "/static/media/next.197911447c55ce2f11fa77207f882698.svg",
+    "static/media/whyLeftEllipse.svg": "/static/media/whyLeftEllipse.7e4b5a10728f630c49f1.svg",
     "static/media/close.svg": "/static/media/close.4502855d242661e067d420486bd577b1.svg",
+    "static/media/whyRightEllipse.svg": "/static/media/whyRightEllipse.faaed10d4f7055f8daea.svg",
+    "static/media/servicesEllipseLeft.svg": "/static/media/servicesEllipseLeft.58ca70866c8ca69e12d0.svg",
+    "static/media/servicesEllipseRight.svg": "/static/media/servicesEllipseRight.dacf9b478444fdbfaa33.svg",
     "static/media/ellipseCenter.svg": "/static/media/ellipseCenter.1e8895dd59a2060cc3e1.svg",
+    "static/media/ellipseCenter2.svg": "/static/media/ellipseCenter2.b72e5db4305a66526d7c.svg",
     "static/media/shadow.svg": "/static/media/shadow.460d6d3508a99240867c9ccc83159e67.svg",
     "static/media/call.svg": "/static/media/call.980736fe0a75e40f63c92e59357d0d46.svg",
     "static/media/burger.svg": "/static/media/burger.7a876719bd2a812c4a280081a32935b0.svg",
@@ -105,11 +114,11 @@
     "static/media/bcg.svg": "/static/media/bcg.fdfa62fc8865d806ef3b.svg",
     "static/media/waveBgBlack.svg": "/static/media/waveBgBlack.1db57256a5214b6d357b.svg",
     "static/media/long-svg.svg": "/static/media/long-svg.3d2c3fb7754f6fb899a40dd610be49bf.svg",
-    "main.505cfb46.css.map": "/static/css/main.505cfb46.css.map",
-    "main.266ef33b.js.map": "/static/js/main.266ef33b.js.map"
+    "main.96eb45bb.css.map": "/static/css/main.96eb45bb.css.map",
+    "main.05821933.js.map": "/static/js/main.05821933.js.map"
   },
   "entrypoints": [
-    "static/css/main.505cfb46.css",
-    "static/js/main.266ef33b.js"
+    "static/css/main.96eb45bb.css",
+    "static/js/main.05821933.js"
   ]
 }

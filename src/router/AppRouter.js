@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {Routes, Route} from 'react-router'
 import {MainLayout} from "../layout/mainLayout";
 import {Main} from "../pages/Main";
@@ -13,7 +13,7 @@ export const AppRouter = () => {
     return (
         <Routes>
             <Route path="/" element={<MainLayout/>}>
-                <Route index element={<Main/>}/>
+                <Route index element={<Main />}/>
                 <Route path="/service/:id" element={<Service/>}/>
                 <Route path="/article/:id" element={<Article/>}/>
                 <Route path="/privacy" element={<Privacy/>}/>

@@ -43,6 +43,12 @@ export const Main = () => {
           mirror: false,
         });
     }, [])
+
+    /*const scrollToMyRef = (myRef) => {
+        setTimeout(() => {
+            window.scrollTo(0, myRef.current.scrollHeight)
+        }, 1000)
+    }*/
     return (
       <main>
         <Promo />
@@ -55,7 +61,7 @@ export const Main = () => {
         {/* <AnimateWrapper animate={"fade-right"}> */}
         <Problems />
         {/* </AnimateWrapper> */}
-        <section className={styles.black}>
+        <section className={styles.black} >
 
 
           {/* <img src={blackBcg} alt={"Black background"} className={styles.img} /> */}
