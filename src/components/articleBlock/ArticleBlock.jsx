@@ -10,7 +10,9 @@ import {convertToRussianDate} from "../../utils/date";
 export const ArticleBlock = ({post}) => {
     // console.log(post.asset)
     const newYoutubeLink = post?.asset.replace("watch?v=","embed/")
-    console.log(newYoutubeLink)
+    function createMarkup() {
+        return {__html: post?.content};
+    }
     return (
         <section className={styles.wrapper}>
             <picture>
@@ -40,9 +42,7 @@ export const ArticleBlock = ({post}) => {
                                 </div>
 
                         }
-                        <p className={styles.text}>
-                            {post?.content}
-                        </p>
+                        <p className={styles.text} dangerouslySetInnerHTML={createMarkup()}></p>
                 </div>
                 <div className={styles.line}/>
             </div>
