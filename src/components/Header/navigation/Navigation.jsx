@@ -65,7 +65,6 @@ export const Navigation = ({className}) => {
 export const NavigationMobile = ({isOpen, setIsOpen}) => {
     const {dispatch} = useModalContext()
     const anotherParts = ['about', 'article', 'service', 'blog'];
-    console.log(document.location.href.split('/'))
     const scrollTo = (idName) => {
         setIsOpen(false)
         const pageY = document.getElementById(idName).getBoundingClientRect().y

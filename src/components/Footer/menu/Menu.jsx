@@ -31,15 +31,12 @@ export const Menu = () => {
     }
     const sizeHeight = useWindowSize();
     useEffect(() => {
-        console.log('ОБНОВЛЕНИЕ')
         setUrl(document.location.href)
         const newUrl = document.location.href
-        console.log(newUrl)
         setPartsUrl(newUrl.split('/'))
     }, [sizeHeight])
 
     const anotherParts = ['about', 'article', 'service', 'blog'];
-    console.log(document.location.href)
 
     const scrollTo = (idName) => {
         const pageY = document.getElementById(idName).getBoundingClientRect().y
