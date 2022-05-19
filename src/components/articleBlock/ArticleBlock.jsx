@@ -8,7 +8,6 @@ import {convertToRussianDate} from "../../utils/date";
 
 
 export const ArticleBlock = ({post}) => {
-
     const newYoutubeLink = post?.asset.replace("watch?v=","embed/")
 
     return (
@@ -29,10 +28,15 @@ export const ArticleBlock = ({post}) => {
                     </div>
 
                     <div className={styles.iframe}>
-                        <iframe src={newYoutubeLink} className={styles.img}
-                                title="YouTube video player" frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen/>
+                        {
+                            newYoutubeLink.indexOf('embed/') === -1 ?
+                                <img src={newYoutubeLink} alt="Preview of Article" />
+                                    :
+                                <iframe src={newYoutubeLink} className={styles.img}
+                                        title="YouTube video player" frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen/>
+                        }
                         <p className={styles.text}>
                             {post?.content}
                         </p>
