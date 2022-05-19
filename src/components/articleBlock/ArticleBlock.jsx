@@ -30,7 +30,7 @@ export const ArticleBlock = ({post}) => {
                     <div className={styles.iframe}>
                         {
                             newYoutubeLink.indexOf('embed/') === -1 ?
-                                <img src={newYoutubeLink} alt="Preview of Article" />
+                                <img src={newYoutubeLink} alt="Preview of Article" {styles.articlePhoto}/>
                                     :
                                 <iframe src={newYoutubeLink} className={styles.img}
                                         title="YouTube video player" frameBorder="0"
