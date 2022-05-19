@@ -8,8 +8,9 @@ import {convertToRussianDate} from "../../utils/date";
 
 
 export const ArticleBlock = ({post}) => {
+    // console.log(post.asset)
     const newYoutubeLink = post?.asset.replace("watch?v=","embed/")
-
+    console.log(newYoutubeLink)
     return (
         <section className={styles.wrapper}>
             <picture>
@@ -27,20 +28,21 @@ export const ArticleBlock = ({post}) => {
                         <span>{convertToRussianDate(post?.created)}</span>
                     </div>
 
-                    <div className={styles.iframe}>
                         {
-                            newYoutubeLink.indexOf('embed/') === -1 ?
-                                <img src={newYoutubeLink} alt="Preview of Article" className={styles.articlePhoto}/>
+                            post?.asset.indexOf('youtube.com') === -1 ?
+                                <img src={post?.asset} alt="Preview of Article" className={styles.articlePhoto}/>
                                     :
-                                <iframe src={newYoutubeLink} className={styles.img}
-                                        title="YouTube video player" frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen/>
+                                <div className={styles.iframe}>
+                                    <iframe src={newYoutubeLink} className={styles.img}
+                                            title="YouTube video player" frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen/>
+                                </div>
+
                         }
                         <p className={styles.text}>
                             {post?.content}
                         </p>
-                    </div>
                 </div>
                 <div className={styles.line}/>
             </div>

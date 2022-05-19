@@ -12,7 +12,6 @@ const ServicesFromApi = () => {
         (async () => {
             await getServices().then(setServices)
         })()
-        console.log(services)
     }, [])
     return (
       <div className={styles.content}>
