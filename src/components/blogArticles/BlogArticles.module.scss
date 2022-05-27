@@ -1,7 +1,13 @@
 .articleWrapper{
-  background: transparent url("../../assets/images/waveBgBlack.svg")center top/contain no-repeat;
+  //background: transparent url("../../assets/images/waveBgBlack.svg")center top/contain no-repeat;
+  background-image: url("../../assets/images/waveBgBlack.svg");
+  background-color: transparent;
+  background-position: center top;
+  background-size: 100%;
+  background-repeat: no-repeat;
   padding-top: 170px;
 }
+//1373
 @media screen and (min-width: 2290px){
   .articleWrapper{
     background: url("../../assets/images/waveBgBlack.svg")center top/cover no-repeat;
@@ -25,7 +31,6 @@
   column-gap: 20px;
   row-gap:20px;
   flex-wrap: wrap;
-  margin: 0 auto;
 }
 
 

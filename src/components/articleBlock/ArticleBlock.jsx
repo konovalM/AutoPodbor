@@ -27,7 +27,7 @@ export const ArticleBlock = ({post}) => {
                         <h1 className={styles.title}>
                             {post?.title}
                         </h1>
-                        <span>{convertToRussianDate(post?.created)}</span>
+                        <span style={{display: 'block', minWidth: '160px', textAlign: 'right'}}>{convertToRussianDate(post?.created)}</span>
                     </div>
 
                         {

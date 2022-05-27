@@ -61,7 +61,7 @@
   line-height: 125%;
   color: var(--gray-primary);
   margin-bottom: 5px;
-  white-space: nowrap; /* Запрещаем перенос строк */
+  //white-space: nowrap; /* Запрещаем перенос строк */
   overflow: hidden; /* Обрезаем все, что не помещается в область */
   text-overflow: ellipsis;
 }

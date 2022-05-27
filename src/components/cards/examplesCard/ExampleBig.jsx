@@ -54,10 +54,7 @@ export const ExampleBig = ({ post}) => {
         </div>
         <div>
           <p className={styles.text}>
-            <span className={styles.textBold}>Задача: </span>Найти автомобиль с
-            заданными параметрами, подходящий потенциальному покупателю. Найти
-            автомобиль с заданными параметрами, подходящий потенциальному
-            покупателю.{" "}
+            <span className={styles.textBold}>Задача: </span>{post.task}
           </p>
           <div className={styles.text}>
             <span className={styles.textBold}>Результат:</span>
