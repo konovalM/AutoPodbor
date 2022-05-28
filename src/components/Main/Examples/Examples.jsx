@@ -21,7 +21,12 @@ export const Examples = () => {
             setCurrent(data.results[0])
         })()
     },[page])
-
+    const setCurrentAndScrollTo = (cur) => {
+        const pageY = document.querySelector('#examples').getBoundingClientRect().y
+        const bodyY = document.body.getBoundingClientRect().y
+        window.scrollTo(0, -bodyY+pageY)
+        setCurrent(cur)
+    }
     return (
         <section
             id={"examples"}
@@ -38,7 +43,7 @@ export const Examples = () => {
                     examples.results.map((example, index) => (
                         <ExampleSmall
                             key={`${example.id}_${index}`}
-                            setCurrent={setCurrent}
+                            setCurrent={setCurrentAndScrollTo}
                             post={example}
                         />
                     ))}

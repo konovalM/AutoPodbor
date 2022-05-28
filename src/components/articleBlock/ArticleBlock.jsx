@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from "./ArticleBlock.module.scss"
-import video from '../../assets/images/video.jpg'
 import christmasTree from '../../assets/images/article/christmasTree.png'
 import carAndTree from '../../assets/images/article/carAndTree.png'
 import carMobile from '../../assets/images/carMobileArticle.png'
@@ -8,7 +7,6 @@ import {convertToRussianDate} from "../../utils/date";
 
 
 export const ArticleBlock = ({post}) => {
-    // console.log(post.asset)
     const newYoutubeLink = post?.asset.replace("watch?v=","embed/")
     function createMarkup() {
         return {__html: post?.content};
@@ -27,7 +25,7 @@ export const ArticleBlock = ({post}) => {
                         <h1 className={styles.title}>
                             {post?.title}
                         </h1>
-                        <span style={{display: 'block', minWidth: '160px', textAlign: 'right'}}>{convertToRussianDate(post?.created)}</span>
+                        <span className={styles.articleDate} style={{}}>{convertToRussianDate(post?.created)}</span>
                     </div>
 
                         {

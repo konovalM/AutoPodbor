@@ -29,7 +29,6 @@ const QuestionsExpanded = () => {
         (async ()=>{
             await getAccordions().then(res=>setQuizes(res))
         })()
-        console.log(quizes)
     },[])
     return (
         <>

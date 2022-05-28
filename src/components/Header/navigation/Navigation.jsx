@@ -68,7 +68,6 @@ export const NavigationMobile = ({isOpen, setIsOpen}) => {
     const scrollTo = (idName) => {
         setIsOpen(false)
         const pageY = document.getElementById(idName).getBoundingClientRect().y
-        // console.log(document.getElementById('examples').getBoundingClientRect().y)
         setTimeout(() => {
             window.scrollTo(0, pageY)
         })

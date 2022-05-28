@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './BlogCard.module.scss'
-import video from '../../../assets/images/video.jpg'
 import {Button} from "../../UI/button";
 import {convertToRussianPointDate} from "../../../utils/date";
 import {useNavigate} from "react-router";
@@ -8,7 +7,6 @@ import {useNavigate} from "react-router";
 
 export const BlogCard = ({post, isRow}) => {
     const nav = useNavigate()
-    console.log(post.title)
     return (
         <div className={isRow ? styles.cardRow : styles.cardCol}>
             <img src={post.asset} alt={"video"} className={styles.img} width={300} height={225}/>
