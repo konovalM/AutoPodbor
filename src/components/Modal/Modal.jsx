@@ -21,7 +21,7 @@ const MainModal = () => {
                     Позвоните нам
                 </p>
 
-                <a href={"/"} className={styles.phoneNumber}>
+                <a href={"tel:+79992009330"} onClick={() => window.yaCounter88846653.reachGoal('phone')} className={styles.phoneNumber}>
                     +7 (999) 200-93-30
                 </a>
                 <p className={styles.subtitle}>

@@ -32,7 +32,11 @@ export const CustomForm = ({isRow,upload}) => {
           }}
         >
           {({ errors, touched }) => (
-            <Form className={styles.form}>
+            <Form className={styles.form} onSubmit={() => {
+                window.ym(88846653, 'reachGoal', 'form')
+                return true;
+            }
+            }>
               <div  className={isRow ? styles.rowInputs : ""}>
                 <div>
                   <Field
