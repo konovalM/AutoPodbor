@@ -10,10 +10,10 @@ import {ExternalLink} from '../../UI/externalLink'
 export const Social = () => {
     return (
         <div className={styles.content}>
-            <ExternalLink href={"https://t.me/Sergey_Petlyak"}>
+            <ExternalLink href={"https://t.me/chestniy_autopodbor"}>
                 <img src={telegram} alt={"telegram"}/>
             </ExternalLink>
-            <ExternalLink href={"https://vk.com/spb_avto_podbor"}>
+            <ExternalLink href={"https://vk.com/chestniy_autopodbor"}>
                 <img src={vk} alt={"vk"}/>
             </ExternalLink>
         </div>

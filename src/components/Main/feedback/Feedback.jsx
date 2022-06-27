@@ -120,7 +120,7 @@ const PhoneSlider = () => {
         }
       >
         <ExternalLink
-          href={"https://vk.com/wall-177600442?own=1"}
+          href={"https://m.vk.com/topic-177600442_47655026"}
           className={cn(styles.review, styles.link)}
         >
           <div className="globalPhone">
@@ -133,7 +133,7 @@ const PhoneSlider = () => {
           </div>
         </ExternalLink>
         <ExternalLink
-          href={"https://vk.com/wall-177600442?own=1"}
+          href={"https://m.vk.com/topic-177600442_47655026"}
           className={cn(styles.review, styles.link)}
         >
           <div className="globalPhone">
@@ -146,7 +146,7 @@ const PhoneSlider = () => {
           </div>
         </ExternalLink>
         <ExternalLink
-          href={"https://vk.com/wall-177600442?own=1"}
+          href={"https://m.vk.com/topic-177600442_47655026"}
           className={cn(styles.review, styles.link)}
         >
           <div className="globalPhone">
@@ -159,7 +159,7 @@ const PhoneSlider = () => {
           </div>
         </ExternalLink>
         <ExternalLink
-          href={"https://vk.com/wall-177600442?own=1"}
+          href={"https://m.vk.com/topic-177600442_47655026"}
           className={cn(styles.review, styles.link)}
         >
           <div className="globalPhone">
@@ -172,7 +172,7 @@ const PhoneSlider = () => {
           </div>
         </ExternalLink>
         <ExternalLink
-          href={"https://vk.com/wall-177600442?own=1"}
+          href={"https://m.vk.com/topic-177600442_47655026"}
           className={cn(styles.review, styles.link)}
         >
           <div className="globalPhone">
@@ -227,7 +227,7 @@ export const Feedback = () => {
                 <SocialItem src={vk}>
                   Более 1200 положительных отзывов в группе{" "}
                   <ExternalLink
-                      href={"https://vk.com/wall-177600442?own=1"}
+                      href={"https://m.vk.com/topic-177600442_47655026"}
                       className={styles.underline}
                   >
                     ВКонтакте
