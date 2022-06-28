@@ -10,7 +10,7 @@ export const SuccessUpload = () => {
                 </h3>
                 <p className={styles.simpleText}>
                     А пока что вы можете познакомиться с нашей группой <a
-                    className={styles.href} style={{textDecoration: 'underline'}} href='https://vk.com/spb_avto_podbor'>ВКонтакте</a>.
+                    className={styles.href} style={{textDecoration: 'underline'}} href='https://vk.com/chestniy_autopodbor'>ВКонтакте</a>.
                 </p>
             </section>
         </>
