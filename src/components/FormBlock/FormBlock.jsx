@@ -36,7 +36,7 @@ export const SecondStep = ({wrapper}) => {
                     </h3>
                     <p className={styles.simpleText}>
                         А пока что вы можете познакомиться с нашей группой <a
-                        href='https://vk.com/spb_avto_podbor'
+                        href='https://vk.com/chestniy_autopodbor'
                         className={styles.href} style={{textDecoration: 'underline'}}>ВКонтакте</a>.
                     </p>
                 </div>
