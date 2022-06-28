@@ -4,6 +4,7 @@ import {FeedbackSchemas} from "./Schemas";
 import {NamedInput, PhoneNumberInput} from "../inputs";
 import styles from './Form.module.scss'
 import {Button} from "../button";
+import ym from "react-yandex-metrika";
 
 function validateNumber(phoneNumber) {
     let error
@@ -29,14 +30,13 @@ export const CustomForm = ({isRow,upload}) => {
           validateOnBlur={true}
           onSubmit={(values) => {
             upload(values);
+            window.ym(88846653, 'reachGoal', 'form')
+            return true;
+
           }}
         >
           {({ errors, touched }) => (
-            <Form className={styles.form} onSubmit={() => {
-                window.ym(88846653, 'reachGoal', 'form')
-                return true;
-            }
-            }>
+            <Form className={styles.form}>
               <div  className={isRow ? styles.rowInputs : ""}>
                 <div>
                   <Field
