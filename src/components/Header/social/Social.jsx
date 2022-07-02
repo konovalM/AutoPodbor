@@ -10,6 +10,9 @@ import {ExternalLink} from '../../UI/externalLink'
 export const Social = () => {
     return (
         <div className={styles.content}>
+            <ExternalLink href={"https://wa.me/79992009330"}>
+                <img src={whatsApp} alt={"whatsApp"}/>
+            </ExternalLink>
             <ExternalLink href={"https://t.me/chestniy_autopodbor"}>
                 <img src={telegram} alt={"telegram"}/>
             </ExternalLink>

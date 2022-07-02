@@ -80,6 +80,9 @@ object-fit: scale-down;
   max-width: 556px;
   width: 100%;
 }
+.money{
+  width: 56px;
+}
 .mainTitle {
   font-style: normal;
   font-weight: 400;
@@ -121,7 +124,7 @@ object-fit: scale-down;
   flex-direction: row;
   align-items: center;
   gap: 11px;
-  padding: 3px 14px;
+  padding: 10px 35px 8px 23px;
   background: #ffffff;
   box-shadow: -1px 4px 21px rgba(0, 0, 0, 0.1);
   border-radius: 11px;
@@ -416,6 +419,9 @@ object-fit: scale-down;
   }
   .main{
     background: url("../../../assets/images/mainBgPhone.jpg")center 150px/contain no-repeat;
+  }
+  .moneyBlock {
+    padding: 5px 14px;
   }
 }
 @media(max-width: 423px){

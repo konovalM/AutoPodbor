@@ -60,20 +60,19 @@ const HeaderMobile = () => {
                 <header className={styles.headerMobile}>
                     <div className={styles.container}>
                         <div className={styles.head}>
-                            <div className={styles.logo} >
-                                <img className={styles.img} src={logo} alt={"logo"} onClick={()=>nav('/')}/>
-                                <div className={styles.textContainer}>
-                                    <p className={styles.text}>
-                                        +7 (999) 200-93-30
-                                    </p>
-                                    <span className={styles.link} onClick={() => dispatch({type: OPEN_MODAL})}>
-                                    заказать звонок
-                                </span>
-                                </div>
+                            <img className={styles.img} src={logo} alt={"logo"} onClick={()=>nav('/')}/>
+                            <div className={styles.textContainer}>
+                                <a href="tel:+79992009330" className={styles.text}>
+                                    +7 (999) 200-93-30
+                                </a>
+                                <span className={styles.link} onClick={() => dispatch({type: OPEN_MODAL})}>
+                                заказать звонок
+                            </span>
                             </div>
                             <button className={styles.btn} onClick={() => setIsOpen(prevState => !prevState)}>
                                 {isOpen ? <Close/> : <Burger/>}
                             </button>
+
                         </div>
 
                     </div>

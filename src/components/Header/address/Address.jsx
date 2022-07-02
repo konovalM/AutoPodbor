@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import styles from "./Addres.module.scss";
-import map from "../../../assets/images/map.png";
+import map from "../../../assets/images/mapAddress.svg";
 import cn from "classnames";
 
 export const Address = ({isBlack}) => {

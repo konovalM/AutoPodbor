@@ -4,7 +4,7 @@ import bcg from "../../../assets/images/mainBcg.jpg";
 import pig from "../../../assets/images/main/pig.png";
 import box from "../../../assets/images/main/box.png";
 import search from "../../../assets/images/main/search.png";
-import money from "../../../assets/images/main/money.png";
+import money from "../../../assets/images/main/money.jpg";
 import people from "../../../assets/images/main/people.png";
 import cloud from "../../../assets/images/clouds/cloud.png";
 import cloud1 from "../../../assets/images/clouds/cloud1.png";
@@ -68,7 +68,7 @@ const MainTitle = () => {
         помогаем с документами
       </p>
       <div className={styles.moneyBlock}>
-        <img src={money} alt={"money"} />
+        <img src={money} alt={"money"} className={styles.money}/>
         <p>Наши услуги окупаются в 95% случаев</p>
       </div>
       <button

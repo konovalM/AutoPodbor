@@ -29,7 +29,7 @@
   align-items: center;
 
   width: 100%;
-  padding: 8px 15px;
+  padding: 4px 15px;
 }
 
 
@@ -84,37 +84,33 @@
       .head {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
-        .logo {
-          display: flex;
-          flex-direction: row;
-          gap: 18px;
-          align-items: center;
-          .img {
-            width: 54px;
-            height: 48px;
+        column-gap: 18px;
+        .img {
+          width: 54px;
+          height: 48px;
+        }
+
+        .textContainer {
+          .text {
+            display: block;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 130%;
+            color: var(--gray-title);
+            margin-bottom: 0;
           }
 
-          .textContainer {
-            .text {
-              font-style: normal;
-              font-weight: 400;
-              font-size: 13px;
-              line-height: 130%;
-              color: var(--gray-title);
-              margin-bottom: 0;
-            }
-
-            .link {
-              cursor: pointer;
-              font-style: normal;
-              font-weight: 500;
-              font-size: 15px;
-              line-height: 113.7%;
-              text-decoration-line: underline;
-              color: var(--orange);
-            }
+          .link {
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 113.7%;
+            text-decoration-line: underline;
+            color: var(--orange);
           }
         }
       }
@@ -160,8 +156,27 @@
     font: inherit;
     color: inherit;
     background-color: transparent;
+    margin-left: auto;
     /* отображаем курсор в виде руки при наведении; некоторые
     считают, что необходимо оставлять стрелочный вид для кнопок */
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .headerMobile {
+    .container {
+      .head {
+        justify-content: space-between;
+        .btn {
+          margin-left: unset;
+        }
+        .textContainer {
+          .link {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
