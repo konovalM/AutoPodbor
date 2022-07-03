@@ -23,7 +23,6 @@ export const Service = () => {
             })
         })()
     }, [id])
-
     return (
         <BreadcrumbsLayout text={serviceData?.title || ""}>
             <main style={{overflow: 'hidden'}}>

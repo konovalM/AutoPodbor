@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Questions} from "../../components/Main/Questions";
 import {Choice} from "../../components/Main/choice";
 import {ServicesAndPrices} from "../../components/Main/servicesAndPrices";
@@ -31,6 +31,7 @@ import AOS from 'aos'
 import {AnimateWrapper} from "../../components/animateWrapper";
 
 export const Main = () => {
+    const [data, setData] = useState()
     useEffect(() => {
         AOS.init({
           offset: 200,
@@ -43,6 +44,18 @@ export const Main = () => {
           mirror: false,
         });
     }, [])
+    useEffect(async () => {
+        await fetch('https://avtopodbor-spb.pro/api/info/')
+            .then(res => {
+                return res.json()
+            })
+            .then(res => {
+                res.forEach((obj, i) => {
+                    localStorage.setItem(obj.slug, obj.value)
+                })
+                setData(res)
+            })
+    }, [])
 
     /*const scrollToMyRef = (myRef) => {
         setTimeout(() => {
@@ -51,7 +64,7 @@ export const Main = () => {
     }*/
     return (
       <main>
-        <Promo />
+        <Promo data={data}/>
         {/* <AnimateWrapper animate={"fade-right"}> */}
         <Choice />
         {/* </AnimateWrapper> */}

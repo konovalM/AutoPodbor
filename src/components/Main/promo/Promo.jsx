@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import styles from "./Promo.module.scss";
 import bcg from "../../../assets/images/mainBcg.jpg";
 import pig from "../../../assets/images/main/pig.png";
@@ -19,14 +19,28 @@ import {
   OPEN_MODAL,
   useModalContext,
 } from "../../../contexts/ModalContext";
+import {getService} from "../../../api/serviceAPI";
+import {getInfo} from "../../../api/infoAPI";
+import {useNavigate} from "react-router";
 
 const Plus = ({ src, title, text }) => {
   return (
     <div className={styles.plus}>
       <img src={src} alt={"plus"} />
       <div>
-        <h3 className={cn(styles.title, styles.titleLeft)}>{title}</h3>
-        <p className={styles.text}>{text}</p>
+          {
+              localStorage.getItem('promo_subheader_1') ?
+                  <h3 className={cn(styles.title, styles.titleLeft)} dangerouslySetInnerHTML={{__html: title}}></h3>
+                  :
+                  ''
+          }
+          {
+              localStorage.getItem('promo_subdescription_1') ?
+                  <p className={styles.text} dangerouslySetInnerHTML={{__html: text}}></p>
+                  :
+                  ''
+          }
+
       </div>
     </div>
   );
@@ -37,18 +51,18 @@ const Pluses = () => {
     <div className={styles.pluses}>
       <Plus
         src={pig}
-        title={"Экономия"}
-        text={"Добиваемся от продавца максимальной скидки"}
+        title={localStorage.getItem('promo_subheader_1')}
+        text={localStorage.getItem('promo_subdescription_1')}
       />
       <Plus
         src={box}
-        title={"0% с торга"}
-        text={"В отличие от конкурентов не берем процент с торга"}
+        title={localStorage.getItem('promo_subheader_2')}
+        text={localStorage.getItem('promo_subdescription_2')}
       />
       <Plus
         src={search}
-        title={"Полный осмотр"}
-        text={"Наш специалист проверяет машину на месте"}
+        title={localStorage.getItem('promo_subheader_3')}
+        text={localStorage.getItem('promo_subdescription_3')}
       />
     </div>
   );
@@ -58,18 +72,20 @@ const MainTitle = () => {
   const { dispatch } = useModalContext();
   return (
     <div className={styles.mainTitleBlock}>
-      <h1 className={styles.mainTitle}>
-        <span className={styles.orange}>Бесплатный</span>
-        <span className={styles.bold}> подбор авто</span> с выездом специалиста
-        в Петербурге и Ленобласти
-      </h1>
-      <p className={cn(styles.title, styles.mb32, styles.mw406)}>
-        Даем гарантию юридической чистоты и технической исправности машины,
-        помогаем с документами
-      </p>
+        {localStorage.getItem('promo_header') ? <h1 className={styles.mainTitle} dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_header')}}></h1> : ''}
+        {localStorage.getItem('promo_description') ? <p className={cn(styles.title, styles.mb32, styles.mw406)}
+                          dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_description')}}></p>
+        :
+        ''}
+
       <div className={styles.moneyBlock}>
         <img src={money} alt={"money"} className={styles.money}/>
-        <p>Наши услуги окупаются в 95% случаев</p>
+          {
+              localStorage.getItem('promo_subdescription') ?
+                  <p dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_subdescription')}}></p>
+                  :
+                  ''
+          }
       </div>
       <button
         className={styles.button}
@@ -98,7 +114,7 @@ const Cloud = () => {
   );
 };
 
-export const Promo = () => {
+export const Promo = ({data}) => {
   return (
     <section className={styles.main}>
       <div style={{ position: "relative" }}>
