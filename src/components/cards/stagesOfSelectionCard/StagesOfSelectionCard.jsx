@@ -9,11 +9,9 @@ export const StagesOfSelectionCard = ({src, title, children}) => {
                 <img src={src} alt={"Selection Card"} height={180}/>
             </div>
             <div className={styles.content}>
-                <h3 className={styles.title}>
-                    {title}
+                <h3 className={styles.title} dangerouslySetInnerHTML={{__html: title}}>
                 </h3>
-                <p className={styles.text}>
-                    {children}
+                <p className={styles.text} dangerouslySetInnerHTML={{__html: children}}>
                 </p>
             </div>
         </div>

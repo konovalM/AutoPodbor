@@ -5,8 +5,7 @@ import {Circle} from "../../UI/circle/Circle";
 export const AboutCardSmall = ({text, number}) => {
     return (
         <div className={styles.small}>
-            <p className={styles.text}>
-                {text}
+            <p className={styles.text} dangerouslySetInnerHTML={{__html: text}}>
             </p>
 
                 <Circle count={number} className={styles.circle}/>

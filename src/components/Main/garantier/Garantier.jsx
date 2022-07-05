@@ -15,23 +15,18 @@ export const Garantier = () => {
             <span className={cn(styles.isPay, styles.white)}>Бесплатная</span>
             <div className={styles.textContent}>
               <h3 className={styles.title}>
-                Вернем <span className={styles.yellow}>20 000 ₽</span> в течение{" "}
+                Вернем <span className={styles.yellow} >20 000 ₽</span> в течение{" "}
                 <span className={styles.bold}>14 дней</span>
               </h3>
 
               <div className={styles.list}>
                 <div className={styles.circle} />
-                <div className={styles.bigText}>
-                  Вернем деньги за наши услуги или{" "}
-                  <span className={styles.bold}>бесплатно</span> отремонтируем
-                  авто
+                <div className={styles.bigText} dangerouslySetInnerHTML={{__html: localStorage.getItem('warranty_text11')}}>
+
                 </div>
               </div>
-              <p className={styles.smallText}>
-                Бесплатно отремонтируем авто в случае, если при проверке мы не
-                смогли выявить неисправность автомобиля. Сумма компенсации, или
-                ремонта не может превышать стоимость заказанных услуг по подбору
-                авто.
+              <p className={styles.smallText} dangerouslySetInnerHTML={{__html: localStorage.getItem('warranty_text111')}}>
+
               </p>
             </div>
             <img src={letter} alt={"letter"} className={styles.letter} />
@@ -48,16 +43,12 @@ export const Garantier = () => {
 
               <div className={styles.list}>
                 <div className={styles.circle} />
-                <div className={styles.bigText}>
-                    {/* <span className={styles.fatText}></span> */}
-                  Бесплатно отремонтируем автомобиль на сумму не более{" "}
-                  <span className={styles.bold}>100 000 ₽</span>
+                <div className={styles.bigText} dangerouslySetInnerHTML={{__html: localStorage.getItem('warranty_text22')}}>
+
                 </div>
               </div>
-              <p className={styles.smallText}>
-                Если в течение 60 дней после покупки машины выявились
-                неисправности в узлах и агрегатах, за работоспособность которых
-                мы поручились при подборе.
+              <p className={styles.smallText} dangerouslySetInnerHTML={{__html: localStorage.getItem('warranty_text222')}}>
+
               </p>
             </div>
             <img src={letter} alt={"letter"} className={styles.letter} />

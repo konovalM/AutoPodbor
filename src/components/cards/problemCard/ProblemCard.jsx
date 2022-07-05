@@ -11,8 +11,8 @@ export const ProblemCard = ({src, title,text,number}) => {
         <ShadowCard>
             <div className={styles.card}>
                 <img src={src} className={styles.img} alt={""}/>
-                <h3 className={styles.title}>{title}</h3>
-                <p className={styles.text}>{text}</p>
+                <h3 className={styles.title} dangerouslySetInnerHTML={{__html: title}}></h3>
+                <p className={styles.text} dangerouslySetInnerHTML={{__html: text}}></p>
                 <Circle count={number}/>
             </div>
         </ShadowCard>

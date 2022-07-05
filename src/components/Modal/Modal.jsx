@@ -14,18 +14,15 @@ const MainModal = () => {
     return (
         <>
             <section className={styles.modal}>
-                <h3 className={styles.title}>
-                    Остались вопросы?
+                <h3 className={styles.title} dangerouslySetInnerHTML={{__html: localStorage.getItem('form_title1')}}>
                 </h3>
-                <p className={styles.subtitle}>
-                    Позвоните нам
+                <p className={styles.subtitle} dangerouslySetInnerHTML={{__html: localStorage.getItem('form_subtitle1')}}>
                 </p>
 
-                <a href={"tel:+79992009330"} onClick={() => window.yaCounter88846653.reachGoal('phone')} className={styles.phoneNumber}>
-                    +7 (999) 200-93-30
+                <a href={"tel:+79992009330"} onClick={() => window.yaCounter88846653.reachGoal('phone')} className={styles.phoneNumber}
+                   dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_telephone')}}>
                 </a>
-                <p className={styles.subtitle}>
-                    или заполните заявку на бесплатную консультацию
+                <p className={styles.subtitle} dangerouslySetInnerHTML={{__html: localStorage.getItem('form_text2')}}>
                 </p>
                 <CustomForm isRow={true} upload={(values)=>dispatch({type:UPLOAD_AND_NEXT_MODAL,payload:values})}/>
             </section>

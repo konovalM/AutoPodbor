@@ -41,10 +41,12 @@ export const MainAbout = () => {
   const [companyInfo, setCompanyInfo] = useState({});
 
   useEffect(() => {
-    (async () => {
+    async function fetchData() {
       await getCompanyInfo().then(setCompanyInfo);
-    })();
-  }, []);
+    }
+    fetchData()
+  }, [companyInfo]);
+
 
   return (
     <section className={styles.wrapper}>
@@ -53,7 +55,7 @@ export const MainAbout = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <h1 className={styles.title}>О компании</h1>
-          <div dangerouslySetInnerHTML={{ __html: companyInfo.info }} />
+          <div dangerouslySetInnerHTML={{ __html: localStorage.getItem('about_company_info') }} />
         </div>
         <div className={styles.sliderWrapp}>
           <Slider />

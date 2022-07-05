@@ -31,69 +31,31 @@ import AOS from 'aos'
 import {AnimateWrapper} from "../../components/animateWrapper";
 
 export const Main = () => {
-    const [data, setData] = useState()
-    useEffect(() => {
-        AOS.init({
-          offset: 200,
-          duration: 1000,
-          easing: "linear",
-          delay: 100,
-          once: false,
-          disable: ["tablet",'mobile'],
-          anchorPlacement: "top-top",
-          mirror: false,
-        });
-    }, [])
-    useEffect(async () => {
-        await fetch('https://avtopodbor-spb.pro/api/info/')
-            .then(res => {
-                return res.json()
-            })
-            .then(res => {
-                res.forEach((obj, i) => {
-                    localStorage.setItem(obj.slug, obj.value)
-                })
-                setData(res)
-            })
-    }, [])
 
-    /*const scrollToMyRef = (myRef) => {
-        setTimeout(() => {
-            window.scrollTo(0, myRef.current.scrollHeight)
-        }, 1000)
-    }*/
+
     return (
       <main>
-        <Promo data={data}/>
-        {/* <AnimateWrapper animate={"fade-right"}> */}
+        <Promo/>
+
         <Choice />
-        {/* </AnimateWrapper> */}
-        {/* <AnimateWrapper animate={"fade-left"}> */}
+
         <ServicesAndPrices />
-        {/* </AnimateWrapper> */}
-        {/* <AnimateWrapper animate={"fade-right"}> */}
+
         <Problems />
-        {/* </AnimateWrapper> */}
+
         <section className={styles.black} >
 
-
-          {/* <img src={blackBcg} alt={"Black background"} className={styles.img} /> */}
-          {/* <AnimateWrapper animate={"fade-left"}> */}
           <Check />
-          {/* </AnimateWrapper> */}
+
           <AnimateWrapper animate={"fade-left"}>
             <FormBlock style={{ padding: "100px 0" }} />
           </AnimateWrapper>
           <AnimateWrapper animate={"fade-right"}>
             <Examples />
           </AnimateWrapper>
-          {/* <AnimateWrapper animate={"fade-right"}> */}
             <Feedback />
-          {/* </AnimateWrapper> */}
           <WaveWrapper src={white} alt={"white background"}>
-            {/* <AnimateWrapper animate={"fade-left"}> */}
               <Selection />
-            {/* </AnimateWrapper> */}
           </WaveWrapper>
 
           <div className={style.back}>

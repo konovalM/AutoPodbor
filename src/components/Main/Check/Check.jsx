@@ -20,9 +20,9 @@ const CheckDesktop = () => {
         <AnimateWrapper animate={"fade-left"}>
           <CheckCard
             src={body}
-            title={"Кузов"}
+            title={localStorage.getItem('what_we_check_subtitle1')}
             text={
-              "Выявляем факты скрытого ДТП, ремонта, нарушения геометрии, окраса, снятия-установки элементов."
+              localStorage.getItem('what_we_check_text1')
             }
             num='1'
           ></CheckCard>
@@ -30,9 +30,9 @@ const CheckDesktop = () => {
         <AnimateWrapper animate={"fade-right"}>
           <CheckCard
             src={engine}
-            title={"Двигатель"}
+            title={localStorage.getItem('what_we_check_subtitle2')}
             text={
-              "Ищем течи, проводим замер компрессии, осматриваем внутренности двигателя эндоскопом."
+                localStorage.getItem('what_we_check_text2')
             }
             isReversed={true}
             num='2'
@@ -43,9 +43,9 @@ const CheckDesktop = () => {
         <AnimateWrapper animate={"fade-left"}>
           <CheckCard
             src={kpp}
-            title={"КПП"}
+            title={localStorage.getItem('what_we_check_subtitle3')}
             text={
-              "Тестируем корректность переключения скоростей, проводим тест-драйв, смотрим  наличие шумов, вибраций."
+                localStorage.getItem('what_we_check_text3')
             }
             num='3'
           />
@@ -54,9 +54,9 @@ const CheckDesktop = () => {
         <AnimateWrapper animate={"fade-right"}>
           <CheckCard
             src={running}
-            title={"Ходовая часть"}
+            title={localStorage.getItem('what_we_check_subtitle4')}
             text={
-              "Проверяем плавность хода во время поездки, выявляем посторонние шумы, стуки."
+                localStorage.getItem('what_we_check_text4')
             }
             isReversed={true}
             num='4'
@@ -67,9 +67,9 @@ const CheckDesktop = () => {
         <AnimateWrapper animate={"fade-left"}>
           <CheckCard
             src={computer}
-            title={"Компьютерная диагностика"}
+            title={localStorage.getItem('what_we_check_subtitle5')}
             text={
-              "Находим следы корректировки пробега. ошибки электронных систем и блоков."
+                localStorage.getItem('what_we_check_text5')
             }
             num='5'
           />
@@ -78,9 +78,9 @@ const CheckDesktop = () => {
         <AnimateWrapper animate={"fade-right"}>
           <CheckCard
             src={lawyer}
-            title={"Юридическая чистота"}
+            title={localStorage.getItem('what_we_check_subtitle6')}
             text={
-              "Проверка по всем базам на угон, арест, залоги, ограничение на регистрационные действия."
+                localStorage.getItem('what_we_check_text6')
             }
             isReversed={true}
             num='6'
@@ -97,9 +97,9 @@ const CheckMobile = () => {
       <div className={styles.column}>
         <CheckCard
           src={body}
-          title={"Кузов"}
+          title={localStorage.getItem('what_we_check_subtitle1')}
           text={
-            "Выявляем факты скрытого ДТП, ремонта, нарушения геометрии, окраса, снятия-установки элементов."
+              localStorage.getItem('what_we_check_text1')
           }
           isReversed={false}
             num='1'
@@ -107,9 +107,9 @@ const CheckMobile = () => {
         <CheckCard
 
           src={engine}
-          title={"Двигатель"}
+          title={localStorage.getItem('what_we_check_subtitle2')}
           text={
-            "Ищем течи, проводим замер компрессии, осматриваем внутренности двигателя эндоскопом."
+              localStorage.getItem('what_we_check_text2')
           }
           isReversed={true}
           num='2'
@@ -117,9 +117,9 @@ const CheckMobile = () => {
         <CheckCard
             num='3'
           src={kpp}
-          title={"КПП"}
+          title={localStorage.getItem('what_we_check_subtitle3')}
           text={
-            "Тестируем корректность переключения скоростей, проводим тест-драйв, смотрим  наличие шумов, вибраций."
+              localStorage.getItem('what_we_check_text3')
           }
           isReversed={false}
         />
@@ -134,9 +134,9 @@ const CheckMobile = () => {
       <div className={styles.column}>
         <CheckCard
           src={running}
-          title={"Ходовая часть"}
+          title={localStorage.getItem('what_we_check_subtitle4')}
           text={
-            "Проверяем плавность хода во время поездки, выявляем посторонние шумы, стуки."
+              localStorage.getItem('what_we_check_text4')
           }
           isReversed={true}
           num='4'
@@ -144,18 +144,18 @@ const CheckMobile = () => {
         <CheckCard
             num={'Hello'}
             src={computer}
-            title={"Компьютерная диагностика"}
+            title={localStorage.getItem('what_we_check_subtitle5')}
             text={
-            "Находим следы корректировки пробега. ошибки электронных систем и блоков."
+                localStorage.getItem('what_we_check_text5')
             }
             isReversed={false}
             num='5'
         />
         <CheckCard
           src={lawyer}
-          title={"Юридическая чистота"}
+          title={localStorage.getItem('what_we_check_subtitle6')}
           text={
-            "Проверка по всем базам на угон, арест, залоги, ограничение на регистрационные действия."
+              localStorage.getItem('what_we_check_text6')
           }
           isReversed={true}
           num='6'
@@ -168,7 +168,7 @@ const CheckMobile = () => {
 export const Check = () => {
   return (
     <div className={styles.wrapper}>
-      <h2 className={styles.title}>Что проверяем в машине</h2>
+      <h2 className={styles.title} dangerouslySetInnerHTML={{__html: localStorage.getItem('what_we_check_title1')}}></h2>
       <div className={styles.content}>
         <CheckDesktop />
         <CheckMobile />

@@ -37,9 +37,7 @@ export const Problems = () => {
         <img src={ss} alt="" className={styles.svgTop} /> */}
 
               <AnimateWrapper animate={"fade-top"}>
-                  <h2 className={styles.title}>
-                      Проблемы при
-                      <br /> самостоятельной покупке
+                  <h2 className={styles.title} dangerouslySetInnerHTML={{__html: localStorage.getItem('problems_title4')}}>
                   </h2>
               </AnimateWrapper>
 
@@ -49,9 +47,9 @@ export const Problems = () => {
                       <AnimateWrapper animate={"fade-right"}>
                           <ProblemCard
                               src={mileage}
-                              title={"Скручивание пробега"}
+                              title={localStorage.getItem('problems_subtitle1')}
                               text={
-                                  "Большинство автомобилей на рынке имеют заниженный пробег"
+                                  localStorage.getItem('problems_text1')
                               }
                               number={1}
                           />
@@ -59,9 +57,9 @@ export const Problems = () => {
                       <AnimateWrapper animate={"fade-left"}>
                           <ProblemCard
                               src={layer}
-                              title={"Юридические проблемы"}
+                              title={localStorage.getItem('problems_subtitle2')}
                               text={
-                                  "Кредитные, залоговые авто, двойники и “перебитые”, с запретами и ограничениями"
+                                  localStorage.getItem('problems_text2')
                               }
                               number={2}
                           />
@@ -72,9 +70,9 @@ export const Problems = () => {
                       <AnimateWrapper animate={"fade-right"}>{" "}
                           <ProblemCard
                               src={dtp}
-                              title={"Восстановление после ДТП"}
+                              title={localStorage.getItem('problems_subtitle3')}
                               text={
-                                  "Цена ремонта скрытых дефектов после ДТП может удвоить стоимость авто"
+                                  localStorage.getItem('problems_text3')
                               }
                               number={3}
                           />
@@ -82,9 +80,9 @@ export const Problems = () => {
                       <AnimateWrapper animate={"fade-left"}>{" "}
                           <ProblemCard
                               src={vin}
-                              title={"Подмена VIN-номера"}
+                              title={localStorage.getItem('problems_subtitle4')}
                               text={
-                                  "При подаче объявления указывают VIN-номер автомобиля-двойника"
+                                  localStorage.getItem('problems_text4')
                               }
                               number={4}
                           />
@@ -94,9 +92,9 @@ export const Problems = () => {
                       <AnimateWrapper animate={"fade-right"}>
                           <ProblemCard
                               src={delerships}
-                              title={"Серые автосалоны"}
+                              title={localStorage.getItem('problems_subtitle5')}
                               text={
-                                  "Продавцы заманивают на просмотр некачественных авто под любым предлогом"
+                                  localStorage.getItem('problems_text5')
                               }
                               number={5}
                           />
@@ -104,9 +102,9 @@ export const Problems = () => {
                       <AnimateWrapper animate={"fade-left"}>{" "}
                           <ProblemCard
                               src={speed}
-                              title={`Перепрошитые "мозги"`}
+                              title={localStorage.getItem('problems_subtitle6')}
                               text={
-                                  "Некачественная прошивка электроники выводит приборы из строя"
+                                  localStorage.getItem('problems_text6')
                               }
                               number={6}
                           />

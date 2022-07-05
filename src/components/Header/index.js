@@ -62,8 +62,7 @@ const HeaderMobile = () => {
                         <div className={styles.head}>
                             <img className={styles.img} src={logo} alt={"logo"} onClick={()=>nav('/')}/>
                             <div className={styles.textContainer}>
-                                <a href="tel:+79992009330" className={styles.text}>
-                                    +7 (999) 200-93-30
+                                <a href="tel:+79992009330" className={styles.text} dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_telephone')}}>
                                 </a>
                                 <span className={styles.link} onClick={() => dispatch({type: OPEN_MODAL})}>
                                 заказать звонок

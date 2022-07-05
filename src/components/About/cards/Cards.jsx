@@ -19,27 +19,27 @@ const SmallCardsBlock = () => {
         <>
             <AboutCardSmall
                 number={1}
-                text={"Необходимо свободное время и возможность оперативно передвигаться для осмотра машин"}
+                text={localStorage.getItem('about_text1')}
             />
             <AboutCardSmall
                 number={2}
-                text={"Надо обладать достаточным опытом и оборудованием для диагностики автомобиля"}
+                text={localStorage.getItem('about_text2')}
             />
             <AboutCardSmall
                 number={3}
-                text={"Нужно знать все юридические нюансы для проверки документов на машину и проведения сделки"}
+                text={localStorage.getItem('about_text3')}
             />
             <AboutCardSmall
                 number={4}
-                text={"Большая часть надежных машин продается через закрытые базы до выхода на рынок, а остатки уже поступают на массовый рынок"}
+                text={localStorage.getItem('about_text4')}
             />
             <AboutCardSmall
                 number={5}
-                text={"При поиске автомобиля необходимо иметь холодную голову, поскольку эмоции в этом деле плохой помощник"}
+                text={localStorage.getItem('about_text5')}
             />
             <AboutCardSmall
                 number={6}
-                text={"Нужно ориентироваться на авторынке, чтобы провести торг и сделку на наиболее выгодных условиях"}
+                text={localStorage.getItem('about_text6')}
             />
         </>
     )
@@ -50,34 +50,34 @@ const BigCardsBlock = () => {
     return (
         <>
             <AboutCardBig
-                title={"Гарантия"}
+                title={localStorage.getItem('about_subtitle3')}
                 src={garantier}
-                text={"Бесплатно отремонтируем авто, либо вернем деньги в случае поломки в течение месяца"}
+                text={localStorage.getItem('about_sub3_text')}
             />
             <AboutCardBig
-                title={"Закрытые базы"}
+                title={localStorage.getItem('about_subtitle4')}
                 src={closeBase}
-                text={"Имеем доступы к закрытым базам продажи автомобилей, благодаря чему забираем лучшие варианты!"}
+                text={localStorage.getItem('about_sub4_text')}
             />
             <AboutCardBig
-                title={"Специальное оборудование"}
+                title={localStorage.getItem('about_subtitle5')}
                 src={specialEquipment}
-                text={"Проведем техническую проверку автомобиля с использованием специального оборудования"}
+                text={localStorage.getItem('about_sub5_text')}
             />
             <AboutCardBig
-                title={"Проверяем документы"}
+                title={localStorage.getItem('about_subtitle6')}
                 src={checkingDocuments}
-                text={"Проверим автомобиль на наличие арестов, залогов, ограничений"}
+                text={localStorage.getItem('about_sub6_text')}
             />
             <AboutCardBig
-                title={"Торг в вашу пользу"}
+                title={localStorage.getItem('about_subtitle7')}
                 src={moreCoin}
-                text={"Проведем аргументированный торг с продавцом в вашу пользу"}
+                text={localStorage.getItem('about_sub7_text')}
             />
             <AboutCardBig
-                title={"Сделка под ключ"}
+                title={localStorage.getItem('about_subtitle8')}
                 src={offerUnderKEy}
-                text={"Оформим сделку под ключ, с постановкой авто на учет в МРЭО"}
+                text={localStorage.getItem('about_sub8_text')}
             />
         </>
     )
@@ -87,8 +87,7 @@ const Block = ({isBig = false, title, className}) => {
     return (
         <section className={styles.wrapper}>
             <div className={cn(styles.section,className)}>
-                <h2 className={styles.title}>
-                    {title}
+                <h2 className={styles.title} dangerouslySetInnerHTML={{__html: title}}>
                 </h2>
                 <div className={styles.blocks}>
                     {
@@ -110,8 +109,7 @@ const ChooseCarCTA = () => {
                 className={styles.btn}
                 onClick={()=>dispatch({type:OPEN_MODAL})}
             />
-            <p className={styles.comment}>
-                С нами вы экономите время, нервы и деньги!
+            <p className={styles.comment} dangerouslySetInnerHTML={{__html: localStorage.getItem('about_under_button')}}>
             </p>
         </div>
     )
@@ -124,8 +122,8 @@ export const Cards = () => {
 
         <div className={styles.waves} alt={"Waves"}>
             <div className={styles.wrapperInner}>
-                <Block title={"Для поиска автомобиля нужно:"} className={styles.mt60}/>
-                <Block isBig={true} title={"Почему именно мы?"} className={styles.second}/>
+                <Block title={localStorage.getItem('about_subtitle1')} className={styles.mt60}/>
+                <Block isBig={true} title={localStorage.getItem('about_subtitle2')} className={styles.second}/>
                 <ChooseCarCTA/>
             </div>
         </div>

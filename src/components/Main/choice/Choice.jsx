@@ -14,24 +14,29 @@ export const Choice = () => {
         <section className={styles.choice}>
             <div className={styles.wrapper}>
                 <AnimateWrapper animate={"fade-left"}>
-                    <h2 className={styles.title}>Почему выбирают нас</h2>
+                    {
+                        <h2 className={styles.title} dangerouslySetInnerHTML={{__html: localStorage.getItem('why_choose_us_title2')}}></h2>
+                        ||
+                        null
+                    }
+
                 </AnimateWrapper>
                 <div className={styles.content}>
                     <AnimateWrapper animate={"fade-right"}>
                         <WhyCard
                             src={cars}
-                            title={"Более 2000 подобранных авто"}
+                            title={localStorage.getItem('why_choose_us_subtitle1')}
                             text={
-                                "Имеем огромный опыт по поиску автомобилей и выявлению в них неполадок. Клиенты оставили более 1300 отзывов в ВКонтакте и Яндексе."
+                                localStorage.getItem('why_choose_us_text1')
                             }
                         />
                     </AnimateWrapper>
                     <AnimateWrapper animate={"fade-right"}>
                         <WhyCard
                             src={wallet}
-                            title={"Не берем процент с торга"}
+                            title={localStorage.getItem('why_choose_us_subtitle2')}
                             text={
-                                "Большинство конкурентов зарабатывают на проценте с торга и вместо нужной клиенту машины выбирают ту, с которой можно получить скидку крупнее."
+                                localStorage.getItem('why_choose_us_text2')
                             }
                         />
                     </AnimateWrapper>
@@ -39,9 +44,9 @@ export const Choice = () => {
                         {" "}
                         <WhyCard
                             src={bank}
-                            title={"Гарантия на услуги"}
+                            title={localStorage.getItem('why_choose_us_subtitle3')}
                             text={
-                                "Обязуемся вернуть деньги в случае, если после нашего подбора в автомобиле выявились скрытые дефекты. Готовы отремонтировать машину за свой счет."
+                                localStorage.getItem('why_choose_us_text3')
                             }
                         />
                     </AnimateWrapper>
@@ -50,9 +55,9 @@ export const Choice = () => {
                         {" "}
                         <WhyCard
                             src={clock}
-                            title={"Экономия времени"}
+                            title={localStorage.getItem('why_choose_us_subtitle4')}
                             text={
-                                "Самостоятельно выезжаем на осмотр и проверку автомобиля. Торгуемся с продавцом и помогаем с оформлением документов при покупке."
+                                localStorage.getItem('why_choose_us_text4')
                             }
                         />
                     </AnimateWrapper>
@@ -60,9 +65,9 @@ export const Choice = () => {
                         {" "}
                         <WhyCard
                             src={packageImg}
-                            title={"Проверка по закрытым базам"}
+                            title={localStorage.getItem('why_choose_us_subtitle5')}
                             text={
-                                "Пробиваем автомобиль по базам ГИБДД и по собственным каналам. Выявляем юридические нарушения и несоответствия в документах."
+                                localStorage.getItem('why_choose_us_text5')
                             }
                         />
                     </AnimateWrapper>
@@ -70,9 +75,9 @@ export const Choice = () => {
                         {" "}
                         <WhyCard
                             src={raiting}
-                            title={"Работаем с 2017 года"}
+                            title={localStorage.getItem('why_choose_us_subtitle6')}
                             text={
-                                "За все годы работы осмотрели более 5000 автомобилей. Отработанная методика подбора позволяет находить клиенту автомобиль за минимальный срок."
+                                localStorage.getItem('why_choose_us_text6')
                             }
                         />
                     </AnimateWrapper>

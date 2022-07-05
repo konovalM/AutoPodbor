@@ -10,8 +10,8 @@ export const Address = ({isBlack}) => {
         <a href="/#footer"  className={cn(styles.text,isBlack?styles.black:styles.white
         )}>
             <img src={map} alt={"Map"} />
-            <span className={styles.spanText}>Работаем в офисе:<br/>
-                    г. СПб, ул. Оптиков, 1к3</span>
+            <span className={styles.spanText}>Наш офис в Санкт-Петербурге<br/>
+                     ул. Оптиков, д.1, корп.3</span>
         </a>
     );
 };

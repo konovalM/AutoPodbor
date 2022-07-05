@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Routes, Route} from 'react-router'
 import {MainLayout} from "../layout/mainLayout";
 import {Main} from "../pages/Main";
@@ -8,8 +8,34 @@ import {NotFound} from "../pages/404";
 import {Blog} from "../pages/Blog";
 import {Privacy} from "../pages/Privacy";
 import {Article} from "../pages/Article/Article";
+import AOS from "aos";
 
 export const AppRouter = () => {
+    const [data, setData] = useState()
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            duration: 1000,
+            easing: "linear",
+            delay: 100,
+            once: false,
+            disable: ["tablet",'mobile'],
+            anchorPlacement: "top-top",
+            mirror: false,
+        });
+    }, [])
+    useEffect(async () => {
+        await fetch('https://avtopodbor-spb.pro/api/info/')
+            .then(res => {
+                return res.json()
+            })
+            .then(res => {
+                res.forEach((obj, i) => {
+                    localStorage.setItem(obj.slug, obj.value)
+                })
+                setData(res)
+            })
+    }, [])
     return (
         <Routes>
             <Route path="/" element={<MainLayout/>}>

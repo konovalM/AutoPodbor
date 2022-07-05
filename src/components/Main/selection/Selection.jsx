@@ -23,63 +23,42 @@ export const Selection = () => {
         {/*<img src={trees} alt={"trees"} className={styles.trees} />*/}
         <div className={styles.container}>
           <AnimateWrapper animate={"fade-left"}>
-            <h2 className={styles.title}>Этапы подбора автомобиля</h2>
+            <h2 className={styles.title} dangerouslySetInnerHTML={{__html: localStorage.getItem('stages_of_car_selection_title7')}}></h2>
           </AnimateWrapper>
           <AnimateWrapper animate={"fade-right"}>
             <div className={styles.cardContainer}>
               <StagesOfSelectionCard
                 src={first}
-                title={"Обращение в Честный автоподбор"}
+                title={localStorage.getItem('stages_of_car_selection_subtitle1')}
               >
-                Вы оставляете заявку на сайте или звоните на номер{" "}
-                <b>+7 (999) 200 93 30</b>.
-                <br />
-                Мы обсуждаем ваши желания и вопросы. Даем свои рекомендации,
-                отталкиваясь от ситуации на рынке. Договариваемся о стоимости
-                автомобиля.
+                {localStorage.getItem('stages_of_car_selection_text1')}
               </StagesOfSelectionCard>
               <StagesOfSelectionCard
                 src={second}
-                title={"Договор и предоплата"}
+                title={localStorage.getItem('stages_of_car_selection_subtitle2')}
               >
-                Вы посещаете наш офис, либо оставляете паспортные данные и
-                подписываете договор удаленно. Вносите задаток 50% от общей
-                суммы. Остальное оплачивается после того, как автомобиль будет
-                подобран. Работаем официально, с предоставлением чеков об оплате
-                услуг.
+                {localStorage.getItem('stages_of_car_selection_text2')}
               </StagesOfSelectionCard>
-              <StagesOfSelectionCard src={third} title={"Поиск автомобиля"}>
-                Мы мониторим рынок с помощью специализированных программ и
-                анализируем предложения. Получаем информацию о свежих
-                поступлениях авто со всех официальных автосалонов, из закрытых
-                баз, напрямую от собственников. Среднее время поиска - 10 дней
+              <StagesOfSelectionCard src={third} title={localStorage.getItem('stages_of_car_selection_subtitle3')}>
+                {localStorage.getItem('stages_of_car_selection_text3')}
               </StagesOfSelectionCard>
               <StagesOfSelectionCard
                 src={fourth}
-                title={"Юридическая проверка автомобиля"}
+                title={localStorage.getItem('stages_of_car_selection_subtitle4')}
               >
-                Проверяем работали ли бывшие владельцы автомобиля в такси.
-                Сверяем были ли случаи ДТП, угона, запрета на регистрацию, ВИН и
-                гос. номера. Сообщаем вам о найденных вариантах авто,
-                согласовываем выбор, исходя из ваших пожеланий.
+                {localStorage.getItem('stages_of_car_selection_text4')}
               </StagesOfSelectionCard>
               <StagesOfSelectionCard
                 src={fifth}
-                title={"Техническая проверка и тест-драйв"}
+                title={localStorage.getItem('stages_of_car_selection_subtitle5')}
               >
-                Если автомобиль вам понравился, мы встречаемся с продавцом.
-                Осматриваем все основные узли и системы машины с использованием
-                специализированного оборудования. Предоставляем вам фото и видео
-                отчет об авто.
+                {localStorage.getItem('stages_of_car_selection_text5')}
               </StagesOfSelectionCard>
               <StagesOfSelectionCard
                 src={sixth}
-                title={"Сделка и оформление документов на авто"}
+                title={localStorage.getItem('stages_of_car_selection_subtitle6')}
               >
-                Торгуемся с продавцом. Для клиентов, которые не могут оперативно
-                приехать и купить машину, мы можем забронировать автомобиль на
-                2-3 дня. Помогаем оформить документы на автомобиль и поставить
-                его на учет в ГИБДД.
+                {localStorage.getItem('stages_of_car_selection_text6')}
               </StagesOfSelectionCard>
             </div>
           </AnimateWrapper>
