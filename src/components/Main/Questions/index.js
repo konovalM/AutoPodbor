@@ -28,8 +28,6 @@ const QuestionsExpanded = () => {
     useEffect(()=>{
         (async ()=>{
             await getAccordions().then(res=>setQuizes(res))
-            console.log(123)
-            console.log(quizes)
         })()
     },[])
     return (
