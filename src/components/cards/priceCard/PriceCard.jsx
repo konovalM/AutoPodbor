@@ -40,7 +40,7 @@ export const PriceCard = ({price, title, component, text, id = 1}) => {
                     <p className={styles.text}>{text}</p>
                     <Price price={price}/>
                     <Button className={styles.button} style={{fontWeight: '500'}} text={"Оставить заявку"} onClick={() => {
-                        dispatch({type: OPEN_MODAL})
+                        dispatch({type: OPEN_MODAL, payload: title})
                     }}/>
                     <Link to={`/service/${id}`} className={styles.more}>
                         Подробнее

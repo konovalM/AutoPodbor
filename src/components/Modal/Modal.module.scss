@@ -154,3 +154,10 @@
     text-align: left;
   }
 }
+
+@media (max-width: 450px){
+  .phoneNumber{
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+}

@@ -8,7 +8,8 @@ const initialState={
     isOpen:false,
     formValues:{
         telephone:"",
-        name:""
+        name:"",
+        details: '',
     },
     count:1
 }
@@ -24,6 +25,7 @@ const reducer = (state = initialState,action) => {
         case OPEN_MODAL:{
             return {
                 ...state,
+                details: action.payload,
                 isOpen: true,
                 count: 1
             }
@@ -37,7 +39,7 @@ const reducer = (state = initialState,action) => {
 
         case UPLOAD_AND_NEXT_MODAL:
             (async ()=>{
-                await postFeedback(action.payload)
+                await postFeedback({...state, ...action.payload})
             })()
 
             return {

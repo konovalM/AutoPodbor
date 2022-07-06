@@ -24,6 +24,7 @@ export const CustomForm = ({isRow,upload}) => {
           initialValues={{
             telephone: "",
             full_name: "",
+
           }}
           validationSchema={FeedbackSchemas}
           validateOnChange={true}
