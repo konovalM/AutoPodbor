@@ -15,23 +15,9 @@ import { getCompanyInfo } from "../../../api/companyInfoAPI";
 import miniImng from "./mini.jpg";
 const Slider = () => {
   return (
-    // <Carousel indicators={false} prevIcon={<Prev />} nextIcon={<Next />}>
-    //   <Carousel.Item>
-    //     <img className={styles.item} src={slider1} alt="First slide" />
-    //   </Carousel.Item>
-    //   <Carousel.Item>
-    //     <img className={styles.item} src={slider2} alt="Second slide" />
-    //   </Carousel.Item>
-    //   <Carousel.Item>
-    //     <img className={styles.item} src={slider3} alt="Third slide" />
-    //   </Carousel.Item>
-    //   <Carousel.Item>
-    //     <img className={styles.item} src={slider4} alt="fourth slide" />
-    //   </Carousel.Item>
-    // </Carousel>
     <>
-      <div className="itemWrapper">
-        <img className={styles.item} src={slider1} alt="First slide" />
+      <div className={styles.itemWrapper}>
+        <img className={styles.item} src={localStorage.getItem('about_photo1')} alt="First slide" />
       </div>
     </>
   );
@@ -60,10 +46,18 @@ export const MainAbout = () => {
         <div className={styles.sliderWrapp}>
           <Slider />
           <div className={styles.thumbnails}>
-            <img src={miniImng} alt="" />
-            <img src={miniImng} alt="" />
-            <img src={miniImng} alt="" />
-            <img src={miniImng} alt="" />
+            <div className={styles.thumbnailWrapper}>
+              <img src={localStorage.getItem('about_photo2')} alt="" />
+            </div>
+            <div className={styles.thumbnailWrapper}>
+              <img src={localStorage.getItem('about_photo3')} alt="" />
+            </div>
+            <div className={styles.thumbnailWrapper}>
+              <img src={localStorage.getItem('about_photo4')} alt="" />
+            </div>
+            <div className={styles.thumbnailWrapper}>
+              <img src={localStorage.getItem('about_photo5')} alt="" />
+            </div>
           </div>
         </div>
       </div>

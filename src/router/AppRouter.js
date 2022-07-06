@@ -30,8 +30,12 @@ export const AppRouter = () => {
                 return res.json()
             })
             .then(res => {
-                res.forEach((obj, i) => {
-                    localStorage.setItem(obj.slug, obj.value)
+                res.forEach((obj) => {
+                    if (obj.image){
+                        localStorage.setItem(obj.slug, obj.image)
+                    } else {
+                        localStorage.setItem(obj.slug, obj.value)
+                    }
                 })
                 setData(res)
             })

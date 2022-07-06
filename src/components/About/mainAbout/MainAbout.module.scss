@@ -12,12 +12,30 @@
   align-items:center;
   margin: 0 auto;
 }
+.itemWrapper{
+  height: 100%;
+}
+.itemWrapper > img{
+  object-fit: cover;
+  height: 100%;
+}
 .thumbnails{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: calc(50% - 5px) calc(50% - 5px);
   column-gap: 20px;
   row-gap: 11px;
+  height: 100%;
+  max-width: 100%;
+}
+.thumbnailWrapper {
+  height: 100%;
+}
+.thumbnailWrapper > * {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .spare1{

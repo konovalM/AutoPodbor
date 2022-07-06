@@ -14,9 +14,7 @@ export const Garantier = () => {
           <div className={styles.card}>
             <span className={cn(styles.isPay, styles.white)}>Бесплатная</span>
             <div className={styles.textContent}>
-              <h3 className={styles.title}>
-                Вернем <span className={styles.yellow} >20 000 ₽</span> в течение{" "}
-                <span className={styles.bold}>14 дней</span>
+              <h3 className={styles.title} dangerouslySetInnerHTML={{__html: localStorage.getItem('warranty_text1')}}>
               </h3>
 
               <div className={styles.list}>
@@ -35,10 +33,7 @@ export const Garantier = () => {
           <div className={styles.card}>
             <span className={cn(styles.isPay, styles.yellow)}>Расширенная</span>
             <div className={styles.textContent}>
-              <h3 className={styles.title}>
-                Отремонтируем на <br></br>
-                <span className={styles.yellow}> 100 000 ₽ </span>
-                за <span className={styles.bold}>60 дней</span>
+              <h3 className={styles.title} dangerouslySetInnerHTML={{__html: localStorage.getItem('warranty_text2')}}>
               </h3>
 
               <div className={styles.list}>
