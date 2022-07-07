@@ -11,10 +11,13 @@ import {CustomForm} from "../UI/Forms/CustomForm";
 
 const MainModal = () => {
     const {dispatch} = useModalContext()
+    const {state} = useModalContext()
+    console.log(state)
     return (
         <>
             <section className={styles.modal}>
-                <h3 className={styles.title} dangerouslySetInnerHTML={{__html: localStorage.getItem('form_title1')}}>
+                <h3 className={styles.title}>
+                    {state.formTitle}
                 </h3>
                 <p className={styles.subtitle} dangerouslySetInnerHTML={{__html: localStorage.getItem('form_subtitle1')}}>
                 </p>

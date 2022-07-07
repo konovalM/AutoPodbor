@@ -33,7 +33,7 @@ const EnterInService = ({service}) => {
             </div>
             <div/>
             <div className={styles.btnWrapper}>
-                <Button text={"Заказать услугу"} className={styles.btn} onClick={() => dispatch({type: OPEN_MODAL, payload: service.title})}/>
+                <Button text={"Заказать услугу"} className={styles.btn} onClick={() => dispatch({type: OPEN_MODAL, payload: {title: service.title, formTitle: 'Заказать услугу'}})}/>
             </div>
             <img className={styles.img} src={car} alt={"car"}/>
 

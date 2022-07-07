@@ -11,7 +11,8 @@ const initialState={
         name:"",
         details: '',
     },
-    count:1
+    count:1,
+    formTitle: 'Остались вопросы?',
 }
 
 
@@ -25,9 +26,10 @@ const reducer = (state = initialState,action) => {
         case OPEN_MODAL:{
             return {
                 ...state,
-                details: action.payload,
+                formValues: {...state.formValues, details: action.payload.title},
                 isOpen: true,
-                count: 1
+                count: 1,
+                formTitle: action.payload.formTitle
             }
         }
         case CLOSE_MODAL:{
@@ -39,7 +41,7 @@ const reducer = (state = initialState,action) => {
 
         case UPLOAD_AND_NEXT_MODAL:
             (async ()=>{
-                await postFeedback({...state, ...action.payload})
+                await postFeedback({...action.payload, details: state.formValues.details})
             })()
 
             return {
@@ -59,7 +61,6 @@ const reducer = (state = initialState,action) => {
 
 export const ModalContextProvider = ({children}) => {
     const [state,dispatch] = useReducer(reducer,initialState)
-
     return (
         <ModalContext.Provider value={{
             state,

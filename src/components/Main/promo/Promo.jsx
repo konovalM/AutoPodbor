@@ -89,7 +89,7 @@ const MainTitle = () => {
       </div>
       <button
         className={styles.button}
-        onClick={() => dispatch({ type: OPEN_MODAL })}
+        onClick={() => dispatch({ type: OPEN_MODAL, payload: {title: 'Обратная связь', formTitle: 'Оставить заявку'} })}
       >
         {/*<img src={button} alt={"Button"} />*/}
           <div className={styles.btnWrapper}>

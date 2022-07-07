@@ -107,7 +107,7 @@ const ChooseCarCTA = () => {
             <Button
                 text={"Подобрать автомобиль"}
                 className={styles.btn}
-                onClick={()=>dispatch({type:OPEN_MODAL})}
+                onClick={()=>dispatch({type:OPEN_MODAL, payload: {formTitle: 'Подобрать автомобиль', title: 'Обратная связь'}})}
             />
             <p className={styles.comment} dangerouslySetInnerHTML={{__html: localStorage.getItem('about_under_button')}}>
             </p>

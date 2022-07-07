@@ -46,7 +46,7 @@ const NavList = () => {
             </NavItem>
 
             <NavItem >
-                <span onClick={()=>dispatch({type:OPEN_MODAL})} className={styles.spanFontFamily}>Контакты</span>
+                <span onClick={()=>dispatch({type:OPEN_MODAL, payload: {formTitle: 'Остались вопросы?', title: 'Обратная связь'}})} className={styles.spanFontFamily}>Контакты</span>
             </NavItem>
         </ul>
     )
