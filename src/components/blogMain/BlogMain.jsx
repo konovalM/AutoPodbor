@@ -12,7 +12,6 @@ export const BlogMain = () => {
 
     return (
         <section className={styles.wrapper}>
-            {/* <img src="" alt=""  className={styles.wheels}/> */}
             <div className={styles.contentWrapper}>
                 <div className={styles.content}>
                     <h1 className={styles.title}>
@@ -20,9 +19,9 @@ export const BlogMain = () => {
                     </h1>
                     <p className={styles.text}>
                         Рассказываем на что обращать внимание при выборе автомобиля и как не попасть на уловки продавцов. Если у вас возникли трудности или сомнения при покупке машины, мы готовы проконсультировать вас бесплатно по телефону
-                        <b className={styles.phoneNumber}>&nbsp;+7 (999) 200 93 30</b>.
+                        <b className={styles.phoneNumber} >&nbsp;<span dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_telephone')}}></span></b>.
                     </p>
-                    <Button text={"Получить консультацию"} className={styles.btn} onClick={()=>dispatch({type:OPEN_MODAL})}/>
+                    <Button text={"Получить консультацию"} className={styles.btn} onClick={()=>dispatch({type:OPEN_MODAL, payload: {formTitle: 'Получить консультацию', title: 'Обратная связь'}})}/>
                 </div>
             </div>
             <picture>

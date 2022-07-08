@@ -22,7 +22,7 @@ const MainModal = () => {
                 <p className={styles.subtitle} dangerouslySetInnerHTML={{__html: localStorage.getItem('form_subtitle1')}}>
                 </p>
 
-                <a href={"tel:+79992009330"} onClick={() => window.yaCounter88846653.reachGoal('phone')} className={styles.phoneNumber}
+                <a href={`tel:${localStorage.getItem('tel')}`} onClick={() => window.yaCounter88846653.reachGoal('phone')} className={styles.phoneNumber}
                    dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_telephone')}}>
                 </a>
                 <p className={styles.subtitle} dangerouslySetInnerHTML={{__html: localStorage.getItem('form_text2')}}>

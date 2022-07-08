@@ -9,6 +9,7 @@ import {Blog} from "../pages/Blog";
 import {Privacy} from "../pages/Privacy";
 import {Article} from "../pages/Article/Article";
 import AOS from "aos";
+import {deleteSpan} from "../functions/deleteSpan";
 
 export const AppRouter = () => {
     const [data, setData] = useState()
@@ -38,6 +39,7 @@ export const AppRouter = () => {
                     }
                 })
                 setData(res)
+                deleteSpan()
             })
     }, [])
     return (
