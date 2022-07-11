@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
 import styles from './Form.module.scss'
 import {CustomForm} from "../../../UI/Forms/CustomForm";
-import {deleteSpan} from "../../../../functions/deleteSpan";
 
 
 export const FirstStep = ({onUploadPosts}) => {
-    deleteSpan(localStorage.getItem('promo_telephone'))
     return (
         <div className={styles.wrapper}>
             <h2 className={styles.title}>Остались вопросы?</h2>

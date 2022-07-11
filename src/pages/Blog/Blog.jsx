@@ -5,11 +5,6 @@ import {getBlogPosts} from "../../api/blogAPI";
 import {BlogArticles} from "../../components/blogArticles";
 import {PaginationComponent} from "../../components/UI/pagination/Pagination";
 import {FormBlock} from "../../components/FormBlock";
-import blackBlogRec from "../../assets/images/waves/blackBlogRec.png";
-// import blackBlogRec from "./wave.svg";
-
-import {BlackWrapper} from "../../components/blackWrapper";
-import {WaveWrapper} from "../../components/wavesWrapper";
 import {BreadcrumbsLayout} from "../../layout/breadcrumbsLayout";
 
 export const Blog = () => {

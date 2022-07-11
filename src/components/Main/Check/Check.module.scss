@@ -20,11 +20,9 @@
   z-index: -1;
   margin: auto;
   position: absolute;
-  // top: 190px;
   left: 0;
   bottom: 0;
   right: 0;
-  //width: 100%;
 }
 
 .wrapper {
@@ -38,7 +36,6 @@
 }
 
 .content {
-
   display: flex;
   flex-direction: column;
   gap: 90px;
@@ -48,7 +45,6 @@
 
 
 .title {
-
   flex: 1 0 auto;
   font-style: normal;
   font-weight: 700;
@@ -147,10 +143,6 @@
   }
 }
 @media screen and (max-width: 990px) {
-  //.title{
-  //  margin-bottom: 30px;
-  //}
-
   .ellipse{
     width: 100%;
     text-align: center;

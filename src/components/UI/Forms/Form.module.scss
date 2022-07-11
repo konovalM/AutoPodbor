@@ -13,7 +13,6 @@
   width: 100%;
   margin: 0 auto;
   background: rgba(119, 119, 119, 0.01);
-  //opacity: 0.7;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   backdrop-filter: blur(150px);
@@ -63,7 +62,6 @@
   font-weight: 700!important;
   font-size: 18px;
   line-height: 140%;
-  /* or 25px */
 
   text-align: center;
 
@@ -94,7 +92,6 @@
   >div{
     width: 100%;
   }
-  // margin-bottom: 10px;
 }
 
 .formWrapper{

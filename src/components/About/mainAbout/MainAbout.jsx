@@ -1,18 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styles from "./MainAbout.module.scss";
-import slider1 from "../../../assets/images/aboutPage/abou1.jpg";
-import slider2 from "../../../assets/images/aboutPage/abou1.jpg";
-// import slider2 from "./wheels.png";
-
-import slider3 from "../../../assets/images/aboutPage/abou1.jpg";
-import slider4 from "../../../assets/images/aboutPage/abou1.jpg";
-import { Carousel } from "react-bootstrap";
-import { ReactComponent as Next } from "../../../assets/images/aboutPage/next.svg";
-import { ReactComponent as Prev } from "../../../assets/images/aboutPage/prev.svg";
 import spare1 from "../../../assets/images/aboutPage/spare1.png";
 import spare2 from "../../../assets/images/aboutPage/spare2.png";
 import { getCompanyInfo } from "../../../api/companyInfoAPI";
-import miniImng from "./mini.jpg";
+
 const Slider = () => {
   return (
     <>

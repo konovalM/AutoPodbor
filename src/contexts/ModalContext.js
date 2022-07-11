@@ -1,4 +1,4 @@
-import React, {useContext, useReducer, useState} from "react";
+import React, {useContext, useReducer} from "react";
 import {postFeedback} from "../api/feedbackAPI";
 
 
@@ -18,7 +18,6 @@ const initialState={
 
 export const OPEN_MODAL="OPEN_MODAL"
 export const CLOSE_MODAL="CLOSE_MODAL"
-export const FORM_STATE = "FORM_STATE"
 export const UPLOAD_AND_NEXT_MODAL = "UPLOAD_AND_NEXT_MODAL"
 
 const reducer = (state = initialState,action) => {

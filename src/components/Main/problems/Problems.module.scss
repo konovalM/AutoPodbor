@@ -10,7 +10,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  // background:url('./pink.jpg') left,url('./pink.jpg') right;
   position: relative;
   z-index: 5;
   padding-bottom: 170px;
@@ -29,10 +28,7 @@
   position: absolute;
   right: 0%;
 }
-.problems{
-  // background:background: #FAF6F3,
-// filter: blur(170px)
-}
+
 .content{
   display: flex;
   flex-direction: column;
@@ -107,8 +103,7 @@
   .men{
     position: static;
     margin: 0;
-        position: relative;
-    // top: 100px;
+    position: relative;
     left: 50%;
     transform: translateX(-50%) translateY(25%);
   }

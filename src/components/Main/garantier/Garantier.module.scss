@@ -17,7 +17,6 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  //align-items: center;
   gap: 70px;
 }
 
@@ -27,7 +26,6 @@
   align-items: center;
   background: rgba(119, 119, 119, 0.01);
   padding: 67px 25px 100px;
-  //opacity: 0.7;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   backdrop-filter: blur(150px);
@@ -163,7 +161,6 @@
     width: 110%;
   }
   .card {
-    //max-width: 98%;
     width: 100%;
     background: url("../../../assets/images/garant/garan.png") no-repeat;
     background-size: contain;

@@ -25,7 +25,6 @@ export const ExampleBig = ({ post}) => {
         </div>
         {post.additional_images.length !== 0 ? (
           <div className={styles.tumbnails}>
-            {/* <div style={{backgroundColor:'black'}}> */}
               {images.map((el, i) => {
                 return (
                   <div className={styles.tumbEl} style={{width: `100%`}} key={i}>
@@ -33,7 +32,6 @@ export const ExampleBig = ({ post}) => {
                   </div>
                 );
               })}
-            {/* </div> */}
           </div>
         ) : null}
       </div>

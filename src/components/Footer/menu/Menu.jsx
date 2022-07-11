@@ -1,19 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Menu.module.scss'
 import {Link} from "react-router-dom";
-import {ExternalLink} from "../../UI/externalLink";
 import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
-import {Link as LinkScroll} from "react-scroll";
-
-const Col = ({firstLink,secondLink, thirdLink}) =>{
-    return (
-        <div className={styles.col}>
-            <ExternalLink href={"/"} className={styles.link}>{firstLink}</ExternalLink>
-            <ExternalLink href={"/"} className={styles.link}>{secondLink}</ExternalLink>
-            <ExternalLink href={"/"} className={styles.link}>{thirdLink}</ExternalLink>
-        </div>
-    )
-}
 
 
 export const Menu = () => {

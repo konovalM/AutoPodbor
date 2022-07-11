@@ -1,11 +1,10 @@
 import {Modal} from "react-bootstrap";
 import {ReactComponent as Close} from '../../assets/images/modal/close.svg'
 import styles from './Modal.module.scss'
-import React, {useState} from "react";
+import React from "react";
 import square from '../../assets/images/modal/square.png'
 import {CLOSE_MODAL, UPLOAD_AND_NEXT_MODAL, useModalContext} from "../../contexts/ModalContext";
 import {SuccessUpload} from "./SuccessUpload";
-import {FullFormWrapper} from "../UI/Forms/FullForm";
 import {CustomForm} from "../UI/Forms/CustomForm";
 
 
@@ -36,9 +35,7 @@ const MainModal = () => {
 
 
 export const ConsultationModal = () => {
-
     const {state, dispatch} = useModalContext()
-
 
     return (
         <Modal
@@ -48,11 +45,9 @@ export const ConsultationModal = () => {
             aria-labelledby="contained-modal-title-vcenter"
             centered
         >
-            {/*<FullFormWrapper>*/}
-                {
-                    state.count === 1 ? <MainModal/> : <SuccessUpload/>
-                }
-            {/*</FullFormWrapper>*/}
+            {
+                state.count === 1 ? <MainModal/> : <SuccessUpload/>
+            }
             <div className={styles.close}>
                 <Close onClick={() => dispatch({type: CLOSE_MODAL})}/>
             </div>

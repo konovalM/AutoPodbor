@@ -42,11 +42,6 @@ export const ServicesAndPrices = () => {
               <AnimateWrapper animate={"fade-left"}>
                   <h2 className={styles.title}>Услуги и цены</h2>
               </AnimateWrapper>
-              {/*<div className={styles.content}>*/}
-
-              {/*Pass one of the component here StaticServices or serviceFromAPI*/}
-
-              {/*</div>*/}
               <ServicesFromApi />
           </div>
       </section>

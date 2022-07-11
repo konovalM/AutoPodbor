@@ -2,11 +2,7 @@ import React from 'react';
 import styles from './AutoPodbor.module.scss'
 import {Button} from "../UI/button";
 import car from '../../assets/images/servicePage/car.png'
-import bcg from '../../assets/images/servicePage/bcg.png'
 import {OPEN_MODAL, useModalContext} from "../../contexts/ModalContext";
-import wheels from '../../assets/images/BlogPage/wheels.png'
-
-
 
 
 const HeaderBlock = ({service}) => {
@@ -27,7 +23,6 @@ const EnterInService = ({service}) => {
     return (
         <div className={styles.box}>
             <h3 className={styles.title}>Входит в услугу</h3>
-            {/*<ListServices/>*/}
             <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                 <div dangerouslySetInnerHTML={{__html: service.service_include}}/>
             </div>
@@ -41,7 +36,6 @@ const EnterInService = ({service}) => {
     )
 }
 
-// style={{display:"flex",justifyContent:"center",alignItems:"center"}}
 export const AutoPodbor = ({service}) => {
     return (
         <section className={styles.wrapper}>

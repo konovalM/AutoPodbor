@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Cards.module.scss'
-import bcg from '../../../assets/images/waves/blackBlogRec.png'
 import {AboutCardBig, AboutCardSmall} from "../../cards/aboutCard";
 import garantier from '../../../assets/images/aboutPage/garantier.png'
 import checkingDocuments from '../../../assets/images/aboutPage/checkingDocuments.jpg'
@@ -11,8 +10,6 @@ import closeBase from '../../../assets/images/aboutPage/closeBatabase.png'
 import cn from "classnames";
 import {Button} from "../../UI/button";
 import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
-
-import {WaveWrapper} from "../../wavesWrapper";
 
 const SmallCardsBlock = () => {
     return (

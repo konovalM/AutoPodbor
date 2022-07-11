@@ -2,9 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useNavigate, useParams} from "react-router";
 import {AutoPodbor} from "../../components/AutoPodbor/AutoPodbor";
 import {FormBlock} from "../../components/FormBlock";
-import blackServiceRec from "../../assets/images/waves/blackServiceRec.png";
 import {getService} from "../../api/serviceAPI";
-import {WaveWrapper} from "../../components/wavesWrapper";
 import {BreadcrumbsLayout} from "../../layout/breadcrumbsLayout";
 import styles from './Service.module.scss'
 

@@ -97,11 +97,6 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 125%;
-  /* identical to box height, or 50px */
-
-
-  /* main_gradient */
-
   background: linear-gradient(180deg, #FCC026 0%, #FC8B26 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -153,30 +148,3 @@
   }
 }
 
-//@media screen and (max-width: 576px){
-//  .card{
-//    min-width: 156px;
-//    max-width: 156px;
-//  }
-//
-//  .price{
-//    width: 100%;
-//    font-size: 16px;
-//  }
-//
-//  .priceNumber{
-//    font-size: 25px;
-//  }
-//
-//  .button{
-//    font-style: normal;
-//    font-weight: 500;
-//    font-size: 14px;
-//    line-height: 113%;
-//    display: flex;
-//    align-items: center;
-//    text-align: center;
-//    text-transform: uppercase;
-//    color: #121212;
-//  }
-//}

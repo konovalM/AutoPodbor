@@ -5,8 +5,6 @@ import cn from 'classnames'
 import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
 import {Link as LinkScroll} from 'react-scroll'
 
-
-
 const NavItem = ({children}) => {
     return (
         <li className={styles.item} >
@@ -14,9 +12,6 @@ const NavItem = ({children}) => {
         </li>
     )
 }
-
-
-
 
 const NavList = () => {
     const {dispatch} = useModalContext()
@@ -62,7 +57,7 @@ export const Navigation = ({className}) => {
 };
 
 
-export const NavigationMobile = ({isOpen, setIsOpen}) => {
+export const NavigationMobile = ({ setIsOpen }) => {
     const {dispatch} = useModalContext()
     const anotherParts = ['about', 'article', 'service', 'blog'];
     const scrollTo = (idName) => {
@@ -86,10 +81,6 @@ export const NavigationMobile = ({isOpen, setIsOpen}) => {
                             цены и Услуги
                         </LinkScroll>
                 }
-                {/*<LinkScroll to={'examples'} className={styles.linkScroll} onClick={() => scrollTo('services')}>
-                    цены и Услуги
-                </LinkScroll>
-                <a href={`/#services`} >цены и Услуги</a>*/}
             </NavItem>
 
             <NavItem>
@@ -108,12 +99,7 @@ export const NavigationMobile = ({isOpen, setIsOpen}) => {
                             подобранные авто
                         </LinkScroll>
                 }
-                {/*<a href={`/#examples`}>подобранные авто</a>
-                <LinkScroll to={'examples'} className={styles.linkScroll} onClick={() => scrollTo('examples')}>
-                    подобранные авто
-                </LinkScroll>*/}
             </NavItem>
-
             <NavItem>
                 {
                     !anotherParts.every((item) => {
@@ -126,16 +112,10 @@ export const NavigationMobile = ({isOpen, setIsOpen}) => {
                             отзывы
                         </LinkScroll>
                 }
-                {/*<a href={`/#feedback`}>отзывы</a>
-                <LinkScroll to={'feedback'} className={styles.linkScroll} onClick={() => scrollTo('feedback')}>
-                    отзывы
-                </LinkScroll>*/}
             </NavItem>
-
             <NavItem>
                 <Link to={'/blog'}>блог</Link>
             </NavItem>
-
             <NavItem >
                 <span onClick={()=>dispatch({type:OPEN_MODAL})} className={styles.spanFontFamily}>Контакты</span>
             </NavItem>

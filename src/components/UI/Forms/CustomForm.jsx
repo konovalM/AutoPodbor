@@ -4,7 +4,6 @@ import {FeedbackSchemas} from "./Schemas";
 import {NamedInput, PhoneNumberInput} from "../inputs";
 import styles from './Form.module.scss'
 import {Button} from "../button";
-import ym from "react-yandex-metrika";
 
 function validateNumber(phoneNumber) {
     let error

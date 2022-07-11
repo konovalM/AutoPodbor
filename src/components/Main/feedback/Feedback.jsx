@@ -2,20 +2,17 @@ import React from "react";
 import styles from "./Feedback.module.scss";
 import yandex from "../../../assets/images/main/yandex.svg";
 import vk from "../../../assets/images/main/vk.svg";
-import map from "../../../assets/images/main/mapOfRussia.png";
 import phone1 from "../../../assets/images/sliderPhone1.png";
 import phone2 from "../../../assets/images/sliderPhone2.png";
 import phone3 from "../../../assets/images/sliderPhone3.png";
 import phone4 from "../../../assets/images/sliderPhone4.png";
 import phone5 from "../../../assets/images/sliderPhone5.png";
-import { Button } from "../../UI/button";
 import cn from "classnames";
 import { ExternalLink } from "../../UI/externalLink";
 import { AnimateWrapper } from "../../animateWrapper";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Prev from "./prev.svg";
 import './Feedback.scss'
 const PhoneSlider = () => {
   const settings = {
@@ -127,8 +124,6 @@ const PhoneSlider = () => {
             {" "}
             <div className={styles.phoneButton}>
               <img src={phone1} alt={"phone"} />
-
-              {/* <Button text={"смотреть все отзывы"} className={styles.btn} /> */}
             </div>
           </div>
         </ExternalLink>
@@ -140,8 +135,6 @@ const PhoneSlider = () => {
             {" "}
             <div className={styles.phoneButton}>
               <img src={phone2} alt={"phone"} />
-
-              {/* <Button text={"смотреть все отзывы"} className={styles.btn} /> */}
             </div>
           </div>
         </ExternalLink>
@@ -153,8 +146,6 @@ const PhoneSlider = () => {
             {" "}
             <div className={styles.phoneButton}>
               <img src={phone3} alt={"phone"} />
-
-              {/* <Button text={"смотреть все отзывы"} className={styles.btn} /> */}
             </div>
           </div>
         </ExternalLink>
@@ -166,8 +157,6 @@ const PhoneSlider = () => {
             {" "}
             <div className={styles.phoneButton}>
               <img src={phone4} alt={"phone"} />
-
-              {/* <Button text={"смотреть все отзывы"} className={styles.btn} /> */}
             </div>
           </div>
         </ExternalLink>
@@ -179,8 +168,6 @@ const PhoneSlider = () => {
             {" "}
             <div className={styles.phoneButton}>
               <img src={phone5} alt={"phone"} />
-
-              {/* <Button text={"смотреть все отзывы"} className={styles.btn} /> */}
             </div>
           </div>
         </ExternalLink>

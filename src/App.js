@@ -7,7 +7,6 @@ import './override.css'
 import 'aos/dist/aos.css'
 import {ModalContextProvider} from "./contexts/ModalContext";
 import {ScrollToTop} from "./components/scrollToTop/ScrollToTop";
-import {useEffect} from "react";
 
 
 export const App = () => {

@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './Call.module.scss'
-import callerBackground from '../../../assets/images/call.svg'
-import caller from '../../../assets/images/call.png'
 import call from '../../../assets/images/phone.svg'
 import cn from "classnames";
 import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";

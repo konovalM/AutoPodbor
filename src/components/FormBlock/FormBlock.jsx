@@ -1,12 +1,8 @@
 import React, {useState} from 'react';
 import styles from './FromBlock.module.scss'
-import {FullFormWrapper} from "../UI/Forms";
-import square from "../../assets/images/modal/square.png";
-import {useModalContext} from "../../contexts/ModalContext";
 import {CustomForm} from "../UI/Forms/CustomForm";
 import {postFeedback} from "../../api/feedbackAPI";
 import cn from "classnames";
-import bcgImg from '../../assets/images/linesBg.png'
 
 
 const FirstStep = ({onUploadPosts}) => {
@@ -58,7 +54,6 @@ export const FormBlock = ({style}) => {
 
     return (
         <div className={styles.padding}>
-            {/*<img src={bcgImg} alt={"Lines"}/>*/}
             {count === 1 ?
                 <FirstStep onUploadPosts={onUploadPosts}/>
                 :

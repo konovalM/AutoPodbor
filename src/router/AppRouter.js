@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Routes, Route} from 'react-router'
 import {MainLayout} from "../layout/mainLayout";
 import {Main} from "../pages/Main";
@@ -39,7 +39,9 @@ export const AppRouter = () => {
                     }
                 })
                 setData(res)
-                deleteSpan()
+            })
+            .then(() => {
+                deleteSpan(localStorage.getItem('promo_telephone'))
             })
     }, [])
     return (

@@ -7,41 +7,17 @@ import vin from "../../../assets/images/problems/vin.jpg"
 import mileage from "../../../assets/images/problems/mileage.jpg"
 import layer from "../../../assets/images/problems/layer.jpg"
 import speed from "../../../assets/images/problems/speed.jpg"
-import men from "../../../assets/images/problemsBg.jpg"
 import cn from "classnames";
-import ss from './long-svg.svg'
 import { AnimateWrapper } from '../../animateWrapper';
-import blue from './blue.jpg'
-import pink from './pink.jpg'
 export const Problems = () => {
     return (
-      //   <div className={styles.problems}>
-      // <img src={pink} className={styles.pink} alt="" />
-      // <img src={blue} className={styles.blue} alt="" />
-
       <section className={styles.problems}>
           <div className={styles.wrapper}>
-              {/* <svg
-          width="391"
-          height="106"
-          viewBox="0 0 391 106"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className={styles.svgTop}
-        >
-          <path
-            d="M391 14.248C238.116 -25.1472 149.202 31.5168 0 14.248V106H391V14.248Z"
-            fill="black"
-          />
-        </svg>
-        <img src={ss} alt="" className={styles.svgTop} /> */}
-
               <AnimateWrapper animate={"fade-top"}>
                   <h2 className={styles.title} dangerouslySetInnerHTML={{__html: localStorage.getItem('problems_title4')}}>
                   </h2>
               </AnimateWrapper>
 
-              {/*<img src={men} alt={"men"} className={styles.men} />*/}
               <div className={styles.content}>
                   <div className={cn(styles.row, styles.first)}>
                       <AnimateWrapper animate={"fade-right"}>
@@ -113,7 +89,6 @@ export const Problems = () => {
               </div>
           </div>
       </section>
-      //   </div>
     );
 };
 

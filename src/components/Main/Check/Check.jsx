@@ -15,7 +15,6 @@ import { AnimateWrapper } from "../../animateWrapper";
 const CheckDesktop = () => {
   return (
     <div className={styles.desktop}>
-      {/*<img src={carInMeddle} alt={"carInMeddle"} className={styles.car} />*/}
       <div className={cn(styles.row, styles.first)}>
         <AnimateWrapper animate={"fade-left"}>
           <CheckCard

@@ -1,12 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {useNavigate, useParams} from "react-router";
 import {ArticleBlock} from "../../components/articleBlock";
-import {BlogArticles} from "../../components/blogArticles";
 import {getBlogPost, getBlogPosts} from "../../api/blogAPI";
 import {PaginationComponent} from "../../components/UI/pagination/Pagination";
-import blackArticleRec from '../../assets/images/waves/blackArticleRec.png'
 import {FormBlock} from "../../components/FormBlock";
-import {WaveWrapper} from "../../components/wavesWrapper";
 import {BreadcrumbsLayout} from "../../layout/breadcrumbsLayout";
 import styles from './Article.module.scss'
 import {BlogCard} from "../../components/cards/blogCard";

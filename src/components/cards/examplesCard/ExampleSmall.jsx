@@ -1,8 +1,5 @@
 import React from 'react';
 import styles from './ExampleCardSmall.module.scss'
-import car from '../../../assets/images/example/car.png'
-import {Button} from "../../UI/button";
-import cn from "classnames";
 
 export const ExampleSmall = ({post,setCurrent}) => {
     return (
