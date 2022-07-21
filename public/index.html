@@ -21,7 +21,7 @@
     <script type="text/javascript">
         const head = document.querySelector('head')
         console.log(location)
-        if (location.host === 'avtopodbor-spb.pro'){
+        if (location.host.endsWith('avtopodbor-spb.pro')){
             head.insertAdjacentHTML('afterbegin', `<meta name="yandex-verification" content="c3f1fffc63fed3d1"/>`)
         } else head.insertAdjacentHTML('afterbegin', `<meta name="yandex-verification" content="27d9e9880afd3563" />`)
     </script>
