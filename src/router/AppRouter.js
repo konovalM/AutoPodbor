@@ -26,7 +26,7 @@ export const AppRouter = () => {
         });
     }, [])
     useEffect(async () => {
-        await fetch('https://chestniy-autopodbor.ru//api/info/')
+        await fetch('https://chestniy-autopodbor.ru/api/info/')
             .then(res => {
                 return res.json()
             })
