@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 export const api = axios.create({
-    baseURL:"https://avtopodbor-spb.pro/api/",
+    baseURL:"https://chestniy-autopodbor.ru/api/",
     headers:{
         "Content-Type": "application/json"
     }
