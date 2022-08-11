@@ -10,6 +10,7 @@ import {Privacy} from "../pages/Privacy";
 import {Article} from "../pages/Article/Article";
 import AOS from "aos";
 import {deleteSpan} from "../functions/deleteSpan";
+import {useBeforeunload} from "react-beforeunload";
 
 export const AppRouter = () => {
     const [data, setData] = useState()
@@ -42,8 +43,13 @@ export const AppRouter = () => {
             })
             .then(() => {
                 deleteSpan(localStorage.getItem('promo_telephone'))
+                console.log(localStorage.getItem('promo_header2'))
             })
     }, [])
+
+    useBeforeunload(() => {
+        localStorage.setItem('isLoggedOut', 'true')
+    })
     return (
         <Routes>
             <Route path="/" element={<MainLayout/>}>
