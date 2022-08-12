@@ -1,10 +1,8 @@
 import {scroller} from "react-scroll";
 
-export const scrollToElement = (element, offset = -50) => {
+export const scrollToElement = (element) => {
     scroller.scrollTo(element, {
-        duration: 800,
-        delay: 0,
-        smooth: 'ease',
-        offset: offset,
+        duration: 300,
+        offset: -70,
     })
 }

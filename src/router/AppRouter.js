@@ -49,7 +49,9 @@ export const AppRouter = () => {
     }, [])
     useEffect(() => {
         if (location.hash){
-            scrollToElement(location.hash)
+            setTimeout(() => {
+                scrollToElement(location.hash)
+            }, 500)
         }
     }, [location.key])
 /*
