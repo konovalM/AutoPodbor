@@ -3,6 +3,7 @@ import logo from '../../../assets/images/Logo.svg'
 import {Link} from "react-router-dom";
 import styles from './Logo.module.scss'
 import {useModalContext} from "../../../contexts/ModalContext";
+
 export const Logo = () => {
     const {state} = useModalContext()
     return (
