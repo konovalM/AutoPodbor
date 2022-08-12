@@ -30,6 +30,7 @@ export const Examples = () => {
     return (
         <section
             name={'#examples'}
+            id='examples'
             style={{ paddingBottom: "50px" }}
             className={styles.wrapper}
         >
