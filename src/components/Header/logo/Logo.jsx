@@ -5,8 +5,6 @@ import styles from './Logo.module.scss'
 import {useModalContext} from "../../../contexts/ModalContext";
 export const Logo = () => {
     const {state} = useModalContext()
-    // console.log(discount)
-    console.log(state.discount)
     return (
         <>
             {

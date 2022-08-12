@@ -9,9 +9,7 @@ import {CustomForm} from "../UI/Forms/CustomForm";
 
 
 const MainModal = () => {
-    const {dispatch} = useModalContext()
-    const {state} = useModalContext()
-    console.log(state)
+    const {dispatch, state} = useModalContext()
     return (
         <>
             <section className={styles.modal}>

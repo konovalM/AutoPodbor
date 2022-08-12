@@ -23,7 +23,6 @@ export const UPLOAD_AND_NEXT_MODAL = "UPLOAD_AND_NEXT_MODAL"
 export const DISCOUNT = "DISCOUNT"
 
 const reducer = (state = initialState,action) => {
-    console.log(state)
     switch(action.type){
         case OPEN_MODAL:{
             return {
