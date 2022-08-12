@@ -6,41 +6,65 @@ import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
 
 const NavItem = ({children}) => {
     return (
-        <li className={styles.item} >
+        <li className={styles.item}>
             {children}
         </li>
     )
 }
 
 const NavList = () => {
-    const {dispatch} = useModalContext()
+    const {dispatch, state} = useModalContext()
     return (
         <ul className={styles.list}>
             <NavItem>
-                <Link to={'/#services'}>цены и Услуги</Link>
+                {
+                    state.discount ?
+                        <Link to={'/discount#services'}>цены и Услуги</Link>
+                        :
+                        <Link to={'/#services'}>цены и Услуги</Link>
+                }
             </NavItem>
             <NavItem>
                 <Link to={'/about'}>О компании</Link>
             </NavItem>
 
             <NavItem>
-                <Link to={'/#examples'}>
-                    подобранные авто
-                </Link>
+                {
+                    state.discount ?
+                        <Link to={'/discount#examples'}>
+                            подобранные авто
+                        </Link>
+                        :
+                        <Link to={'/#examples'}>
+                            подобранные авто
+                        </Link>
+                }
+
             </NavItem>
 
             <NavItem>
-                <Link to={'/#feedback'}>
-                    отзывы
-                </Link>
+                {
+                    state.discount ?
+                        <Link to={'/discount#feedback'}>
+                            отзывы
+                        </Link>
+                        :
+                        <Link to={'/#feedback'}>
+                            отзывы
+                        </Link>
+                }
+
             </NavItem>
 
             <NavItem>
                 <Link to={'/blog'}>блог</Link>
             </NavItem>
 
-            <NavItem >
-                <span onClick={()=>dispatch({type:OPEN_MODAL, payload: {formTitle: 'Остались вопросы?', title: 'Обратная связь'}})} className={styles.spanFontFamily}>Контакты</span>
+            <NavItem>
+                <span onClick={() => dispatch({
+                    type: OPEN_MODAL,
+                    payload: {formTitle: 'Остались вопросы?', title: 'Обратная связь'}
+                })} className={styles.spanFontFamily}>Контакты</span>
             </NavItem>
         </ul>
     )
@@ -56,13 +80,17 @@ export const Navigation = ({className}) => {
 };
 
 
-export const NavigationMobile = ({ setIsOpen }) => {
-    const {dispatch} = useModalContext()
+export const NavigationMobile = ({setIsOpen}) => {
+    const {dispatch, state} = useModalContext()
     return (
         <ul className={styles.list}>
             <NavItem>
-                <Link to={'/#services'}>цены и Услуги</Link>
-
+                {
+                    state.discount ?
+                        <Link to={'/discount#services'}>цены и Услуги</Link>
+                        :
+                        <Link to={'/#services'}>цены и Услуги</Link>
+                }
             </NavItem>
 
             <NavItem>
@@ -70,18 +98,28 @@ export const NavigationMobile = ({ setIsOpen }) => {
             </NavItem>
 
             <NavItem>
-                <Link to={'/#examples'}>подобранные авто</Link>
-
+                {
+                    state.discount ?
+                        <Link to={'/discount#examples'}>подобранные авто</Link>
+                        :
+                        <Link to={'/#examples'}>подобранные авто</Link>
+                }
             </NavItem>
             <NavItem>
-                <Link to={'/#feedback'}>отзывы</Link>
+                {
+                    state.discount ?
+                        <Link to={'/discount#feedback'}>отзывы</Link>
+                        :
+                        <Link to={'/#feedback'}>отзывы</Link>
+                }
+
 
             </NavItem>
             <NavItem>
                 <Link to={'/blog'}>блог</Link>
             </NavItem>
-            <NavItem >
-                <span onClick={()=>dispatch({type:OPEN_MODAL})} className={styles.spanFontFamily}>Контакты</span>
+            <NavItem>
+                <span onClick={() => dispatch({type: OPEN_MODAL})} className={styles.spanFontFamily}>Контакты</span>
             </NavItem>
         </ul>
     )

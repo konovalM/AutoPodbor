@@ -12,10 +12,12 @@ import AOS from "aos";
 import {deleteSpan} from "../functions/deleteSpan";
 import {useBeforeunload} from "react-beforeunload";
 import {scrollToElement} from "../utils/ScrollToElement";
+import {DISCOUNT, useModalContext} from "../contexts/ModalContext";
 
 export const AppRouter = () => {
     const [data, setData] = useState()
     const location = useLocation()
+    const {dispatch} = useModalContext()
     useEffect(() => {
         AOS.init({
             offset: 200,
@@ -48,28 +50,30 @@ export const AppRouter = () => {
             })
     }, [])
     useEffect(() => {
+        console.log(location)
         if (location.hash){
             setTimeout(() => {
                 scrollToElement(location.hash)
             }, 500)
         }
+        if (location.pathname === '/discount'){
+            dispatch({type: DISCOUNT})
+        }
     }, [location.key])
-/*
-    useBeforeunload(() => {
-        localStorage.setItem('isLoggedOut', 'true')
-    })*/
+
     return (
-        <Routes>
-            <Route path="/" element={<MainLayout/>}>
-                <Route index element={<Main />}/>
+        <MainLayout>
+            <Routes>
+                <Route path="/" element={<Main />}/>
+                <Route path="/discount" element={<Main />}/>
                 <Route path="/service/:id" element={<Service/>}/>
                 <Route path="/article/:id" element={<Article/>}/>
                 <Route path="/privacy" element={<Privacy/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/blog" element={<Blog/>}/>
                 <Route path="*" element={<NotFound to={"not-found"}/>}/>
-            </Route>
-        </Routes>
+            </Routes>
+        </MainLayout>
     );
 };
 

@@ -10,7 +10,7 @@ import {ExternalLink} from "../UI/externalLink";
 
 export const Footer = () => {
     return (
-        <footer className={styles.black} id='footer'>
+        <footer className={styles.black} name='#footer'>
 
             <div className={styles.container}>
                 <div className={styles.footer}>
@@ -26,7 +26,7 @@ export const Footer = () => {
                     <Link to={'privacy'} className={styles.policy}>
                         Политика конфиденциальности
                     </Link>
-                    <ExternalLink href={"https://ozzostudio.ru/"} className={styles.companylink}> Сайт сделан ozzostudio.ru</ExternalLink>
+                    <ExternalLink href={"https://ozzostudio.ru/"} className={styles.companylink}>Сайт сделан ozzostudio.ru</ExternalLink>
                 </div>
             </div>
         </footer>

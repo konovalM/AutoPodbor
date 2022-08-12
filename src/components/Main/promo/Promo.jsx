@@ -59,11 +59,11 @@ const Pluses = () => {
 };
 
 const MainTitle = () => {
-    const {dispatch} = useModalContext();
+    const {dispatch, state} = useModalContext();
     return (
         <div className={localStorage.getItem('isLoggedOut') ? cn(styles.mainTitleBlock, styles.mainTitleBlock2) : styles.mainTitleBlock}>
             {
-                localStorage.getItem('isLoggedOut')
+                state.discount
                 ?
                     localStorage.getItem('promo_header2')
                         ? <h1 className={styles.mainTitle}

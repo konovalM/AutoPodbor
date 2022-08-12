@@ -13,14 +13,17 @@ const initialState={
     },
     count:1,
     formTitle: 'Остались вопросы?',
+    discount: false,
 }
 
 
 export const OPEN_MODAL="OPEN_MODAL"
 export const CLOSE_MODAL="CLOSE_MODAL"
 export const UPLOAD_AND_NEXT_MODAL = "UPLOAD_AND_NEXT_MODAL"
+export const DISCOUNT = "DISCOUNT"
 
 const reducer = (state = initialState,action) => {
+    console.log(state)
     switch(action.type){
         case OPEN_MODAL:{
             return {
@@ -34,7 +37,8 @@ const reducer = (state = initialState,action) => {
         case CLOSE_MODAL:{
             return {
                 ...initialState,
-                isOpen: false
+                isOpen: false,
+                discount: state.discount
             }
         }
 
@@ -46,6 +50,11 @@ const reducer = (state = initialState,action) => {
             return {
                 ...state,
                 count: 2
+            }
+        case DISCOUNT:
+            return {
+                ...state,
+                discount: true
             }
         default:{
             return {

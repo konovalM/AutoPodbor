@@ -16,11 +16,10 @@ const ServicesFromApi = () => {
     return (
       <div className={styles.content}>
         {services.map((service, index) => (
-          <AnimateWrapper animate={"fade-left"}>
+          <AnimateWrapper animate={"fade-left"} key={index}>
             <PriceCard
               component={service.icon}
               id={service.id}
-              key={index + 1}
               title={service.title}
               text={service.description}
               price={service.price_from}

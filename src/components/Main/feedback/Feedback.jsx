@@ -77,8 +77,8 @@ const PhoneSlider = () => {
                 y2="45"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#FCC026" />
-                <stop offset="1" stop-color="#FC8B26" />
+                <stop stopColor="#FCC026" />
+                <stop offset="1" stopColor="#FC8B26" />
               </linearGradient>
             </defs>
           </svg>
@@ -109,8 +109,8 @@ const PhoneSlider = () => {
                 y2="45"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#FCC026" />
-                <stop offset="1" stop-color="#FC8B26" />
+                <stop stopColor="#FCC026" />
+                <stop offset="1" stopColor="#FC8B26" />
               </linearGradient>
             </defs>
           </svg>
