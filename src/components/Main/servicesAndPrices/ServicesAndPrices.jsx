@@ -34,7 +34,7 @@ const ServicesFromApi = () => {
 
 export const ServicesAndPrices = () => {
     return (
-      <section className={styles.servicesAndPrices} id={"services"} name={'services'}>
+      <section className={styles.servicesAndPrices} name={'#services'}>
           <img src={glasses} className={styles.glasses} alt={"glasses"} />
           <img src={key} className={styles.key} alt={"key"} />
           <div className={styles.wrapper}>

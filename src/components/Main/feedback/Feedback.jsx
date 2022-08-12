@@ -190,7 +190,7 @@ const SocialItem = ({ src, children }) => {
 
 export const Feedback = () => {
   return (
-      <section className={styles.bck} id={"feedback"} name={'feedback'}>
+      <section className={styles.bck} name={'#feedback'}>
         <div className={styles.container}>
           <AnimateWrapper animate={"fade-right"}>
             <h2 className={styles.title}>Отзывы клиентов</h2>

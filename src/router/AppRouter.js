@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Routes, Route} from 'react-router'
+import {Routes, Route, useLocation} from 'react-router'
 import {MainLayout} from "../layout/mainLayout";
 import {Main} from "../pages/Main";
 import {Service} from "../pages/Service";
@@ -11,9 +11,11 @@ import {Article} from "../pages/Article/Article";
 import AOS from "aos";
 import {deleteSpan} from "../functions/deleteSpan";
 import {useBeforeunload} from "react-beforeunload";
+import {scrollToElement} from "../utils/ScrollToElement";
 
 export const AppRouter = () => {
     const [data, setData] = useState()
+    const location = useLocation()
     useEffect(() => {
         AOS.init({
             offset: 200,
@@ -43,13 +45,17 @@ export const AppRouter = () => {
             })
             .then(() => {
                 deleteSpan(localStorage.getItem('promo_telephone'))
-                console.log(localStorage.getItem('promo_header2'))
             })
     }, [])
-
+    useEffect(() => {
+        if (location.hash){
+            scrollToElement(location.hash)
+        }
+    }, [location.key])
+/*
     useBeforeunload(() => {
         localStorage.setItem('isLoggedOut', 'true')
-    })
+    })*/
     return (
         <Routes>
             <Route path="/" element={<MainLayout/>}>
