@@ -1,0 +1,17 @@
+/*.ellipse{
+    background: url("../../assets/images/catalog/lightEllipse.svg") center -70px/ contain no-repeat;
+}*/
+.wave{
+    background: url("../../assets/images/waveBgBlack.svg")center top/100% no-repeat;
+    padding-top: 170px;
+    overflow: auto;
+}
+.bgBlack{
+    background-color: #000000;
+    overflow: visible;
+
+}
+/*.lines{
+    background: url("../../assets/images/catalog/lines.svg") center center/cover no-repeat;
+    margin: 60px 0;
+}*/
