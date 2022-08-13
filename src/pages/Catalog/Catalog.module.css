@@ -8,7 +8,8 @@
 }
 .bgBlack{
     background-color: #000000;
-    overflow: auto;
+    overflow: visible;
+
 }
 /*.lines{
     background: url("../../assets/images/catalog/lines.svg") center center/cover no-repeat;

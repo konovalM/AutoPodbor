@@ -32,24 +32,30 @@ const Catalog = () => {
     return (
         <>
             <BreadcrumbsLayout text={"Каталог"}>
-                <Main />
-                {/*<div className={styles.wave}>
-                    <div className={styles.bgBlack}>
+                <div style={{overflowX: 'hidden'}}>
+
+                    <Main/>
+                    {/*<div className={styles.bgBlack}>*/}
+                    {/*<div className={styles.wave}>
+
                         <div className={styles.ellipse}>*/}
-                            {
-                                items?.results.length && <>
-                                    <CatalogCards />
-                                    <PaginationComponent pageCount={items.page_count} setPage={setPage}/>
-                                    {/*<BlogArticles posts={posts.results}/>*/}
-                                    {/*<PaginationComponent pageCount={posts.page_count} setPage={setPage}/>*/}
-                                </>
-                            }
-                            <div className={styles.lines} style={{background: '#000'}}>
-                                <FormBlock />
-                            </div>
-                        {/*</div>
+                    {
+                        items?.results.length && <>
+                            <CatalogCards/>
+                            <PaginationComponent pageCount={items.page_count} setPage={setPage}
+                                                 style={{padding: '3px', margin: '-3px'}}/>
+                            {/*<BlogArticles posts={posts.results}/>*/}
+                            {/*<PaginationComponent pageCount={posts.page_count} setPage={setPage}/>*/}
+                        </>
+                    }
+                    <div className={styles.lines} style={{background: '#000'}}>
+                        <FormBlock/>
                     </div>
+                    {/*</div>
+
                 </div>*/}
+                    {/*</div>*/}
+                </div>
             </BreadcrumbsLayout>
         </>
     );
