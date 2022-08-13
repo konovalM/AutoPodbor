@@ -1,0 +1,51 @@
+.catalog{
+    padding: 50px 0 175px;
+    position: relative;
+}
+.promoWrapper{
+    max-width: 640px;
+    margin-left: auto;
+}
+.title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 125%;
+    color: #121212;
+    margin-bottom: 37px;
+}
+.promoText{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 129.7%;
+    color: #7B7B7B;
+    margin-bottom: 82px;
+}
+.bold{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(109.36deg, #000000 0%, #282828 100%);
+    font-size: 20px;
+    line-height: 129.7%;
+}
+.btn{
+    text-transform: uppercase;
+    padding: 0 35px;
+    height: 45px;
+    color: #121212;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 113%;
+}
+.outside{
+    /*position: relative;*/
+}
+.promoImg{
+    position: absolute;
+    display: block;
+    bottom: -150px;
+    left: 0;
+    height: 666px;
+    z-index: -1;
+}

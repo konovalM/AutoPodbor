@@ -13,6 +13,7 @@ import {deleteSpan} from "../functions/deleteSpan";
 import {useBeforeunload} from "react-beforeunload";
 import {scrollToElement} from "../utils/ScrollToElement";
 import {DISCOUNT, useModalContext} from "../contexts/ModalContext";
+import Catalog from "../pages/Catalog/Catalog";
 
 export const AppRouter = () => {
     const [data, setData] = useState()
@@ -65,6 +66,7 @@ export const AppRouter = () => {
             <Routes>
                 <Route path="/" element={<Main />}/>
                 <Route path="/discount" element={<Main />}/>
+                <Route path="/catalog" element={<Catalog />}/>
                 <Route path="/service/:id" element={<Service/>}/>
                 <Route path="/article/:id" element={<Article/>}/>
                 <Route path="/privacy" element={<Privacy/>}/>
