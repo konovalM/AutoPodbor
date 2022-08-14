@@ -14,6 +14,7 @@ import {useBeforeunload} from "react-beforeunload";
 import {scrollToElement} from "../utils/ScrollToElement";
 import {DISCOUNT, useModalContext} from "../contexts/ModalContext";
 import Catalog from "../pages/Catalog/Catalog";
+import CatalogCar from "../pages/CatalogCar/CatalogCar";
 
 export const AppRouter = () => {
     const [data, setData] = useState()
@@ -67,6 +68,8 @@ export const AppRouter = () => {
                 <Route path="/" element={<Main />}/>
                 <Route path="/discount" element={<Main />}/>
                 <Route path="/catalog" element={<Catalog />}/>
+                <Route path="/catalog/:id" element={<CatalogCar />}/>
+                <Route path="/service/:id" element={<Service/>}/>
                 <Route path="/service/:id" element={<Service/>}/>
                 <Route path="/article/:id" element={<Article/>}/>
                 <Route path="/privacy" element={<Privacy/>}/>
