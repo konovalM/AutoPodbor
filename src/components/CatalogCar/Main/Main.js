@@ -10,9 +10,7 @@ const Main = () => {
         (async ()=>{
             const data = await getWorkExamples(1)
             setActiveImg(data.results[0].img)
-            console.log(data.results[0].additional_images)
             setImages(data.results[0].additional_images)
-
         })()
     },[])
 
