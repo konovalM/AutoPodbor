@@ -1,0 +1,28 @@
+.section{
+    padding: 30px 0 60px;
+}
+.carName{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 129.7%;
+    text-align: center;
+    color: #121212;
+    margin-bottom: 70px;
+}
+.card{
+    width: 100%;
+    box-shadow: -1px 4px 21px rgba(0, 0, 0, 0.1);
+    border-radius: 11px;
+    min-height: 430px;
+    margin-bottom: 30px;
+}
+.btnOrder{
+    width: 314px;
+    height: 60px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000000;
+    display: block;
+    margin: 0 auto;
+}
