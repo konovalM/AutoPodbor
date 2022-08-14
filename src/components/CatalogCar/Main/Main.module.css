@@ -80,14 +80,12 @@
     bottom: 6px;
     padding: 8px 11px;
     display: flex;
-    /*max-width: 80%;*/
     max-width: unset;
     height: 75px;
 }
 
 .thumbnail{
     display: block;
-    /*width: 20%;*/
     border-radius: 11px;
     object-fit: cover;
 }
