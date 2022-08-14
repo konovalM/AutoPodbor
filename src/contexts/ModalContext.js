@@ -43,7 +43,7 @@ const reducer = (state = initialState,action) => {
 
         case UPLOAD_AND_NEXT_MODAL:
             (async ()=>{
-                await postFeedback({...action.payload, details: state.formValues.details})
+                await postFeedback({...action.payload, details: state.formValues.details + (state.discount ? ' *со скидкой' : '') })
             })()
 
             return {
