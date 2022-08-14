@@ -1,0 +1,13 @@
+.wave {
+    background-image: url("../../../assets/images/waveBgBlack.svg");
+    background-color: transparent;
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 140px;
+    overflow: visible;
+    position: relative;
+}
+.black{
+    background: #000;
+}
