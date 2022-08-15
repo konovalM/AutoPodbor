@@ -66,6 +66,9 @@ const customStyles = {
         ...provided,
         paddingRight: '30px',
         color: '#121212',
+        '&:hover': {
+            color: '#121212',
+        }
     }),
     menu: (provided) => ({
         ...provided,
