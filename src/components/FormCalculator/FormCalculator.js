@@ -32,6 +32,7 @@ const customStyles = {
         fontWeight: '400',
         fontSize: '20px',
         lineHeight: '125%',
+        display: state.isSelected ? 'none' : 'block',
         background: state.isSelected ? '#DCDCDC' : '#FFFFFF',
         '&:hover': {
             background: '#E7E7E7',
