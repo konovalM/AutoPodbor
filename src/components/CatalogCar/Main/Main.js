@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styles from './Main.module.css'
 import {Button} from "../../UI/button";
 import {getWorkExamples} from "../../../api/workExamplesApi";
+import FormCalculator from "../../FormCalculator/FormCalculator";
 
 const Main = () => {
     const [activeImg, setActiveImg] = useState(null)
@@ -64,6 +65,7 @@ const Main = () => {
                     </div>
                 </div>
                 <Button text='Заказать автомобиль' className={styles.btnOrder}/>
+                <FormCalculator />
             </div>
         </section>
     );

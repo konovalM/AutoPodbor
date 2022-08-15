@@ -1,0 +1,74 @@
+.form{
+    background: #000000;
+    border-radius: 11px;
+    padding: 53px;
+    margin: 30px auto;
+    max-width: 932px;
+    width: 100%;
+}
+.calcWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 58px;
+    grid-auto-rows: auto;
+    width: 100%;
+    margin-bottom: 90px;
+}
+
+.column{
+    display: grid;
+    row-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 100px);
+}
+.label{
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+.inputWrapper .input{
+    padding: 22px 60px 22px 30px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 125%;
+    color: #121212;
+    border: 1px solid #4B4A4A;
+    border-radius: 11px;
+    max-height: 70px;
+    background-image: url("../../assets/images/selectArrow.svg");
+    background-position: right 30px center;
+    background-size: 14px;
+}
+
+
+.inputWrapper .input:focus{
+    border-color: #4B4A4A;
+    box-shadow: none;
+
+}
+
+.inputWrapper .input:focus{
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+}
+.option{
+    height: 46px;
+    padding: 50px;
+}
+.select .react-select__control:hover{
+    border: 1px solid #ff0000;
+}
+
+.btn{
+    width: 384px;
+    height: 60px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000000;
+}
