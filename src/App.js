@@ -7,15 +7,18 @@ import './override.css'
 import 'aos/dist/aos.css'
 import {ModalContextProvider} from "./contexts/ModalContext";
 import {ScrollToTop} from "./components/scrollToTop/ScrollToTop";
+import {FilterContextProvider} from "./contexts/FilterContext";
 
 
 export const App = () => {
 
     return (
         <BrowserRouter>
-            <ModalContextProvider >
-                <ScrollToTop/>
-                <AppRouter/>
+            <ModalContextProvider>
+                <FilterContextProvider>
+                    <ScrollToTop/>
+                    <AppRouter/>
+                </FilterContextProvider>
             </ModalContextProvider>
         </BrowserRouter>
     );

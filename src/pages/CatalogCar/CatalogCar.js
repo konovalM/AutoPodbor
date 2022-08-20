@@ -8,7 +8,7 @@ import {getCatalogItem} from "../../api/catalogAPI";
 const CatalogCar = () => {
     const {id} = useParams()
     const nav = useNavigate()
-    const [car, setCar] = useState()
+    const [car, setCar] = useState(null)
     console.log(car)
     useEffect(() => {
         (async () => {

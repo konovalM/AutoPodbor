@@ -37,6 +37,14 @@
     height: 45px;
 }
 
+.btnActive{
+    background: #fff;
+}
+
+.btnActive:hover{
+    background: #fff;
+}
+
 .catalogGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

@@ -1,149 +1,82 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './CatalogCards.module.css'
 import {Button} from "../../UI/button";
 import imgMock from '../../../assets/images/catalog/catalogItemMock.jpg'
 import keys from '../../../assets/images/catalog/keys.png'
 import {useNavigate} from "react-router";
+import cn from "classnames";
+import {SET_FILTER, useFilterContext} from "../../../contexts/FilterContext";
 
 const CatalogCards = ({cars}) => {
-    const nav = useNavigate()
+    const {dispatch} = useFilterContext()
+    const [buttons, setButtons] = useState([
+        {
+            text: 'от 1,2 до 1,3 млн. руб.',
+            isActive: false,
+        },
+        {
+            text: 'от 1,3 до 2 млн. руб.',
+            isActive: false,
+        },
+        {
+            text: 'от 2 млн. руб. и дороже.',
+            isActive: false,
+        },
+    ])
+
+    const setActiveButton = (index) => {
+        dispatch({type: SET_FILTER, payload: index})
+        setButtons(
+            buttons.map((btn, i) => {
+                if (index === i) {
+                    return {...btn, isActive: true}
+                }
+                return {...btn, isActive: false}
+            })
+        )
+    }
     return (
         <section className={styles.wave}>
             <img src={keys} alt="keys" className={styles.keys}/>
             <div className={styles.background}>
                 <div className="container">
                     <div className={styles.btnWrapper}>
-                        <Button text='от 1,2 до 1,3 млн. руб.' className={styles.btn}/>
-                        <Button text='от 1,3 до 2 млн. руб.' className={styles.btn}/>
-                        <Button text='от 2 млн. руб. и дороже.' className={styles.btn}/>
-                    </div>
-                    <div className={styles.catalogGrid}>
                         {
-                            cars.map((car, index) => (
-                                <div className={styles.gridItem}>
-                                    <Button text='Подробнее' className={styles.moreBtn} onClick={() => nav(`/catalog/${car.id}`)}/>
-                                    <img src={car.image} alt="mock" className={styles.catalogItemImg}/>
-                                    <div className={styles.description}>
-                                        <h5 className={styles.name}>{car.title}</h5>
-                                        <p className={styles.year}>{car.manufacture_year} год выпуска</p>
-                                        <p className={styles.price}>Цена: {car.price} руб.</p>
-                                    </div>
-                                </div>
+                            buttons.map((btn, index) => (
+                                <Button onClick={() => setActiveButton(index)} text={btn.text} className={btn.isActive ? cn(styles.btn, styles.btnActive) : styles.btn} key={index}/>
                             ))
                         }
-                        {/*<div className={styles.gridItem}>
-                            <Button text='Подробнее' className={styles.moreBtn}/>
-                            <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
-                            <div className={styles.description}>
-                                <h5 className={styles.name}>Toyota Land Cruiser 300</h5>
-                                <p className={styles.year}>2003 год выпуска</p>
-                                <p className={styles.price}>Цена: 1 900 000 руб.</p>
-                            </div>
-                        </div>
-                        <div className={styles.gridItem}>
-                            <Button text='Подробнее' className={styles.moreBtn}/>
-                            <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
-                            <div className={styles.description}>
-                                <h5 className={styles.name}>Toyota Land Cruiser 300</h5>
-                                <p className={styles.year}>2003 год выпуска</p>
-                                <p className={styles.price}>Цена: 1 900 000 руб.</p>
-                            </div>
-                        </div>
-                        <div className={styles.gridItem}>
-                            <Button text='Подробнее' className={styles.moreBtn}/>
-                            <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
-                            <div className={styles.description}>
-                                <h5 className={styles.name}>Toyota Land Cruiser 300</h5>
-                                <p className={styles.year}>2003 год выпуска</p>
-                                <p className={styles.price}>Цена: 1 900 000 руб.</p>
-                            </div>
-                        </div>
-                        <div className={styles.gridItem}>
-                            <Button text='Подробнее' className={styles.moreBtn}/>
-                            <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
-                            <div className={styles.description}>
-                                <h5 className={styles.name}>Toyota Land Cruiser 300</h5>
-                                <p className={styles.year}>2003 год выпуска</p>
-                                <p className={styles.price}>Цена: 1 900 000 руб.</p>
-                            </div>
-                        </div>
-                        <div className={styles.gridItem}>
-                            <Button text='Подробнее' className={styles.moreBtn}/>
-                            <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
-                            <div className={styles.description}>
-                                <h5 className={styles.name}>Toyota Land Cruiser 300</h5>
-                                <p className={styles.year}>2003 год выпуска</p>
-                                <p className={styles.price}>Цена: 1 900 000 руб.</p>
-                            </div>
-                        </div>
-                        <div className={styles.gridItem}>
-                            <Button text='Подробнее' className={styles.moreBtn}/>
-                            <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
-                            <div className={styles.description}>
-                                <h5 className={styles.name}>Toyota Land Cruiser 300</h5>
-                                <p className={styles.year}>2003 год выпуска</p>
-                                <p className={styles.price}>Цена: 1 900 000 руб.</p>
-                            </div>
-                        </div>
-                        <div className={styles.gridItem}>
-                            <Button text='Подробнее' className={styles.moreBtn}/>
-                            <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
-                            <div className={styles.description}>
-                                <h5 className={styles.name}>Toyota Land Cruiser 300</h5>
-                                <p className={styles.year}>2003 год выпуска</p>
-                                <p className={styles.price}>Цена: 1 900 000 руб.</p>
-                            </div>
-                        </div>
-                        <div className={styles.gridItem}>
-                            <Button text='Подробнее' className={styles.moreBtn}/>
-                            <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
-                            <div className={styles.description}>
-                                <h5 className={styles.name}>Toyota Land Cruiser 300</h5>
-                                <p className={styles.year}>2003 год выпуска</p>
-                                <p className={styles.price}>Цена: 1 900 000 руб.</p>
-                            </div>
-                        </div>
-                        <div className={styles.gridItem}>
-                            <Button text='Подробнее' className={styles.moreBtn}/>
-                            <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
-                            <div className={styles.description}>
-                                <h5 className={styles.name}>Toyota Land Cruiser 300</h5>
-                                <p className={styles.year}>2003 год выпуска</p>
-                                <p className={styles.price}>Цена: 1 900 000 руб.</p>
-                            </div>
-                        </div>
-                        <div className={styles.gridItem}>
-                            <Button text='Подробнее' className={styles.moreBtn}/>
-                            <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
-                            <div className={styles.description}>
-                                <h5 className={styles.name}>Toyota Land Cruiser 300</h5>
-                                <p className={styles.year}>2003 год выпуска</p>
-                                <p className={styles.price}>Цена: 1 900 000 руб.</p>
-                            </div>
-                        </div>
-                        <div className={styles.gridItem}>
-                            <Button text='Подробнее' className={styles.moreBtn}/>
-                            <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
-                            <div className={styles.description}>
-                                <h5 className={styles.name}>Toyota Land Cruiser 300</h5>
-                                <p className={styles.year}>2003 год выпуска</p>
-                                <p className={styles.price}>Цена: 1 900 000 руб.</p>
-                            </div>
-                        </div>
-                        <div className={styles.gridItem}>
-                            <Button text='Подробнее' className={styles.moreBtn}/>
-                            <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
-                            <div className={styles.description}>
-                                <h5 className={styles.name}>Toyota Land Cruiser 300</h5>
-                                <p className={styles.year}>2003 год выпуска</p>
-                                <p className={styles.price}>Цена: 1 900 000 руб.</p>
-                            </div>
-                        </div>*/}
                     </div>
+                    {
+                        !!cars?.length &&
+                        <Cards cars={cars}/>
+                    }
                 </div>
             </div>
         </section>
     );
 };
+
+export const Cards = ({cars}) => {
+    const nav = useNavigate()
+    return (
+        <div className={styles.catalogGrid}>
+            {
+                cars.map((car, index) => (
+                    <div className={styles.gridItem} key={index}>
+                        <Button text='Подробнее' className={styles.moreBtn}
+                                onClick={() => nav(`/catalog/${car.id}`)}/>
+                        <img src={car.image} alt="mock" className={styles.catalogItemImg}/>
+                        <div className={styles.description}>
+                            <h5 className={styles.name}>{car.title}</h5>
+                            <p className={styles.year}>{car.manufacture_year} год выпуска</p>
+                            <p className={styles.price}>Цена: {car.price} руб.</p>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    )
+}
 
 export default CatalogCards;

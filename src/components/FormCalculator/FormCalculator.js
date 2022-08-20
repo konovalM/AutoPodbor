@@ -143,7 +143,6 @@ const FormCalculator = () => {
                             isSearchable={false}
                             aria-live='off'
                             className={styles.select}
-                            // menuIsOpen={true}
                         />
                     </div>
                     <div className={styles.inputWrapper}>

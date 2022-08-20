@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Main.module.css'
 import {Button} from "../../UI/button";
-import {getWorkExamples} from "../../../api/workExamplesApi";
 import FormCalculator from "../../FormCalculator/FormCalculator";
 
 const Main = ({car}) => {
