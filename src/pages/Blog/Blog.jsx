@@ -14,11 +14,11 @@ export const Blog = () => {
 
     const [posts, setPosts] = useState()
 
-    useEffect(() => {
+/*    useEffect(() => {
         (async () => {
             await getBlogPosts(1)
         })()
-    }, [])
+    }, [])*/
     useEffect(() => {
         (async () => {
             await getBlogPosts(page).then(setPosts).catch(() => {

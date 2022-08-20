@@ -16,12 +16,6 @@ const Catalog = () => {
     const [page, setPage] = useState(1)
 
     const [items, setItems] = useState()
-
-    useEffect(() => {
-        (async () => {
-            await getCatalogItems(1)
-        })()
-    }, [])
     useEffect(() => {
         (async () => {
             await getCatalogItems(page).then(setItems).catch(() => {
@@ -41,7 +35,7 @@ const Catalog = () => {
                         <div className={styles.ellipse}>*/}
                     {
                         items?.results.length && <>
-                            <CatalogCards/>
+                            <CatalogCards cars={items.results}/>
                             <PaginationComponent pageCount={items.page_count} setPage={setPage}
                                                  style={{padding: '3px', margin: '-3px'}}/>
                             {/*<BlogArticles posts={posts.results}/>*/}

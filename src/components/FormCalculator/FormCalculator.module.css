@@ -28,31 +28,42 @@
     color: #FFFFFF;
     margin-bottom: 6px;
 }
-.inputWrapper .input{
+.input{
     padding: 22px 60px 22px 30px;
     font-weight: 400;
     font-size: 20px;
     line-height: 125%;
     color: #121212;
-    border: 1px solid #4B4A4A;
     border-radius: 11px;
     max-height: 70px;
-    background-image: url("../../assets/images/selectArrow.svg");
-    background-position: right 30px center;
-    background-size: 14px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    width: 100%;
+    border: 1px solid #4B4A4A;
+}
+.shortInput{
+    flex: 0 0 53%;
+}
+.inputFlex{
+    display: flex;
+    column-gap: 25px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
 }
 
 
-.inputWrapper .input:focus{
-    border-color: #4B4A4A;
-    box-shadow: none;
-
-}
-
-.inputWrapper .input:focus{
-    border-bottom-left-radius: unset;
-    border-bottom-right-radius: unset;
-}
 .option{
     height: 46px;
     padding: 50px;

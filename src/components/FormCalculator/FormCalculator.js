@@ -23,6 +23,17 @@ const engineOptions = [
     { value: '4', label: 'Электрический' },
 ]
 
+const powerOptions = [
+    { value: '1', label: 'ЛС' },
+    { value: '2', label: 'кВт' },
+]
+
+const currencyOptions = [
+    { value: '1', label: 'EUR' },
+    { value: '2', label: 'USD' },
+    { value: '3', label: 'RUB' },
+]
+
 const customStyles = {
     option: (provided, state) => ({
         ...provided,
@@ -47,6 +58,7 @@ const customStyles = {
         position: 'relative',
         background: '#ffffff',
         paddingBottom: state.selectProps.menuIsOpen ? '10px' : '0',
+        width: '100%',
     }),
     control: (provided, state) => ({
         ...provided,
@@ -97,7 +109,7 @@ const customStyles = {
     singleValue: (provided) => ({
         ...provided,
         margin: 0,
-        padding: '22px 30px',
+        padding: '22px 10px 22px 30px',
         color: '#121212',
         fontWeight: '400',
         fontSize: '20px',
@@ -106,7 +118,6 @@ const customStyles = {
 }
 
 const FormCalculator = () => {
-
     return (
         <form className={styles.form}>
             <div className={styles.calcWrapper}>
@@ -150,12 +161,35 @@ const FormCalculator = () => {
                 <div className={cn(styles.rightInputs, styles.column)}>
                     <div className={styles.inputWrapper}>
                         <div className={styles.label}>Мощность двигателя</div>
+                        <div className={styles.inputFlex}>
+                            <input type='number' className={cn(styles.shortInput, styles.input)}></input>
+                            <Select
+                                options={powerOptions}
+                                styles={customStyles}
+                                defaultValue={powerOptions[0]}
+                                isSearchable={false}
+                                aria-live='off'
+                                className={styles.select}
+                            />
+                        </div>
                     </div>
                     <div className={styles.inputWrapper}>
                         <div className={styles.label}>Объем двигателя в см3 (1 л = 1000 см3)</div>
+                        <input type="number" className={styles.input}/>
                     </div>
                     <div className={styles.inputWrapper}>
                         <div className={styles.label}>Стоимость автомобиля</div>
+                        <div className={styles.inputFlex}>
+                            <input type='number' className={cn(styles.shortInput, styles.input)}></input>
+                            <Select
+                                options={currencyOptions}
+                                styles={customStyles}
+                                defaultValue={currencyOptions[0]}
+                                isSearchable={false}
+                                aria-live='off'
+                                className={styles.select}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

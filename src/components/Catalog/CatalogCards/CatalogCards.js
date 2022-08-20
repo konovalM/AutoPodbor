@@ -3,8 +3,10 @@ import styles from './CatalogCards.module.css'
 import {Button} from "../../UI/button";
 import imgMock from '../../../assets/images/catalog/catalogItemMock.jpg'
 import keys from '../../../assets/images/catalog/keys.png'
+import {useNavigate} from "react-router";
 
-const CatalogCards = () => {
+const CatalogCards = ({cars}) => {
+    const nav = useNavigate()
     return (
         <section className={styles.wave}>
             <img src={keys} alt="keys" className={styles.keys}/>
@@ -16,7 +18,20 @@ const CatalogCards = () => {
                         <Button text='от 2 млн. руб. и дороже.' className={styles.btn}/>
                     </div>
                     <div className={styles.catalogGrid}>
-                        <div className={styles.gridItem}>
+                        {
+                            cars.map((car, index) => (
+                                <div className={styles.gridItem}>
+                                    <Button text='Подробнее' className={styles.moreBtn} onClick={() => nav(`/catalog/${car.id}`)}/>
+                                    <img src={car.image} alt="mock" className={styles.catalogItemImg}/>
+                                    <div className={styles.description}>
+                                        <h5 className={styles.name}>{car.title}</h5>
+                                        <p className={styles.year}>{car.manufacture_year} год выпуска</p>
+                                        <p className={styles.price}>Цена: {car.price} руб.</p>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                        {/*<div className={styles.gridItem}>
                             <Button text='Подробнее' className={styles.moreBtn}/>
                             <img src={imgMock} alt="mock" className={styles.catalogItemImg}/>
                             <div className={styles.description}>
@@ -123,7 +138,7 @@ const CatalogCards = () => {
                                 <p className={styles.year}>2003 год выпуска</p>
                                 <p className={styles.price}>Цена: 1 900 000 руб.</p>
                             </div>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
             </div>
