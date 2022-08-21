@@ -47,6 +47,9 @@ const customStyles = {
         background: state.isSelected ? '#DCDCDC' : '#FFFFFF',
         '&:hover': {
             background: '#E7E7E7',
+        },
+        '@media only screen and (max-width: 370px)': {
+            padding: '22px 0 22px 9px'
         }
     }),
     container: (provided, state ) => ({
@@ -102,6 +105,14 @@ const customStyles = {
         padding: 0,
 
     }),
+    indicatorsContainer: (provided) => ({
+        ...provided,
+        padding: 0,
+        '& > div': {
+            padding: 0,
+            paddingRight: '30px',
+        }
+    }),
     menuPortal: (provided) => ({
         ...provided,
         borderRadius: '11px',
@@ -109,11 +120,14 @@ const customStyles = {
     singleValue: (provided) => ({
         ...provided,
         margin: 0,
-        padding: '22px 10px 22px 30px',
+        padding: '22px 0 22px 30px',
         color: '#121212',
         fontWeight: '400',
         fontSize: '20px',
         lineHeight: '125%',
+        '@media only screen and (max-width: 370px)': {
+            padding: '22px 0 22px 9px'
+        }
     })
 }
 

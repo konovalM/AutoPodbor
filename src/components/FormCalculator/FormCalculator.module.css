@@ -2,7 +2,7 @@
     background: #000000;
     border-radius: 11px;
     padding: 53px;
-    margin: 30px auto;
+    margin: 0 auto;
     max-width: 932px;
     width: 100%;
 }
@@ -73,7 +73,8 @@ input[type="number"]:focus {
 }
 
 .btn{
-    width: 384px;
+    max-width: 384px;
+    width: 100%;
     height: 60px;
     border-radius: 5px;
     margin: 0 auto;
@@ -82,4 +83,48 @@ input[type="number"]:focus {
     font-size: 18px;
     line-height: 140%;
     color: #000000;
+}
+
+@media screen and (max-width: 810px) {
+    .calcWrapper{
+        column-gap: 27px;
+    }
+    .form{
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .calcWrapper{
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .calcWrapper{
+        column-gap: 27px;
+        row-gap: 27px;
+    }
+    .form{
+        padding: 28px 15px;
+    }
+    .column{
+        grid-template-rows: repeat(3, auto);
+        row-gap: 27px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .calcWrapper{
+        column-gap: 27px;
+        row-gap: 27px;
+    }
+    .form{
+        padding: 28px 15px;
+    }
+    .column{
+        grid-template-rows: repeat(3, auto);
+        row-gap: 27px;
+    }
 }

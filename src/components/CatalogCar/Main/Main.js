@@ -55,7 +55,6 @@ const Main = ({car}) => {
                     </div>
                 </div>
                 <Button text='Заказать автомобиль' className={styles.btnOrder}/>
-                <FormCalculator />
             </div>
         </section>
     );

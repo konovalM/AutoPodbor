@@ -21,17 +21,21 @@ import {WaveWrapper} from "../../../components/wavesWrapper";
 
 import {AnimateWrapper} from "../../../components/animateWrapper";
 import {PromoAbroad} from "../../../components/Main/promo/Promo";
+import {ServicesAndPricesAbroad} from "../../../components/Main/servicesAndPrices/ServicesAndPrices";
+import Catalog from "../../../components/Abroad/Catalog/Catalog";
+import Calculator from "../../../components/Abroad/Calculator/Calculator";
 
 export const MainAbroad = () => {
     return (
-      <main>
-        <PromoAbroad/>
+        <main>
+            <PromoAbroad/>
 
-        <Choice />
+            <Choice/>
 
-          <ServicesAndPrices />
-
-          {/*<Problems />
+            <ServicesAndPricesAbroad/>
+            <Catalog />
+            <Calculator />
+            {/*<Problems />
 
         <section className={styles.black} >
 
@@ -64,7 +68,7 @@ export const MainAbroad = () => {
           </div>
         </section>
         <Maps />*/}
-      </main>
+        </main>
     );
 };
 

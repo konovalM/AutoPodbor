@@ -21,8 +21,7 @@ const Catalog = () => {
     useEffect(() => {
         (async () => {
             await getCatalogItems(page, 12, state.activeFilter).then(setItems).catch((e) => {
-                // nav("/not-found");
-                console.log(e)
+                nav("/not-found");
             })
         })()
     }, [page, state])
