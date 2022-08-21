@@ -6,6 +6,7 @@ import keys from '../../../assets/images/catalog/keys.png'
 import {useNavigate} from "react-router";
 import cn from "classnames";
 import {SET_FILTER, useFilterContext} from "../../../contexts/FilterContext";
+import {abroad} from "../../../router/AppRouter";
 
 const CatalogCards = ({cars}) => {
     const {dispatch} = useFilterContext()
@@ -65,7 +66,7 @@ export const Cards = ({cars}) => {
                 cars.map((car, index) => (
                     <div className={styles.gridItem} key={index}>
                         <Button text='Подробнее' className={styles.moreBtn}
-                                onClick={() => nav(`/catalog/${car.id}`)}/>
+                                onClick={() => nav(`/${abroad}/catalog/${car.id}`)}/>
                         <img src={car.image} alt="mock" className={styles.catalogItemImg}/>
                         <div className={styles.description}>
                             <h5 className={styles.name}>{car.title}</h5>

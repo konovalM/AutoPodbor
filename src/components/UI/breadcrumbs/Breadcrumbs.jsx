@@ -4,6 +4,7 @@ import styles from './Breadcrumbs.module.scss'
 import {Link} from "react-router-dom";
 import {useModalContext} from "../../../contexts/ModalContext";
 import {useLocation} from "react-router";
+import {abroad} from "../../../router/AppRouter";
 
 
 export const Breadcrumbs = ({text}) => {
@@ -33,7 +34,7 @@ export const Breadcrumbs = ({text}) => {
                 {
                     isCatalogCarPage &&
                         <Breadcrumb.Item href="/" className={styles.item}>
-                            <Link to='/catalog'>
+                            <Link to={`/${abroad}/catalog`}>
                                 Каталог
                             </Link>
                         </Breadcrumb.Item>

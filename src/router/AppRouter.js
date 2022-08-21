@@ -17,7 +17,7 @@ import Catalog from "../pages/euro/Catalog/Catalog";
 import CatalogCar from "../pages/euro/CatalogCar/CatalogCar";
 import {MainAbroad} from "../pages/euro/MainAbroad/MainAbroad";
 
-const abroad = 'abroad'
+export const abroad = 'abroad'
 
 export const AppRouter = () => {
     const [data, setData] = useState()
@@ -70,8 +70,6 @@ export const AppRouter = () => {
             <Routes>
                 <Route path="/" element={<Main />}/>
                 <Route path="/discount" element={<Main />}/>
-                <Route path="/catalog" element={<Catalog />}/>
-                <Route path="/catalog/:id" element={<CatalogCar />}/>
                 <Route path="/service/:id" element={<Service/>}/>
                 <Route path="/service/:id" element={<Service/>}/>
                 <Route path="/article/:id" element={<Article/>}/>
@@ -79,6 +77,9 @@ export const AppRouter = () => {
                 <Route path="/about" element={<About/>}/>
                 <Route path="/blog" element={<Blog/>}/>
                 <Route path={`/${abroad}`} element={<MainAbroad />} />
+                <Route path={`/${abroad}/catalog`} element={<Catalog />}/>
+                <Route path={`/${abroad}/catalog/:id`} element={<CatalogCar />}/>
+
                 <Route path="*" element={<NotFound to={"not-found"}/>}/>
             </Routes>
         </MainLayout>

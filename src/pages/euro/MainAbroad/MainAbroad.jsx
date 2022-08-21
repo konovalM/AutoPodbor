@@ -29,9 +29,9 @@ export const MainAbroad = () => {
 
         <Choice />
 
-          {/*<ServicesAndPrices />
+          <ServicesAndPrices />
 
-        <Problems />
+          {/*<Problems />
 
         <section className={styles.black} >
 
