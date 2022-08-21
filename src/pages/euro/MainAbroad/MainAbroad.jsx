@@ -24,6 +24,7 @@ import {PromoAbroad} from "../../../components/Main/promo/Promo";
 import {ServicesAndPricesAbroad} from "../../../components/Main/servicesAndPrices/ServicesAndPrices";
 import Catalog from "../../../components/Abroad/Catalog/Catalog";
 import Calculator from "../../../components/Abroad/Calculator/Calculator";
+import {ProblemsAbroad} from "../../../components/Main/problems/Problems";
 
 export const MainAbroad = () => {
     return (
@@ -35,9 +36,9 @@ export const MainAbroad = () => {
             <ServicesAndPricesAbroad/>
             <Catalog />
             <Calculator />
-            {/*<Problems />
+            <ProblemsAbroad />
 
-        <section className={styles.black} >
+            {/*<section className={styles.black} >
 
           <Check />
 
