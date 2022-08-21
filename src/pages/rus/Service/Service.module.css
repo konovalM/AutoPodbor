@@ -1,6 +1,6 @@
 .wave {
   padding-top: 100px;
-  background: url("../../assets/images/waveBgBlack.svg") center top/contain no-repeat;
+  background: url("../../../assets/images/waveBgBlack.svg") center top/contain no-repeat;
 }
 
 @media screen and (min-width: 1309px) {

@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {BlogMain} from "../../components/blogMain";
+import {BlogMain} from "../../../components/blogMain";
 import {useNavigate} from "react-router";
-import {getBlogPosts} from "../../api/blogAPI";
-import {BlogArticles} from "../../components/blogArticles";
-import {PaginationComponent} from "../../components/UI/pagination/Pagination";
-import {FormBlock} from "../../components/FormBlock";
-import {BreadcrumbsLayout} from "../../layout/breadcrumbsLayout";
+import {getBlogPosts} from "../../../api/blogAPI";
+import {BlogArticles} from "../../../components/blogArticles";
+import {PaginationComponent} from "../../../components/UI/pagination/Pagination";
+import {FormBlock} from "../../../components/FormBlock";
+import {BreadcrumbsLayout} from "../../../layout/breadcrumbsLayout";
 
 export const Blog = () => {
     const nav = useNavigate()

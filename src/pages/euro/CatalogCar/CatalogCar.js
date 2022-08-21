@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {BreadcrumbsLayout} from "../../layout/breadcrumbsLayout";
-import Main from "../../components/CatalogCar/Main/Main";
-import CatalogCarBlack from "../../components/CatalogCar/CatalogCarBlack/CatalogCarBlack";
+import {BreadcrumbsLayout} from "../../../layout/breadcrumbsLayout";
+import Main from "../../../components/CatalogCar/Main/Main";
+import CatalogCarBlack from "../../../components/CatalogCar/CatalogCarBlack/CatalogCarBlack";
 import {useNavigate, useParams} from "react-router";
-import {getCatalogItem} from "../../api/catalogAPI";
+import {getCatalogItem} from "../../../api/catalogAPI";
 
 const CatalogCar = () => {
     const {id} = useParams()

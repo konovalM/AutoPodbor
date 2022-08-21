@@ -1,0 +1,53 @@
+.back{
+  position: relative;
+  z-index: 5;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.questionWrapper{
+  //background-image: radial-gradient(46.55% 119.48% at 49.96% 52.73%, #282828 0%, #000000 100%);
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;*/
+
+}
+
+.garantier{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+}
+
+
+
+.bcg{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+  .garantier{
+    display: none;
+  }
+  .back{
+    overflow-x: hidden;
+  }
+  .orangeSquare{
+    
+    display: none;
+  }
+}

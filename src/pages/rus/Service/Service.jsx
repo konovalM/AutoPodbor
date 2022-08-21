@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {useNavigate, useParams} from "react-router";
-import {AutoPodbor} from "../../components/AutoPodbor/AutoPodbor";
-import {FormBlock} from "../../components/FormBlock";
-import {getService} from "../../api/serviceAPI";
-import {BreadcrumbsLayout} from "../../layout/breadcrumbsLayout";
+import {AutoPodbor} from "../../../components/AutoPodbor/AutoPodbor";
+import {FormBlock} from "../../../components/FormBlock";
+import {getService} from "../../../api/serviceAPI";
+import {BreadcrumbsLayout} from "../../../layout/breadcrumbsLayout";
 import styles from './Service.module.scss'
 
 

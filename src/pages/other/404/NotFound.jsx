@@ -1,5 +1,5 @@
 import React from 'react';
-import bcg from '../../assets/images/404Page/404.png'
+import bcg from '../../../assets/images/404Page/404.png'
 import styles from './NotFound.module.scss'
 import {useNavigate} from "react-router";
 

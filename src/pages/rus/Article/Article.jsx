@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {useNavigate, useParams} from "react-router";
-import {ArticleBlock} from "../../components/articleBlock";
-import {getBlogPost, getBlogPosts} from "../../api/blogAPI";
-import {PaginationComponent} from "../../components/UI/pagination/Pagination";
-import {FormBlock} from "../../components/FormBlock";
-import {BreadcrumbsLayout} from "../../layout/breadcrumbsLayout";
+import {ArticleBlock} from "../../../components/articleBlock";
+import {getBlogPost, getBlogPosts} from "../../../api/blogAPI";
+import {PaginationComponent} from "../../../components/UI/pagination/Pagination";
+import {FormBlock} from "../../../components/FormBlock";
+import {BreadcrumbsLayout} from "../../../layout/breadcrumbsLayout";
 import styles from './Article.module.scss'
-import {BlogCard} from "../../components/cards/blogCard";
+import {BlogCard} from "../../../components/cards/blogCard";
 
 export const Article = () => {
     const {id} = useParams()

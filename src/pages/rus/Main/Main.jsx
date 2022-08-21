@@ -1,25 +1,25 @@
 import React from 'react';
-import {Questions} from "../../components/Main/Questions";
-import {Choice} from "../../components/Main/choice";
-import {ServicesAndPrices} from "../../components/Main/servicesAndPrices";
-import {Problems} from "../../components/Main/problems";
-import {Check} from "../../components/Main/Check";
-import {Examples} from "../../components/Main/Examples";
-import {Maps} from "../../components/Main/Map";
-import {Promo} from "../../components/Main/promo";
-import {Selection} from "../../components/Main/selection";
-import {Feedback} from "../../components/Main/feedback";
-import styles from "../../components/Main/Check/Check.module.scss";
+import {Questions} from "../../../components/Main/Questions";
+import {Choice} from "../../../components/Main/choice";
+import {ServicesAndPrices} from "../../../components/Main/servicesAndPrices";
+import {Problems} from "../../../components/Main/problems";
+import {Check} from "../../../components/Main/Check";
+import {Examples} from "../../../components/Main/Examples";
+import {Maps} from "../../../components/Main/Map";
+import {Promo} from "../../../components/Main/promo";
+import {Selection} from "../../../components/Main/selection";
+import {Feedback} from "../../../components/Main/feedback";
+import styles from "../../../components/Main/Check/Check.module.scss";
 import style from './Main.module.scss'
-import {RoadToCenter} from "../../components/Main/RoadToCenter";
-import garantier from '../../assets/images/garant/garan.png'
-import {Garantier} from "../../components/Main/garantier";
-import {FormBlock} from "../../components/FormBlock";
-import white from "../../assets/images/waves/whiteMainRec.png";
+import {RoadToCenter} from "../../../components/Main/RoadToCenter";
+import garantier from '../../../assets/images/garant/garan.png'
+import {Garantier} from "../../../components/Main/garantier";
+import {FormBlock} from "../../../components/FormBlock";
+import white from "../../../assets/images/waves/whiteMainRec.png";
 import './questions.scss'
-import {WaveWrapper} from "../../components/wavesWrapper";
+import {WaveWrapper} from "../../../components/wavesWrapper";
 
-import {AnimateWrapper} from "../../components/animateWrapper";
+import {AnimateWrapper} from "../../../components/animateWrapper";
 
 export const Main = () => {
 

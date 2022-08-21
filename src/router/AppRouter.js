@@ -1,20 +1,23 @@
 import React, {useEffect, useState} from 'react';
 import {Routes, Route, useLocation} from 'react-router'
 import {MainLayout} from "../layout/mainLayout";
-import {Main} from "../pages/Main";
-import {Service} from "../pages/Service";
-import {About} from "../pages/About";
-import {NotFound} from "../pages/404";
-import {Blog} from "../pages/Blog";
-import {Privacy} from "../pages/Privacy";
-import {Article} from "../pages/Article/Article";
+import {Main} from "../pages/rus/Main";
+import {Service} from "../pages/rus/Service";
+import {About} from "../pages/other/About";
+import {NotFound} from "../pages/other/404";
+import {Blog} from "../pages/rus/Blog";
+import {Privacy} from "../pages/other/Privacy";
+import {Article} from "../pages/rus/Article/Article";
 import AOS from "aos";
 import {deleteSpan} from "../functions/deleteSpan";
 import {useBeforeunload} from "react-beforeunload";
 import {scrollToElement} from "../utils/ScrollToElement";
 import {DISCOUNT, useModalContext} from "../contexts/ModalContext";
-import Catalog from "../pages/Catalog/Catalog";
-import CatalogCar from "../pages/CatalogCar/CatalogCar";
+import Catalog from "../pages/euro/Catalog/Catalog";
+import CatalogCar from "../pages/euro/CatalogCar/CatalogCar";
+import {MainAbroad} from "../pages/euro/MainAbroad/MainAbroad";
+
+const abroad = 'abroad'
 
 export const AppRouter = () => {
     const [data, setData] = useState()
@@ -75,6 +78,7 @@ export const AppRouter = () => {
                 <Route path="/privacy" element={<Privacy/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/blog" element={<Blog/>}/>
+                <Route path={`/${abroad}`} element={<MainAbroad />} />
                 <Route path="*" element={<NotFound to={"not-found"}/>}/>
             </Routes>
         </MainLayout>
