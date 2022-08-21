@@ -25,11 +25,11 @@ const CatalogCards = ({cars}) => {
     ])
 
     const setActiveButton = (index) => {
-        dispatch({type: SET_FILTER, payload: index})
         setButtons(
             buttons.map((btn, i) => {
                 if (index === i) {
-                    return {...btn, isActive: true}
+                    dispatch({type: SET_FILTER, payload: (btn.isActive ? null : index)})
+                    return {...btn, isActive: !btn.isActive}
                 }
                 return {...btn, isActive: false}
             })
