@@ -1,5 +1,21 @@
 .main{
     padding: 70px 0;
+    position: relative;
+}
+
+.notebook, .calculator{
+    position: absolute;
+    z-index: -1;
+}
+
+.notebook{
+    left: 0;
+    top: 24%;
+}
+
+.calculator{
+    right: 0;
+    bottom: 21%;
 }
 
 .title{
@@ -9,4 +25,10 @@
     text-align: center;
     color: #121212;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 900px) {
+    .notebook, .calculator{
+        display: none;
+    }
 }
