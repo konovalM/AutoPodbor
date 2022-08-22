@@ -25,6 +25,7 @@ import {ServicesAndPricesAbroad} from "../../../components/Main/servicesAndPrice
 import Catalog from "../../../components/Abroad/Catalog/Catalog";
 import Calculator from "../../../components/Abroad/Calculator/Calculator";
 import {ProblemsAbroad} from "../../../components/Main/problems/Problems";
+import {SelectionAbroad} from "../../../components/Main/selection/Selection";
 
 export const MainAbroad = () => {
     return (
@@ -49,10 +50,10 @@ export const MainAbroad = () => {
                     <Examples/>
                 </AnimateWrapper>
                 <Feedback/>
-                {/*<WaveWrapper src={white} alt={"white background"}>
-              <Selection />
-          </WaveWrapper>
-
+                <WaveWrapper src={white} alt={"white background"}>
+                    <SelectionAbroad/>
+                </WaveWrapper>
+                {/*
           <div className={style.back}>
             <img src={garantier} alt={"Гарант"} className={style.garantier} />
             <AnimateWrapper animate={"fade-right"}>
