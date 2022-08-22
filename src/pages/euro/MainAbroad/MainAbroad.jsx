@@ -55,22 +55,22 @@ export const MainAbroad = () => {
                     <SelectionAbroad/>
                 </WaveWrapper>
 
-          <div className={style.back}>
-            <img src={garantier} alt={"Гарант"} className={style.garantier} />
-            <AnimateWrapper animate={"fade-right"}>
-              <GarantierAbroad />
-            </AnimateWrapper>
-          </div>
-            {/* <div className={style.questionWrapper}>
-                   <div className='questionInner'>
-                       <AnimateWrapper animate={"fade-left"}>
-                           <Questions />
-                       </AnimateWrapper>
-                       <RoadToCenter />
-                   </div>
-              </div>/>*/}
+                <div className={style.back}>
+                    <img src={garantier} alt={"Гарант"} className={style.garantier}/>
+                    <AnimateWrapper animate={"fade-right"}>
+                        <GarantierAbroad/>
+                    </AnimateWrapper>
+                </div>
+                <div className={style.questionWrapper}>
+                    <div className='questionInner'>
+                        <AnimateWrapper animate={"fade-left"}>
+                            <Questions type={'euro'}/>
+                        </AnimateWrapper>
+                        <RoadToCenter/>
+                    </div>
+                </div>
             </section>
-            <Maps />
+            <Maps/>
         </main>
     );
 };
