@@ -26,6 +26,7 @@ import Catalog from "../../../components/Abroad/Catalog/Catalog";
 import Calculator from "../../../components/Abroad/Calculator/Calculator";
 import {ProblemsAbroad} from "../../../components/Main/problems/Problems";
 import {SelectionAbroad} from "../../../components/Main/selection/Selection";
+import {GarantierAbroad} from "../../../components/Main/garantier/Garantier";
 
 export const MainAbroad = () => {
     return (
@@ -53,23 +54,23 @@ export const MainAbroad = () => {
                 <WaveWrapper src={white} alt={"white background"}>
                     <SelectionAbroad/>
                 </WaveWrapper>
-                {/*
+
           <div className={style.back}>
             <img src={garantier} alt={"Гарант"} className={style.garantier} />
             <AnimateWrapper animate={"fade-right"}>
-              <Garantier />
+              <GarantierAbroad />
             </AnimateWrapper>
           </div>
-          <div className={style.questionWrapper}>
-               <div className='questionInner'>
-                   <AnimateWrapper animate={"fade-left"}>
-                       <Questions />
-                   </AnimateWrapper>
-                   <RoadToCenter />
-               </div>
-          </div>/>*/}
+            {/* <div className={style.questionWrapper}>
+                   <div className='questionInner'>
+                       <AnimateWrapper animate={"fade-left"}>
+                           <Questions />
+                       </AnimateWrapper>
+                       <RoadToCenter />
+                   </div>
+              </div>/>*/}
             </section>
-            {/*<Maps */}
+            <Maps />
         </main>
     );
 };
