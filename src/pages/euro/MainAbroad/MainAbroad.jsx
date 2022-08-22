@@ -34,22 +34,22 @@ export const MainAbroad = () => {
             <Choice/>
 
             <ServicesAndPricesAbroad/>
-            <Catalog />
-            <Calculator />
-            <ProblemsAbroad />
+            <Catalog/>
+            <Calculator/>
+            <ProblemsAbroad/>
 
-            {/*<section className={styles.black} >
+            <section className={styles.black}>
 
-          <Check />
+                <Check/>
 
-          <AnimateWrapper animate={"fade-left"}>
-            <FormBlock style={{ padding: "100px 0" }} />
-          </AnimateWrapper>
-          <AnimateWrapper animate={"fade-right"}>
-            <Examples />
-          </AnimateWrapper>
-            <Feedback />
-          <WaveWrapper src={white} alt={"white background"}>
+                <AnimateWrapper animate={"fade-left"}>
+                    <FormBlock style={{padding: "100px 0"}}/>
+                </AnimateWrapper>
+                <AnimateWrapper animate={"fade-right"}>
+                    <Examples/>
+                </AnimateWrapper>
+                <Feedback/>
+                {/*<WaveWrapper src={white} alt={"white background"}>
               <Selection />
           </WaveWrapper>
 
@@ -66,9 +66,9 @@ export const MainAbroad = () => {
                    </AnimateWrapper>
                    <RoadToCenter />
                </div>
-          </div>
-        </section>
-        <Maps />*/}
+          </div>/>*/}
+            </section>
+            {/*<Maps */}
         </main>
     );
 };
