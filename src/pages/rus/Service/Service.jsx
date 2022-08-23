@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {useNavigate, useParams} from "react-router";
+import {useLocation, useNavigate, useParams} from "react-router";
 import {AutoPodbor} from "../../../components/AutoPodbor/AutoPodbor";
 import {FormBlock} from "../../../components/FormBlock";
-import {getService} from "../../../api/serviceAPI";
+import {getService, getServiceAbroad} from "../../../api/serviceAPI";
 import {BreadcrumbsLayout} from "../../../layout/breadcrumbsLayout";
 import styles from './Service.module.scss'
 
@@ -11,15 +11,24 @@ export const Service = () => {
     const {id} = useParams()
     const nav = useNavigate()
 
-
+    const location = useLocation()
     const [serviceData, setServiceData] = useState()
 
     useEffect(() => {
-        (async () => {
-            await getService(id).then(setServiceData).catch(() => {
-                nav("/not-found");
-            })
-        })()
+        if (location.pathname.includes('abroad')) {
+            (async () => {
+                await getServiceAbroad(id).then(setServiceData).catch(() => {
+                    nav("/not-found");
+                })
+            })()
+        } else {
+            (async () => {
+                await getService(id).then(setServiceData).catch(() => {
+                    nav("/not-found");
+                })
+            })()
+        }
+
     }, [id])
     return (
         <BreadcrumbsLayout text={serviceData?.title || ""}>

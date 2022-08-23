@@ -26,7 +26,7 @@ export const Breadcrumbs = ({text}) => {
                                 Главная страница
                             </Link>
                             :
-                            <Link to='/'>
+                            <Link to={location.pathname.includes('abroad') ? '/abroad' : '/'}>
                                 Главная страница
                             </Link>
                     }

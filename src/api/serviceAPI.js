@@ -11,3 +11,7 @@ export const getServicesAbroad = async () => {
 export const getService = async (id) => {
     return await api.get(`/service/${id}/`,).then(res => res.data)
 }
+
+export const getServiceAbroad = async (id) => {
+    return await api.get(`/euro-service/${id}/`,).then(res => res.data)
+}

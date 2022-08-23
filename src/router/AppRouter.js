@@ -82,6 +82,7 @@ export const AppRouter = () => {
                 <Route path={`/${abroad}/blog`} element={<Blog />}/>
                 <Route path={`/${abroad}/privacy`} element={<Privacy />}/>
                 <Route path={`/${abroad}/catalog/:id`} element={<CatalogCar />}/>
+                <Route path={`/${abroad}/service/:id`} element={<Service/>}/>
 
                 <Route path="*" element={<NotFound to={"not-found"}/>}/>
             </Routes>
