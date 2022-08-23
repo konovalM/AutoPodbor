@@ -20,6 +20,7 @@ const HeaderBlock = ({service}) => {
 
 const EnterInService = ({service}) => {
     const {dispatch} = useModalContext()
+    console.log(service)
     return (
         <div className={styles.box}>
             <h3 className={styles.title}>Входит в услугу</h3>
@@ -30,7 +31,7 @@ const EnterInService = ({service}) => {
             <div className={styles.btnWrapper}>
                 <Button text={"Заказать услугу"} className={styles.btn} onClick={() => dispatch({type: OPEN_MODAL, payload: {title: service.title, formTitle: 'Заказать услугу'}})}/>
             </div>
-            <img className={styles.img} src={car} alt={"car"}/>
+            <img className={styles.img} src={service.background_image} alt={"car"}/>
 
         </div>
     )
