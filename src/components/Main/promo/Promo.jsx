@@ -85,19 +85,20 @@ const PlusesAbroad = () => {
 const MainTitle = () => {
     const {dispatch, state} = useModalContext();
     return (
-        <div className={localStorage.getItem('isLoggedOut') ? cn(styles.mainTitleBlock, styles.mainTitleBlock2) : styles.mainTitleBlock}>
+        <div
+            className={localStorage.getItem('isLoggedOut') ? cn(styles.mainTitleBlock, styles.mainTitleBlock2) : styles.mainTitleBlock}>
             {
                 state.discount
-                ?
+                    ?
                     localStorage.getItem('promo_header2')
                         ? <h1 className={styles.mainTitle}
                               dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_header2')}}
                         ></h1>
                         : ''
-                :
+                    :
                     localStorage.getItem('promo_header')
                         ? <h1 className={styles.mainTitle}
-                               dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_header')}}
+                              dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_header')}}
                         ></h1>
                         : ''
             }
@@ -135,7 +136,8 @@ const MainTitle = () => {
 const MainTitleAbroad = () => {
     const {dispatch, state} = useModalContext();
     return (
-        <div className={localStorage.getItem('isLoggedOut') ? cn(styles.mainTitleBlock, styles.mainTitleBlock2) : styles.mainTitleBlock}>
+        <div
+            className={localStorage.getItem('isLoggedOut') ? cn(styles.mainTitleBlock, styles.mainTitleBlock2) : styles.mainTitleBlock}>
             {
                 localStorage.getItem('euro_first_page_header')
                     ? <h1 className={styles.mainTitle}

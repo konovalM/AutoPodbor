@@ -6,9 +6,9 @@
 }
 
 .mainAbroad {
-  background: url("./../../../assets/images/mainBgAbroad.jpg") right center/cover no-repeat;
+  background: url("./../../../assets/images/mainBgAbroad.jpg") 0% 30%/105% no-repeat;
 }
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 1900px){
   .mainAbroad {
     background: url("./../../../assets/images/mainBgAbroad.jpg") right bottom/cover no-repeat;
   }
@@ -367,11 +367,17 @@
     background-position: -340px 160px;
     background-size: 1250px;
   }
+  .mainAbroad {
+    background: url("./../../../assets/images/mainBgAbroad.jpg") 70% 70%/110% no-repeat;
+  }
 }
 
 @media screen and (max-width: 822px) {
   .main {
     background-position: -375px 180px;
+  }
+  .mainAbroad {
+    background: url("./../../../assets/images/mainBgAbroad.jpg") 70% 70%/110% no-repeat;
   }
 }
 
@@ -451,8 +457,8 @@
   }
   .mainAbroad {
     background: url("./../../../assets/images/mainBgAbroad.jpg") center center/cover no-repeat;
-    background-position: -270px 150px;
-    background-size: 850px;
+    background-position: 85% 150px;
+    background-size: 750px;
   }
   .btnWrapper {
     width: 173px;
@@ -481,8 +487,8 @@
   }
   .mainAbroad {
     background: url("./../../../assets/images/mainBgAbroad.jpg") center center/cover no-repeat;
-    background-position: -270px 150px;
-    background-size: 800px;
+    background-position: 85%  190px;
+    background-size: 720px;
   }
   .moneyBlock {
     padding: 5px 14px;
@@ -506,14 +512,14 @@
   }
   .mainAbroad {
     background: url("./../../../assets/images/mainBgAbroad.jpg") center center/cover no-repeat;
-    background-position: 100% 270px;
-    background-size: 600px;
+    background-position: 85% 270px;
+    background-size: 580px;
   }
 }
 @media screen and (max-width: 372px){
   .mainAbroad {
     background: url("./../../../assets/images/mainBgAbroad.jpg") center center/cover no-repeat;
-    background-position: 100% 280px;
+    background-position: 88% 280px;
     background-size: 600px;
   }
 }
@@ -532,7 +538,7 @@
   }
   .mainAbroad {
     background: url("./../../../assets/images/mainBgAbroad.jpg") center center/cover no-repeat;
-    background-position: 100% 340px;
-    background-size: 500px;
+    background-position: 80% 340px;
+    background-size: 470px;
   }
 }
