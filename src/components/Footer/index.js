@@ -7,8 +7,10 @@ import {Menu} from "./menu";
 import {Waiting} from "./waiting";
 import {Link} from "react-router-dom";
 import {ExternalLink} from "../UI/externalLink";
+import {useLocation} from "react-router";
 
 export const Footer = () => {
+    const location = useLocation()
     return (
         <footer className={styles.black} name='#footer'>
 
@@ -23,7 +25,7 @@ export const Footer = () => {
                     <Waiting/>
                 </div>
                 <div className={styles.policyblock}>
-                    <Link to={'privacy'} className={styles.policy}>
+                    <Link to={location.pathname.includes('abroad') ? '/abroad/privacy' : '/privacy'} className={styles.policy}>
                         Политика конфиденциальности
                     </Link>
                     <ExternalLink href={"https://ozzostudio.ru/"} className={styles.companylink}>Сайт сделан ozzostudio.ru</ExternalLink>

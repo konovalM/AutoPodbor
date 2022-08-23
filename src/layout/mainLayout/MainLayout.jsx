@@ -4,7 +4,6 @@ import {Header} from "../../components/Header";
 import {Footer} from "../../components/Footer";
 import {ConsultationModal} from "../../components/Modal";
 export const MainLayout = ({children}) => {
-    const location = useLocation()
 
     return (
         <>

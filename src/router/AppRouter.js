@@ -78,6 +78,9 @@ export const AppRouter = () => {
                 <Route path="/blog" element={<Blog/>}/>
                 <Route path={`/${abroad}`} element={<MainAbroad />} />
                 <Route path={`/${abroad}/catalog`} element={<Catalog />}/>
+                <Route path={`/${abroad}/about`} element={<About />}/>
+                <Route path={`/${abroad}/blog`} element={<Blog />}/>
+                <Route path={`/${abroad}/privacy`} element={<Privacy />}/>
                 <Route path={`/${abroad}/catalog/:id`} element={<CatalogCar />}/>
 
                 <Route path="*" element={<NotFound to={"not-found"}/>}/>

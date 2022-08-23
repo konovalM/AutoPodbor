@@ -6,7 +6,7 @@ import calculator from '../../../assets/images/abroad/CalcAndCash.png'
 
 const Calculator = () => {
     return (
-        <section className={styles.main}>
+        <section className={styles.main} name={'#custom-clearance'}>
             <img src={notebook} alt="notebook" className={styles.notebook}/>
             <img src={calculator} alt="calculator" className={styles.calculator}/>
             <div className="container">

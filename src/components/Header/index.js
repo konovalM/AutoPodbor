@@ -60,7 +60,7 @@ const HeaderMobile = () => {
                 <header className={styles.headerMobile}>
                     <div className={styles.container}>
                         <div className={styles.head}>
-                            <img className={styles.img} src={logo} alt={"logo"} onClick={()=>nav('/')}/>
+                            <img className={styles.img} src={logo} alt={"logo"} onClick={()=>nav(location ? '/abroad' : '/')}/>
                             <div className={styles.textContainer}>
                                 <a href={`tel:${localStorage.getItem('tel')}`} className={styles.text} dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_telephone')}}>
                                 </a>
