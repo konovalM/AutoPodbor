@@ -16,8 +16,6 @@ const Catalog = () => {
     const {state} = useFilterContext()
     const [page, setPage] = useState(1)
     const [items, setItems] = useState()
-    console.log(items)
-    console.log(state)
     useEffect(() => {
         (async () => {
             await getCatalogItems(page, 12, state.activeFilter).then(setItems).catch((e) => {

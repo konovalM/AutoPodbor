@@ -154,7 +154,6 @@ const FormCalculator = () => {
             validateOnBlur={true}
             validationSchema={CalcSchema}
             onSubmit={(values) => {
-                console.log(JSON.stringify(values))
                 calcCustomsClearance(values)
                     .then(setCalculatedData)
             }}

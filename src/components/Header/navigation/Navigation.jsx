@@ -75,7 +75,7 @@ const NavList = () => {
 }
 
 const NavListAbroad = () => {
-    const {dispatch, state} = useModalContext()
+    const {dispatch} = useModalContext()
     return (
         <ul className={styles.list}>
             <NavItem>

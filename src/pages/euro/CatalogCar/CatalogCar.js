@@ -9,7 +9,6 @@ const CatalogCar = () => {
     const {id} = useParams()
     const nav = useNavigate()
     const [car, setCar] = useState(null)
-    console.log(car)
     useEffect(() => {
         (async () => {
             await getCatalogItem(id).then(setCar).catch(() => {
