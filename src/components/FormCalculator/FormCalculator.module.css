@@ -85,6 +85,46 @@ input[type="number"]:focus {
     color: #000000;
 }
 
+.error{
+    color: #ff0000;
+}
+
+.calculatedGrid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 20px;
+    margin-bottom: 41px;
+}
+
+.lineFlex{
+    display: flex;
+    column-gap: 58px;
+}
+
+.usualText{
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+.lastText{
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+.span{
+    margin-left: 20px;
+}
+.text{
+    flex-basis: calc(50% - 29px);
+    flex-shrink: 0;
+}
+
+
+
 @media screen and (max-width: 810px) {
     .calcWrapper{
         column-gap: 27px;
@@ -92,9 +132,31 @@ input[type="number"]:focus {
     .form{
         padding: 30px;
     }
+
+    .lineFlex{
+        column-gap: 27px;
+    }
+
+    .text{
+        flex-basis: calc(50% - 14px);
+    }
 }
 
 @media screen and (max-width: 740px) {
+    .lineFlex{
+        flex-direction: column;
+    }
+    .flexSpan{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .span{
+        margin-left: 0;
+        font-weight: 400;
+    }
+    .money{
+        font-weight: 700;
+    }
     .calcWrapper{
         grid-template-columns: 1fr;
         row-gap: 30px;
@@ -110,7 +172,7 @@ input[type="number"]:focus {
         padding: 28px 15px;
     }
     .column{
-        grid-template-rows: repeat(3, auto);
+        grid-template-rows: repeat(3, 100px);
         row-gap: 27px;
     }
 }

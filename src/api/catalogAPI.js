@@ -17,7 +17,6 @@ const filterOptions = [
 // need to change "/blog" on "/catalog"
 export const getCatalogItems = async (page = 1, objectCount = 12, filter = null) => {
     if (!isNaN(filter)) {
-        console.log('test')
         return await api.get("/catalog/", {
             params: {
                 page,

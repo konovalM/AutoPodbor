@@ -1,4 +1,4 @@
-import {api} from "./axios";
+    import {api} from "./axios";
 
 
 export const getBlogPosts = async (page=1,objectCount = 5) => {
