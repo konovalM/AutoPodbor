@@ -14,7 +14,6 @@ const Main = ({car}) => {
     useEffect(() => {
         setImages(car?.additional_images)
     }, [car])
-    console.log(car)
 
     const handleActive = (img, index) => {
         const clonedImages = [...images]
