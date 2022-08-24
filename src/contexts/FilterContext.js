@@ -11,12 +11,12 @@ export const CLEAR_FILTER = 'CLEAR_FILTER'
 export const SET_FILTER = 'SET_FILTER'
 
 const reducer = (state = initialState, action) => {
-    switch (action.type){
+    switch (action.type) {
         case SET_FILTER:
-            return {activeFilter: action.payload}
+            return {activeFilter: {...action.payload}}
         case CLEAR_FILTER:
             return {...initialState}
-        default:{
+        default: {
             return {
                 ...initialState
             }
@@ -25,7 +25,7 @@ const reducer = (state = initialState, action) => {
 }
 
 export const FilterContextProvider = ({children}) => {
-    const [state,dispatch] = useReducer(reducer,initialState)
+    const [state, dispatch] = useReducer(reducer, initialState)
     return (
         <FilterContext.Provider value={{
             state,
@@ -36,6 +36,6 @@ export const FilterContextProvider = ({children}) => {
     )
 }
 
-export const useFilterContext = () =>{
+export const useFilterContext = () => {
     return useContext(FilterContext)
 }
