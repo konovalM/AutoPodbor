@@ -45,7 +45,7 @@ export const MainAbroad = () => {
                 <Check/>
 
                 <AnimateWrapper animate={"fade-left"}>
-                    <FormBlock style={{padding: "100px 0"}}/>
+                    <FormBlock style={{padding: "100px 0"}} isAbroad={true}/>
                 </AnimateWrapper>
                 <AnimateWrapper animate={"fade-right"}>
                     <Examples/>

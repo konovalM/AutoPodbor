@@ -163,7 +163,7 @@ const MainTitleAbroad = () => {
                 className={styles.button}
                 onClick={() => dispatch({
                     type: OPEN_MODAL,
-                    payload: {title: 'Обратная связь', formTitle: 'Оставить заявку'}
+                    payload: {title: 'Обратная связь', formTitle: 'Оставить заявку', type: 'euro'}
                 })}
             >
                 <div className={styles.btnWrapper}>

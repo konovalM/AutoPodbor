@@ -3,6 +3,7 @@ import styles from './FromBlock.module.scss'
 import {CustomForm} from "../UI/Forms/CustomForm";
 import {postFeedback} from "../../api/feedbackAPI";
 import cn from "classnames";
+import {useModalContext} from "../../contexts/ModalContext";
 
 
 const FirstStep = ({onUploadPosts}) => {
@@ -42,12 +43,12 @@ export const SecondStep = ({wrapper}) => {
 }
 
 
-export const FormBlock = ({style}) => {
+export const FormBlock = ({isAbroad = false}) => {
     const [count, setCount] = useState(1)
 
     const onUploadPosts = (body) => {
         (async () => {
-            await postFeedback(body)
+            await postFeedback({...body, type: isAbroad ? 'euro' : 'local'})
         })()
         setCount(2)
     }

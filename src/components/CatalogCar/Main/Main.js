@@ -2,18 +2,20 @@ import React, {useEffect, useState} from 'react';
 import styles from './Main.module.css'
 import {Button} from "../../UI/button";
 import FormCalculator from "../../FormCalculator/FormCalculator";
+import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
 
 const Main = ({car}) => {
-
+    const {dispatch} = useModalContext()
     const [activeImg, setActiveImg] = useState(car?.image)
     useEffect(() => {
         setActiveImg(car?.image)
     }, [car])
-
     const [images, setImages] = useState(car?.additional_images)
     useEffect(() => {
         setImages(car?.additional_images)
     }, [car])
+    console.log(car)
+
     const handleActive = (img, index) => {
         const clonedImages = [...images]
         clonedImages[index] = activeImg
@@ -54,7 +56,7 @@ const Main = ({car}) => {
                         </p>
                     </div>
                 </div>
-                <Button text='Заказать автомобиль' className={styles.btnOrder}/>
+                <Button text='Заказать автомобиль' className={styles.btnOrder} onClick={() => dispatch({type: OPEN_MODAL, payload: {title: car.title, formTitle: 'Заказать автомобиль', type: 'euro'}})}/>
             </div>
         </section>
     );

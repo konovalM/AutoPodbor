@@ -40,7 +40,10 @@ export const PriceCard = ({price, title, component, text, id = 1, type = null}) 
                     <Price price={price}/>
                     <Button className={styles.button} style={{fontWeight: '500'}} text={"Оставить заявку"}
                             onClick={() => {
-                                dispatch({type: OPEN_MODAL, payload: {title: type ? `подбор из-за рубежа* ${title}` : title, formTitle: 'Оставить заявку'}})
+                                dispatch({
+                                    type: OPEN_MODAL,
+                                    payload: {title: title, formTitle: 'Оставить заявку', type: type || 'local'}
+                                })
                             }}/>
                     {
                         type ?

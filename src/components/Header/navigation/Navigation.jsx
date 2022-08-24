@@ -13,7 +13,7 @@ const NavItem = ({children}) => {
     )
 }
 
-const NavList = () => {
+const NavList = ({isAbroad}) => {
     const {dispatch, state} = useModalContext()
     return (
         <ul className={styles.list}>
@@ -100,7 +100,7 @@ const NavListAbroad = () => {
             <NavItem>
                 <span onClick={() => dispatch({
                     type: OPEN_MODAL,
-                    payload: {formTitle: 'Остались вопросы?', title: 'Обратная связь'}
+                    payload: {formTitle: 'Остались вопросы?', title: 'Обратная связь', type: 'euro'}
                 })} className={styles.spanFontFamily}>Контакты</span>
             </NavItem>
             <NavItem>
@@ -130,7 +130,6 @@ export const Navigation = ({className}) => {
 
 const NavListMobile = () => {
     const {dispatch, state} = useModalContext()
-
     return (
         <>
             <NavItem>
@@ -204,7 +203,7 @@ const NavListMobileAbroad = () => {
             <NavItem>
                 <span onClick={() => dispatch({
                     type: OPEN_MODAL,
-                    payload: {formTitle: 'Заказать звонок', title: 'Обратная связь'}
+                    payload: {formTitle: 'Заказать звонок', title: 'Обратная связь', type: 'euro'}
                 })} className={styles.spanFontFamily}>Контакты</span>
             </NavItem>
             <NavItem>
@@ -223,9 +222,9 @@ export const NavigationMobile = () => {
         <ul className={styles.list}>
             {
                 location.pathname.includes('abroad') ?
-                    <NavListMobileAbroad />
+                    <NavListMobileAbroad isAbroad={true}/>
                     :
-                    <NavListMobile/>
+                    <NavListMobile isAbroad={false}/>
             }
         </ul>
     )

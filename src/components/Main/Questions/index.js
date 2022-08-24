@@ -66,7 +66,7 @@ export const Questions = ({type = null}) => {
     const [count, setCount] = useState(1)
     const onUploadPosts = (body) => {
         (async () => {
-            await postFeedback(body)
+            await postFeedback({...body, type: type ? 'euro' : 'local'})
         })()
         setCount(2)
     }

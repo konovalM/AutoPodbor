@@ -45,7 +45,7 @@ const HeaderMobile = () => {
 
     const {current} = useRef(document.querySelector("#root"));
     useEffect(() => {
-        isOpen? current.style.position = "fixed": current.style.position = "static"
+        isOpen ? current.style.position = "fixed" : current.style.position = "static"
     }, [isOpen])
 
     useEffect(() => {
@@ -60,11 +60,19 @@ const HeaderMobile = () => {
                 <header className={styles.headerMobile}>
                     <div className={styles.container}>
                         <div className={styles.head}>
-                            <img className={styles.img} src={logo} alt={"logo"} onClick={()=>nav(location ? '/abroad' : '/')}/>
+                            <img className={styles.img} src={logo} alt={"logo"}
+                                 onClick={() => nav(location ? '/abroad' : '/')}/>
                             <div className={styles.textContainer}>
-                                <a href={`tel:${localStorage.getItem('tel')}`} className={styles.text} dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_telephone')}}>
+                                <a href={`tel:${localStorage.getItem('tel')}`} className={styles.text}
+                                   dangerouslySetInnerHTML={{__html: localStorage.getItem('promo_telephone')}}>
                                 </a>
-                                <span className={styles.link} onClick={() => dispatch({type: OPEN_MODAL})}>
+                                <span className={styles.link} onClick={() => dispatch({
+                                    type: OPEN_MODAL, payload: {
+                                        formTitle: 'Заказать звонок',
+                                        title: 'Обратная связь',
+                                        type: location.pathname.includes('abroad') ? 'euro' : 'local'
+                                    }
+                                })}>
                                 заказать звонок
                             </span>
                             </div>

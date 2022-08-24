@@ -4,36 +4,38 @@ import {postFeedback} from "../api/feedbackAPI";
 
 const ModalContext = React.createContext()
 
-const initialState={
-    isOpen:false,
-    formValues:{
-        telephone:"",
-        name:"",
+const initialState = {
+    isOpen: false,
+    formValues: {
+        telephone: "",
+        name: "",
         details: '',
     },
-    count:1,
+    count: 1,
     formTitle: 'Остались вопросы?',
     discount: false,
+    type: 'local'
 }
 
 
-export const OPEN_MODAL="OPEN_MODAL"
-export const CLOSE_MODAL="CLOSE_MODAL"
+export const OPEN_MODAL = "OPEN_MODAL"
+export const CLOSE_MODAL = "CLOSE_MODAL"
 export const UPLOAD_AND_NEXT_MODAL = "UPLOAD_AND_NEXT_MODAL"
 export const DISCOUNT = "DISCOUNT"
 
-const reducer = (state = initialState,action) => {
-    switch(action.type){
-        case OPEN_MODAL:{
+const reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case OPEN_MODAL: {
             return {
                 ...state,
                 formValues: {...state.formValues, details: action.payload.title},
                 isOpen: true,
                 count: 1,
+                type: action.payload?.type || 'local',
                 formTitle: action.payload.formTitle
             }
         }
-        case CLOSE_MODAL:{
+        case CLOSE_MODAL: {
             return {
                 ...initialState,
                 isOpen: false,
@@ -42,9 +44,16 @@ const reducer = (state = initialState,action) => {
         }
 
         case UPLOAD_AND_NEXT_MODAL:
-            (async ()=>{
-                await postFeedback({...action.payload, details: state.formValues.details + (state.discount ? ' *со скидкой' : '') })
-            })()
+            console.log({...action.payload,
+                type: state.type,
+            details: state.formValues.details + (state.discount ? ' *со скидкой' : '')})
+            /*(async () => {
+                await postFeedback({
+                    ...action.payload,
+                    type: state.type,
+                    details: state.formValues.details + (state.discount ? ' *со скидкой' : '')
+                })
+            })()*/
 
             return {
                 ...state,
@@ -55,7 +64,7 @@ const reducer = (state = initialState,action) => {
                 ...state,
                 discount: true
             }
-        default:{
+        default: {
             return {
                 ...initialState
             }
@@ -64,10 +73,8 @@ const reducer = (state = initialState,action) => {
 }
 
 
-
-
 export const ModalContextProvider = ({children}) => {
-    const [state,dispatch] = useReducer(reducer,initialState)
+    const [state, dispatch] = useReducer(reducer, initialState)
     return (
         <ModalContext.Provider value={{
             state,
@@ -78,7 +85,7 @@ export const ModalContextProvider = ({children}) => {
     )
 }
 
-export const useModalContext = () =>{
+export const useModalContext = () => {
     return useContext(ModalContext)
 }
 
