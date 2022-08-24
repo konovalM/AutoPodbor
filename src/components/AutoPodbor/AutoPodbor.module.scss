@@ -103,8 +103,8 @@
 
 .img{
   position: absolute;
-  right: 0;
-  top: -150px;
+  right: 20px;
+  top: -100px;
 }
 
 .imgBackground{
@@ -120,11 +120,7 @@
 
 
 @media screen and (max-width: 768px){
-  .img{
-    top: -180px;
-    right: -60px;
 
-  }
   .box{
     padding: 20px;
   }
@@ -135,5 +131,21 @@
   }
   .imgBackground{
     margin: auto;
+  }
+}
+
+@media screen and (max-width: 730px){
+  .img{
+    width: 300px;
+    top: -100px;
+    right: -30px;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .img{
+    width: 260px;
+    top: -100px;
+    right: -30px;
   }
 }

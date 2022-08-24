@@ -71,7 +71,6 @@ export const AppRouter = () => {
                 <Route path="/" element={<Main />}/>
                 <Route path="/discount" element={<Main />}/>
                 <Route path="/service/:id" element={<Service/>}/>
-                <Route path="/service/:id" element={<Service/>}/>
                 <Route path="/article/:id" element={<Article/>}/>
                 <Route path="/privacy" element={<Privacy/>}/>
                 <Route path="/about" element={<About/>}/>
