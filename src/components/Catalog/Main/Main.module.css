@@ -20,7 +20,10 @@
     font-size: 16px;
     line-height: 129.7%;
     color: #7B7B7B;
-    margin-bottom: 82px;
+    margin-bottom: 10px;
+}
+.promoText:nth-child(3){
+    margin-bottom: 50px;
 }
 .bold{
     color: transparent;

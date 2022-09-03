@@ -1,11 +1,9 @@
 import React from 'react';
 import styles from './Main.module.css'
-import {Button} from "../../UI/button";
 import promoImg from '../../../assets/images/catalog/manPromo.png'
-import {OPEN_MODAL, useModalContext} from "../../../contexts/ModalContext";
+import {AnimateButton} from "../../UI/animateButton/AnimateButton";
 
 const Main = () => {
-    const {dispatch} = useModalContext()
     return (
         <section className={styles.catalog}>
             <div className="container">
@@ -15,10 +13,13 @@ const Main = () => {
                             Каталог
                         </h3>
                         <p className={styles.promoText}>
-                            Самые свежие предложения по продаже б/у автомобилей на рынках Европы. Мы готовы
-                            проконсультировать вас бесплатно по телефону <b><span className={styles.bold}>+7 (999) 200 93 30</span></b>.
+                            Самые свежие предложения по продаже новых и б/у автомобилей на рынках Европы. Цены указаны
+                            без учета стоимости транспортировки и растаможки. </p>
+                        <p className={styles.promoText}>
+                            Бесплатная консультация по тел.:&nbsp;<b><span
+                            className={styles.bold}>+7 (999) 200 93 30</span></b>.
                         </p>
-                        <Button text={'Получить консультацию'} className={styles.btn} onClick={() => dispatch({type: OPEN_MODAL, payload: { formTitle: 'Получить консультацию', type: 'euro'}})}/>
+                        <AnimateButton text={'варианты в наличии'}/>
                     </div>
                     <img src={promoImg} alt="promo" className={styles.promoImg}/>
                 </div>

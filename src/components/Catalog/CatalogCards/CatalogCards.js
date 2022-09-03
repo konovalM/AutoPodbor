@@ -51,7 +51,7 @@ export const Cards = ({cars}) => {
             <div className={styles.description}>
                 <h5 className={styles.name}>{car.title}</h5>
                 <p className={styles.year}>{car.manufacture_year} год выпуска</p>
-                <p className={styles.price}>Цена: {car.price} руб.</p>
+                <p className={styles.price}>Цена от: {car.price} eur</p>
             </div>
         </div>))}
     </div>)

@@ -12,6 +12,7 @@ import {
     OPEN_MODAL,
     useModalContext,
 } from "../../../contexts/ModalContext";
+import {AnimateButton} from "../../UI/animateButton/AnimateButton";
 
 
 const Plus = ({src, title, text}) => {
@@ -172,6 +173,7 @@ const MainTitleAbroad = () => {
                     </div>
                 </div>
             </button>
+            <AnimateButton text={'варианты в наличии'} isLight={true}/>
         </div>
     );
 };

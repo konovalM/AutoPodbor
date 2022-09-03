@@ -1,0 +1,245 @@
+@keyframes movingFlare1 {
+    0% {
+        left: -35px;
+        margin-left: 0px;
+    }
+    30% {
+        left: 105%;
+        margin-left: 80px;
+    }
+    100% {
+        left: 110%;
+        margin-left: 80px;
+    }
+}
+
+@keyframes movingFlare2 {
+    0% {
+        left: -30px;
+        margin-left: 0px;
+    }
+    30% {
+        left: 110%;
+        margin-left: 80px;
+    }
+    100% {
+        left: 110%;
+        margin-left: 80px;
+    }
+}
+
+.button {
+    z-index: 20;
+    background: inherit;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    display: block;
+    cursor: pointer;
+}
+
+.buttonLight {
+    margin-top: 28px;
+}
+
+
+.btnWrapper {
+    background: #FC8B26;
+    box-shadow: -1px 4px 21px rgba(0, 0, 0, 0.2);
+    border-radius: 35px;
+    width: 414px;
+    height: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.btnWrapperLight {
+    background: #F3F3F3;
+}
+.btnWrapperLight::after {
+    display: none !important;
+}
+
+.btnWrapper::after {
+    content: "";
+    display: block;
+    height: 170px;
+    width: 57px;
+    margin-left: 50px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    left: -150px;
+    top: -50px;
+    z-index: 0;
+    transform: rotate(48deg);
+    position: absolute;
+    animation: movingFlare1 3s ease-in-out 0.05s infinite;
+}
+
+.btnInner {
+    background: #FCC026;
+    border-radius: 30px;
+    width: 400px;
+    height: 57px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 113%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 25px;
+    text-transform: uppercase;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.btnInnerLight {
+    background: #FFFFFF;
+}
+
+.btnInnerLight::after {
+    display: none !important;
+}
+
+.btnInner::after {
+    content: "";
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 158px;
+    width: 56px;
+    margin-left: 50px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    left: -40px;
+    top: -50px;
+    z-index: 1;
+    transform: rotate(48deg);
+    position: absolute;
+    animation: movingFlare2 3s ease-in-out 0.05s infinite;
+}
+
+
+.iconWrapperLight {
+    position: absolute;
+    right: 0;
+    background: #0088CC;
+    border-radius: 30px;
+    aspect-ratio: 1/1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconLight {
+    transform: translateX(-2px);
+}
+
+.text{
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 113%;
+    transform: translateX(-25px);
+}
+
+@media screen and (max-width: 1070px) {
+    .btnWrapperLight{
+        width: 380px;
+        height: 60px;
+    }
+    .btnInnerLight{
+        width: 367px;
+        height: 50px;
+    }
+    .iconLight{
+        width: 30px;
+    }
+    .buttonLight{
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .btnWrapperLight{
+        width: 330px !important;
+        height: 50px !important;
+    }
+    .btnInnerLight{
+        width: 315px !important;
+        height: 37px !important;
+    }
+    .iconLight{
+        width: 25px !important;
+    }
+    .buttonLight{
+        margin-top: 15px !important;
+    }
+    .text{
+        transform: translateX(-15px);
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .btnWrapper {
+        width: 282px;
+        height: 50px;
+    }
+
+    .btnInner {
+        width: 268px;
+        height: 37px;
+        font-size: 14px;
+        column-gap: 6px;
+
+        line-height: 113%;
+    }
+
+    .icon {
+        width: 28px;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .btnWrapperLight{
+        width: 173px !important;
+        height: 50px !important;
+    }
+    .btnInnerLight{
+        width: 159px !important;
+        height: 38px !important;
+    }
+    .iconLight{
+        width: 24px !important;
+    }
+    .buttonLight{
+        margin-top: 15px !important;
+    }
+    .text{
+        transform: translateX(0);
+        font-size: 13px;
+        display: block;
+        max-width: 120px;
+    }
+}
+/*
+.icon{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+*/
+
+
