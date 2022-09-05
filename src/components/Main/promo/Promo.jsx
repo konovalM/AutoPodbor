@@ -208,7 +208,7 @@ export const PromoAbroad = () => {
                 </div>
             </div>
             <div className={styles.plusesMobile}>
-                <Pluses/>
+                <PlusesAbroad/>
             </div>
         </section>
     );
