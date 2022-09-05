@@ -9,15 +9,14 @@ const Main = () => {
             <div className="container">
                 <div className={styles.outside}>
                     <div className={styles.promoWrapper}>
-                        <h3 className={styles.title}>
-                            Каталог
+                        <h3 className={styles.title}
+                            dangerouslySetInnerHTML={{__html: localStorage.getItem('euro_catalog_title10')}}>
                         </h3>
-                        <p className={styles.promoText}>
-                            Самые свежие предложения по продаже новых и б/у автомобилей на рынках Европы. Цены указаны
-                            без учета стоимости транспортировки и растаможки. </p>
-                        <p className={styles.promoText}>
-                            Бесплатная консультация по тел.:&nbsp;<b><span
-                            className={styles.bold}>+7 (999) 200 93 30</span></b>.
+                        <p className={styles.promoText}
+                           dangerouslySetInnerHTML={{__html: localStorage.getItem('euro_catalog_text1')}}>
+                        </p>
+                        <p className={styles.promoText}
+                           dangerouslySetInnerHTML={{__html: localStorage.getItem('euro_catalog_text2')}}>
                         </p>
                         <AnimateButton text={'варианты в наличии'}/>
                     </div>
