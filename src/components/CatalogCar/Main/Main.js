@@ -45,7 +45,7 @@ const Main = ({car}) => {
                         }
                     </div>
                     <div className={styles.aboutMain}>
-                        <h5 className={styles.price}>Стоимость: {car?.price} ₽ </h5>
+                        <h5 className={styles.price}>Стоимость: {car?.price} &#8364;</h5>
                         <p className={styles.year}>{car?.manufacture_year} год выпуска</p>
                     </div>
                     <div className={styles.about}>
