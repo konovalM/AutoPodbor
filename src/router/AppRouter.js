@@ -30,7 +30,7 @@ export const AppRouter = () => {
             easing: "linear",
             delay: 100,
             once: false,
-            disable: ["tablet",'mobile'],
+            disable: ["tablet", 'mobile'],
             anchorPlacement: "top-top",
             mirror: false,
         });
@@ -42,7 +42,7 @@ export const AppRouter = () => {
             })
             .then(res => {
                 res.forEach((obj) => {
-                    if (obj.image){
+                    if (obj.image) {
                         localStorage.setItem(obj.slug, obj.image)
                     } else {
                         localStorage.setItem(obj.slug, obj.value)
@@ -55,32 +55,38 @@ export const AppRouter = () => {
             })
     }, [])
     useEffect(() => {
-        if (location.hash){
+        if (location.hash) {
             setTimeout(() => {
                 scrollToElement(location.hash)
             }, 500)
         }
-        if (location.pathname === '/discount'){
+        if (location.pathname === '/discount') {
             dispatch({type: DISCOUNT})
+        }
+
+        if (location.pathname.indexOf('/abroad') >= 0) {
+            document.title = 'Автоподбор автомобиля под ключ за рубежом'
+        } else {
+            document.title = 'Автоподбор автомобиля под ключ в СПБ и области'
         }
     }, [location.key])
 
     return (
         <MainLayout>
             <Routes>
-                <Route path="/" element={<Main />}/>
-                <Route path="/discount" element={<Main />}/>
+                <Route path="/" element={<Main/>}/>
+                <Route path="/discount" element={<Main/>}/>
                 <Route path="/service/:id" element={<Service/>}/>
                 <Route path="/article/:id" element={<Article/>}/>
                 <Route path="/privacy" element={<Privacy/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/blog" element={<Blog/>}/>
-                <Route path={`/${abroad}`} element={<MainAbroad />} />
-                <Route path={`/${abroad}/catalog`} element={<Catalog />}/>
-                <Route path={`/${abroad}/about`} element={<About />}/>
-                <Route path={`/${abroad}/blog`} element={<Blog />}/>
-                <Route path={`/${abroad}/privacy`} element={<Privacy />}/>
-                <Route path={`/${abroad}/catalog/:id`} element={<CatalogCar />}/>
+                <Route path={`/${abroad}`} element={<MainAbroad/>}/>
+                <Route path={`/${abroad}/catalog`} element={<Catalog/>}/>
+                <Route path={`/${abroad}/about`} element={<About/>}/>
+                <Route path={`/${abroad}/blog`} element={<Blog/>}/>
+                <Route path={`/${abroad}/privacy`} element={<Privacy/>}/>
+                <Route path={`/${abroad}/catalog/:id`} element={<CatalogCar/>}/>
                 <Route path={`/${abroad}/service/:id`} element={<Service/>}/>
                 <Route path="*" element={<NotFound to={"not-found"}/>}/>
             </Routes>
