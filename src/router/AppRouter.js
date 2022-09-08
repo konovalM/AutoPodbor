@@ -63,12 +63,6 @@ export const AppRouter = () => {
         if (location.pathname === '/discount') {
             dispatch({type: DISCOUNT})
         }
-
-        if (location.pathname.indexOf('/abroad') >= 0) {
-            document.title = 'Автоподбор автомобиля под ключ за рубежом'
-        } else {
-            document.title = 'Автоподбор автомобиля под ключ в СПБ и области'
-        }
     }, [location.key])
 
     return (
