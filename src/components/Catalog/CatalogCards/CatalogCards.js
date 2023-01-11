@@ -45,8 +45,10 @@ export const Cards = ({cars}) => {
     const nav = useNavigate()
     return (<div className={styles.catalogGrid}>
         {cars.map((car, index) => (<div className={styles.gridItem} key={index}>
-            <Button text='Подробнее' className={styles.moreBtn}
-                    onClick={() => nav(`/${abroad}/catalog/${car.id}`)}/>
+            <a href="https://t.me/chestniy_autopodbor">
+                <Button text='Подробнее' className={styles.moreBtn}
+                />
+            </a>
             <img src={car.image} alt="mock" className={styles.catalogItemImg}/>
             <div className={styles.description}>
                 <h5 className={styles.name}>{car.title}</h5>
