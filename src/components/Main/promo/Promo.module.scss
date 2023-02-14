@@ -100,6 +100,13 @@
   z-index: 20;
   max-width: 556px;
   width: 100%;
+  position: relative;
+  padding-top: 20px;
+}
+
+.frame{
+  position: absolute;
+  top: 0;
 }
 
 .mainTitleBlock2 {
@@ -382,6 +389,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .mainTitleBlock{
+    padding-top: 40px;
+  }
   .plus {
     flex-direction: row;
     justify-content: flex-start;

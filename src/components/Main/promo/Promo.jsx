@@ -88,6 +88,8 @@ const MainTitle = () => {
     return (
         <div
             className={localStorage.getItem('isLoggedOut') ? cn(styles.mainTitleBlock, styles.mainTitleBlock2) : styles.mainTitleBlock}>
+            <iframe src="https://yandex.ru/sprav/widget/rating-badge/185334738407?type=rating" style={{backgroundColor: 'transparent'}} width="150" height="50"
+                    frameBorder="0" className={styles.frame}></iframe>
             {
                 state.discount
                     ?
@@ -139,6 +141,8 @@ const MainTitleAbroad = () => {
     return (
         <div
             className={localStorage.getItem('isLoggedOut') ? cn(styles.mainTitleBlock, styles.mainTitleBlock2) : styles.mainTitleBlock}>
+            <iframe src="https://yandex.ru/sprav/widget/rating-badge/185334738407?type=rating" style={{backgroundColor: 'transparent'}} width="150" height="50"
+                    frameBorder="0" className={styles.frame}></iframe>
             {
                 localStorage.getItem('euro_first_page_header')
                     ? <h1 className={styles.mainTitle}
