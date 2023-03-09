@@ -1,60 +1,62 @@
-.text{
-  margin-right: 20px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 125%;
-  color: var(--gray-title);
-  &:hover{
+.text {
+    margin-right: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 125%;
     color: var(--gray-title);
-  }
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap:13px
+    &:hover {
+        color: var(--gray-title);
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
 }
-.spanText{}
-
-
-.black{
-  color: var(--gray-title);
-  &:hover{
-    color: var(--gray-title);
-  }
+.spanText {
 }
 
-.white{
-  color: var(--white);
-  &:hover{
+.black {
+    color: var(--gray-title);
+    &:hover {
+        color: var(--gray-title);
+    }
+}
+
+.white {
     color: var(--white);
-  }
+    &:hover {
+        color: var(--white);
+    }
 }
 @media screen and (max-width: 1400px) {
-  .text{
-    margin-right: 20px;
-  }
+    .text {
+        margin-right: 20px;
+    }
 }
 
-@media screen and (max-width:1282px){
-  .spanText{
-    font-size: 14px;
-  }
+@media screen and (max-width: 1350px) {
+    .spanText {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1230px) {
+    .spanText {
+        font-size: 12px;
+    }
 }
 
-@media screen and (max-width:1090px){
-  .text{
-    margin-right: 0;
-  }
+@media screen and (max-width: 1090px) {
+    .text {
+        margin-right: 0;
+    }
 }
 
-@media screen and (max-width:1024px){
-  .text{
-    margin-right: 20px;
-  }
-  .spanText{
-    font-size: 17px;
-  }
+@media screen and (max-width: 1024px) {
+    .text {
+        margin-right: 20px;
+    }
+    .spanText {
+        font-size: 17px;
+    }
 }
-
-
-

@@ -1,20 +1,22 @@
-.logo{
-  width: 66px;
+.logo {
+    width: 66px;
 }
 
-.link{
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 113.7%;
-  text-transform: uppercase;
-  color: var(--gray-primary);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap:9px;
-  margin-right:50px;
+.link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 113.7%;
+    text-transform: uppercase;
+    color: var(--gray-primary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9px;
+    margin-right: 50px;
 }
 
-
-
-
+@media screen and (max-width: 1230px) {
+    .link {
+        margin-right: 0;
+    }
+}
