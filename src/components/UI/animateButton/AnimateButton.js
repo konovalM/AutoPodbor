@@ -8,7 +8,7 @@ export const AnimateButton = ({text, isLight = false}) => {
         <>
             {
                 isLight ?
-                    <a className={cn(styles.button, styles.buttonLight)} href={'https://t.me/chestniy_avtorynok'} target="_blank" rel="noreferrer">
+                    <a className={cn(styles.button, styles.buttonLight)} href={'https://t.me/autosha_bot'} target="_blank" rel="noreferrer">
                         <div className={cn(styles.btnWrapper, styles.btnWrapperLight)}>
                             <div className={cn(styles.btnInner, styles.btnInnerLight)}>
                                 <span className={styles.text}>
@@ -20,7 +20,7 @@ export const AnimateButton = ({text, isLight = false}) => {
                             </div>
                         </div>
                     </a> :
-                    <a className={styles.button} href={'https://t.me/chestniy_avtorynok'} target="_blank" rel="noreferrer">
+                    <a className={styles.button} href={'https://t.me/autosha_bot'} target="_blank" rel="noreferrer">
                         <div className={styles.btnWrapper}>
                             <div className={styles.btnInner}>
                                 {text}

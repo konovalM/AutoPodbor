@@ -13,7 +13,7 @@ export const Social = () => {
             <ExternalLink href={"https://wa.me/79992009330"}>
                 <img src={whatsApp} alt={"whatsApp"}/>
             </ExternalLink>
-            <ExternalLink href={"https://t.me/chestniy_autopodbor"}>
+            <ExternalLink href={"https://t.me/autosha_bot"}>
                 <img src={telegram} alt={"telegram"}/>
             </ExternalLink>
             <ExternalLink href={"https://vk.com/chestniy_autopodbor"}>
