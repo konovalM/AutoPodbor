@@ -67,63 +67,63 @@ const NavList = ({isAbroad}) => {
                     payload: {formTitle: 'Остались вопросы?', title: 'Обратная связь'}
                 })} className={styles.spanFontFamily}>Контакты</span>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
                 <Link to={'/abroad'}>Авто из-за рубежа</Link>
-            </NavItem>
+            </NavItem> */}
         </ul>
     )
 }
 
-const NavListAbroad = () => {
-    const {dispatch} = useModalContext()
-    return (
-        <ul className={styles.list}>
-            <NavItem>
-                <Link to={'/abroad#services'}>цены и Услуги</Link>
-            </NavItem>
-            <NavItem>
-                <Link to={'/abroad/catalog'}>каталог</Link>
-            </NavItem>
-            <NavItem>
-                <Link to={'/abroad#custom-clearance'}>растаможка</Link>
-            </NavItem>
-            <NavItem>
-                <Link to={'/abroad#examples'}>
-                    подобранные авто
-                </Link>
-            </NavItem>
-            <NavItem>
-                <Link to={'/abroad#feedback'}>
-                    отзывы
-                </Link>
-            </NavItem>
-            <NavItem>
-                <span onClick={() => dispatch({
-                    type: OPEN_MODAL,
-                    payload: {formTitle: 'Остались вопросы?', title: 'Обратная связь', type: 'euro'}
-                })} className={styles.spanFontFamily}>Контакты</span>
-            </NavItem>
-            <NavItem>
-                <Link to={'/abroad/about'}>О компании</Link>
-            </NavItem>
-            <NavItem>
-                <Link to={'/'}>авто из России</Link>
-            </NavItem>
-        </ul>
-    )
-}
+// const NavListAbroad = () => {
+//     const {dispatch} = useModalContext()
+//     return (
+//         <ul className={styles.list}>
+//             <NavItem>
+//                 <Link to={'/abroad#services'}>цены и Услуги</Link>
+//             </NavItem>
+//             <NavItem>
+//                 <Link to={'/abroad/catalog'}>каталог</Link>
+//             </NavItem>
+//             <NavItem>
+//                 <Link to={'/abroad#custom-clearance'}>растаможка</Link>
+//             </NavItem>
+//             <NavItem>
+//                 <Link to={'/abroad#examples'}>
+//                     подобранные авто
+//                 </Link>
+//             </NavItem>
+//             <NavItem>
+//                 <Link to={'/abroad#feedback'}>
+//                     отзывы
+//                 </Link>
+//             </NavItem>
+//             <NavItem>
+//                 <span onClick={() => dispatch({
+//                     type: OPEN_MODAL,
+//                     payload: {formTitle: 'Остались вопросы?', title: 'Обратная связь', type: 'euro'}
+//                 })} className={styles.spanFontFamily}>Контакты</span>
+//             </NavItem>
+//             <NavItem>
+//                 <Link to={'/abroad/about'}>О компании</Link>
+//             </NavItem>
+//             <NavItem>
+//                 <Link to={'/'}>авто из России</Link>
+//             </NavItem>
+//         </ul>
+//     )
+// }
 
 export const Navigation = ({className}) => {
     const location = useLocation()
     return (
         <nav className={cn(styles.navigation, className)}>
-            {
+            {/* {
                 location.pathname.includes('abroad') ?
                     <NavListAbroad/>
                     :
                     <NavList/>
-            }
-
+            } */}
+            <NavList/>
         </nav>
     );
 };
@@ -173,59 +173,60 @@ const NavListMobile = () => {
                     payload: {formTitle: 'Заказать звонок', title: 'Обратная связь'}
                 })} className={styles.spanFontFamily}>Контакты</span>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
                 <Link to={'/abroad'}>Авто из-за рубежа</Link>
-            </NavItem>
+            </NavItem> */}
         </>
     )
 }
 
-const NavListMobileAbroad = () => {
-    const {dispatch} = useModalContext()
+// const NavListMobileAbroad = () => {
+//     const {dispatch} = useModalContext()
 
-    return (
-        <>
-            <NavItem>
-                <Link to={'/abroad#services'}>цены и Услуги</Link>
-            </NavItem>
-            <NavItem>
-                <Link to={'/abroad/catalog'}>каталог</Link>
-            </NavItem>
-            <NavItem>
-                <Link to={'/abroad#custom-clearance'}>растаможка</Link>
-            </NavItem>
-            <NavItem>
-                <Link to={'/abroad#examples'}>подобранные авто</Link>
-            </NavItem>
-            <NavItem>
-                <Link to={'/abroad#feedback'}>отзывы</Link>
-            </NavItem>
-            <NavItem>
-                <span onClick={() => dispatch({
-                    type: OPEN_MODAL,
-                    payload: {formTitle: 'Заказать звонок', title: 'Обратная связь', type: 'euro'}
-                })} className={styles.spanFontFamily}>Контакты</span>
-            </NavItem>
-            <NavItem>
-                <Link to={'/abroad/about'}>О компании</Link>
-            </NavItem>
-            <NavItem>
-                <Link to={'/'}>авто из России</Link>
-            </NavItem>
-        </>
-    )
-}
+//     return (
+//         <>
+//             <NavItem>
+//                 <Link to={'/abroad#services'}>цены и Услуги</Link>
+//             </NavItem>
+//             <NavItem>
+//                 <Link to={'/abroad/catalog'}>каталог</Link>
+//             </NavItem>
+//             <NavItem>
+//                 <Link to={'/abroad#custom-clearance'}>растаможка</Link>
+//             </NavItem>
+//             <NavItem>
+//                 <Link to={'/abroad#examples'}>подобранные авто</Link>
+//             </NavItem>
+//             <NavItem>
+//                 <Link to={'/abroad#feedback'}>отзывы</Link>
+//             </NavItem>
+//             <NavItem>
+//                 <span onClick={() => dispatch({
+//                     type: OPEN_MODAL,
+//                     payload: {formTitle: 'Заказать звонок', title: 'Обратная связь', type: 'euro'}
+//                 })} className={styles.spanFontFamily}>Контакты</span>
+//             </NavItem>
+//             <NavItem>
+//                 <Link to={'/abroad/about'}>О компании</Link>
+//             </NavItem>
+//             <NavItem>
+//                 <Link to={'/'}>авто из России</Link>
+//             </NavItem>
+//         </>
+//     )
+// }
 
 export const NavigationMobile = () => {
     const location = useLocation()
     return (
         <ul className={styles.list}>
-            {
+            {/* {
                 location.pathname.includes('abroad') ?
                     <NavListMobileAbroad isAbroad={true}/>
                     :
                     <NavListMobile isAbroad={false}/>
-            }
+            } */}
+            <NavListMobile isAbroad={false}/>
         </ul>
     )
 }
