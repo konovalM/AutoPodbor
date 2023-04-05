@@ -49,7 +49,7 @@ export const Main = () => {
               <Selection />
           </WaveWrapper>
 
-          <div className={style.back}>
+          <div className={style.back}  name={"#garantier"}>
             <img src={garantier} alt={"Гарант"} className={style.garantier} />
             <AnimateWrapper animate={"fade-right"}>
               <Garantier />

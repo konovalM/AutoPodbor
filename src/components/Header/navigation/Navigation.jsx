@@ -58,8 +58,20 @@ const NavList = ({isAbroad}) => {
             </NavItem>
 
             <NavItem>
+                {
+                    state.discount ?
+                        <Link to={'/discount#garantier'}>гарантии</Link>
+                        :
+                        <Link
+                            to={'/#garantier'}>гарантии</Link>
+                }
+            </NavItem>
+
+            <NavItem>
                 <Link to={'/blog'}>блог</Link>
             </NavItem>
+
+            
 
             <NavItem>
                 <span onClick={() => dispatch({
@@ -162,6 +174,15 @@ const NavListMobile = () => {
                         :
                         <Link
                             to={'/#feedback'}>отзывы</Link>
+                }
+            </NavItem>
+            <NavItem>
+                {
+                    state.discount ?
+                        <Link to={'/discount#garantier'}>гарантии</Link>
+                        :
+                        <Link
+                            to={'/#garantier'}>гарантии</Link>
                 }
             </NavItem>
             <NavItem>
