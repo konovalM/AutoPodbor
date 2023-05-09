@@ -36,7 +36,9 @@ const ServicesFromApiAbroad = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
         (async () => {
-            await getServicesAbroad().then(setServices)
+            await getServicesAbroad().then((data)=>{ 
+                const sortData = [data.at(1), data.at(2), data.at(0)]
+                return setServices(sortData)})
         })()
     }, [])
     return (
