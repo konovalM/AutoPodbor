@@ -1,6 +1,13 @@
 .choice{
   background: url("../../../assets/images/whyLeftEllipse.svg")left center/contain no-repeat, url("../../../assets/images/whyRightEllipse.svg")right bottom/contain no-repeat;
 }
+@media screen and (max-width:768px) {
+  .choice{
+    display: none;
+  }
+}
+
+
 .wrapper{
   margin: 0 auto;
   max-width: 1090px;
