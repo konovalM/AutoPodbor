@@ -25,18 +25,18 @@ export const Choice = () => {
                     <AnimateWrapper animate={"fade-right"}>
                         <WhyCard
                             src={cars}
-                            title={localStorage.getItem('euro_title2_subtitle1')}
+                            title={localStorage.getItem('why_choose_us_subtitle1')}
                             text={
-                                localStorage.getItem('euro_title2_text1')
+                                localStorage.getItem('why_choose_us_text1')
                             }
                         />
                     </AnimateWrapper>
                     <AnimateWrapper animate={"fade-right"}>
                         <WhyCard
                             src={wallet}
-                            title={localStorage.getItem('euro_title2_subtitle2')}
+                            title={localStorage.getItem('why_choose_us_subtitle2')}
                             text={
-                                localStorage.getItem('euro_title2_text2')
+                                localStorage.getItem('why_choose_us_text2')
                             }
                         />
                     </AnimateWrapper>
@@ -44,9 +44,9 @@ export const Choice = () => {
                         {" "}
                         <WhyCard
                             src={bank}
-                            title={localStorage.getItem('euro_title2_subtitle3')}
+                            title={localStorage.getItem('why_choose_us_subtitle3')}
                             text={
-                                localStorage.getItem('euro_title2_text3')
+                                localStorage.getItem('why_choose_us_text3')
                             }
                         />
                     </AnimateWrapper>
@@ -55,9 +55,9 @@ export const Choice = () => {
                         {" "}
                         <WhyCard
                             src={clock}
-                            title={localStorage.getItem('euro_title2_subtitle4')}
+                            title={localStorage.getItem('why_choose_us_subtitle4')}
                             text={
-                                localStorage.getItem('euro_title2_text4')
+                                localStorage.getItem('why_choose_us_text4')
                             }
                         />
                     </AnimateWrapper>
@@ -65,9 +65,9 @@ export const Choice = () => {
                         {" "}
                         <WhyCard
                             src={packageImg}
-                            title={localStorage.getItem('euro_title2_subtitle5')}
+                            title={localStorage.getItem('why_choose_us_subtitle5')}
                             text={
-                                localStorage.getItem('euro_title2_text5')
+                                localStorage.getItem('why_choose_us_text5')
                             }
                         />
                     </AnimateWrapper>
@@ -75,9 +75,9 @@ export const Choice = () => {
                         {" "}
                         <WhyCard
                             src={raiting}
-                            title={localStorage.getItem('euro_title2_subtitle6')}
+                            title={localStorage.getItem('why_choose_us_subtitle6')}
                             text={
-                                localStorage.getItem('euro_title2_text6')
+                                localStorage.getItem('why_choose_us_text6')
                             }
                         />
                     </AnimateWrapper>
