@@ -17,7 +17,10 @@
             property="og:description"
             content="Компания Честный автоподбор предлагает услуги выездной диагностики авто перед покупкой и автоподбор под ключ. Договор. Гарантия 1 год. Звоните"
         />
-        <meta name="description" content="Компания Честный автоподбор предлагает услуги выездной диагностики авто перед покупкой и автоподбор под ключ. Договор. Гарантия 1 год. Звоните" />
+        <meta
+            name="description"
+            content="Компания Честный автоподбор предлагает услуги выездной диагностики авто перед покупкой и автоподбор под ключ. Договор. Гарантия 1 год. Звоните"
+        />
 
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
         <!--
@@ -63,10 +66,42 @@
         <!-- /Yandex.Metrika counter -->
         <!-- calltouch -->
         <script>
-        (function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var a=d.getElementsByTagName("script")[0],s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)},m=typeof Array.prototype.find === 'function',n=m?"init-min.js":"init.js";s.async=true;s.src="https://mod.calltouch.ru/"+n+"?id="+cId;if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})(window,document,"ct","5me5tnqt");
+            (function (w, d, n, c) {
+                w.CalltouchDataObject = n;
+                w[n] = function () {
+                    w[n]["callbacks"].push(arguments);
+                };
+                if (!w[n]["callbacks"]) {
+                    w[n]["callbacks"] = [];
+                }
+                w[n]["loaded"] = false;
+                if (typeof c !== "object") {
+                    c = [c];
+                }
+                w[n]["counters"] = c;
+                for (var i = 0; i < c.length; i += 1) {
+                    p(c[i]);
+                }
+                function p(cId) {
+                    var a = d.getElementsByTagName("script")[0],
+                        s = d.createElement("script"),
+                        i = function () {
+                            a.parentNode.insertBefore(s, a);
+                        },
+                        m = typeof Array.prototype.find === "function",
+                        n = m ? "init-min.js" : "init.js";
+                    s.async = true;
+                    s.src = "https://mod.calltouch.ru/" + n + "?id=" + cId;
+                    if (w.opera == "[object Opera]") {
+                        d.addEventListener("DOMContentLoaded", i, false);
+                    } else {
+                        i();
+                    }
+                }
+            })(window, document, "ct", "bmofzgzj");
         </script>
         <!-- calltouch -->
-    
+
         <title>Автоподбор СПБ - диагностика и подбор автомобиля перед покупкой</title>
     </head>
     <body>
@@ -91,10 +126,7 @@
   To create a production bundle, use `npm run build` or `yarn build`.
 -->
 
-
-
-<script src="//code.jivo.ru/widget/Pivp3VnHJJ" async></script>
-
+        <script src="//code.jivo.ru/widget/Pivp3VnHJJ" async></script>
 
         <script
             src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
