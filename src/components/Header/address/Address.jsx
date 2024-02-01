@@ -23,7 +23,7 @@ export const Address = ({isBlack}) => {
                     <Link to={location.pathname.includes('abroad') ? "/abroad#footer" : "/#footer"} className={cn(styles.text, isBlack ? styles.black : styles.white
                     )}>
                         <img src={map} alt={"Map"}/>
-                        <span className={styles.spanText}>Наш офис в Санкт-Петербурге<br/>
+                        <span className={styles.spanText}>Наши офисы в Москве и Санкт-Петербурге<br/>
                      ул. Оптиков, д.1, корп.3</span>
                     </Link>
             }
