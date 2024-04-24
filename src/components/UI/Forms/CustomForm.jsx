@@ -70,7 +70,11 @@ export const CustomForm = ({isRow,upload}) => {
               <Button
                 type="submit"
                 text={"Получить консультацию"}
-                className={styles.btn}
+                // className={styles.btn}
+                className={`${styles.btn} g-recaptcha`}
+                data-sitekey="6Lfu08UpAAAAABL-ya_0HEFeBpBVPyhRsXEC8v0W" 
+                data-callback='onSubmit' 
+                data-action='submit'
               />
             </Form>
           )}
