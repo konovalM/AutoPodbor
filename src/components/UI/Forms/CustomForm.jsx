@@ -43,7 +43,14 @@ export const CustomForm = ({isRow,upload}) => {
                     name="full_name"
                     as={NamedInput}
                     placeholder={"Иванов Иван"}
-                    label={"Ваше имя"}
+                    label={"Ваше имя и фамилия"}
+                    validate={(name)=>{
+                      let error
+                      if(name.trim().split(" ").length<2){
+                        error = "Введите полные имя и фамилию"
+                      }
+                      return error
+                    }}
                   />
                   {errors.full_name && touched.full_name ? (
                     <div className={styles.error}>{errors.full_name}</div>
