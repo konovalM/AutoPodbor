@@ -145,62 +145,28 @@
         <script src="https://res.smartwidgets.ru/app.js" defer></script>
         <!-- Smart Widgets -->
 
-        <!-- Jivo -->
-        <script src="//code.jivo.ru/widget/Pivp3VnHJJ" async></script>
-        <script type="text/javascript">
-            var _ctreq_jivo = function (sub) {
-                var sid = "64074";
-                var jc = jivo_api.getContactInfo();
-                var fio = "";
-                var phone = "";
-                var email = "";
-                if (!!jc.client_name) {
-                    fio = jc.client_name;
-                }
-                if (!!jc.phone) {
-                    phone = jc.phone;
-                }
-                if (!!jc.email) {
-                    email = jc.email;
-                }
-                var ct_data = {
-                    fio: fio,
-                    phoneNumber: phone,
-                    email: email,
-                    subject: sub,
-                    requestUrl: location.href,
-                    sessionId: window.call_value,
+        <!-- Chat App -->
+        <script>
+            (function (w, d, u, j) {
+                var s = d.createElement("script");
+                s.defer = true;
+                s.onload = function () {
+                    var s = d.createElement("script");
+                    s.defer = true;
+                    s.src = j + "?" + ((Date.now() / 60000) | 0);
+                    var h = d.getElementsByTagName("script")[0];
+                    h.parentNode.insertBefore(s, h);
                 };
-                var request = window.ActiveXObject ? new ActiveXObject("Microsoft.XMLHTTP") : new XMLHttpRequest();
-                var post_data = Object.keys(ct_data)
-                    .reduce(function (a, k) {
-                        if (!!ct_data[k]) {
-                            a.push(k + "=" + encodeURIComponent(ct_data[k]));
-                        }
-                        return a;
-                    }, [])
-                    .join("&");
-                var url = "https://api.calltouch.ru/calls-service/RestAPI/" + sid + "/requests/orders/register/";
-                if (!window.ct_snd_flag) {
-                    window.ct_snd_flag = 1;
-                    setTimeout(function () {
-                        window.ct_snd_flag = 0;
-                    }, 10000);
-                    request.open("POST", url, true);
-                    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                    request.send(post_data);
-                }
-            };
-            window.jivo_onIntroduction = function () {
-                _ctreq_jivo("JivoSite посетитель оставил контакты");
-            };
-            window.jivo_onCallStart = function () {
-                _ctreq_jivo("JivoSite обратный звонок");
-            };
-            window.jivo_onMessageSent = function () {
-                ct("goal", "jivo_ms");
-            };
+                s.src = u + "?" + ((Date.now() / 60000) | 0);
+                var h = d.getElementsByTagName("script")[0];
+                h.parentNode.insertBefore(s, h);
+            })(
+                window,
+                document,
+                "https://s3.wasabisys.com/cabinet.chatapp.online/widgetsFiles/45723/2024/06/08/e9035e30-a6fe-4a6a-b73d-4ebc4d300023.js",
+                "https://s3.wasabisys.com/cabinet.chatapp.online/external/widget/v3/index.js",
+            );
         </script>
-        <!-- Jivo -->
+        <!-- Chat App -->
     </body>
 </html>
